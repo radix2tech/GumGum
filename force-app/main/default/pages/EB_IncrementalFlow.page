@@ -1,0 +1,8 @@
+<apex:page standardController="Opportunity" extensions="EB_IncrementalFlowExt">
+    
+    <flow:interview name="Opportunity_Advertising_Incremental" interview="{!myFlow}" 
+    finishLocation="{!NewOpportunityRecord}">
+        <apex:param name="var_OpptyID" value="{!Opportunity.Id}"/>
+    </flow:interview>
+
+</apex:page>

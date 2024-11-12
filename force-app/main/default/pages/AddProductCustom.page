@@ -1,0 +1,122 @@
+<apex:page standardController="Opportunity" extensions="AddProductCustomController" showHeader="true" sidebar="true">
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"/>
+    <script>
+        j$ = jQuery.noConflict();
+
+        function showSavingDiv() {
+            var newHeight = j$("[id$=AddNewOppProduct]").css("height");//Just shade the body, not the header
+            j$("[id$=saving-curtain-div]").css("background-color", "black").css("opacity", 0.35).css("height", newHeight).css("width", "80%");
+        }
+
+        function hideSavingDiv() {
+            j$("[id$=saving-curtain-div]").css("background-color", "black").css("opacity", "1").css("height", "0px").css("width", "80%");
+        }
+    </script>
+    
+    <style>
+        #saving-curtain-div {
+            height:0px;
+            width:100%;
+            position:absolute;
+            z-index:5;
+            //-webkit-transition: all 0.30s ease-out;
+            //-moz-transition: all 0.30s ease-out;
+        }
+    </style>
+    
+    <script type="text/javascript">
+        function onFocus(){
+            updateCurrentOppProducts();
+            return false;
+        };
+    
+        if (/*@cc_on!@*/false) { // check for Internet Explorer
+            document.onfocusin = onFocus;
+        } else {
+            window.onfocus = onFocus;
+        }
+    </script>
+    
+    <apex:form rendered="{!selectPricebook}">
+        <apex:pageBlock title="Select Price Book for {!opp.Name}">
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Use Standard Price Book" action="{!savePricebook}"/>
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="1">
+                <apex:outputText >This opportunity currently is not set to use the Standard Price Book.  Click 'Use Standard Price Book' to continue.</apex:outputText>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+    
+    <apex:form rendered="{!!selectPricebook}">
+        <apex:actionFunction name="updateCurrentOppProducts" action="{!updateCurrentOppProducts}" rerender="CurrentOppProducts"/>
+        <div id="saving-curtain-div" />
+        <apex:pageBlock title="Add New Product to {!opp.Name}" id="AddNewOppProduct">
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Price Book"/>
+                    <apex:outputText value="{!objPb.Name}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Pricing"/>
+                    <apex:selectList value="{!pricingOption}" multiselect="false" size="1">
+                        <apex:selectOptions value="{!pricingOptions}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{!pricingError}">
+                    <apex:outputLabel />
+                    <apex:outputLabel value="The pricing must be selected." styleClass="warning"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Product"/>
+                    <apex:selectList value="{!productOption}" multiselect="false" size="1">
+                        <apex:selectOptions value="{!productOptions}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{!productError}">
+                    <apex:outputLabel />
+                    <apex:outputLabel value="The product must be selected." styleClass="warning"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Quantity"/>
+                    <apex:inputText value="{!strQuantForCpm}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{!quantityError}">
+                    <apex:outputLabel />
+                    <apex:outputLabel value="The Quantity field must contain a number." styleClass="warning"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Price"/>
+                    <apex:inputText value="{!strPrice}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{!priceError}">
+                    <apex:outputLabel />
+                    <apex:outputLabel value="The Price field must contain a number." styleClass="warning"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:actionStatus id="saveProduct" onStart="showSavingDiv();" onStop="hideSavingDiv();" startText="Saving product ... " stopText=""/>
+                <apex:commandButton value="Save Product" action="{!saveProduct}" reRender="AddNewOppProduct, CurrentOppProducts" status="saveProduct"/>
+                <apex:commandButton value="Return to Opportunity" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        <apex:pageBlock title="Current Products for {!opp.Name}" id="CurrentOppProducts">
+            <apex:pageBlockTable value="{!oppProducts}" var="oP">
+                <apex:column value="{!oP.Pricing__c}" headerValue="Pricing"/>
+                <apex:column value="{!oP.PricebookEntry.Product2.Name}" headerValue="Product"/>
+                <apex:column value="{!oP.Quantity}" headerValue="Quantity"/>
+                <apex:column value="{!oP.UnitPrice}" headerValue="Price"/>
+                <apex:column value="{!oP.TotalPrice}" headerValue="Total Price"/>
+                <apex:column headerValue="Schedule">
+                    <apex:outputPanel rendered="{!!oP.HasSchedule}">
+                        <a href="/oppitm/establishschedule.jsp?id={!oP.Id}&amp;retURL=%2F{!oP.Id}" target="_blank" class="btn" style="text-decoration:none;">Establish</a>
+                    </apex:outputPanel>
+                    <apex:outputText rendered="{!oP.HasSchedule}">
+                        <a href="/oppitm/scheduleedit.jsp?id={!oP.Id}&sUrl=%2Foppitm%2Festablishschedule.jsp&retURL=%2F{!oP.Id}" target="_blank" class="btn" style="text-decoration:none;">Edit</a>
+                    </apex:outputText>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

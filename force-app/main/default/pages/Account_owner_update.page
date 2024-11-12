@@ -1,0 +1,19 @@
+<apex:page standardController="Account" recordSetVar="accounts" tabStyle="Account" sidebar="false" lightningStylesheets="true">
+    <apex:form >
+        <apex:pageBlock title="Edit Accounts" mode="edit">
+            <apex:pageMessages />
+            <apex:pageblockButtons location="top">
+                <apex:commandButton value="Save" action="{!Save}" />
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+        <apex:pageBlockTable value="{!selected}" var="A">
+            <apex:column headerValue="Name">
+                <apex:outputField value="{!A.name}"/>
+            </apex:column> 
+            <apex:column headerValue="Owner">
+                <apex:inputField value="{!A.OwnerId}"/>
+            </apex:column>
+       </apex:pageBlockTable>         
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

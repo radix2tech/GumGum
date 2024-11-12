@@ -1,0 +1,3 @@
+<apex:page showHeader="true" sidebar="true" standardController="System_Snapshot__c" extensions="AttachPDF" action="{!CreateAttachment}">
+	
+</apex:page>

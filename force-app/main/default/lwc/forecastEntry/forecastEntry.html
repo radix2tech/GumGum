@@ -1,0 +1,569 @@
+<template>
+    <!-- Modal Popup to create advertiser agency relationship -->
+    <template if:true={isModalOpen2}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open custom-modal">
+            <div class="slds-modal__container custom-container">
+                <!-- Modal/Popup Header -->
+                <header class="slds-modal__header custom-header">
+                    <lightning-button-icon icon-name="utility:close" alternative-text="Close" class="slds-modal__close custom-close" onclick={closeModal2}></lightning-button-icon>
+                    <h2 class="slds-text-heading_medium">Create Advertiser Agency Relationship</h2>
+                </header>
+
+                <!-- Modal/Popup Body -->
+                <div class="slds-modal__content slds-p-around_medium custom-body">
+                        <lightning-card>
+                            <lightning-record-form
+                                object-api-name="Advertiser_Agency_Relationship__c"
+                                fields={fields}
+                                mode="edit"
+                                onsuccess={handleSuccess2}
+                                oncancel={closeModal2}
+                                onerror={handleError2}>
+                            </lightning-record-form>
+                        </lightning-card>
+
+                        <!-- Error Display -->
+                        <template if:true={errorMessage}>
+                            <div class="slds-box slds-theme_error slds-m-top_medium">
+                                <p>{errorMessage}</p>
+                                <ul>
+                                    <template for:each={duplicateRecordLinks} for:item="link">
+                                        <li key={link.id}>
+                                            <a href={link.url} target="_blank">{link.id}</a>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </div>
+                        </template>
+                </div>
+
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+    <!-- Modal Popup to Request new owner for advertiser-->
+    <template if:true={isModalOpen}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open custom-modal">
+            <div class="slds-modal__container custom-container">
+                <!-- Modal/Popup Header -->
+                <header class="slds-modal__header custom-header">
+                    <lightning-button-icon icon-name="utility:close" alternative-text="Close" class="slds-modal__close custom-close" onclick={closeModal}></lightning-button-icon>
+                    <h2 class="slds-text-heading_medium">Request Account</h2>
+                </header>
+                
+                
+                <!-- Modal/Popup Body -->
+                <div class="slds-modal__content slds-p-around_medium custom-body">
+                    <!-- Display the SelectedAdvertiserName -->
+                    <p class="slds-text-heading_medium">Advertiser: {SelectedAdvertiserName}</p>
+                    <!-- Lookup Input -->
+                    <lightning-input
+                        label="Requested New Owner"
+                        value={searchKey}
+                        placeholder="Search by Name"
+                        onchange={handleInputChange}
+                        onfocus={showDropdown}
+                        onblur={hideDropdown}>
+                    </lightning-input>
+
+                    <!-- Dropdown for user results -->
+                    <template if:true={isDropdownVisible}>
+                        <div class="dropdown-list">
+                            <ul>
+                                <template for:each={userOptions} for:item="user">
+                                    <li key={user.value} class="dropdown-item" onclick={handleUserSelection}>
+                                        {user.label}
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </template>
+
+                </div>
+
+                
+
+                <!-- If no results found -->
+                <template if:true={isNoData}>
+                    <p>No Users Found</p>
+                </template>
+
+                <!-- Modal/Popup Footer -->
+                <footer class="slds-modal__footer custom-footer">
+                    <lightning-button variant="neutral" label="Cancel" onclick={closeModal}></lightning-button>
+                    <lightning-button variant="brand" label="Submit for Approval" onclick={handleSave}></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+    <!-- Modal Popup to create new split-->
+    <template if:true={isModalOpen1}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open custom-modal">
+            <div class="slds-modal__container custom-container" style="height: 1000px">
+                <!-- Modal/Popup Header -->
+                <header class="slds-modal__header custom-header">
+                    <lightning-button-icon icon-name="utility:close" alternative-text="Close" class="slds-modal__close custom-close" onclick={closeModal1}></lightning-button-icon>
+                    <h2 class="slds-text-heading_medium">Add Advertiser Agency Relationship</h2>
+                </header>
+                
+                
+                <!-- Modal/Popup Body -->
+                <div class="slds-modal__content slds-p-around_medium custom-body">
+                    <!-- Lookup Input -->
+                    <lightning-input
+                        label="Search Advertiser Agency Relationship"
+                        value={searchKey1}
+                        placeholder="Search by Name"
+                        onchange={handleInputChange1}
+                        onfocus={showDropdown1}
+                        onblur={hideDropdown1}>
+                    </lightning-input>
+
+                        <!-- Dropdown for user results -->
+                    <template if:true={isDropdownVisible1}>
+                        <div class="dropdown-list">
+                            <ul>
+                                <template for:each={AAROptions} for:item="AAR">
+                                    <li key={AAR.value} class="dropdown-item" onclick={handleUserSelection1}>
+                                        {AAR.label}
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </template>
+
+                    <!-- If no results found -->
+                    <template if:true={isNoData1}>
+                        <p style="color: red;" >No Relationship Found</p>
+                    </template>
+                </div>
+
+                
+
+                
+
+                <!-- Modal/Popup Footer -->
+                <footer class="slds-modal__footer custom-footer">
+                    <lightning-button variant="neutral" label="Cancel" onclick={closeModal1}></lightning-button>
+                    <lightning-button variant="brand" label="Add" onclick={handleSave1}></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+
+    <!-- Show spinner when isLoading is true -->
+    <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+    </template>
+
+    <lightning-card title={title} icon-name="custom:custom63">
+        
+        <lightning-button 
+            slot="actions" 
+            label="New Relationship" 
+            variant="brand" 
+            onclick={openModal2}
+            class="slds-m-right_small">
+        </lightning-button>
+
+        <!-- Slot for actions (Top-right corner) -->
+        <lightning-button 
+            slot="actions" 
+            label="Add Split" 
+            variant="brand" 
+            onclick={openModal1} 
+            class="slds-m-right_small">
+        </lightning-button>
+
+        <lightning-button 
+            slot="actions" 
+            label={batchButtonLabel} 
+            variant="brand" 
+            disabled={disableBatchButton} 
+            onclick={runBatch}>
+        </lightning-button>
+        <div class="card-body">
+        <lightning-card class="child-card">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" >
+                <thead>
+                    <tr>
+                        <!-- Bookings -->
+                        <th colspan="2" class="booking-header center-text">Cumulative Bookings</th>
+                        <!-- Pipeline -->
+                        <th colspan="2" class="pipeline-header center-text">Cumulative Unweighted Pipeline</th>
+                        <!-- Forecast -->
+                        <th colspan="4" class="forecast-header center-text">Cumulative Forecast</th>
+                    </tr>
+                    <tr>
+                        <!-- Booking Quarters -->
+                        <th  class="booking-header center-text">Current Year</th>
+                        <th  class="booking-header center-text">Next Year</th>
+
+                        <!-- Pipeline Quarters -->
+                        <th class="pipeline-header center-text">Current Quarter</th>
+                        <th class="pipeline-header">Next Quarter</th>
+
+                        <!-- Forecast Quarters -->
+                        <th class="forecast-header center-text">Q1 {nextYear}</th>
+                        <th class="forecast-header center-text">Q2 {nextYear}</th>
+                        <th class="forecast-header center-text">Q3 {nextYear}</th>
+                        <th class="forecast-header center-text">Q4 {nextYear}</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="top-aligned">
+                            {currencySymbol}<lightning-formatted-number value={CumulativeData.BookingsCurrentYear} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                            </lightning-formatted-number>    
+                        </td>
+                        <td class="top-aligned">
+                            {currencySymbol}<lightning-formatted-number value={CumulativeData.BookingsNextYear} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                            </lightning-formatted-number>  
+                        </td>
+                        <td class="top-aligned">
+                            {currencySymbol}<lightning-formatted-number value={CumulativeData.PipelineCurrentQuarter} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                            </lightning-formatted-number> 
+                        </td>
+                        <td class="top-aligned">
+                            {currencySymbol}<lightning-formatted-number value={CumulativeData.PipelineNextQuarter} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                            </lightning-formatted-number> 
+                        </td>
+                        <td class="top-aligned">
+                            {currencySymbol}<lightning-formatted-number value={CumulativeData.q1} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                            </lightning-formatted-number> 
+                        </td>
+                        <td class="top-aligned">
+                            {currencySymbol}<lightning-formatted-number value={CumulativeData.q2} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                            </lightning-formatted-number> 
+                        </td>
+                        <td class="top-aligned">
+                            {currencySymbol}<lightning-formatted-number value={CumulativeData.q3} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                            </lightning-formatted-number> 
+                        </td>
+                        <td class="top-aligned">
+                            {currencySymbol}<lightning-formatted-number value={CumulativeData.q4} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                            </lightning-formatted-number> 
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>    
+        </lightning-card>
+
+        
+        <div id="filterOptions" style="display: flex; align-items: center;">
+
+            <!--<label for="filterOptions" style="font-size: 16px;font-weight: bold;margin-right: 10px;">Filter:</label>-->
+
+            <lightning-combobox 
+                name="myCombobox" 
+                value={value9} 
+                placeholder="Filter" 
+                options={options9} 
+                onchange={handleChangeFilter}
+                style="margin-right: 10px;">
+            </lightning-combobox>
+            
+            <template if:true={displayFilterInput}>
+                <lightning-input 
+                    value={filterText} 
+                    onchange={handleFilterChange}
+                    style="margin-right: 10px;">
+                </lightning-input>
+            </template>
+
+            <template if:false={displayFilterInput}>
+                <lightning-combobox 
+                    name="myCombobox1" 
+                    value={filterText} 
+                    placeholder="Select" 
+                    options={filterOptions} 
+                    onchange={handleFilterChange}
+                    style="margin-right: 10px;">
+                </lightning-combobox>
+            </template>
+            
+            <lightning-button 
+                label="Clear Filter" 
+                onclick={clearFilter} 
+                class="slds-m-top_small">
+            </lightning-button>
+        </div>
+
+        <lightning-card>
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" >
+                <thead>
+                    <tr>
+                        <template if:true={isManager}>
+                            <th class="center-text">Seller</th>
+                        </template>    
+                        <th class="center-text">Advertiser</th>
+                        <th class="center-text">Agency</th>
+                        <th class="center-text">Type</th>
+                        <th class="center-text">Channel</th>
+                        <th class="center-text">Trading Deal</th>
+                        <!-- Bookings -->
+                        <th colspan="2" class="booking-header center-text">Bookings</th>
+                        <!-- Pipeline -->
+                        <th colspan="2" class="pipeline-header center-text">Pipeline</th>
+                        <th class="forecast-header center-text" >Product Forecasts</th>
+                        <th>Change Ownership/</th>
+                    </tr>
+                    <tr>
+                        <!-- Empty Columns -->
+                        <template if:true={isManager}>
+                            <th></th>
+                        </template>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <!-- Booking Quarters -->
+                        <th  class="booking-header center-text">Current Year</th>
+                        <th  class="booking-header center-text">Next Year</th>
+
+                        <!-- Pipeline Quarters -->
+                        <th class="pipeline-header center-text">Current Quarter</th>
+                        <th class="pipeline-header center-text">Next Quarter</th>
+                        <th class="forecast-header center-text" ></th>
+                        <th>Remove Relationship</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={returnData} for:item="row">
+                        <template if:true={row.isDisplayed}>
+                            <!-- Main Row (Clickable to toggle) -->
+                            <tr key={row.Id} >
+                                <template if:true={isManager}>
+                                    <td class="top-aligned">
+                                        {row.Seller}
+                                    </td>
+                                </template>
+                                <td class="top-aligned" >
+                                    {row.Advertiser}
+                                </td>
+                                <td class="top-aligned">{row.Agency}</td>
+                                <td class="top-aligned">{row.Type}</td>
+                                <!--<td class="top-aligned">{row.Channel}</td>-->
+
+                                <td class="top-aligned">
+                                    <lightning-combobox 
+                                        class="custom-combobox"
+                                        label=""
+                                        name="channel" 
+                                        placeholder="Select an option"
+                                        value={row.Channel}
+                                        options={options}
+                                        data-id = {row.Id}
+                                        onchange={handleChannelChange}>
+                                    </lightning-combobox>
+                                </td>
+
+                                <!--<td class="top-aligned">{row.TradingDeal}</td>-->
+                                <td class="top-aligned center-text">
+                                    <lightning-input type="checkbox" checked={row.TradingDeal} data-id = {row.Id} onchange={handleTypeChange}></lightning-input>
+                                </td>    
+                                <!-- Bookings -->
+                                <td class="top-aligned">
+                                    {currencySymbol}<lightning-formatted-number value={row.BookingsCurrentYear} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                                    </lightning-formatted-number> 
+                                </td>
+                                <td class="top-aligned">
+                                    {currencySymbol}<lightning-formatted-number value={row.BookingsNextYear} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                                    </lightning-formatted-number> 
+                                </td>
+
+                                <!-- Pipeline -->
+                                <td class="top-aligned">
+                                    {currencySymbol}<lightning-formatted-number value={row.PipelineCurrentQuarter} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                                    </lightning-formatted-number> 
+                                </td>
+                                <td class="top-aligned">
+                                    {currencySymbol}<lightning-formatted-number value={row.PipelineNextQuarter} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                                    </lightning-formatted-number> 
+                                </td>
+                                <td class="center-text">
+                                    <p>{row.ForecastSum}</p>
+                                    <template if:true={row.isExpanded}>
+                                        <lightning-button-icon 
+                                            icon-name=utility:chevronup
+                                            alternative-text="Toggle Details"
+                                            variant="bare"
+                                            onclick={toggleRow}
+                                            data-id = {row.Id}>
+                                        </lightning-button-icon>
+                                    </template>
+
+                                    <template if:false={row.isExpanded}>
+                                        <lightning-button-icon 
+                                            icon-name=utility:chevrondown
+                                            alternative-text="Toggle Details"
+                                            variant="bare"
+                                            onclick={toggleRow}
+                                            data-id = {row.Id}>
+                                        </lightning-button-icon>
+                                    </template>
+                                </td>
+                                <td>
+                                    <!--<template if:true={isManager}>-->
+                                        <div>
+                                            <!-- Button to trigger popup -->
+                                            <lightning-button label="Change" data-name={row.Advertiser} data-id={row.Id} onclick={openModal} variant="brand" style="margin-right: 10px;"></lightning-button>
+                                            <lightning-button label="Remove" data-id={row.SOId} onclick={removeAAR} variant="brand"></lightning-button>
+
+                                        </div>
+                                    <!--</template>-->
+                                </td>
+                            </tr>
+
+                            <!-- Collapsible Row (Hidden by default) -->
+                            <template if:true={row.isExpanded}>
+
+                                <tr key={row.Id}>
+                                    <td colspan="11">
+                                        
+                                                <table>
+
+                                                    <thead>
+                                                        <tr>
+                                                            <template if:true={isManager}>
+                                                                <th class="forecast-header center-text">Split Owner</th>
+                                                            </template>
+                                                            <th class="forecast-header center-text">Product</th>
+                                                            <!-- Forecast Quarters -->
+                                                            <th class="forecast-header center-text">Q1 {currentYear}</th>
+                                                            <th class="forecast-header center-text">Q1 {nextYear}</th>
+                                                            <th class="forecast-header center-text">Q2 {currentYear}</th>
+                                                            <th class="forecast-header center-text">Q2 {nextYear}</th>
+                                                            <th class="forecast-header center-text">Q3 {currentYear}</th>
+                                                            <th class="forecast-header center-text">Q3 {nextYear}</th>
+                                                            <th class="forecast-header center-text">Q4 {currentYear}</th>
+                                                            <th class="forecast-header center-text">Q4 {nextYear}</th>
+                                                            <th class="forecast-header">Add/Remove</th>
+                                                        </tr>
+
+
+                                                    </thead>  
+                                                    
+                                                    <tbody>
+
+                                                        <template if:true={row.displayProducts} for:each={row.ForecastList} for:item="product">
+                                                            <tr  key={product.Id} >
+
+                                                                <template if:true={isManager}>
+                                                                    <td class="top-aligned">
+                                                                        {product.OwnerName}
+                                                                    </td>
+                                                                </template>
+
+                                                                <td>
+                                                                    <lightning-combobox 
+                                                                        name="product" 
+                                                                        placeholder="Select an option"
+                                                                        value={product.name}
+                                                                        options={products}
+                                                                        data-id = {product.Id}
+                                                                        data-row = {row.Id}
+                                                                        onchange={handleProductChange}>
+                                                                    </lightning-combobox>
+                                                                </td>    
+                                                                <td>
+                                                                    <lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q1} onchange={handleQ1Change}></lightning-input>
+                                                                </td>
+                                                                <td>
+                                                                    <lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q11} onchange={handleQ11Change}></lightning-input>
+                                                                </td>
+                                                                <td>
+                                                                    <lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q2} onchange={handleQ2Change}></lightning-input>
+                                                                </td>
+                                                                <td>
+                                                                    <lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q21} onchange={handleQ21Change}></lightning-input>
+                                                                </td>
+                                                                <td>
+                                                                    <lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q3} onchange={handleQ3Change}></lightning-input>
+                                                                </td>
+                                                                <td>
+                                                                    <lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q31} onchange={handleQ31Change}></lightning-input>
+                                                                </td>
+                                                                <td>
+                                                                    <lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q4} onchange={handleQ4Change}></lightning-input>
+                                                                </td>
+                                                                <td>
+                                                                    <lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q41} onchange={handleQ41Change}></lightning-input>
+                                                                </td>
+                                                                <td style="width: 40px; text-align: left;">
+                                                                    <lightning-button-icon 
+                                                                        icon-name='action:delete'
+                                                                        alternative-text="Remove" 
+                                                                        variant="bare" 
+                                                                        size="small" 
+                                                                        data-id = {product.Id}
+                                                                        data-row = {row.Id}
+                                                                        onclick={handleDelete}>
+                                                                    </lightning-button-icon>
+
+                                                                    <template if:true={product.displayAdd}>
+                                                                        <lightning-button-icon 
+                                                                            icon-name='action:new'
+                                                                            alternative-text="Add" 
+                                                                            variant="bare" 
+                                                                            size="medium" 
+                                                                            data-id = {row.Id}
+                                                                            onclick={handleAdd}>
+                                                                        </lightning-button-icon>
+                                                                    </template>
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        </template>
+                                                        <template if:false={row.displayProducts}>
+                                                            <tr  key={row.Id} >
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td  style="display: flex; justify-content: flex-end;">
+                                                                    <lightning-button-icon 
+                                                                        icon-name='action:new'
+                                                                        alternative-text="Add" 
+                                                                        variant="bare" 
+                                                                        size="medium" 
+                                                                        data-id = {row.Id}
+                                                                        onclick={handleAdd}>
+                                                                    </lightning-button-icon>
+                                                                </td>
+                                                            </tr>
+                                                        </template>
+                                                    </tbody>
+                                                </table>
+                                        
+                                        
+                                    </td>
+                                </tr>
+                            </template>
+                        </template>
+                    </template>
+                </tbody>
+            </table>
+        </lightning-card>
+        </div>
+    <!-- Footer Slot for Bottom-Right Button -->
+        <div slot="footer" style="z-index: 2000" class=" footer  slds-text-align_right">
+            <lightning-button label="Submit" variant="brand" onclick={submit}></lightning-button>
+        </div>
+
+    </lightning-card>
+</template>

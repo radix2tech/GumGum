@@ -1,0 +1,687 @@
+<apex:page standardController="Opportunity" extensions="EB_OpportunityProductsExt" showHeader="false" sidebar="true" lightningstylesheets="true">
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"/>
+    <script>
+        j$ = jQuery.noConflict();
+        
+        function showSavingDivAddNewProduct() {
+            var newHeight = j$("[id$=productAddBlock]").height();
+            j$("[id$=saving-curtain-div]").css("height", "100%");
+        }     
+        function showSavingDivEditProduct() {
+            var newHeight = j$("[id$=productEditBlock]").height();
+            j$("[id$=saving-curtain-div]").css("height", "100%");
+        }
+        function showSavingDivSchedule() {
+            var newHeight = j$("[id$=scheduleEditBlock]").height();
+            j$("[id$=saving-curtain-div]").css("height", "100%");
+        }
+        function hideSavingDiv() {
+            j$("[id$=saving-curtain-div]").css("height", "0px");
+        }
+        function reCalcSchedule(unitPriceStr, firstRun) {
+            var divider = unitPriceStr.indexOf('thousand') > 0 ? 1000 : 1;
+            var totalQuantity = 0;
+            var unitPrice = unitPriceStr.replace(" per thousand", "");
+            unitPrice = Number(unitPrice.replace(/[^\d\.\-\ ]/g, ''));
+            var newRevenueList = [];
+            j$("[id$=inputScheduleQuantity]").each(function() {
+                var newQuantity = Number(this.value.replace(/[^\d\.\-\ ]/g, ''));
+                totalQuantity += newQuantity;
+                this.value = numberToString(newQuantity);
+                newRevenueList.push(numberToStringDecimal((newQuantity/divider) * unitPrice));
+            });
+            totalRevenue = (totalQuantity/divider) * unitPrice;
+            remainingRevenue = totalRevenue;
+            for (i=0;i<newRevenueList.length;i++) {
+                var revenue =  Number(newRevenueList[i].replace(/[^\d\.\-\ ]/g, ''));
+                remainingRevenue -= revenue;
+                if (i == newRevenueList.length - 1) {
+                    newRevenueList[i] = numberToStringDecimal(revenue + remainingRevenue);
+                }
+            }
+            if (!firstRun) {
+                var i = 0;
+                j$("[id$=outputScheduleRevenue]").each(function() {
+                    this.innerHTML = "$" + newRevenueList[i];
+                    i++;
+                });
+                var i = 0;
+                j$("[id$=inputScheduleRevenue]").each(function() {
+                    this.value = Number(newRevenueList[i].replace(/[^\d\.\-\ ]/g, ''));
+                    i++;
+                });
+            }
+            document.getElementById("scheduleRevenueTotal").innerHTML = ": $" + numberToString(numberToStringDecimal(totalRevenue));
+            document.getElementById("scheduleQuantityTotal").innerHTML = ": " + numberToString(totalQuantity);
+        }
+        function numberToString(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+        function numberToStringDecimal(num) {
+            var numArray = num.toString().split(".");
+            var numString = '';
+            if (numArray.length == 1) {
+                numString = numArray[0] + ".00";
+            } else {
+                if (numArray[1].length == 1) {
+                    numString = numArray[0] + "." + numArray[1] + "0";
+                } else {
+                    numString = numArray[0] + "." + numArray[1].substring(0,2);
+                }
+            }
+            return numString;
+        }
+        function updateAddPriceLabel() {
+            var pricing = j$("[id$=selectedPricingAdd]").val();
+            var priceLabel = "Price";
+            if (pricing == "CPM" || pricing == "VCPM") {
+                priceLabel += " per thousand";
+            }
+            j$("[id$=addPriceLabel]").html(priceLabel);
+        }       
+        function updateEditPriceLabel() {
+            var pricing = j$("[id$=selectedPricingEdit]").val();
+            var priceLabel = "Price";
+            if (pricing == "CPM" || pricing == "VCPM") {
+                priceLabel += " per thousand";
+            }
+            j$("[id$=editPriceLabel]").html(priceLabel);
+        }
+    </script>
+    
+    <style>
+        #saving-curtain-div {  
+            background-color:black;
+            opacity: 0.20;
+            filter: alpha(opacity = 20);
+            position: absolute;
+            width: 100%;
+            height: 0%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+            //-webkit-transition: all 0.30s ease-out;
+            //-moz-transition: all 0.30s ease-out;
+        }
+        
+        .right-align {
+            text-align: right;
+        }
+        
+        .headerTitle{
+                text-transform: capitalize;
+         }
+        
+          .headerRow, .slds-vf-scope .headerRow {
+              font-size: .75rem;
+              line-height: 1.25;
+              color: rgb(68, 68, 68);
+              text-transform: capitalize;
+              letter-spacing: 0.0625rem;
+        }
+         .warning{
+          color: rgb(255, 00, 0);
+        }
+    </style>
+    <apex:slds /> 
+    <apex:outputPanel id="sectionHeader">
+        <apex:sectionHeader title="{!headerTitle}" subtitle="{!headerSubTitle}"/>
+    </apex:outputPanel>
+    
+    <apex:outputPanel id="savingCurtainDivContainer">
+        <div id="saving-curtain-div" class="savingDiv"/>
+    </apex:outputPanel>
+    
+    <apex:form rendered="{!selectPricebook}" >
+        <apex:commandLink action="{!returnToOpportunity}" value="Return to Opportunity"></apex:commandLink>
+        <apex:pageBlock title="Select Price Book for {!opp.Name}">
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Use Standard Price Book" action="{!savePricebook}"/>
+                <apex:commandButton value="Return to Opportunity" action="{!returnToOpportunity}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="1">
+                <apex:outputText >This opportunity currently is not set to use the Standard Price Book.  Click 'Use Standard Price Book' to continue.</apex:outputText>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+    
+    <apex:form rendered="{!!selectPricebook}" >
+        <apex:outputPanel id="returnLink">
+            <apex:commandLink action="{!returnToOpportunity}" value="Return to Opportunity" rendered="{!doRenderCurrentProducts}"/>
+            <apex:commandLink action="{!resetPage}" value="Return to Products" rendered="{!doRenderProductAdd || doRenderScheduleView || (doRenderProductEdit && editProductReturn == 'products')}" reRender="currentOppProducts, productAdd, productEdit, scheduleView, scheduleEdit, savingCurtainDivContainer, sectionHeader, returnLink"/>
+            <apex:commandLink action="{!renderScheduleView}" value="Return to Schedule" rendered="{!doRenderScheduleEdit || (doRenderProductEdit && editProductReturn == 'schedule')}" reRender="currentOppProducts, productAdd, productEdit, scheduleView, scheduleEdit, savingCurtainDivContainer, sectionHeader, returnLink"/>
+        </apex:outputPanel>
+     
+        <apex:outputPanel id="productAdd">
+            <apex:pageBlock rendered="{!doRenderProductAdd}" id="productAddBlock">
+                <apex:pageBlockButtons location="both">
+                    <apex:actionStatus id="saveNewProduct" onStart="showSavingDivAddNewProduct();" onStop="hideSavingDiv();" startText="Saving product ... " stopText=""/>
+                    <apex:commandButton value="Save Product" action="{!saveNewProduct}" reRender="currentOppProducts, productAdd, productEdit, scheduleView, scheduleEdit, savingCurtainDivContainer, sectionHeader, returnLink" status="saveNewProduct"/>
+                    <apex:commandButton value="Cancel" action="{!resetPage}" reRender="currentOppProducts, productAdd, productEdit, scheduleView, scheduleEdit, savingCurtainDivContainer, sectionHeader, returnLink"/>
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection columns="1">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Price Book"/>
+                        <apex:outputText value="{!objPb.Name}"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem rendered="{!IF(!CONTAINS($Profile.Name,'Playground'), true, false)}">
+                        <apex:outputLabel value="Revenue Change" id="incremental"/>
+                         <apex:selectList value="{!incremental}" multiselect="false" size="1">
+                            <apex:selectOptions value="{!incrementalOptions}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem rendered="{!IF(!CONTAINS($Profile.Name,'Playground'), true, false)}">
+                        <apex:outputLabel value="Custom Creative" id="customcreative"/>
+                        <apex:inputCheckbox value="{!customCreative}"/>
+                    </apex:pageBlockSectionItem>
+                    <!--<apex:pageBlockSectionItem rendered="{!IF(!CONTAINS($Profile.Name,'Playground'), true, false)}">
+                        <apex:outputLabel value="Lightbox" id="lightbox" />
+                        <apex:inputCheckbox value="{!lightbox}"/> 
+                    </apex:pageBlockSectionItem>-->
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Start Date"/>
+                        <apex:inputField value="{!opp.Start_Date__c}"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="End Date"/>
+                        <apex:inputField value="{!opp.End_Date__c}"/> 
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Pricing"/>
+                        <apex:selectList value="{!pricingOption}" multiselect="false" size="1" id="selectedPricingAdd" onchange="updateAddPriceLabel();">
+                            <apex:selectOptions value="{!pricingOptions}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem rendered="{!pricingError}">
+                        <apex:outputLabel />
+                        <apex:outputLabel value="The pricing must be selected." styleClass="warning"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Product"/>
+                        <apex:selectList value="{!productOption}" multiselect="false" size="1">
+                            <apex:selectOptions value="{!productOptions}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem rendered="{!productError}">
+                        <apex:outputLabel />
+                        <apex:outputLabel value="The product must be selected." styleClass="warning"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem rendered="{!IF(!CONTAINS($Profile.Name,'Playground'), true, false)}">
+                        <apex:outputLabel value="Product Description"/>
+                        <apex:inputText value="{!strProductDescription}"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Quantity"/> 
+                        <apex:inputText value="{!strQuantForCpm}"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem rendered="{!quantityError}">
+                        <apex:outputLabel />
+                        <apex:outputLabel value="The Quantity field must contain a number." styleClass="warning"/>
+                    </apex:pageBlockSectionItem>
+                   <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Total Price" />
+                        <apex:inputText value="{!strTotalPrice}"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem rendered="{!priceError}">
+                        <apex:outputLabel />
+                        <apex:outputLabel value="The Price field must contain a number." styleClass="warning"/>
+                    </apex:pageBlockSectionItem> 
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Verity Deal ID" />
+                        <apex:inputText value="{!verityDealId}"/>
+                    </apex:pageBlockSectionItem>
+                    
+                    <!--<apex:pageBlockSectionItem rendered="{!IF(!CONTAINS($Profile.Name,'Playground'), true, false)}">
+                        <apex:outputLabel value="Extended Animation" id="extendedanimation"/>
+                        <apex:inputCheckbox value="{!extendedAnimation}"/>
+                    </apex:pageBlockSectionItem>-->                    
+                    
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+        
+        <apex:outputPanel id="productEdit">
+            <apex:pageBlock title="Edit Product" rendered="{!doRenderProductEdit}" id="productEditBlock">
+                <apex:pageBlockSection columns="1">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Price Book"/>
+                        <apex:outputText value="{!objPb.Name}"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem rendered="{!IF(!CONTAINS($Profile.Name,'Playground'), true, false)}">
+                        <apex:outputLabel value="Revenue Change" id="incremental"/>
+                        <apex:inputField value="{!oppProductToWorkWith.Incremental_New__c}"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem rendered="{!IF(!CONTAINS($Profile.Name,'Playground'), true, false)}">
+                        <apex:outputLabel value="Custom Creative"/>
+                        <apex:inputField value="{!oppProductToWorkWith.Custom_Creative__c}" id="customcreative"/>
+                    </apex:pageBlockSectionItem>
+                    <!--<apex:pageBlockSectionItem rendered="{!IF(!CONTAINS($Profile.Name,'Playground'), true, false)}">
+                        <apex:outputLabel value="Lightbox" id="lightbox"/>
+                        <apex:inputCheckbox value="{!oppProductToWorkWith.Lightbox__c}"/>
+                    </apex:pageBlockSectionItem>-->
+                    
+                   <!-- <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Start Date"/>
+                        <apex:inputField value="{!oppProductToWorkWith.Start_Date__c}" id="start-date"/>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="End Date"/>
+                        <apex:inputField value="{!oppProductToWorkWith.End_Date__c}" id="end-date"/> 
+                    </apex:pageBlockSectionItem> -->
+                    
+                    <apex:pageBlockSectionItem rendered="{!IF(hasActuals,true,false)}">
+                        <apex:outputLabel value="Start Date"/>
+                        <apex:inputField value="{!oppProductToWorkWith.Start_Date__c}" id="start-date" html-disabled="true"/> 
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem rendered="{!!IF(hasActuals,true,false)}">
+                        <apex:outputLabel value="Start Date"/>
+                        <apex:inputField value="{!oppProductToWorkWith.Start_Date__c}" id="start-date"/> 
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="End Date"/>
+                        <apex:inputField value="{!oppProductToWorkWith.End_Date__c}" id="end-date"/> 
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel />
+                        <div id="disabledMessage" style="display:none; color: red;">
+                        </div>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Pricing"/>
+                        <apex:selectList value="{!oppProductToWorkWith.Pricing__c}" multiselect="false" size="1" id="selectedPricingEdit" onchange="updateEditPriceLabel();">
+                            <apex:selectOptions value="{!pricingOptions}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Product"/>
+                        <apex:selectList value="{!productOption}" multiselect="false" size="1">
+                            <apex:selectOptions value="{!productOptions}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem rendered="{!IF(!CONTAINS($Profile.Name,'Playground'), true, false)}">
+                        <apex:outputLabel value="Description"/>
+                        <apex:inputField value="{!oppProductToWorkWith.Description}"/> 
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Quantity"/> 
+                        <apex:inputField value="{!oppProductToWorkWith.Quantity}" id="product-quantity"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Total Price Old"/>
+                        <apex:inputField value="{!oppProductToWorkWith.TotalPrice}" id="product-price"/> 
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Total Price New"/>
+                        <apex:inputField value="{!oppProductToWorkWith.Total_Price_Custom__c}" id="product-price"/> 
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputText value="" id="fixed-schedule-explanation"/>
+                        <apex:outputText value="Check the following option to keep the quantity scheduled the way it was before the start or end date was changed."/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem id="fixed-schedule-option">
+                        <apex:outputLabel value="Keep Product Schedule Fixed"/>
+                        <apex:inputCheckbox value="{!fixedSchedule}" id="fixed-schedule"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Verity Deal ID" />
+                        <apex:inputText value="{!oppProductToWorkWith.Verity_Deal_ID__c}"/>
+                    </apex:pageBlockSectionItem>
+                    
+                    <!--<apex:pageBlockSectionItem rendered="{!IF(!CONTAINS($Profile.Name,'Playground'), true, false)}">
+                        <apex:outputLabel value="Extended Animation"/>
+                        <apex:inputField value="{!oppProductToWorkWith.Extended_Animation__c}" id="extendedanimation"/>
+                    </apex:pageBlockSectionItem>  -->                             
+                </apex:pageBlockSection>
+                <apex:pageBlockButtons location="top">
+                    <apex:actionStatus id="saveProduct" onStart="showSavingDivEditProduct();" onStop="hideSavingDiv();" startText="Saving product ... " stopText=""/>
+                    <apex:commandButton id="saveProdcutEditPageButton" value="Save Product"  rendered="{!renderSaveProductForVideoSoultionProducts}" action="{!saveProduct}" reRender="currentOppProducts, productAdd, productEdit, scheduleView, scheduleEdit, savingCurtainDivContainer, sectionHeader, returnLink" status="saveProduct" onclick="if(!fixedSchedule && !confirm('The schedule will be reestablished and any modifications to Verity Revenue on the Schedules will be lost.  Do you want to proceed?')){return false;}"/>
+                    <apex:commandButton value="Save Product" rendered="{!!renderSaveProductForVideoSoultionProducts}" action="{!saveProduct}" reRender="currentOppProducts, productAdd, productEdit, scheduleView, scheduleEdit, savingCurtainDivContainer, sectionHeader, returnLink" status="saveProduct" onclick="if(!fixedSchedule && !confirm('When you change the product,the schedule will be reestablished and any modifications to the schedule will be lost.  Do you want to proceed?')){return false;}"/>
+                    
+                    <apex:commandButton value="Cancel" action="{!resetPage}" reRender="currentOppProducts, productAdd, productEdit, scheduleView, scheduleEdit, savingCurtainDivContainer, sectionHeader, returnLink"/>
+                </apex:pageBlockButtons>
+                <script>
+                    updateEditPriceLabel(); 
+                    var fixedSchedule = false;
+                    var originalStartDate = j$("[id$=start-date]").val();
+                    var originalEndDate = j$("[id$=end-date]").val();
+                    var originalQuantity = j$("[id$=product-quantity]").val();
+                    var originalPrice = j$("[id$=product-price]").val();
+                    j$("[id$=fixed-schedule]").parent().parent().hide()
+                    j$("[id$=fixed-schedule-explanation]").parent().parent().hide()
+                    j$("[id$=start-date]").on('change', function() { toggleFixed(); });
+               		j$("[id$=end-date]").on('change', function() { toggleFixed(); });
+               		j$("[id$=end-date]").on('change', function() { endDateChanged(); });
+               		j$("[id$=product-quantity]").on('change', function() { toggleFixed(); });
+                    j$("[id$=product-price]").on('change', function() { toggleFixed(); });
+
+                    j$("[id$=fixed-schedule]").on('click', function() { fixedSchedule = j$("[id$=fixed-schedule]").prop('checked'); });
+                    
+                    function toggleFixed() {
+                        if (originalQuantity == j$("[id$=product-quantity]").val() && originalPrice == j$("[id$=product-price]").val()) {                        
+                            j$("[id$=fixed-schedule]").parent().parent().show()
+                            j$("[id$=fixed-schedule-explanation]").parent().parent().show()
+                            newStartDate = j$("[id$=start-date]").val();
+                            newEndDate = j$("[id$=end-date]").val();
+                            if ((newStartDate == originalStartDate && newEndDate == originalEndDate) || (newStartDate.split('/')[0] != originalStartDate.split('/')[0] || newEndDate.split('/')[0] != originalEndDate.split('/')[0])) {
+                                j$("[id$=fixed-schedule]").parent().parent().hide()
+                                j$("[id$=fixed-schedule-explanation]").parent().parent().hide()
+                                j$("[id$=fixed-schedule]").prop('checked', false);
+                                fixedSchedule = false;
+                            }
+                        } else {
+                            j$("[id$=fixed-schedule]").parent().parent().hide()
+                            j$("[id$=fixed-schedule-explanation]").parent().parent().hide()
+                            j$("[id$=fixed-schedule]").prop('checked', false);
+                            fixedSchedule = false;
+                        }
+                    }
+                
+                function endDateChanged(){
+                    console.log("{!hasActuals}");
+                    if({!hasActuals}){
+                        var newEndDate = new Date(j$("[id$=end-date]").val());
+                        var messageDiv = document.querySelector("[id$='disabledMessage']");
+                        var maxScheduleDate = new Date("{!maxActualScheduleDateString}");
+                        var btn = document.querySelector("[id$='saveProdcutEditPageButton']");
+                        if(newEndDate<maxScheduleDate){
+                            console.log("New End Date should be Greater than the Maximum Schedule Date");
+                            btn.disabled = true;
+                            messageDiv.style.display = 'block';
+                            var formattedMaxActualScheduleDate = (maxScheduleDate.getMonth() + 1).toString().padStart(2, '0') + '/' + maxScheduleDate.getDate().toString().padStart(2, '0') + '/' + maxScheduleDate.getFullYear();
+                            messageDiv.innerText = "The End Date should be greater than the maximum actual Schedule Date - " + formattedMaxActualScheduleDate;
+                            
+                        }else{
+                            messageDiv.style.display = 'none';
+                            btn.disabled = false;
+                        }
+                    }
+                }
+
+                </script>
+            </apex:pageBlock>
+        </apex:outputPanel>
+        
+        <apex:outputPanel id="scheduleView">
+            <apex:pageBlock rendered="{!doRenderScheduleView}" id="scheduleEditBlock">
+                <apex:pageBlockButtons location="top">
+                    <apex:commandButton value="Edit Schedule" action="{!renderScheduleEdit}" reRender="currentOppProducts, productAdd, productEdit, scheduleView, scheduleEdit, savingCurtainDivContainer, sectionHeader, returnLink">
+                        <apex:param name="scheduleId" value="{!oppProductToWorkWith.Id}" assignTo="{!oppProductScheduleToEditId}"/>
+                    </apex:commandButton>
+                    <apex:commandButton value="Edit Product" action="{!renderProductEditFromSchedule}" reRender="currentOppProducts, productAdd, productEdit, scheduleView, scheduleEdit, savingCurtainDivContainer, sectionHeader, returnLink">
+                        <apex:param name="oppProductToWorkWithId" value="{!oppProductToWorkWith.Id}" assignTo="{!oppProductToWorkWithId}"/>
+                    </apex:commandButton>
+                    <apex:commandButton value="Return to Products" action="{!resetPage}" reRender="currentOppProducts, productAdd, productEdit, scheduleView, scheduleEdit, savingCurtainDivContainer, sectionHeader, returnLink"/>
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection >
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Start Date</apex:outputLabel>
+                        <apex:outputText value="{0,date,M'/'d'/'yyyy}">
+                            <apex:param value="{!oppProductToWorkWith.Start_Date__c}" /> 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Pricing</apex:outputLabel>
+                        <apex:outputText value="{0}">
+                            <apex:param value="{!oppProductToWorkWith.Pricing__c}" /> 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >End Date</apex:outputLabel>
+                        <apex:outputText value="{0,date,M'/'d'/'yyyy}">
+                            <apex:param value="{!oppProductToWorkWith.End_Date__c}" /> 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Quantity</apex:outputLabel>
+                        <apex:outputText value="{0}">
+                            <apex:param value="{!oppProductToWorkWith.Quantity}" /> 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel />
+                        <apex:outputText />
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Unit Price</apex:outputLabel>
+                        <apex:outputText value="{0,number,'{!currencySymbol}'#,##0.00000}{!IF(oppProductToWorkWith.Pricing__c=='CPM' || oppProductToWorkWith.Pricing__c=='VCPM', ' per thousand', '')}">
+                            <apex:param value="{!oppProductToWorkWith.Unit_Price__c}" />
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel />
+                        <apex:outputText />
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Total Price</apex:outputLabel>
+                        <apex:outputText value="{0,number,'{!currencySymbol}'#,##0.00}">
+                            <apex:param value="{!oppProductToWorkWith.TotalPrice}" /> 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel />
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel />
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection columns="1">
+                    <apex:pageBlockTable value="{!oppProductScheduleToView}" var="olis">
+                        <apex:column headerValue="Date">
+                            <apex:outputText value="{0,date,MMM' 'yyyy}">
+                                <apex:param value="{!olis.ScheduleDate}" /> 
+                            </apex:outputText>
+                        </apex:column>
+                        <apex:column headerValue="Quantity" headerClass="right-align" styleClass="right-align">
+                            <apex:outputText value="{0}">
+                                <apex:param value="{!olis.Quantity}" /> 
+                            </apex:outputText>
+                        </apex:column>
+                        <apex:column headerValue="Revenue" headerClass="right-align" styleClass="right-align">
+                            <apex:outputText value="{0,number,'{!currencySymbol}'#,##0.00}">
+                                <apex:param value="{!olis.Revenue}" /> 
+                            </apex:outputText>
+                        </apex:column>
+                         <apex:column headerValue="Verity Amount" headerClass="right-align" styleClass="right-align">
+                            <apex:outputText value="{0,number,'{!currencySymbol}'#,##0.00}">
+                                <apex:param value="{!olis.Verity_Revenue__c}" /> 
+                            </apex:outputText>
+                        </apex:column>
+                        <apex:column headerValue="Comments">
+                            <apex:outputText value="{0}">
+                                <apex:param value="{!olis.Description}" /> 
+                            </apex:outputText>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+        
+        <apex:outputPanel id="scheduleEdit">
+            <apex:pageBlock rendered="{!doRenderScheduleEdit}">
+                <apex:pageBlockButtons location="bottom">
+                    <apex:actionStatus id="saveSchedule" onStart="showSavingDivSchedule();" onStop="hideSavingDiv();" startText="Saving schedule ... " stopText=""/>
+                    <apex:commandButton value="Save" action="{!saveSchedule}" reRender="currentOppProducts, productAdd, productEdit, scheduleView, scheduleEdit, savingCurtainDivContainer, sectionHeader, returnLink" status="saveSchedule"/>
+                    <apex:commandButton value="Cancel" action="{!renderScheduleView}" reRender="currentOppProducts, workWIthOppProduct, scheduleView, scheduleEdit, savingCurtainDivContainer, sectionHeader">
+                        <apex:param name="scheduleId" value="{!oppProductToWorkWith.Id}" assignTo="{!oppProductScheduleToViewId}"/>
+                    </apex:commandButton>
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection >
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Start Date</apex:outputLabel>
+                        <apex:outputText value="{0,date,M'/'d'/'yyyy}">
+                            <apex:param value="{!oppProductToWorkWith.Start_Date__c}" /> 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Pricing</apex:outputLabel>
+                        <apex:outputText value="{0}">
+                            <apex:param value="{!oppProductToWorkWith.Pricing__c}" /> 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >End Date</apex:outputLabel>
+                        <apex:outputText value="{0,date,M'/'d'/'yyyy}">
+                            <apex:param value="{!oppProductToWorkWith.End_Date__c}" /> 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Quantity</apex:outputLabel>
+                        <apex:outputText value="{0}">
+                            <apex:param value="{!oppProductToWorkWith.Quantity}" />  After edits<span id='scheduleQuantityTotal'></span> | Original: 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel />
+                        <apex:outputText />
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Unit Price</apex:outputLabel> 
+                        <apex:outputText value="{0,number,'{!currencySymbol}'#,##0.00000}{!IF(oppProductToWorkWith.Pricing__c=='CPM' || oppProductToWorkWith.Pricing__c=='VCPM', ' per thousand', '')}">
+                            <apex:param value="{!oppProductToWorkWith.Unit_Price__c}" /> 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel />
+                        <apex:outputText />
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Total Price</apex:outputLabel>
+                        <apex:outputText value="{0,number,'{!currencySymbol}'#,##0.00}"> After edits<span id='scheduleRevenueTotal'></span> | Original: 
+                            <apex:param value="{!oppProductToWorkWith.TotalPrice}" /> 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel />
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel />
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+
+                <apex:pageBlockSection columns="1">
+                    <apex:dataTable value="{!oppProductScheduleToEdit}" var="olis" styleClass="tabularEditElement" >
+                        <apex:column >
+                            <apex:facet name="header">Date</apex:facet>
+                            <apex:outputText value="{0,date,MMM' 'yyyy}">
+                                <apex:param value="{!olis.ScheduleDate}" /> 
+                            </apex:outputText>
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">Quantity</apex:facet>
+                            <apex:inputField value="{!olis.Quantity}" id="inputScheduleQuantity" onchange="reCalcSchedule('{!oppProductToWorkWith.Unit_Price__c}{!IF(oppProductToWorkWith.Pricing__c=='CPM' || oppProductToWorkWith.Pricing__c=='VCPM', ' per thousand', '')}', false)"/>
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">Revenue</apex:facet>
+                            <apex:inputHidden id="inputScheduleRevenue" value="{!olis.Revenue}"/>
+                            <span id="outputScheduleRevenue">{!currencySymbol}{!olis.Revenue}</span>
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">Verity Amount</apex:facet>
+                            <apex:inputField value="{!olis.Verity_Revenue__c}"/>
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">Comments</apex:facet>
+                            <apex:inputField value="{!olis.Description}"/>
+                        </apex:column>
+                    </apex:dataTable>
+                </apex:pageBlockSection>
+                <script type="text/javascript">
+                    reCalcSchedule("{!oppProductToWorkWith.Unit_Price__c}{!IF(oppProductToWorkWith.Pricing__c == 'CPM' || oppProductToWorkWith.Pricing__c == 'VCPM', ' per thousand', '')}", true);
+                </script>
+            </apex:pageBlock>
+        </apex:outputPanel>
+        
+        <apex:outputPanel id="currentOppProducts" >
+            
+            <apex:pageBlock title="{!objPb.Name}"  rendered="{!doRenderCurrentProducts}"> 
+                <apex:pageBlockButtons location="top" >
+                    <apex:commandButton value="Add Product" action="{!renderProductAdd}" reRender="currentOppProducts, productAdd, productEdit, scheduleView, scheduleEdit, savingCurtainDivContainer, sectionHeader, returnLink"/>
+                    <apex:commandButton value="Return to Opportunity" action="{!returnToOpportunity}"/>
+                </apex:pageBlockButtons>
+                <div class="slds-table slds-table_cell-buffer slds-vf-scope text-transform: capitalize; slds-no-row-hover slds-table_bordered slds-table_col-bordered slds-text-title" >
+                 
+                <apex:pageBlockTable value="{!oppProducts}" var="oP">
+                    
+                    <apex:column headerValue="Action" styleClass="actionColumn">
+                    
+                        <apex:commandLink value="Edit" action="{!renderProductEditFromProducts}" reRender="currentOppProducts, productAdd, productEdit, scheduleView, scheduleEdit, savingCurtainDivContainer, sectionHeader, returnLink" styleClass="actionLink">
+                            <apex:param name="oppProductToWorkWithId" value="{!oP.Id}" assignTo="{!oppProductToWorkWithId}"/>
+                        </apex:commandLink>
+                        <apex:outputText >&nbsp;|&nbsp;</apex:outputText>
+                        <apex:commandLink value="Clone" action="{!cloneProduct}" reRender="currentOppProducts, productAdd, productEdit, scheduleView, scheduleEdit, savingCurtainDivContainer, sectionHeader, returnLink" styleClass="actionLink">
+                            <apex:param name="oppProductToWorkWithId" value="{!oP.Id}" assignTo="{!oppProductToWorkWithId}"/>
+                        </apex:commandLink>
+                        <apex:outputText >&nbsp;|&nbsp;</apex:outputText>
+                        <apex:commandLink value="Del" rendered="{!IF(oP.Actual_Amount_Verity__c==null,true,IF(oP.Actual_Amount_Verity__c>0,false,true))}" action="{!deleteProduct}" reRender="currentOppProducts, productAdd, productEdit, scheduleView, scheduleEdit, savingCurtainDivContainer, sectionHeader, returnLink" styleClass="actionLink" onclick="if(!confirm('Please confirm that you want to delete this product.  This cannot be undone.')){return false;}">
+                            <apex:param name="oppProductToWorkWithId" value="{!oP.Id}" assignTo="{!oppProductToWorkWithId}"/>
+                        </apex:commandLink>
+                        <br/> <!-- <apex:outputText >&nbsp;|&nbsp;</apex:outputText>-->
+                        <apex:commandLink value="View Schedule" action="{!renderScheduleView}"  reRender="currentOppProducts, productAdd, productEdit, scheduleView, scheduleEdit, savingCurtainDivContainer, sectionHeader, returnLink" styleClass="actionLink">
+                            <apex:param name="scheduleId" value="{!oP.Id}" assignTo="{!oppProductScheduleToViewId}"/>
+                        </apex:commandLink>
+                    </apex:column>
+                   <apex:column value="{!oP.Pricing__c}" headerValue="Pricing" />   
+                    <apex:column value="{!oP.PricebookEntry.Product2.Name}{!IF(oP.Description != null, ' -- ' + oP.Description, '')}" headerValue="Product"/>
+                    <apex:column headerValue="Revenue Change" headerClass="right-align" styleClass="right-align" rendered="{!IF(!CONTAINS($Profile.Name,'Playground'), true, false)}">
+                        <apex:outputField value="{!oP.Incremental_New__c}"/>
+                    </apex:column>
+                    <apex:column rendered="{!IF(!CONTAINS($Profile.Name,'Playground'), true, false)}"> <apex:facet name="header">Custom <br/> Creative</apex:facet>
+                        <apex:outputField value="{!oP.Custom_Creative__c}"/>
+                    </apex:column>
+                    <!--<apex:column headerValue="Lightbox" headerClass="right-align" styleClass="right-align" rendered="{!IF(!CONTAINS($Profile.Name,'Playground'), true, false)}">
+                        <apex:outputField value="{!oP.Lightbox__c}"/>
+                    </apex:column>-->
+                    <apex:column headerValue="Start Date" headerClass="right-align" styleClass="right-align">
+                        <apex:outputText value="{0,date,M'/'d'/'yyyy}">
+                            <apex:param value="{!oP.Start_Date__c}" /> 
+                        </apex:outputText>
+                    </apex:column>
+                    
+                    <apex:column headerValue="End Date" headerClass="right-align" styleClass="right-align">
+                        <apex:outputText value="{0,date,M'/'d'/'yyyy}">
+                            <apex:param value="{!oP.End_Date__c}" /> 
+                        </apex:outputText>
+                    </apex:column>
+                      
+                    <apex:column headerValue="Quantity" headerClass="right-align" styleClass="right-align">
+                        <apex:outputText value="{0}">
+                            <apex:param value="{!oP.Quantity}" /> 
+                        </apex:outputText>
+                    </apex:column>
+                    <apex:column headerValue="Unit Price" headerClass="right-align" styleClass="right-align">
+                        <apex:outputText value="{0,number,'{!currencySymbol}'#,##0.00000}{!IF(oP.Pricing__c=='CPM' || oP.Pricing__c == 'VCPM', ' per thousand', '')}">
+                            <apex:param value="{!oP.Unit_Price__c}" />  
+                        </apex:outputText>
+                    </apex:column>
+                    <apex:column headerValue="Total Price" headerClass="right-align" styleClass="right-align">
+                        <apex:outputText value="{0,number,'{!currencySymbol}'#,##0.000}">
+                            <apex:param value="{!oP.TotalPrice}" /> 
+                        </apex:outputText>
+                    </apex:column>
+                     <apex:column headerValue="Gross Price" headerClass="right-align" styleClass="right-align">
+                        <apex:outputText value="{0,number,'{!currencySymbol}'#,##0.000}">
+                            <apex:param value="{!oP.Net_Total_Price__c}" /> 
+                        </apex:outputText>
+                    </apex:column>
+                    
+                    <apex:column headerValue="Verity Revenue" headerClass="right-align" styleClass="right-align">
+                        <apex:outputText value="{0,number,'{!currencySymbol}'#,##0.000}">
+                            <apex:param value="{!oP.Verity_Revenue__c}" /> 
+                        </apex:outputText>
+                    </apex:column>
+                    <apex:column headerValue="Verity Deal ID" headerClass="right-align" styleClass="right-align">
+                        <apex:outputField value="{!oP.Verity_Deal_ID__c}"/>
+                    </apex:column>
+                    
+                    <!--<apex:column rendered="{!IF(!CONTAINS($Profile.Name,'Playground'), true, false)}"> <apex:facet name="header">Extended <br/> Animation </apex:facet>
+                        <apex:outputField value="{!oP.Extended_Animation__c}"/>
+                    </apex:column>  -->
+                   
+                </apex:pageBlockTable>   
+                </div>
+            </apex:pageBlock>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

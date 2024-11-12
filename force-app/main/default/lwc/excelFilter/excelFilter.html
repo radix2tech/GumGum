@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Excel-like Filtering">
+        <lightning-input 
+            label="Filter by Name" 
+            value={filterText} 
+            onchange={handleFilterChange}>
+        </lightning-input>
+
+        <lightning-button label="Clear Filter" onclick={clearFilter} class="slds-m-top_small"></lightning-button>
+
+        <lightning-datatable
+            key-field="id"
+            data={filteredData}
+            columns={columns}>
+        </lightning-datatable>
+    </lightning-card>
+</template>

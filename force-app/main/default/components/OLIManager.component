@@ -1,0 +1,11 @@
+<apex:component access="global" controller="OLIManagerCtlr">
+    <apex:attribute name="OppId" type="Id" description="Id of the Opportunity" assignTo="{!opportunityId}"/>
+    <table border = "1" style="border-collapse: collapse;">
+        <apex:repeat value="{!oppLines}" var="ol">
+        <tr>
+            <td style="font-family: Verdana, Helvetica, sans-serif; font-size: small; border-top-width: 1px;border-right-width: 1px;border-bottom-width: 1px;border-left-width: 1px;
+                padding-top: 4px;padding-left: 4px;padding-right: 4px;padding-bottom: 1px">{!ol.Product2.Name}</td>
+        </tr>
+        </apex:repeat>        
+    </table>
+</apex:component>
