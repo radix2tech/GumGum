@@ -217,7 +217,3 @@ footer {
 .custom-combobox {
     width: 200px; /* Adjust this value as needed */
 }
-
-:host {
-    font-family: var(--sds-text-font-family, 'Salesforce Sans', Arial, sans-serif);
-}

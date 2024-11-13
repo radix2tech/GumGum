@@ -46,11 +46,6 @@ export default class ForecastEntry extends LightningElement {
     ];
 
     // Define the picklist options
-    @track options2 = [
-        { label: 'New', value: 'New' },
-        { label: 'Renewal', value: 'Renewal' }
-    ];
-
     @track options = [
         { label: 'Direct', value: 'Direct' },
         { label: 'Programmatic', value: 'Programmatic' }
@@ -713,11 +708,19 @@ export default class ForecastEntry extends LightningElement {
   
     }
 
+
+    filterText = '';
+
+    handleFilterChange(event) {
+        this.filterText = event.target.value.toLowerCase();
+        this.applyFilter();
+    }
+
     applyFilter() {
         if(this.value9 == 'Advertiser'){
             // Loop through the returnData array to find the correct row
             for (let i = 0; i < this.returnData.length; i++) {
-                if ( this.returnData[i].Advertiser && this.returnData[i].Advertiser.toLowerCase().includes(this.filterText.toLowerCase())) {
+                if ( this.returnData[i].Advertiser && this.returnData[i].Advertiser.toLowerCase().includes(this.filterText)) {
                     this.returnData[i].isDisplayed = true;
                 }
                 else{
@@ -729,7 +732,7 @@ export default class ForecastEntry extends LightningElement {
         if(this.value9 == 'Seller'){
             // Loop through the returnData array to find the correct row
             for (let i = 0; i < this.returnData.length; i++) {
-                if (this.returnData[i].Seller && this.returnData[i].Seller.toLowerCase().includes(this.filterText.toLowerCase())) {
+                if (this.returnData[i].Seller && this.returnData[i].Seller.toLowerCase().includes(this.filterText)) {
                     this.returnData[i].isDisplayed = true;
                 }
                 else{
@@ -741,7 +744,7 @@ export default class ForecastEntry extends LightningElement {
         if(this.value9 == 'Agency'){
             // Loop through the returnData array to find the correct row
             for (let i = 0; i < this.returnData.length; i++) {
-                if (this.returnData[i].Agency && this.returnData[i].Agency.toLowerCase().includes(this.filterText.toLowerCase())) {
+                if (this.returnData[i].Agency && this.returnData[i].Agency.toLowerCase().includes(this.filterText)) {
                     this.returnData[i].isDisplayed = true;
                 }
                 else{
@@ -753,7 +756,7 @@ export default class ForecastEntry extends LightningElement {
         if(this.value9 == 'Type'){
             // Loop through the returnData array to find the correct row
             for (let i = 0; i < this.returnData.length; i++) {
-                if (this.returnData[i].Type && this.returnData[i].Type.toLowerCase() == this.filterText.toLowerCase()) {
+                if (this.returnData[i].Type && this.returnData[i].Type.toLowerCase().includes(this.filterText)) {
                     this.returnData[i].isDisplayed = true;
                 }
                 else{
@@ -765,7 +768,7 @@ export default class ForecastEntry extends LightningElement {
         if(this.value9 == 'Channel'){
             // Loop through the returnData array to find the correct row
             for (let i = 0; i < this.returnData.length; i++) {
-                if ( this.returnData[i].Channel && this.returnData[i].Channel.toLowerCase() == this.filterText.toLowerCase()) {
+                if ( this.returnData[i].Channel && this.returnData[i].Channel.toLowerCase().includes(this.filterText)) {
                     this.returnData[i].isDisplayed = true;
                 }
                 else{
@@ -773,6 +776,9 @@ export default class ForecastEntry extends LightningElement {
                 }
             }
         }
+
+
+
     }
 
     clearFilter() {
@@ -795,30 +801,9 @@ export default class ForecastEntry extends LightningElement {
         { label: 'Channel', value: 'Channel' }
     ];
 
-    @track filterOptions = [];
-    @track displayFilterInput = true;
     // Handles changes in combobox selection
     handleChangeFilter(event) {
         this.value9 = event.detail.value;
-        if(this.value9 == 'Type' || this.value9 == 'Channel'){
-            this.displayFilterInput = false;
-            if(this.value9 == 'Type'){
-                this.filterOptions = this.options2;
-            }else if(this.value9 == 'Channel'){
-                this.filterOptions = this.options;
-            }
-        }
-        else{
-            this.displayFilterInput = true;
-        }
-    }
-
-    
-    @track filterText;
-
-    handleFilterChange(event) {
-        this.filterText = event.target.value;
-        this.applyFilter();
     }
 
 

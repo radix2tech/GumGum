@@ -6,6 +6,6 @@ trigger TDGAccount on Account (after insert, after update) {
             handler.afterInsert(Trigger.new);
         } when AFTER_UPDATE {
             handler.afterUpdate(Trigger.new, Trigger.oldMap);
-        } 
+        }
     }
 }
