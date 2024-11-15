@@ -65,10 +65,14 @@ public class ForecastController {
 
                     returnData.ForecastSum += FE.Forecast_Sum__c;
 
-                    data.q1 += (FE.Forecast_Q1__c ?? 0);
-                    data.q2 += (FE.Forecast_Q2__c ?? 0);
-                    data.q3 += (FE.Forecast_Q3__c ?? 0);
-                    data.q4 += (FE.Forecast_Q4__c ?? 0);
+                    data.q1 += (FE.Forecast_Q11__c ?? 0);
+                    data.q2 += (FE.Forecast_Q21__c ?? 0);
+                    data.q3 += (FE.Forecast_Q31__c ?? 0);
+                    data.q4 += (FE.Forecast_Q41__c ?? 0);
+                    data.ForecastNextYear += (FE.Forecast_Q11__c ?? 0);
+                    data.ForecastNextYear += (FE.Forecast_Q21__c ?? 0);
+                    data.ForecastNextYear += (FE.Forecast_Q31__c ?? 0);
+                    data.ForecastNextYear += (FE.Forecast_Q41__c ?? 0);
 
                     returnData.ForecastList.add(forecastRecord);
                     returnData.displayProducts = true;
@@ -303,7 +307,7 @@ public class ForecastController {
             AccountCondition = ' AND Advertiser__c = \''+recordId+'\'';
         }
 
-        String query = 'SELECT Id,	Agency__c,	Agency__r.Name,	Advertiser__c,	Advertiser__r.Name, Advertiser__r.Owner.Name,(SELECT Id,Type__c,Channel__c,Trading_Deal__c,	Booking_Next_Year__c, Bookings_Current_Year__c,Pipeline_Current_Quarter__c,Pipeline_Next_Quarter__c FROM Account_Forecasts__r LIMIT 1),(SELECT Id,Primary_owner__c,Advertiser_Agency_Relationship__c,	OwnerId,Owner.Name,(SELECT Id, Forecast_Q1__c,	Forecast_Q2__c, Forecast_Q3__c,	Forecast_Q4__c,Forecast_Q11__c,	Forecast_Q21__c,Forecast_Q31__c,Forecast_Q41__c,Product__c,	Forecast_Sum__c	FROM Forecast_Entries__r WHERE IsActive__c = true) FROM AAR_Split_Owners__r	WHERE Is_Active__c = true '+AccessCondition+' ORDER BY Owner.Name ) FROM Advertiser_Agency_Relationship__c WHERE ID IN (SELECT Advertiser_Agency_Relationship__c FROM Account_Forecast__c) AND ID IN (SELECT Advertiser_Agency_Relationship__c FROM AAR_Split_Owner__c WHERE Is_Active__c = true'+AccessCondition+')'+AccountCondition+' ORDER BY Advertiser__r.Name';
+        String query = 'SELECT Id,	Agency__c,	Agency__r.Name,	Advertiser__c,	Advertiser__r.Name, Advertiser__r.Owner.Name,(SELECT Id,Type__c,Channel__c,Trading_Deal__c,	Booking_Next_Year__c, convertCurrency(Bookings_Current_Year__c),Pipeline_Current_Quarter__c,Pipeline_Next_Quarter__c FROM Account_Forecasts__r LIMIT 1),(SELECT Id,Primary_owner__c,Advertiser_Agency_Relationship__c,	OwnerId,Owner.Name,(SELECT Id, Forecast_Q1__c,	Forecast_Q2__c, Forecast_Q3__c,	Forecast_Q4__c,Forecast_Q11__c,	Forecast_Q21__c,Forecast_Q31__c,Forecast_Q41__c,Product__c,	Forecast_Sum__c	FROM Forecast_Entries__r WHERE IsActive__c = true) FROM AAR_Split_Owners__r	WHERE Is_Active__c = true '+AccessCondition+' ORDER BY Owner.Name ) FROM Advertiser_Agency_Relationship__c WHERE ID IN (SELECT Advertiser_Agency_Relationship__c FROM Account_Forecast__c) AND ID IN (SELECT Advertiser_Agency_Relationship__c FROM AAR_Split_Owner__c WHERE Is_Active__c = true'+AccessCondition+')'+AccountCondition+' ORDER BY Advertiser__r.Name';
 
         AARList = Database.query(query);
 
@@ -440,6 +444,9 @@ public class ForecastController {
         @AuraEnabled
         public Decimal q4 { get; set; }
 
+        @AuraEnabled
+        public Decimal ForecastNextYear { get; set; }
+
         public CumulativeData() {
             this.BookingsCurrentYear = 0;
             this.BookingsNextYear = 0;
@@ -450,6 +457,7 @@ public class ForecastController {
             this.q2 = 0;
             this.q3 = 0;
             this.q4 = 0;
+            this.ForecastNextYear = 0;
 
         }
 

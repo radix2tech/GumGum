@@ -49,7 +49,7 @@
                 <!-- Modal/Popup Header -->
                 <header class="slds-modal__header custom-header">
                     <lightning-button-icon icon-name="utility:close" alternative-text="Close" class="slds-modal__close custom-close" onclick={closeModal}></lightning-button-icon>
-                    <h2 class="slds-text-heading_medium">Request Account</h2>
+                    <h2 class="slds-text-heading_medium">Request New Owner</h2>
                 </header>
                 
                 
@@ -79,7 +79,7 @@
                             </ul>
                         </div>
                     </template>
-
+                    <h3 class="slds-text-heading_small">Submit your request to update the Owner of the Advertiser record</h3>
                 </div>
 
                 
@@ -196,24 +196,24 @@
                         <th colspan="2" class="booking-header center-text">Cumulative Bookings</th>
                         <!-- Pipeline -->
                         <th colspan="2" class="pipeline-header center-text">Cumulative Unweighted Pipeline</th>
-                        
                         <!-- Forecast -->
-                        <th colspan="4" class="forecast-header center-text">Cumulative Forecast</th>
+                        <th colspan="5" class="forecast-header center-text">Cumulative Forecast</th>
                     </tr>
                     <tr>
                         <!-- Booking Quarters -->
-                        <th  class="booking-header left-aligned">Current Year</th>
-                        <th  class="booking-header left-aligned">Next Year</th>
+                        <th  class="booking-header center-text">Current Year</th>
+                        <th  class="booking-header center-text">Next Year</th>
 
                         <!-- Pipeline Quarters -->
-                        <th class="pipeline-header left-aligned">Current Quarter</th>
+                        <th class="pipeline-header center-text">Current Quarter</th>
                         <th class="pipeline-header">Next Quarter</th>
 
                         <!-- Forecast Quarters -->
-                        <th class="forecast-header left-aligned">Q1 {nextYear}</th>
-                        <th class="forecast-header left-aligned">Q2 {nextYear}</th>
-                        <th class="forecast-header left-aligned">Q3 {nextYear}</th>
-                        <th class="forecast-header left-aligned">Q4 {nextYear}</th>
+                        <th class="forecast-header center-text">Q1 {nextYear}</th>
+                        <th class="forecast-header center-text">Q2 {nextYear}</th>
+                        <th class="forecast-header center-text">Q3 {nextYear}</th>
+                        <th class="forecast-header center-text">Q4 {nextYear}</th>
+                        <th class="forecast-header center-text">FY {nextYear}</th>
                     </tr>
                 </thead>
 
@@ -251,6 +251,10 @@
                             {currencySymbol}<lightning-formatted-number value={CumulativeData.q4} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
                             </lightning-formatted-number> 
                         </td>
+                        <td class="top-aligned">
+                            {currencySymbol}<lightning-formatted-number value={CumulativeData.ForecastNextYear} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                            </lightning-formatted-number> 
+                        </td>
                     </tr>
                 </tbody>
 
@@ -271,11 +275,24 @@
                 style="margin-right: 10px;">
             </lightning-combobox>
             
-            <lightning-input 
-                value={filterText} 
-                onchange={handleFilterChange}
-                style="margin-right: 10px;">
-            </lightning-input>
+            <template if:true={displayFilterInput}>
+                <lightning-input 
+                    value={filterText} 
+                    onchange={handleFilterChange}
+                    style="margin-right: 10px;">
+                </lightning-input>
+            </template>
+
+            <template if:false={displayFilterInput}>
+                <lightning-combobox 
+                    name="myCombobox1" 
+                    value={filterText} 
+                    placeholder="Select" 
+                    options={filterOptions} 
+                    onchange={handleFilterChange}
+                    style="margin-right: 10px;">
+                </lightning-combobox>
+            </template>
             
             <lightning-button 
                 label="Clear Filter" 
@@ -289,13 +306,13 @@
                 <thead>
                     <tr>
                         <template if:true={isManager}>
-                            <th>Seller</th>
+                            <th class="center-text">Seller</th>
                         </template>    
-                        <th>Advertiser</th>
-                        <th>Agency</th>
-                        <th>Type</th>
-                        <th>Channel</th>
-                        <th>Trading Deal</th>
+                        <th class="center-text">Advertiser</th>
+                        <th class="center-text">Agency</th>
+                        <th class="center-text">Type</th>
+                        <th class="center-text">Channel</th>
+                        <th class="center-text">Trading Deal</th>
                         <!-- Bookings -->
                         <th colspan="2" class="booking-header center-text">Bookings</th>
                         <!-- Pipeline -->
@@ -314,12 +331,12 @@
                         <th></th>
                         <th></th>
                         <!-- Booking Quarters -->
-                        <th  class="booking-header left-aligned">Current Year</th>
-                        <th  class="booking-header left-aligned">Next Year</th>
+                        <th  class="booking-header center-text">Current Year</th>
+                        <th  class="booking-header center-text">Next Year</th>
 
                         <!-- Pipeline Quarters -->
-                        <th class="pipeline-header left-aligned">Current Quarter</th>
-                        <th class="pipeline-header">Next Quarter</th>
+                        <th class="pipeline-header center-text">Current Quarter</th>
+                        <th class="pipeline-header center-text">Next Quarter</th>
                         <th class="forecast-header center-text" ></th>
                         <th>Remove Relationship</th>
                     </tr>
@@ -422,7 +439,7 @@
                                                     <thead>
                                                         <tr>
                                                             <template if:true={isManager}>
-                                                                <th class="forecast-header center-text">Split Onwer</th>
+                                                                <th class="forecast-header center-text">Split Owner</th>
                                                             </template>
                                                             <th class="forecast-header center-text">Product</th>
                                                             <!-- Forecast Quarters -->
@@ -434,7 +451,7 @@
                                                             <th class="forecast-header center-text">Q3 {nextYear}</th>
                                                             <th class="forecast-header center-text">Q4 {currentYear}</th>
                                                             <th class="forecast-header center-text">Q4 {nextYear}</th>
-                                                            <th class="forecast-header"></th>
+                                                            <th class="forecast-header">Add/Remove</th>
                                                         </tr>
 
 
@@ -513,6 +530,7 @@
                                                         </template>
                                                         <template if:false={row.displayProducts}>
                                                             <tr  key={row.Id} >
+                                                                <td></td>
                                                                 <td></td>
                                                                 <td></td>
                                                                 <td></td>

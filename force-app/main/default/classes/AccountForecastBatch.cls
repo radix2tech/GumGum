@@ -36,7 +36,7 @@ public class AccountForecastBatch implements Database.Batchable<sObject>,Schedul
         // Fetch Opportunity Line Item Schedule records
         List<OpportunityLineItemSchedule> oliScheduleList = [SELECT Id, ScheduleDate, Revenue, OpportunityLineItem.Opportunity.IsClosed, OpportunityLineItem.Opportunity.AccountId, OpportunityLineItem.Opportunity.Agency_Name__c 
                                                               FROM OpportunityLineItemSchedule 
-                                                              WHERE (OpportunityLineItem.Opportunity.AccountId IN :AdvertiserIds OR OpportunityLineItem.Opportunity.Agency_Name__c IN :AgencyIds) 
+                                                              WHERE (OpportunityLineItem.Opportunity.AccountId IN :AdvertiserIds) AND (OpportunityLineItem.Opportunity.StageName = 'Closed/Won') 
                                                               AND (ScheduleDate = THIS_YEAR OR ScheduleDate = NEXT_YEAR OR ScheduleDate = LAST_N_MONTHS:13)];
 
         // Calculate account forecast data based on the fetched schedules
