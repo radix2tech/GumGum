@@ -221,3 +221,10 @@ footer {
 :host {
     font-family: var(--sds-text-font-family, 'Salesforce Sans', Arial, sans-serif);
 }
+
+.child-card2 {
+    position: sticky;
+    top: 100px;
+    z-index: 1000;
+    background-color: black; /* Keeps the card background intact */
+}

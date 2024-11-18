@@ -10,8 +10,48 @@ import removeAAR from '@salesforce/apex/ForecastController.removeAAR';
 import AAR_Advertiser from '@salesforce/schema/Advertiser_Agency_Relationship__c.Advertiser__c';
 import AAR_Agency from '@salesforce/schema/Advertiser_Agency_Relationship__c.Agency__c';
 import submitForApproval from '@salesforce/apex/ForecastController.submitForApproval';
+import { NavigationMixin } from 'lightning/navigation';
+import getActiveCurrencies from '@salesforce/apex/ForecastController.getActiveCurrencies';
 
-export default class ForecastEntry extends LightningElement {
+export default class ForecastEntry extends NavigationMixin(LightningElement) {
+
+    @track currencyOptions = [];
+    @track selectedCurrency;
+
+    @wire(getActiveCurrencies)
+    wiredCurrencies({ error, data }) {
+        if (data) {
+            // Map currency data to combobox options
+            this.currencyOptions = data.map(currency => ({
+                label: currency,
+                value: currency
+            }));
+        } else if (error) {
+            console.error('Error fetching currencies', error);
+        }
+    }
+
+    handleCurrencyChange(event) {
+
+        const value = event.target.value;
+        
+        const forecastId = event.target.dataset.id;  // Gets the dynamic ID
+        const rowId = event.target.dataset.row;  // Gets the dynamic name
+
+
+        // Loop through the returnData array to find the correct row
+        for (let i = 0; i < this.returnData.length; i++) {
+            if (this.returnData[i].Id === rowId) {
+                for(let j = 0; j < this.returnData[i].ForecastList.length; j++){
+                    if(this.returnData[i].ForecastList[j].Id == forecastId){
+                        this.returnData[i].ForecastList[j].CurrencyIsoCode = value;
+                        this.returnData[i].ForecastList[j].isChanged = true;
+                    }
+                }
+            }
+        }
+        this.isChanged = true;
+    }
 
     // Specify the fields to display in the form
     fields = [AAR_Advertiser, AAR_Agency];
@@ -23,7 +63,7 @@ export default class ForecastEntry extends LightningElement {
     @track CumulativeData = [];
     @track isLoading = false;
     @track currencyCode = 'USD';
-    @track currencySymbol = '$';
+    @track currencySymbol ;
     @track searchKey = '';
     @track userOptions = [];
     @track isDropdownVisible = false;
@@ -122,6 +162,7 @@ export default class ForecastEntry extends LightningElement {
 
         const objResult = await getForecastEntries({ recordId:this.recordId});
         this.returnData = objResult.returnDataList;
+        this.currencySymbol = objResult.currencySymbol;
         this.CumulativeData = objResult.data;
         this.isManager = objResult.isManager;
         if(this.isManager == true){
@@ -714,6 +755,7 @@ export default class ForecastEntry extends LightningElement {
     }
 
     applyFilter() {
+
         if(this.value9 == 'Advertiser'){
             // Loop through the returnData array to find the correct row
             for (let i = 0; i < this.returnData.length; i++) {
@@ -731,9 +773,22 @@ export default class ForecastEntry extends LightningElement {
             for (let i = 0; i < this.returnData.length; i++) {
                 if (this.returnData[i].Seller && this.returnData[i].Seller.toLowerCase().includes(this.filterText.toLowerCase())) {
                     this.returnData[i].isDisplayed = true;
+                    this.returnData[i].isExpanded = true;
                 }
                 else{
                     this.returnData[i].isDisplayed = false;
+                    this.returnData[i].isExpanded = false;
+                }
+
+                for(let j = 0; j < this.returnData[i].ForecastList.length; j++){
+                   if (this.returnData[i].ForecastList[j].OwnerName && this.returnData[i].ForecastList[j].OwnerName.toLowerCase().includes(this.filterText.toLowerCase())) {
+                        this.returnData[i].isDisplayed = true;
+                        this.returnData[i].isExpanded = true;
+                    }
+                    else{
+                        this.returnData[i].isDisplayed = false;
+                        this.returnData[i].isExpanded = false;
+                    } 
                 }
             }
         }
@@ -773,6 +828,53 @@ export default class ForecastEntry extends LightningElement {
                 }
             }
         }
+
+        this.CaluclateCumulativeData();
+    }
+
+    CaluclateCumulativeData(){
+        
+        this.CumulativeData.BookingsCurrentYear = 0;
+        this.CumulativeData.BookingsNextYear = 0;
+        this.CumulativeData.PipelineCurrentQuarter = 0;
+        this.CumulativeData.PipelineNextQuarter = 0;
+        this.CumulativeData.q1 = 0;
+        this.CumulativeData.q2 = 0;
+        this.CumulativeData.q3 = 0;
+        this.CumulativeData.q4 = 0;
+        this.CumulativeData.ForecastNextYear = 0;
+
+
+        for (let i = 0; i < this.returnData.length; i++) {
+            if (this.returnData[i].isDisplayed == true) {
+                this.CumulativeData.BookingsCurrentYear =  this.CumulativeData.BookingsCurrentYear + this.returnData[i].BookingsCurrentYear;
+                this.CumulativeData.BookingsNextYear =  this.CumulativeData.BookingsNextYear + this.returnData[i].BookingsNextYear;
+                this.CumulativeData.PipelineCurrentQuarter =  this.CumulativeData.PipelineCurrentQuarter + this.returnData[i].PipelineCurrentQuarter;
+                this.CumulativeData.PipelineNextQuarter =  this.CumulativeData.PipelineNextQuarter + this.returnData[i].PipelineNextQuarter;
+
+                for(let j = 0; j < this.returnData[i].ForecastList.length; j++){
+                    console.log('### this.CumulativeData.q1 '+this.CumulativeData.q1);
+                    console.log('### this.returnData[i].ForecastList[j].q11 '+this.returnData[i].ForecastList[j].q11);
+                    if(this.returnData[i].ForecastList[j].q11){
+                        this.CumulativeData.q1 = this.CumulativeData.q1 + this.returnData[i].ForecastList[j].q11;
+                    }
+                    if(this.returnData[i].ForecastList[j].q21){
+                        this.CumulativeData.q2 = this.CumulativeData.q2 + this.returnData[i].ForecastList[j].q21;
+                    }
+                    if(this.returnData[i].ForecastList[j].q31){
+                        this.CumulativeData.q3 = this.CumulativeData.q3 + this.returnData[i].ForecastList[j].q31;
+                    }
+                    if(this.returnData[i].ForecastList[j].q41){
+                        this.CumulativeData.q4 = this.CumulativeData.q4 + this.returnData[i].ForecastList[j].q41;
+                    }
+                    this.CumulativeData.ForecastNextYear = this.CumulativeData.q1 + this.CumulativeData.q2 + this.CumulativeData.q3 + this.CumulativeData.q4;
+                }
+            }
+
+
+        }
+
+        
     }
 
     clearFilter() {
@@ -781,8 +883,10 @@ export default class ForecastEntry extends LightningElement {
         for (let i = 0; i < this.returnData.length; i++) {
 
             this.returnData[i].isDisplayed = true;
+            this.returnData[i].isExpanded = false;
 
         }
+        this.CaluclateCumulativeData();
     }
 
     @track value9 = '';  // Selected value
@@ -821,5 +925,24 @@ export default class ForecastEntry extends LightningElement {
         this.applyFilter();
     }
 
+    handleNavigate(event) {
+        const rowId = event.target.dataset.id;
+        console.log('#### rowId ' + rowId);
+
+        // Check if rowId exists to prevent errors
+        if (rowId) {
+            // Use the NavigationMixin to navigate to the record page
+            this[NavigationMixin.Navigate]({
+                type: 'standard__recordPage',
+                attributes: {
+                    recordId: rowId,
+                    objectApiName: 'Account', // Change 'Account' to your object API name if different
+                    actionName: 'view'
+                }
+            });
+        } else {
+            console.error('Row ID is not defined');
+        }
+    }
 
 }

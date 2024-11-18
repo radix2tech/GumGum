@@ -9,6 +9,8 @@ public class ForecastController {
         CumulativeData data = new CumulativeData();
         ReturnDataClass rd = new ReturnDataClass();
 
+        String currentUsersCurrency = UserInfo.getDefaultCurrency();
+
         Integer AccessLevel = getCurrentUserAccess(rd);
 
         List<Advertiser_Agency_Relationship__c> AARList = new List<Advertiser_Agency_Relationship__c>();
@@ -27,9 +29,11 @@ public class ForecastController {
             returnData.Id = AAR.Account_Forecasts__r[0].Id;
             returnData.Seller = AAR.Advertiser__r.Owner.Name;
             returnData.Advertiser = AAR.Advertiser__r.Name;
+            returnData.AdvertiserId = AAR.Advertiser__c;
             returnData.SOPrimary = AAR.AAR_Split_Owners__r[0].Primary_owner__c;
             returnData.SOId = AAR.AAR_Split_Owners__r[0].Id;
             returnData.Agency = AAR.Agency__r.Name;
+            returnData.AgencyId = AAR.Agency__c;
             returnData.Type = AAR.Account_Forecasts__r[0].Type__c;
             returnData.Channel = AAR.Account_Forecasts__r[0].Channel__c;
             returnData.TradingDeal = AAR.Account_Forecasts__r[0].Trading_Deal__c;
@@ -38,6 +42,8 @@ public class ForecastController {
             returnData.PipelineCurrentQuarter= AAR.Account_Forecasts__r[0].Pipeline_Current_Quarter__c ;
             returnData.PipelineNextQuarter= AAR.Account_Forecasts__r[0].Pipeline_Next_Quarter__c ;
             
+            system.debug('##### AAR.Account_Forecasts__r[0].Bookings_Current_Year__c '+ AAR.Account_Forecasts__r[0].Bookings_Current_Year__c);
+            system.debug('#### AAR.Account_Forecasts__r[0].Pipeline_Current_Quarter__c '+AAR.Account_Forecasts__r[0].Pipeline_Current_Quarter__c);
             //Get Cumulative Data
             data.BookingsCurrentYear += AAR.Account_Forecasts__r[0].Bookings_Current_Year__c ;
             data.BookingsNextYear += AAR.Account_Forecasts__r[0].Booking_Next_Year__c ;
@@ -62,6 +68,9 @@ public class ForecastController {
                     forecastRecord.q21 = FE.Forecast_Q21__c;
                     forecastRecord.q31 = FE.Forecast_Q31__c;
                     forecastRecord.q41 = FE.Forecast_Q41__c;
+                    forecastRecord.currencyISOCode = FE.CurrencyIsoCode;
+                    system.debug('### FE.CurrencyIsoCode '+FE.CurrencyIsoCode);
+                    forecastRecord.productCumulative = FE.Forecast_Sum__c;
 
                     returnData.ForecastSum += FE.Forecast_Sum__c;
 
@@ -92,6 +101,7 @@ public class ForecastController {
         }
         
         rd.returnDataList = returnDataList;
+        rd.currencySymbol = currentUsersCurrency+' ';
         rd.data = data;
 
         return rd;
@@ -132,7 +142,8 @@ public class ForecastController {
                     FE.Forecast_Q21__c = forecastRecord.q21;
                     FE.Forecast_Q31__c = forecastRecord.q31;
                     FE.Forecast_Q41__c = forecastRecord.q41;
-
+                    FE.currencyISOCode = forecastRecord.currencyISOCode;
+                    
                     FE.AAR_Split_Owner__c = dataRecord.SOId; // Set the owner field
                     FE.IsActive__c = true; 
 
@@ -307,13 +318,52 @@ public class ForecastController {
             AccountCondition = ' AND Advertiser__c = \''+recordId+'\'';
         }
 
-        String query = 'SELECT Id,	Agency__c,	Agency__r.Name,	Advertiser__c,	Advertiser__r.Name, Advertiser__r.Owner.Name,(SELECT Id,Type__c,Channel__c,Trading_Deal__c,	Booking_Next_Year__c, convertCurrency(Bookings_Current_Year__c),Pipeline_Current_Quarter__c,Pipeline_Next_Quarter__c FROM Account_Forecasts__r LIMIT 1),(SELECT Id,Primary_owner__c,Advertiser_Agency_Relationship__c,	OwnerId,Owner.Name,(SELECT Id, Forecast_Q1__c,	Forecast_Q2__c, Forecast_Q3__c,	Forecast_Q4__c,Forecast_Q11__c,	Forecast_Q21__c,Forecast_Q31__c,Forecast_Q41__c,Product__c,	Forecast_Sum__c	FROM Forecast_Entries__r WHERE IsActive__c = true) FROM AAR_Split_Owners__r	WHERE Is_Active__c = true '+AccessCondition+' ORDER BY Owner.Name ) FROM Advertiser_Agency_Relationship__c WHERE ID IN (SELECT Advertiser_Agency_Relationship__c FROM Account_Forecast__c) AND ID IN (SELECT Advertiser_Agency_Relationship__c FROM AAR_Split_Owner__c WHERE Is_Active__c = true'+AccessCondition+')'+AccountCondition+' ORDER BY Advertiser__r.Name';
+        String query = 'SELECT Id,	Agency__c,	Agency__r.Name,	Advertiser__c,	Advertiser__r.Name, Advertiser__r.Owner.Name,(SELECT Id,Type__c,Channel__c,Trading_Deal__c,	convertCurrency (Booking_Next_Year__c), convertCurrency(Bookings_Current_Year__c), convertCurrency(Pipeline_Current_Quarter__c),convertCurrency(Pipeline_Next_Quarter__c), CurrencyIsoCode FROM Account_Forecasts__r LIMIT 1),(SELECT Id,Primary_owner__c,Advertiser_Agency_Relationship__c,OwnerId,Owner.Name,(SELECT Id, convertCurrency(Forecast_Q1__c),	convertCurrency(Forecast_Q2__c), convertCurrency(Forecast_Q3__c),	convertCurrency(Forecast_Q4__c),convertCurrency(Forecast_Q11__c),	convertCurrency(Forecast_Q21__c),convertCurrency(Forecast_Q31__c),convertCurrency(Forecast_Q41__c),Product__c,	convertCurrency(Forecast_Sum__c),CurrencyIsoCode	FROM Forecast_Entries__r WHERE IsActive__c = true) FROM AAR_Split_Owners__r	WHERE Is_Active__c = true '+AccessCondition+' ORDER BY Owner.Name ) FROM Advertiser_Agency_Relationship__c WHERE ID IN (SELECT Advertiser_Agency_Relationship__c FROM Account_Forecast__c) AND ID IN (SELECT Advertiser_Agency_Relationship__c FROM AAR_Split_Owner__c WHERE Is_Active__c = true'+AccessCondition+')'+AccountCondition+' ORDER BY Advertiser__r.Name';
 
         AARList = Database.query(query);
 
         return AARList;
     }
-    
+
+
+    // Static variable to cache currency rates
+    private static Map<String, Decimal> currencyRatesCache;
+
+    //Method to get a converted amount using cached rates.
+    public Decimal getConvertedAmount(Decimal amount, String fromCurrencyIsoCode, String toCurrencyIsoCode) {
+        // Initialize the currency rates cache if not already populated
+        if (currencyRatesCache == null) {
+            currencyRatesCache = new Map<String, Decimal>();
+            // Fetch conversion rates and store them in the cache
+            for (CurrencyType curr : [SELECT IsoCode, ConversionRate FROM CurrencyType]) {
+                currencyRatesCache.put(curr.IsoCode, curr.ConversionRate);
+            }
+        }
+
+        // Check if both currencies exist in the cache
+        if (!currencyRatesCache.containsKey(fromCurrencyIsoCode) || !currencyRatesCache.containsKey(toCurrencyIsoCode)) {
+            throw new AuraHandledException('One of the specified currencies is not supported.');
+        }
+
+        // Get conversion rates from cache
+        Decimal fromCurrencyRate = currencyRatesCache.get(fromCurrencyIsoCode);
+        Decimal toCurrencyRate = currencyRatesCache.get(toCurrencyIsoCode);
+
+        // Calculate the converted amount
+        Decimal convertedAmount = (amount / fromCurrencyRate) * toCurrencyRate;
+        return convertedAmount.setScale(2); // Round to 2 decimal places
+    }
+
+    @AuraEnabled(cacheable=true)
+    public static List<String> getActiveCurrencies() {
+        List<CurrencyType> currencyRecords = [SELECT IsoCode FROM CurrencyType WHERE IsActive = true];
+        List<String> currencies = new List<String>();
+        for (CurrencyType curr : currencyRecords) {
+            currencies.add(curr.IsoCode);
+        }
+        return currencies;
+    }
+
     //Inner Class to return result to LWC
     public Class ReturnDataClass{
         @AuraEnabled
@@ -322,7 +372,9 @@ public class ForecastController {
         public CumulativeData data { get; set; }  
         @AuraEnabled
         public Boolean isManager  { get; set; }
-
+        @AuraEnabled
+        public String currencySymbol  { get; set; }
+        
         public ReturnDataClass(){
             this.returnDataList = new List<Data>();
             this.isManager = false;
@@ -339,11 +391,15 @@ public class ForecastController {
         @AuraEnabled
         public String Advertiser { get; set; } 
         @AuraEnabled
+        public String AdvertiserId { get; set; } 
+        @AuraEnabled
         public String SOId { get; set; }  
         @AuraEnabled
         public Boolean SOPrimary { get; set; } 
         @AuraEnabled
         public String Agency { get; set; }
+        @AuraEnabled
+        public String AgencyId { get; set; }
         @AuraEnabled
         public String Type { get; set; }
         @AuraEnabled
@@ -411,6 +467,12 @@ public class ForecastController {
         public Decimal q31 { get; set; }
         @AuraEnabled
         public Decimal q41 { get; set; }
+
+        @AuraEnabled
+        public String currencyISOCode { get; set; }
+
+        @AuraEnabled
+        public Decimal productCumulative { get; set; }
 
         @AuraEnabled
         public Boolean displayAdd { get; set; } 
