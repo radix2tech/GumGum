@@ -502,7 +502,7 @@ public with sharing class EB_VerityOpportunityProductsExt {
                 tempOp.TotalPrice = changeProduct.Total_Price_Custom__c;  
             }
             tempOp.of_Budget__c = changeProduct.of_Budget__c;
-            tempOp.Verity_Revenue__c = changeProduct.Total_Price_Custom__c;
+            tempOp.Verity_Revenue__c = tempOp.Total_Price_Custom__c;
             tempOp.Pricing__c = changeProduct.Pricing__c;
             tempOp.Start_Date__c = changeProduct.Start_Date__c;
             tempOp.End_Date__c = changeProduct.End_Date__c;
@@ -557,13 +557,14 @@ public with sharing class EB_VerityOpportunityProductsExt {
                     if(priceBookEntryList.size()>0){
                         if(priceBookEntryList[0].Product2.Verity_Revenue__c!=null && opp.Voiced_Budget__c!=null && oppProductToWorkWith.of_Budget__c!=null){   
                             newOppProduct.TotalPrice = (priceBookEntryList[0].Product2.Verity_Revenue__c*opp.Voiced_Budget__c*oppProductToWorkWith.of_Budget__c/10000);
+                            newOppProduct.Total_Price_Custom__c = newOppProduct.TotalPrice;
                         }
                     }
                 }
             }else{ 
                 newOppProduct.TotalPrice = oppProductToWorkWith.Total_Price_Custom__c;
             }
-            newOppProduct.Verity_Revenue__c = oppProductToWorkWith.Total_Price_Custom__c;
+            newOppProduct.Verity_Revenue__c = newOppProduct.Total_Price_Custom__c;
 
             CalculatePricing(newOppProduct);
             
