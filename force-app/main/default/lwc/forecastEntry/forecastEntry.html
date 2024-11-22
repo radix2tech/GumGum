@@ -59,7 +59,7 @@
                     <p class="slds-text-heading_medium">Advertiser: {SelectedAdvertiserName}</p>
                     <!-- Lookup Input -->
                     <lightning-input
-                        label="Requested New Owner"
+                        label="Request New Owner"
                         value={searchKey}
                         placeholder="Search by Name"
                         onchange={handleInputChange}
@@ -260,12 +260,10 @@
 
             </table>    
         </lightning-card>
+       
+        <div id="filterOptions" style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
 
-        
-        <div id="filterOptions" style="display: flex; align-items: center;">
-
-            <!--<label for="filterOptions" style="font-size: 16px;font-weight: bold;margin-right: 10px;">Filter:</label>-->
-
+            <!-- Filter combobox -->
             <lightning-combobox 
                 name="myCombobox" 
                 value={value9} 
@@ -274,15 +272,19 @@
                 onchange={handleChangeFilter}
                 style="margin-right: 10px;">
             </lightning-combobox>
-            
+
+            <!-- Conditional filter input -->
             <template if:true={displayFilterInput}>
-                <lightning-input 
-                    value={filterText} 
-                    onchange={handleFilterChange}
+                <lightning-input
+                    type="text"
+                    value={pillInput}
+                    onchange={handlePillInputChange}
+                    onkeydown={handleKeyDown}
                     style="margin-right: 10px;">
                 </lightning-input>
             </template>
 
+            <!-- Alternate filter combobox -->
             <template if:false={displayFilterInput}>
                 <lightning-combobox 
                     name="myCombobox1" 
@@ -293,17 +295,41 @@
                     style="margin-right: 10px;">
                 </lightning-combobox>
             </template>
-            
+
+            <!-- Clear filter button -->
             <lightning-button 
                 label="Clear Filter" 
                 onclick={clearFilter} 
                 class="slds-m-top_small">
             </lightning-button>
+
+            <!-- Pills and message on a new line -->
+            <div style="flex-basis: 100%;"></div> <!-- Break to next line -->
+
+            <div>
+                <template if:true={pills.length}>
+                    <div>
+                        <template for:each={pills} for:item="pill">
+                            <lightning-pill
+                                key={pill.id}
+                                label={pill.label}
+                                onremove={handleRemovePill}
+                                data-id={pill.id}
+                                class="slds-m-right_small slds-m-bottom_small"
+                            ></lightning-pill>
+                        </template>
+                    </div>
+                </template>
+
+                <template if:false={pills.length}>
+                    <p>No filters added yet.</p>
+                </template>
+            </div>
         </div>
 
         <lightning-card>
             <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" >
-                <thead>
+                <thead class="child-card2">
                     <tr>
                         <template if:true={isManager}>
                             <th class="center-text">Seller</th>
@@ -352,9 +378,11 @@
                                     </td>
                                 </template>
                                 <td class="top-aligned" >
-                                    {row.Advertiser}
+                                    <lightning-button variant="base" data-id = {row.AdvertiserId} label={row.Advertiser} title={row.Advertiser} onclick={handleNavigate} class="slds-m-left_x-small"></lightning-button>
                                 </td>
-                                <td class="top-aligned">{row.Agency}</td>
+                                <td class="top-aligned">
+                                    <lightning-button variant="base" data-id = {row.AgencyId} label={row.Agency} title={row.Advertiser} onclick={handleNavigate} class="slds-m-left_x-small"></lightning-button>
+                                </td>
                                 <td class="top-aligned">{row.Type}</td>
                                 <!--<td class="top-aligned">{row.Channel}</td>-->
 
@@ -395,7 +423,7 @@
                                     </lightning-formatted-number> 
                                 </td>
                                 <td class="center-text">
-                                    <p>{row.ForecastSum}</p>
+                                    {currencySymbol}<lightning-formatted-number value={row.ForecastSum} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}></lightning-formatted-number> 
                                     <template if:true={row.isExpanded}>
                                         <lightning-button-icon 
                                             icon-name=utility:chevronup
@@ -451,6 +479,8 @@
                                                             <th class="forecast-header center-text">Q3 {nextYear}</th>
                                                             <th class="forecast-header center-text">Q4 {currentYear}</th>
                                                             <th class="forecast-header center-text">Q4 {nextYear}</th>
+                                                            <!-- <th class="forecast-header center-text">Currency</th> -->
+                                                            <th class="forecast-header center-text">Sum ({nextYear})</th>
                                                             <th class="forecast-header">Add/Remove</th>
                                                         </tr>
 
@@ -480,28 +510,55 @@
                                                                     </lightning-combobox>
                                                                 </td>    
                                                                 <td>
-                                                                    <lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q1} onchange={handleQ1Change}></lightning-input>
+                                                                    <!--<lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q1} onchange={handleQ1Change}></lightning-input>-->
+                                                                    {currencySymbol}<lightning-formatted-number value={product.q1} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                                                                    </lightning-formatted-number> 
                                                                 </td>
                                                                 <td>
                                                                     <lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q11} onchange={handleQ11Change}></lightning-input>
                                                                 </td>
                                                                 <td>
-                                                                    <lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q2} onchange={handleQ2Change}></lightning-input>
+                                                                    <!--<lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q2} onchange={handleQ2Change}></lightning-input>-->
+                                                                    {currencySymbol}<lightning-formatted-number value={product.q2} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                                                                    </lightning-formatted-number> 
                                                                 </td>
                                                                 <td>
                                                                     <lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q21} onchange={handleQ21Change}></lightning-input>
                                                                 </td>
                                                                 <td>
-                                                                    <lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q3} onchange={handleQ3Change}></lightning-input>
+                                                                    <!--<lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q3} onchange={handleQ3Change}></lightning-input>-->
+                                                                    {currencySymbol}<lightning-formatted-number value={product.q3} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                                                                    </lightning-formatted-number> 
                                                                 </td>
                                                                 <td>
                                                                     <lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q31} onchange={handleQ31Change}></lightning-input>
                                                                 </td>
                                                                 <td>
-                                                                    <lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q4} onchange={handleQ4Change}></lightning-input>
+                                                                    <!--<lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q4} onchange={handleQ4Change}></lightning-input>-->
+                                                                    {currencySymbol}<lightning-formatted-number value={product.q4} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                                                                    </lightning-formatted-number> 
                                                                 </td>
                                                                 <td>
                                                                     <lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q41} onchange={handleQ41Change}></lightning-input>
+                                                                </td>
+                                                                <!-- <td>
+                                                                    <p>{currencyCode}</p>
+                                                                    
+                                                                     <lightning-combobox
+                                                                        placeholder="Choose"
+                                                                        data-id = {product.Id}
+                                                                        data-row = {row.Id}
+                                                                        value={currencyCode}
+                                                                        options={currencyOptions}
+                                                                        
+                                                                        onchange={handleCurrencyChange}>
+                                                                    </lightning-combobox> 
+
+                                                                </td> -->
+                                                                
+                                                                <td class="top-aligned">
+                                                                    {currencySymbol}<lightning-formatted-number value={product.productCumulative} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                                                                    </lightning-formatted-number> 
                                                                 </td>
                                                                 <td style="width: 40px; text-align: left;">
                                                                     <lightning-button-icon 
@@ -540,6 +597,8 @@
                                                                 <td></td>
                                                                 <td></td>
                                                                 <td></td>
+                                                                <td></td>
+                                                                <td></td>
                                                                 <td  style="display: flex; justify-content: flex-end;">
                                                                     <lightning-button-icon 
                                                                         icon-name='action:new'
@@ -567,6 +626,8 @@
         </div>
     <!-- Footer Slot for Bottom-Right Button -->
         <div slot="footer" style="z-index: 2000" class=" footer  slds-text-align_right">
+            <lightning-button label="Previous" class="slds-m-right_small" variant="brand" onclick={Previous}></lightning-button>
+            <lightning-button label="Next" class="slds-m-right_small" variant="brand" onclick={Next}></lightning-button>
             <lightning-button label="Submit" variant="brand" onclick={submit}></lightning-button>
         </div>
 
