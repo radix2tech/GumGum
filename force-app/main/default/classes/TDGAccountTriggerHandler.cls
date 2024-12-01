@@ -15,6 +15,7 @@ public class TDGAccountTriggerHandler {
         updateRegion(newList, oldMap);
     }
 
+    
     private void updateRegion(List<Account> newList, Map<ID, Account> oldMap) {
         if(!General_Setting__mdt.getInstance(SETTING_NAME).Enable_TDG_Account_Trigger__c) return; 
         List<Account> accsToProcess = new List<Account>();

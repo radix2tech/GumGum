@@ -100,7 +100,7 @@ public with sharing class EB_VerityOpportunityProductsExtTest {
         apcCtrl.saveSchedule();
         apcCtrl.saveNewProduct();
         apcCtrl.deleteProduct();
-        apcCtrl.returnToOpportunity();     
+        apcCtrl.returnToOpportunity();    
         Test.stopTest();
     }
 
@@ -163,8 +163,9 @@ public with sharing class EB_VerityOpportunityProductsExtTest {
         apcCtrl.oppProductToWorkWithId = listOli[0].Id;
         Test.startTest();
         apcCtrl.renderProductEdit();
-        apcCtrl.saveProduct();
+        apcCtrl.saveProduct(); 
         Test.stopTest();
+        
     }
 
     @isTest static void changeProduct() {

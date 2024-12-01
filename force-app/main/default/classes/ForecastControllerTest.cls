@@ -47,6 +47,7 @@ public class ForecastControllerTest {
 
         AAR_Split_Owner__c splitOwner = new AAR_Split_Owner__c(
             Advertiser_Agency_Relationship__c = aar.Id,
+            Account_Forecast__c = forecast.Id,
             Is_Active__c = true
         );
         insert splitOwner;
@@ -103,16 +104,24 @@ public class ForecastControllerTest {
         List<String> Ids = new List<String>();
         Ids.add(FE.Id);
         Test.startTest();
-        ForecastController.ReturnDataClass result = ForecastController.getForecastEntries(AccountId);
-        
+
+        ForecastController.ReturnDataClass result = ForecastController.getForecastEntries(AccountId,10,1,null,null,null,null,null);
+
         result.returnDataList[0].isChanged=true;
         result.returnDataList[0].TradingDeal=true;
         
         ForecastController.processData(result.returnDataList, Ids);
-        
+		
+        List<String> seller = new List<String>{'e'};
+        List<String> advertiser = new List<String>{'Test'};
+        List<String> agency = new List<String>{'Test'};
+        List<String> type = new List<String>{'New','Renewal'};
+        List<String> channel = new List<String>{'Direct','Programmatic'};
+        ForecastController.getForecastEntries(AccountId,10,1,seller,advertiser,agency,type,channel);        
+
         Test.stopTest();
     }
-
+	
     @IsTest
     static void testRunBatchJob() {
         setupTestData();
@@ -184,4 +193,5 @@ public class ForecastControllerTest {
         Test.stopTest();
 
     }
+	
 }

@@ -2,8 +2,16 @@
 
 public class ForecastController {
 
+    static Integer totalRecords = 0;
+    static Set<Id> AllAFRecords = new Set<Id>();
+
     @AuraEnabled(cacheable=false)
-    public static ReturnDataClass  getForecastEntries(String recordId) {
+    public static ReturnDataClass  getForecastEntries(String recordId, Integer pageSize, Integer pageNumber ,List<String> sellerLabelSet, List<String> advertiserLabelSet ,List<String> agencyLabelSet,List<String> typeLabelSet, List<String> channelLabelSet) {
+        system.debug('### sellerLabelSet '+sellerLabelSet);
+        system.debug('### advertiserLabelSet '+advertiserLabelSet);
+        system.debug('### agencyLabelSet '+agencyLabelSet);
+        system.debug('### typeLabelSet '+typeLabelSet);
+        system.debug('### channelLabelSet '+channelLabelSet);
 
         List<Data> returnDataList = new List<Data>();
         CumulativeData data = new CumulativeData();
@@ -13,52 +21,81 @@ public class ForecastController {
 
         Integer AccessLevel = getCurrentUserAccess(rd);
 
-        List<Advertiser_Agency_Relationship__c> AARList = new List<Advertiser_Agency_Relationship__c>();
-        AARList = getAARList(AccessLevel,recordId);
+        List<Account_Forecast__c> AFList = getAFList(AccessLevel,recordId,pageSize,pageNumber,sellerLabelSet,advertiserLabelSet, agencyLabelSet,typeLabelSet,channelLabelSet);
+
+        AggregateResult[] AFAggregateResult1 = [
+            SELECT 
+                SUM(Booking_Next_Year__c) totalBookingNextYear, 
+                SUM(Bookings_Current_Year__c) totalBookingsCurrentYear, 
+                SUM(Pipeline_Current_Quarter__c) totalPipelineCurrentQuarter, 
+                SUM(Pipeline_Next_Quarter__c) totalPipelineNextQuarter 
+            FROM Account_Forecast__c WHERE Id IN :AllAFRecords
+        ];
+
+        System.debug('AFAggregateResult1: ' + AFAggregateResult1);
+
+        data.BookingsCurrentYear = (Decimal)AFAggregateResult1[0].get('totalBookingsCurrentYear') ;
+        data.BookingsNextYear = (Decimal)AFAggregateResult1[0].get('totalBookingNextYear') ;
+        data.PipelineCurrentQuarter = (Decimal)AFAggregateResult1[0].get('totalPipelineCurrentQuarter') ;
+        data.PipelineNextQuarter = (Decimal)AFAggregateResult1[0].get('totalPipelineNextQuarter') ;
+
+
+        AggregateResult[] AFAggregateResult2 = [SELECT 
+            SUM(Forecast_Q11__c) Total_Forecast_Q11,
+            SUM(Forecast_Q21__c) Total_Forecast_Q21,
+            SUM(Forecast_Q31__c) Total_Forecast_Q31,
+            SUM(Forecast_Q41__c) Total_Forecast_Q41
+        FROM 
+            Forecast_Entry__c
+        WHERE 
+            AAR_Split_Owner__r.Account_Forecast__c IN :AllAFRecords AND 
+            IsActive__c = true];
+
+        data.q1 = (Decimal)AFAggregateResult2[0].get('Total_Forecast_Q11') ;
+        data.q2 = (Decimal)AFAggregateResult2[0].get('Total_Forecast_Q21') ;
+        data.q3 = (Decimal)AFAggregateResult2[0].get('Total_Forecast_Q31') ;
+        data.q4 = (Decimal)AFAggregateResult2[0].get('Total_Forecast_Q41') ;
+        data.ForecastNextYear = (data.q1 != null ? data.q1 : 0) + 
+                                (data.q2 != null ? data.q2 : 0) + 
+                                (data.q3 != null ? data.q3 : 0) + 
+                                (data.q4 != null ? data.q4 : 0);
 
         //Process Relationship data to be sent to UI
-        for(Advertiser_Agency_Relationship__c AAR : AARList){
+        for(Account_Forecast__c AF : AFList){
             
             Data returnData = new Data();
-            //If Account Forecast does not exist then return
-            if( AAR.Account_Forecasts__r == null || AAR.Account_Forecasts__r.isEmpty()){
-                continue;
-            }
 
             //Capture Forecast data
-            returnData.Id = AAR.Account_Forecasts__r[0].Id;
-            returnData.Seller = AAR.Advertiser__r.Owner.Name;
-            returnData.Advertiser = AAR.Advertiser__r.Name;
-            returnData.AdvertiserId = AAR.Advertiser__c;
-            returnData.SOPrimary = AAR.AAR_Split_Owners__r[0].Primary_owner__c;
-            returnData.SOId = AAR.AAR_Split_Owners__r[0].Id;
-            returnData.Agency = AAR.Agency__r.Name;
-            returnData.AgencyId = AAR.Agency__c;
-            returnData.Type = AAR.Account_Forecasts__r[0].Type__c;
-            returnData.Channel = AAR.Account_Forecasts__r[0].Channel__c;
-            returnData.TradingDeal = AAR.Account_Forecasts__r[0].Trading_Deal__c;
-            returnData.BookingsCurrentYear = AAR.Account_Forecasts__r[0].Bookings_Current_Year__c ;
-            returnData.BookingsNextYear= AAR.Account_Forecasts__r[0].Booking_Next_Year__c ;
-            returnData.PipelineCurrentQuarter= AAR.Account_Forecasts__r[0].Pipeline_Current_Quarter__c ;
-            returnData.PipelineNextQuarter= AAR.Account_Forecasts__r[0].Pipeline_Next_Quarter__c ;
+            returnData.Id = AF.Id;
+            returnData.Seller = AF.Advertiser_Agency_Relationship__r.Advertiser__r.Owner.Name;
+            returnData.Advertiser = AF.Advertiser_Agency_Relationship__r.Advertiser__r.Name;
+            returnData.AdvertiserId = AF.Advertiser_Agency_Relationship__r.Advertiser__c;
+            //returnData.SOPrimary = AAR.AAR_Split_Owners__r[0].Primary_owner__c;
+            //returnData.SOId = AAR.AAR_Split_Owners__r[0].Id;
+            returnData.Agency = AF.Advertiser_Agency_Relationship__r.Agency__r.Name;
+            returnData.AgencyId = AF.Advertiser_Agency_Relationship__r.Agency__c;
+            returnData.Type = AF.Type__c;
+            returnData.Channel = AF.Channel__c;
+            returnData.TradingDeal = AF.Trading_Deal__c;
+            returnData.BookingsCurrentYear = AF.Bookings_Current_Year__c ;
+            returnData.BookingsNextYear= AF.Booking_Next_Year__c ;
+            returnData.PipelineCurrentQuarter= AF.Pipeline_Current_Quarter__c ;
+            returnData.PipelineNextQuarter= AF.Pipeline_Next_Quarter__c ;
+
+            if(sellerLabelSet!= null && !sellerLabelSet.isEmpty()){
+                returnData.isExpanded = true;
+            }
             
-            system.debug('##### AAR.Account_Forecasts__r[0].Bookings_Current_Year__c '+ AAR.Account_Forecasts__r[0].Bookings_Current_Year__c);
-            system.debug('#### AAR.Account_Forecasts__r[0].Pipeline_Current_Quarter__c '+AAR.Account_Forecasts__r[0].Pipeline_Current_Quarter__c);
-            //Get Cumulative Data
-            data.BookingsCurrentYear += AAR.Account_Forecasts__r[0].Bookings_Current_Year__c ;
-            data.BookingsNextYear += AAR.Account_Forecasts__r[0].Booking_Next_Year__c ;
-            data.PipelineCurrentQuarter += AAR.Account_Forecasts__r[0].Pipeline_Current_Quarter__c ;
-            data.PipelineNextQuarter += AAR.Account_Forecasts__r[0].Pipeline_Next_Quarter__c ;
 
 
             returnData.ForecastList = new List<Forecast>();
             //Get Forecast Entry Data
-            for(AAR_Split_Owner__c SplitOwner : AAR.AAR_Split_Owners__r){
+            for(AAR_Split_Owner__c SplitOwner : AF.AAR_Split_Owners__r){
                 for(Forecast_Entry__c FE : SplitOwner.Forecast_Entries__r){
                     
                     Forecast forecastRecord = new Forecast();
                     forecastRecord.Id = FE.Id;
-                    forecastRecord.OwnerName = SplitOwner.Owner.Name;
+                    forecastRecord.OwnerName = FE.AAR_Split_Owner__r.Owner.Name;
                     forecastRecord.name = FE.Product__c;
                     forecastRecord.q1 = FE.Forecast_Q1__c;
                     forecastRecord.q2 = FE.Forecast_Q2__c;
@@ -69,19 +106,9 @@ public class ForecastController {
                     forecastRecord.q31 = FE.Forecast_Q31__c;
                     forecastRecord.q41 = FE.Forecast_Q41__c;
                     forecastRecord.currencyISOCode = FE.CurrencyIsoCode;
-                    system.debug('### FE.CurrencyIsoCode '+FE.CurrencyIsoCode);
                     forecastRecord.productCumulative = FE.Forecast_Sum__c;
 
                     returnData.ForecastSum += FE.Forecast_Sum__c;
-
-                    data.q1 += (FE.Forecast_Q11__c ?? 0);
-                    data.q2 += (FE.Forecast_Q21__c ?? 0);
-                    data.q3 += (FE.Forecast_Q31__c ?? 0);
-                    data.q4 += (FE.Forecast_Q41__c ?? 0);
-                    data.ForecastNextYear += (FE.Forecast_Q11__c ?? 0);
-                    data.ForecastNextYear += (FE.Forecast_Q21__c ?? 0);
-                    data.ForecastNextYear += (FE.Forecast_Q31__c ?? 0);
-                    data.ForecastNextYear += (FE.Forecast_Q41__c ?? 0);
 
                     returnData.ForecastList.add(forecastRecord);
                     returnData.displayProducts = true;
@@ -103,13 +130,135 @@ public class ForecastController {
         rd.returnDataList = returnDataList;
         rd.currencySymbol = currentUsersCurrency+' ';
         rd.data = data;
-
+        rd.totalRecords = totalRecords;
         return rd;
     }
 
     @AuraEnabled 
+    public static List<Account_Forecast__c> getAFList(Integer AccessLevel, String recordId,Integer pageSize, Integer pageNumber,List<String> sellerLabelSet, List<String> advertiserLabelSet, List<String> agencyLabelSet, List<String> typeLabelSet, List<String> channelLabelSet){
+
+        if(AccessLevel == 0) return null;
+
+        String SellerConditionQuery = '';
+        String SellerForecastConditionQuery = '';
+        if(sellerLabelSet!= null && !sellerLabelSet.isEmpty()){
+            List<String> sellerConditions = new List<String>();
+            List<String> sellerForecastConditions = new List<String>();
+
+            for (String pattern : sellerLabelSet) {
+                sellerConditions.add('Advertiser_Agency_Relationship__r.Advertiser__r.Owner.Name LIKE \'' + pattern + '\'');
+                sellerForecastConditions.add('Owner.Name LIKE \'' + pattern + '\'');
+            }
+
+            SellerConditionQuery = ' ( ' + String.join(sellerConditions, ' OR ') + ') AND ';
+            SellerForecastConditionQuery = 'ID IN ( SELECT Account_Forecast__c FROM AAR_Split_Owner__c WHERE ( ' + String.join(sellerForecastConditions, ' OR ') + ')) AND';
+            system.debug('#### SellerConditonQuery'+SellerConditionQuery);
+        }
+
+        String AdvertiserConditionQuery = '';
+        if(advertiserLabelSet!= null && !advertiserLabelSet.isEmpty()){
+            List<String> AdvertiserConditions = new List<String>();
+ 
+            for (String pattern : advertiserLabelSet) {
+                AdvertiserConditions.add('Advertiser_Agency_Relationship__r.Advertiser__r.Name LIKE \'' + pattern + '\'');
+            }
+
+            AdvertiserConditionQuery = ' ( ' + String.join(AdvertiserConditions, ' OR ') + ') AND ';
+            system.debug('#### AdvertiserConditionQuery'+AdvertiserConditionQuery);
+        }
+        
+
+
+        String AgencyConditionQuery = '';
+        if(AgencyLabelSet!= null && !AgencyLabelSet.isEmpty()){
+            List<String> AgencyConditions = new List<String>();
+ 
+            for (String pattern : AgencyLabelSet) {
+                AgencyConditions.add('Advertiser_Agency_Relationship__r.Agency__r.Name LIKE \'' + pattern + '\'');
+            }
+
+            AgencyConditionQuery = ' ( ' + String.join(AgencyConditions, ' OR ') + ') AND ';
+            system.debug('#### AgencyConditionQuery'+AgencyConditionQuery);
+        }
+
+        String TypeConditionQuery = '';
+        if(typeLabelSet!= null && !typeLabelSet.isEmpty()){
+            List<String> TypeConditions = new List<String>();
+ 
+            for (String pattern : typeLabelSet) {
+                TypeConditions.add('Type__c = \'' + pattern + '\'');
+            }
+
+            TypeConditionQuery =  ' ( ' + String.join(TypeConditions, ' OR ') + ') AND';
+            system.debug('#### TypeConditionQuery'+TypeConditionQuery);
+        }
+
+
+        String ChannelConditionQuery = '';
+        if(ChannelLabelSet!= null && !ChannelLabelSet.isEmpty()){
+            List<String> ChannelConditions = new List<String>();
+ 
+            for (String pattern : ChannelLabelSet) {
+                ChannelConditions.add('Channel__c = \'' + pattern + '\'');
+            }
+
+            ChannelConditionQuery =  '  ( ' + String.join(ChannelConditions, ' OR ') + ') AND ';
+
+            system.debug('#### ChannelConditionQuery'+ChannelConditionQuery);
+        }
+
+        Integer offset = (pageNumber - 1) * pageSize;
+
+        String AccessCondition = '';
+        String AccountCondition = '';
+        
+        if(AccessLevel == 2){
+            AccessCondition = ' AND (Owner_s_Manager__c = \''+UserInfo.getUserId()+'\' OR OwnerId = \''+UserInfo.getUserId()+'\') ';
+        }else if(AccessLevel == 3){
+            AccessCondition = ' AND OwnerId = \''+UserInfo.getUserId()+'\'';
+        }
+
+        if(recordId != null){
+            AccountCondition = ' AND Advertiser_Agency_Relationship__r.Advertiser__c = \''+recordId+'\'';
+        }
+
+
+        List<Account_Forecast__c> AFList1 = new List<Account_Forecast__c>();
+        List<Account_Forecast__c> AFList2 = new List<Account_Forecast__c>();
+        
+
+        String query1 = 'SELECT Id FROM Account_Forecast__c WHERE '+SellerConditionQuery+AdvertiserConditionQuery+AgencyConditionQuery+TypeConditionQuery+ChannelConditionQuery+' ID IN (SELECT Account_Forecast__c FROM AAR_Split_Owner__c WHERE Is_Active__c = true ' + AccessCondition + ')' + AccountCondition + ' ORDER BY Advertiser_Agency_Relationship__r.Advertiser__r.Name';
+        String query2 = 'SELECT Id FROM Account_Forecast__c WHERE '+SellerForecastConditionQuery+AdvertiserConditionQuery+AgencyConditionQuery+TypeConditionQuery+ChannelConditionQuery+' ID IN (SELECT Account_Forecast__c FROM AAR_Split_Owner__c WHERE Is_Active__c = true ' + AccessCondition + ')' + AccountCondition + ' ORDER BY Advertiser_Agency_Relationship__r.Advertiser__r.Name';
+
+        AFList1 = Database.query(query1);
+        AFList2 = Database.query(query2);
+
+        //AFList1.addAll(AFList2);
+        //totalRecords = AFList1.size();
+
+        Map<Id, Account_Forecast__c> AFMap1 = new Map<Id, Account_Forecast__c>(AFList1);
+        Map<Id, Account_Forecast__c> AFMap2 = new Map<Id, Account_Forecast__c>(AFList2);
+
+
+        AFMap2.putAll(AFMap1);
+
+        totalRecords = AFMap2.size();
+        AllAFRecords = AFMap2.keySet() ;
+
+        List<Account_Forecast__c> AFList3 = new List<Account_Forecast__c>();
+
+        //String query3 = 'SELECT Id, Type__c, Channel__c, Trading_Deal__c, Advertiser_Agency_Relationship__c, Advertiser_Agency_Relationship__r.Agency__c, Advertiser_Agency_Relationship__r.Agency__r.Name, Advertiser_Agency_Relationship__r.Advertiser__c, Advertiser_Agency_Relationship__r.Advertiser__r.Name, Advertiser_Agency_Relationship__r.Advertiser__r.Owner.Name, CONVERTCURRENCY(Booking_Next_Year__c), CONVERTCURRENCY(Bookings_Current_Year__c), CONVERTCURRENCY(Pipeline_Current_Quarter__c), CONVERTCURRENCY(Pipeline_Next_Quarter__c), (SELECT Id, (SELECT Id, AAR_Split_Owner__r.Owner.Name, Product__c, Forecast_Q1__c, Forecast_Q2__c, Forecast_Q3__c, Forecast_Q4__c, Forecast_Q11__c, Forecast_Q21__c, Forecast_Q31__c, Forecast_Q41__c, CurrencyIsoCode, Forecast_Sum__c FROM Forecast_Entries__r WHERE IsActive__c = true) FROM AAR_Split_Owners__r WHERE Is_Active__c = true ' + AccessCondition + ' ORDER BY Owner.Name) FROM Account_Forecast__c WHERE '+SellerConditionQuery+AdvertiserConditionQuery+AgencyConditionQuery+TypeConditionQuery+ChannelConditionQuery+' ID IN (SELECT Account_Forecast__c FROM AAR_Split_Owner__c WHERE Is_Active__c = true ' + AccessCondition + ')' + AccountCondition + ' ORDER BY Advertiser_Agency_Relationship__r.Advertiser__r.Name LIMIT ' + pageSize + ' OFFSET ' + offset;
+        
+        String idsString = String.join(new List<Id>(AFMap2.keySet()), '\',\'');
+
+        String query3 = 'SELECT Id, Type__c, Channel__c, Trading_Deal__c, Advertiser_Agency_Relationship__c, Advertiser_Agency_Relationship__r.Agency__c, Advertiser_Agency_Relationship__r.Agency__r.Name, Advertiser_Agency_Relationship__r.Advertiser__c, Advertiser_Agency_Relationship__r.Advertiser__r.Name, Advertiser_Agency_Relationship__r.Advertiser__r.Owner.Name, CONVERTCURRENCY(Booking_Next_Year__c), CONVERTCURRENCY(Bookings_Current_Year__c), CONVERTCURRENCY(Pipeline_Current_Quarter__c), CONVERTCURRENCY(Pipeline_Next_Quarter__c), (SELECT Id, (SELECT Id, AAR_Split_Owner__r.Owner.Name, Product__c, CONVERTCURRENCY(Forecast_Q1__c), CONVERTCURRENCY(Forecast_Q2__c), CONVERTCURRENCY(Forecast_Q3__c), CONVERTCURRENCY(Forecast_Q4__c), CONVERTCURRENCY(Forecast_Q11__c), CONVERTCURRENCY(Forecast_Q21__c), CONVERTCURRENCY(Forecast_Q31__c),CONVERTCURRENCY Forecast_Q41__c), CurrencyIsoCode, CONVERTCURRENCY(Forecast_Sum__c) FROM Forecast_Entries__r WHERE IsActive__c = true) FROM AAR_Split_Owners__r WHERE Is_Active__c = true ' + AccessCondition + ' ORDER BY Owner.Name) FROM Account_Forecast__c WHERE Id IN (\'' + idsString + '\') LIMIT ' + pageSize + ' OFFSET ' + offset;
+        AFList3 = Database.query(query3);
+
+        return AFList3;
+    }
+
+    @AuraEnabled 
     public static String processData(List<Data> returnDataList, List<String> deletedForecastList) {
-		system.debug('### returnDataList '+returnDataList);
         List<Account_Forecast__c> AFList = new List<Account_Forecast__c>();
         List<Forecast_Entry__c> forecastList = new List<Forecast_Entry__c>();
 
@@ -144,7 +293,7 @@ public class ForecastController {
                     FE.Forecast_Q41__c = forecastRecord.q41;
                     FE.currencyISOCode = forecastRecord.currencyISOCode;
                     
-                    FE.AAR_Split_Owner__c = dataRecord.SOId; // Set the owner field
+                    //FE.AAR_Split_Owner__c = dataRecord.SOId; // Set the owner field
                     FE.IsActive__c = true; 
 
                     forecastList.add(FE); 
@@ -299,61 +448,6 @@ public class ForecastController {
         return 0;
     }
 
-    public static List<Advertiser_Agency_Relationship__c> getAARList(Integer AccessLevel, String recordId){
-        
-        if(AccessLevel == 0) return null;
-
-        List<Advertiser_Agency_Relationship__c> AARList = new List<Advertiser_Agency_Relationship__c>();
-
-        String AccessCondition = '';
-        String AccountCondition = '';
-        
-        if(AccessLevel == 2){
-            AccessCondition = ' AND (Owner_s_Manager__c = \''+UserInfo.getUserId()+'\' OR OwnerId = \''+UserInfo.getUserId()+'\') ';
-        }else if(AccessLevel == 3){
-            AccessCondition = ' AND OwnerId = \''+UserInfo.getUserId()+'\'';
-        }
-
-        if(recordId != null){
-            AccountCondition = ' AND Advertiser__c = \''+recordId+'\'';
-        }
-
-        String query = 'SELECT Id,	Agency__c,	Agency__r.Name,	Advertiser__c,	Advertiser__r.Name, Advertiser__r.Owner.Name,(SELECT Id,Type__c,Channel__c,Trading_Deal__c,	convertCurrency (Booking_Next_Year__c), convertCurrency(Bookings_Current_Year__c), convertCurrency(Pipeline_Current_Quarter__c),convertCurrency(Pipeline_Next_Quarter__c), CurrencyIsoCode FROM Account_Forecasts__r LIMIT 1),(SELECT Id,Primary_owner__c,Advertiser_Agency_Relationship__c,OwnerId,Owner.Name,(SELECT Id, convertCurrency(Forecast_Q1__c),	convertCurrency(Forecast_Q2__c), convertCurrency(Forecast_Q3__c),	convertCurrency(Forecast_Q4__c),convertCurrency(Forecast_Q11__c),	convertCurrency(Forecast_Q21__c),convertCurrency(Forecast_Q31__c),convertCurrency(Forecast_Q41__c),Product__c,	convertCurrency(Forecast_Sum__c),CurrencyIsoCode	FROM Forecast_Entries__r WHERE IsActive__c = true) FROM AAR_Split_Owners__r	WHERE Is_Active__c = true '+AccessCondition+' ORDER BY Owner.Name ) FROM Advertiser_Agency_Relationship__c WHERE ID IN (SELECT Advertiser_Agency_Relationship__c FROM Account_Forecast__c) AND ID IN (SELECT Advertiser_Agency_Relationship__c FROM AAR_Split_Owner__c WHERE Is_Active__c = true'+AccessCondition+')'+AccountCondition+' ORDER BY Advertiser__r.Name';
-
-        AARList = Database.query(query);
-
-        return AARList;
-    }
-
-
-    // Static variable to cache currency rates
-    private static Map<String, Decimal> currencyRatesCache;
-
-    //Method to get a converted amount using cached rates.
-    public Decimal getConvertedAmount(Decimal amount, String fromCurrencyIsoCode, String toCurrencyIsoCode) {
-        // Initialize the currency rates cache if not already populated
-        if (currencyRatesCache == null) {
-            currencyRatesCache = new Map<String, Decimal>();
-            // Fetch conversion rates and store them in the cache
-            for (CurrencyType curr : [SELECT IsoCode, ConversionRate FROM CurrencyType]) {
-                currencyRatesCache.put(curr.IsoCode, curr.ConversionRate);
-            }
-        }
-
-        // Check if both currencies exist in the cache
-        if (!currencyRatesCache.containsKey(fromCurrencyIsoCode) || !currencyRatesCache.containsKey(toCurrencyIsoCode)) {
-            throw new AuraHandledException('One of the specified currencies is not supported.');
-        }
-
-        // Get conversion rates from cache
-        Decimal fromCurrencyRate = currencyRatesCache.get(fromCurrencyIsoCode);
-        Decimal toCurrencyRate = currencyRatesCache.get(toCurrencyIsoCode);
-
-        // Calculate the converted amount
-        Decimal convertedAmount = (amount / fromCurrencyRate) * toCurrencyRate;
-        return convertedAmount.setScale(2); // Round to 2 decimal places
-    }
-
     @AuraEnabled(cacheable=true)
     public static List<String> getActiveCurrencies() {
         List<CurrencyType> currencyRecords = [SELECT IsoCode FROM CurrencyType WHERE IsActive = true];
@@ -374,6 +468,8 @@ public class ForecastController {
         public Boolean isManager  { get; set; }
         @AuraEnabled
         public String currencySymbol  { get; set; }
+        @AuraEnabled
+        public Integer totalRecords  { get; set; }
         
         public ReturnDataClass(){
             this.returnDataList = new List<Data>();

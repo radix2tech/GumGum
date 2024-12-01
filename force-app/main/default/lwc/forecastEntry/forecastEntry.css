@@ -228,3 +228,15 @@ footer {
     z-index: 1000;
     background-color: black; /* Keeps the card background intact */
 }
+
+.slds-m-around_medium {
+    margin: 1rem;
+}
+
+.page-info {
+    display: inline-block;
+    margin: 0 10px;
+    color: #333;
+    font-size: 1 rem; /* Larger font size */
+    font-weight: bold;
+}
