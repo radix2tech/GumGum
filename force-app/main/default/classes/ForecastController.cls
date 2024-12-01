@@ -251,7 +251,7 @@ public class ForecastController {
         
         String idsString = String.join(new List<Id>(AFMap2.keySet()), '\',\'');
 
-        String query3 = 'SELECT Id, Type__c, Channel__c, Trading_Deal__c, Advertiser_Agency_Relationship__c, Advertiser_Agency_Relationship__r.Agency__c, Advertiser_Agency_Relationship__r.Agency__r.Name, Advertiser_Agency_Relationship__r.Advertiser__c, Advertiser_Agency_Relationship__r.Advertiser__r.Name, Advertiser_Agency_Relationship__r.Advertiser__r.Owner.Name, CONVERTCURRENCY(Booking_Next_Year__c), CONVERTCURRENCY(Bookings_Current_Year__c), CONVERTCURRENCY(Pipeline_Current_Quarter__c), CONVERTCURRENCY(Pipeline_Next_Quarter__c), (SELECT Id, (SELECT Id, AAR_Split_Owner__r.Owner.Name, Product__c, CONVERTCURRENCY(Forecast_Q1__c), CONVERTCURRENCY(Forecast_Q2__c), CONVERTCURRENCY(Forecast_Q3__c), CONVERTCURRENCY(Forecast_Q4__c), CONVERTCURRENCY(Forecast_Q11__c), CONVERTCURRENCY(Forecast_Q21__c), CONVERTCURRENCY(Forecast_Q31__c),CONVERTCURRENCY Forecast_Q41__c), CurrencyIsoCode, CONVERTCURRENCY(Forecast_Sum__c) FROM Forecast_Entries__r WHERE IsActive__c = true) FROM AAR_Split_Owners__r WHERE Is_Active__c = true ' + AccessCondition + ' ORDER BY Owner.Name) FROM Account_Forecast__c WHERE Id IN (\'' + idsString + '\') LIMIT ' + pageSize + ' OFFSET ' + offset;
+        String query3 = 'SELECT Id, Type__c, Channel__c, Trading_Deal__c, Advertiser_Agency_Relationship__c, Advertiser_Agency_Relationship__r.Agency__c, Advertiser_Agency_Relationship__r.Agency__r.Name, Advertiser_Agency_Relationship__r.Advertiser__c, Advertiser_Agency_Relationship__r.Advertiser__r.Name, Advertiser_Agency_Relationship__r.Advertiser__r.Owner.Name, CONVERTCURRENCY(Booking_Next_Year__c), CONVERTCURRENCY(Bookings_Current_Year__c), CONVERTCURRENCY(Pipeline_Current_Quarter__c), CONVERTCURRENCY(Pipeline_Next_Quarter__c), (SELECT Id, (SELECT Id, AAR_Split_Owner__r.Owner.Name, Product__c, Forecast_Q1__c, Forecast_Q2__c, Forecast_Q3__c, Forecast_Q4__c, Forecast_Q11__c, Forecast_Q21__c, Forecast_Q31__c, Forecast_Q41__c, CurrencyIsoCode, Forecast_Sum__c FROM Forecast_Entries__r WHERE IsActive__c = true) FROM AAR_Split_Owners__r WHERE Is_Active__c = true ' + AccessCondition + ' ORDER BY Owner.Name) FROM Account_Forecast__c WHERE Id IN (\'' + idsString + '\') LIMIT ' + pageSize + ' OFFSET ' + offset;
         AFList3 = Database.query(query3);
 
         return AFList3;
@@ -293,7 +293,7 @@ public class ForecastController {
                     FE.Forecast_Q41__c = forecastRecord.q41;
                     FE.currencyISOCode = forecastRecord.currencyISOCode;
                     
-                    //FE.AAR_Split_Owner__c = dataRecord.SOId; // Set the owner field
+                    FE.AAR_Split_Owner__c = dataRecord.SOId; // Set the owner field
                     FE.IsActive__c = true; 
 
                     forecastList.add(FE); 

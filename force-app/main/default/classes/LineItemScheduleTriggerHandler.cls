@@ -3,9 +3,6 @@ Description	 : LineItemScheduleTriggerHandler
 Created Date : 01-05-2024
 Created By   : Kiran 
 Test Class   : LineItemScheduleTriggerHandlerTest
-Change Request : CR#1 Date: 15/11/2024
-				 Description: Changes made to handle the update of the field Maximum_Actual_Verity_Schedule_Date__c at Opportunity Product
-							  When Verity Actual Revenue is update on the Schedule or When a Schedule is created with Verity Actual Revenue.
 */
 public class LineItemScheduleTriggerHandler {
     
@@ -102,52 +99,6 @@ public class LineItemScheduleTriggerHandler {
             system.debug(ex);
         }
     }
-    
-    //updates Maximum_Actual_Verity_Schedule_Date__c on Opportunity Products when a Schedule with Actual Verity Revenue is Created/Deleted
-    public static void updateMaximumActualVeritySchedulDateOnInsertOrDelete(List<OpportunityLineItemSchedule> olisList){
-        
-        try{
-            Set<Id> effectedOliIdSet = new Set<Id>();
-            for(OpportunityLineItemSchedule olis: olisList){
-                if(olis.Actual_Revenue_Verity__c !=null && olis.Actual_Revenue_Verity__c >0){
-                    effectedOliIdSet.add(olis.OpportunityLineItemId);
-                }
-            }
-            if(!effectedOliIdSet.isEmpty()){
-                rollupMaxActualVerityRevenueDate(effectedOliIdSet);
-            }
-        }catch(Exception ex){
-            HandleCustomException.LogException(ex);  
-            system.debug(ex);
-        }
-    }
-    
-    //updates Maximum_Actual_Verity_Schedule_Date__c when Actual_Revenue_Verity__c is changed
-    public static void updateMaximumActualVeritySchedulDateOnUpdate(List<OpportunityLineItemSchedule> olisList,Map<Id,OpportunityLineItemSchedule> oldMap){
-        
-        try{
-            Set<Id> effectedOliIdSet = new Set<Id>();
-            for(OpportunityLineItemSchedule olis: olisList){
-                //checking if the Actual_Revenue_Verity__c is changed from blank or 0 to Valid value and vice versa
-                if(
-                    (olis.Actual_Revenue_Verity__c!=oldMap.get(olis.Id).Actual_Revenue_Verity__c) &&
-                    (
-                        (olis.Actual_Revenue_Verity__c>0 && (oldMap.get(olis.Id).Actual_Revenue_Verity__c==0 ||oldMap.get(olis.Id).Actual_Revenue_Verity__c==null))||
-                        (oldMap.get(olis.Id).Actual_Revenue_Verity__c>0 && (olis.Actual_Revenue_Verity__c==null || olis.Actual_Revenue_Verity__c==0))
-                    )
-                ){
-                    effectedOliIdSet.add(olis.OpportunityLineItemId);
-                }
-            }
-            if(!effectedOliIdSet.isEmpty()){
-                rollupMaxActualVerityRevenueDate(effectedOliIdSet);
-            }
-        }catch(Exception ex){
-            HandleCustomException.LogException(ex);  
-            system.debug(ex);
-        }
-    }
-    
    
     
     public static void rollupActualVerityRevenue(List<opportunityLineItem> oliList){
@@ -177,33 +128,6 @@ public class LineItemScheduleTriggerHandler {
         }
     }
     
-    //Rolling up the Max Actual Verity Schedule Date
-    public static void rollupMaxActualVerityRevenueDate(Set<Id> oliIdSet){
-        if(oliIdSet.size()>0){
-            Map<Id,Date> oliId2MaxActualVerityScheDate = new Map<Id,Date>();
-            List<OpportunityLineItem> oliListToUpdate = new List<OpportunityLineItem>();
-            List<AggregateResult> groupedOliMaxScheduleDateResult = [SELECT OpportunityLineItemId,Max(ScheduleDate)maxScheduleDate FROM
-                                         OpportunityLineItemSchedule
-                                         WHERE OpportunityLineItemId in :oliIdSet AND Actual_Revenue_Verity__c>0  GROUP BY OpportunityLineItemId];
-            for(AggregateResult ar: groupedOliMaxScheduleDateResult){
-                system.debug('maxScheduleDate'+ar.get('maxScheduleDate'));
-                oliId2MaxActualVerityScheDate.put((Id)ar.get('OpportunityLineItemId'),(Date)ar.get('maxScheduleDate'));
-            }
-            for(Id oliId: oliIdSet){
-                OpportunityLineItem oliRecord = new OpportunityLineItem();
-                oliRecord.Id = oliId;
-                if(oliId2MaxActualVerityScheDate.containsKey(oliId)){
-                    oliRecord.Maximum_Actual_Verity_Schedule_Date__c = oliId2MaxActualVerityScheDate.get(oliId);
-                }else{
-                    oliRecord.Maximum_Actual_Verity_Schedule_Date__c = null;
-                }
-                oliListToUpdate.add(oliRecord);
-            }
-            if(!oliListToUpdate.isEmpty()){
-                system.debug('@@@@@@@@oliList'+oliListToUpdate);
-                update oliListToUpdate;
-            }
-        }
-    }
-  
+    
+    
 }
