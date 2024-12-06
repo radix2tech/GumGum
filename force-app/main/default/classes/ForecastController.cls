@@ -4,6 +4,26 @@ public class ForecastController {
 
     static Integer totalRecords = 0;
     static Set<Id> AllAFRecords = new Set<Id>();
+    
+    public static Forecast convertCurrencyFields(Forecast f){
+        Forecast convForecast = new Forecast(f);
+        String userCurrencyIsoCode = UserInfo.getDefaultCurrency ();
+        if(f.currencyISOCode == userCurrencyIsoCode)
+            return convForecast;
+        
+        DatedConversionRate dcr = [SELECT ConversionRate 
+                                FROM DatedConversionRate 
+                                WHERE IsoCode = :f.currencyISOCode 
+                                AND StartDate <= :System.today() 
+                                ORDER BY StartDate DESC LIMIT 1];
+        if (dcr != null) {
+        	if(convForecast.q11 > 0)convForecast.q11 = convForecast.q11 * dcr.ConversionRate;
+        	if(convForecast.q21 > 0)convForecast.q21 = convForecast.q21 * dcr.ConversionRate;
+        	if(convForecast.q31 > 0)convForecast.q31 = convForecast.q31 * dcr.ConversionRate;
+        	if(convForecast.q41 > 0)convForecast.q41 = convForecast.q41 * dcr.ConversionRate;
+        }
+        return convForecast;
+    }
 
     @AuraEnabled(cacheable=false)
     public static ReturnDataClass  getForecastEntries(String recordId, Integer pageSize, Integer pageNumber ,List<String> sellerLabelSet, List<String> advertiserLabelSet ,List<String> agencyLabelSet,List<String> typeLabelSet, List<String> channelLabelSet) {
@@ -96,6 +116,7 @@ public class ForecastController {
                     Forecast forecastRecord = new Forecast();
                     forecastRecord.Id = FE.Id;
                     forecastRecord.OwnerName = FE.AAR_Split_Owner__r.Owner.Name;
+                    forecastRecord.SplitOwnerRecId = FE.AAR_Split_Owner__c;
                     forecastRecord.name = FE.Product__c;
                     forecastRecord.q1 = FE.Forecast_Q1__c;
                     forecastRecord.q2 = FE.Forecast_Q2__c;
@@ -251,7 +272,7 @@ public class ForecastController {
         
         String idsString = String.join(new List<Id>(AFMap2.keySet()), '\',\'');
 
-        String query3 = 'SELECT Id, Type__c, Channel__c, Trading_Deal__c, Advertiser_Agency_Relationship__c, Advertiser_Agency_Relationship__r.Agency__c, Advertiser_Agency_Relationship__r.Agency__r.Name, Advertiser_Agency_Relationship__r.Advertiser__c, Advertiser_Agency_Relationship__r.Advertiser__r.Name, Advertiser_Agency_Relationship__r.Advertiser__r.Owner.Name, CONVERTCURRENCY(Booking_Next_Year__c), CONVERTCURRENCY(Bookings_Current_Year__c), CONVERTCURRENCY(Pipeline_Current_Quarter__c), CONVERTCURRENCY(Pipeline_Next_Quarter__c), (SELECT Id, (SELECT Id, AAR_Split_Owner__r.Owner.Name, Product__c, Forecast_Q1__c, Forecast_Q2__c, Forecast_Q3__c, Forecast_Q4__c, Forecast_Q11__c, Forecast_Q21__c, Forecast_Q31__c, Forecast_Q41__c, CurrencyIsoCode, Forecast_Sum__c FROM Forecast_Entries__r WHERE IsActive__c = true) FROM AAR_Split_Owners__r WHERE Is_Active__c = true ' + AccessCondition + ' ORDER BY Owner.Name) FROM Account_Forecast__c WHERE Id IN (\'' + idsString + '\') LIMIT ' + pageSize + ' OFFSET ' + offset;
+        String query3 = 'SELECT Id, Type__c, Channel__c, Trading_Deal__c, Advertiser_Agency_Relationship__c, Advertiser_Agency_Relationship__r.Agency__c, Advertiser_Agency_Relationship__r.Agency__r.Name, Advertiser_Agency_Relationship__r.Advertiser__c, Advertiser_Agency_Relationship__r.Advertiser__r.Name, Advertiser_Agency_Relationship__r.Advertiser__r.Owner.Name, CONVERTCURRENCY(Booking_Next_Year__c), CONVERTCURRENCY(Bookings_Current_Year__c), CONVERTCURRENCY(Pipeline_Current_Quarter__c), CONVERTCURRENCY(Pipeline_Next_Quarter__c), (SELECT Id, (SELECT Id, AAR_Split_Owner__r.Owner.Name, Product__c, CONVERTCURRENCY(Forecast_Q1__c), CONVERTCURRENCY(Forecast_Q2__c), CONVERTCURRENCY(Forecast_Q3__c), CONVERTCURRENCY(Forecast_Q4__c), CONVERTCURRENCY(Forecast_Q11__c), CONVERTCURRENCY(Forecast_Q21__c), CONVERTCURRENCY(Forecast_Q31__c),CONVERTCURRENCY(Forecast_Q41__c), CurrencyIsoCode, CONVERTCURRENCY(Forecast_Sum__c) FROM Forecast_Entries__r WHERE IsActive__c = true) FROM AAR_Split_Owners__r WHERE Is_Active__c = true ' + AccessCondition + ' ORDER BY Owner.Name) FROM Account_Forecast__c WHERE Id IN (\'' + idsString + '\') LIMIT ' + pageSize + ' OFFSET ' + offset;
         AFList3 = Database.query(query3);
 
         return AFList3;
@@ -287,24 +308,27 @@ public class ForecastController {
                     FE.Forecast_Q4__c = forecastRecord.q4; // Set Q4 forecast
 
                     // Set additional forecast fields for quarters 11 to 41
+                    forecastRecord = convertCurrencyFields(forecastRecord);
                     FE.Forecast_Q11__c = forecastRecord.q11;
                     FE.Forecast_Q21__c = forecastRecord.q21;
                     FE.Forecast_Q31__c = forecastRecord.q31;
                     FE.Forecast_Q41__c = forecastRecord.q41;
                     FE.currencyISOCode = forecastRecord.currencyISOCode;
                     
-                    FE.AAR_Split_Owner__c = dataRecord.SOId; // Set the owner field
+                    //FE.AAR_Split_Owner__c = forecastRecord.OwnerId; // Set the owner field
+                    if(forecastRecord.Id != null) 
+                        FE.Id = forecastRecord.Id; // Set the owner field
                     FE.IsActive__c = true; 
 
                     forecastList.add(FE); 
 
                     // If the forecastRecord has a valid ID (18 characters long), create an inactive record
-                    if(forecastRecord.Id.length() == 18){
+                    /*if(forecastRecord.Id.length() == 18){
                         FE = new Forecast_Entry__c(); 
                         FE.Id = forecastRecord.Id; 
                         FE.IsActive__c = false; 
                         forecastList.add(FE); 
-                    }
+                    }*/	
                 }
             }
         }
@@ -545,6 +569,8 @@ public class ForecastController {
         @AuraEnabled   
         public String OwnerName { get; set; }
         @AuraEnabled   
+        public String SplitOwnerRecId { get; set; }
+        @AuraEnabled   
         public String name { get; set; }
         @AuraEnabled
         public Decimal q1 { get; set; }
@@ -578,6 +604,25 @@ public class ForecastController {
         public Forecast() {
             this.displayAdd = false;
             this.isChanged = false;
+        }
+        
+        public Forecast(Forecast f) {
+            this.Id = f.Id;
+            this.OwnerName = f.OwnerName;
+            this.SplitOwnerRecId = f.SplitOwnerRecId;
+            this.name = f.name;
+            this.q1 = f.q1;
+            this.q2 = f.q2;
+            this.q3 = f.q3;
+            this.q4 = f.q4;
+            this.q11 = f.q11;
+            this.q21 = f.q21;
+            this.q31 = f.q31;
+            this.q41 = f.q41;
+            this.currencyISOCode = f.currencyISOCode;
+            this.productCumulative = f.productCumulative;
+            this.displayAdd = f.displayAdd;
+            this.isChanged = f.isChanged;
         }
     }
 
