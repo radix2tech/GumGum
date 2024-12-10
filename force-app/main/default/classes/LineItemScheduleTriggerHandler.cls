@@ -105,34 +105,46 @@ public class LineItemScheduleTriggerHandler {
     
     //updates Maximum_Actual_Verity_Schedule_Date__c on Opportunity Products when a Schedule with Actual Verity Revenue is Created/Deleted
     public static void updateMaximumActualVeritySchedulDateOnInsertOrDelete(List<OpportunityLineItemSchedule> olisList){
-        Set<Id> effectedOliIdSet = new Set<Id>();
-        for(OpportunityLineItemSchedule olis: olisList){
-            if(olis.Actual_Revenue_Verity__c !=null && olis.Actual_Revenue_Verity__c >0){
-                effectedOliIdSet.add(olis.OpportunityLineItemId);
+        
+        try{
+            Set<Id> effectedOliIdSet = new Set<Id>();
+            for(OpportunityLineItemSchedule olis: olisList){
+                if(olis.Actual_Revenue_Verity__c !=null && olis.Actual_Revenue_Verity__c >0){
+                    effectedOliIdSet.add(olis.OpportunityLineItemId);
+                }
             }
-        }
-        if(!effectedOliIdSet.isEmpty()){
-            rollupMaxActualVerityRevenueDate(effectedOliIdSet);
+            if(!effectedOliIdSet.isEmpty()){
+                rollupMaxActualVerityRevenueDate(effectedOliIdSet);
+            }
+        }catch(Exception ex){
+            HandleCustomException.LogException(ex);  
+            system.debug(ex);
         }
     }
     
     //updates Maximum_Actual_Verity_Schedule_Date__c when Actual_Revenue_Verity__c is changed
     public static void updateMaximumActualVeritySchedulDateOnUpdate(List<OpportunityLineItemSchedule> olisList,Map<Id,OpportunityLineItemSchedule> oldMap){
-        Set<Id> effectedOliIdSet = new Set<Id>();
-        for(OpportunityLineItemSchedule olis: olisList){
-            //checking if the Actual_Revenue_Verity__c is changed from blank or 0 to Valid value and vice versa
-            if(
-                (olis.Actual_Revenue_Verity__c!=oldMap.get(olis.Id).Actual_Revenue_Verity__c) &&
-                 (
-                     (olis.Actual_Revenue_Verity__c>0 && (oldMap.get(olis.Id).Actual_Revenue_Verity__c==0 ||oldMap.get(olis.Id).Actual_Revenue_Verity__c==null))||
-                     (oldMap.get(olis.Id).Actual_Revenue_Verity__c>0 && (olis.Actual_Revenue_Verity__c==null || olis.Actual_Revenue_Verity__c==0))
-                 )
-              ){
-                effectedOliIdSet.add(olis.OpportunityLineItemId);
+        
+        try{
+            Set<Id> effectedOliIdSet = new Set<Id>();
+            for(OpportunityLineItemSchedule olis: olisList){
+                //checking if the Actual_Revenue_Verity__c is changed from blank or 0 to Valid value and vice versa
+                if(
+                    (olis.Actual_Revenue_Verity__c!=oldMap.get(olis.Id).Actual_Revenue_Verity__c) &&
+                    (
+                        (olis.Actual_Revenue_Verity__c>0 && (oldMap.get(olis.Id).Actual_Revenue_Verity__c==0 ||oldMap.get(olis.Id).Actual_Revenue_Verity__c==null))||
+                        (oldMap.get(olis.Id).Actual_Revenue_Verity__c>0 && (olis.Actual_Revenue_Verity__c==null || olis.Actual_Revenue_Verity__c==0))
+                    )
+                ){
+                    effectedOliIdSet.add(olis.OpportunityLineItemId);
+                }
             }
-        }
-        if(!effectedOliIdSet.isEmpty()){
-            rollupMaxActualVerityRevenueDate(effectedOliIdSet);
+            if(!effectedOliIdSet.isEmpty()){
+                rollupMaxActualVerityRevenueDate(effectedOliIdSet);
+            }
+        }catch(Exception ex){
+            HandleCustomException.LogException(ex);  
+            system.debug(ex);
         }
     }
     

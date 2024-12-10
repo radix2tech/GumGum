@@ -221,7 +221,8 @@ public class OpportunityProductSchedulerController {
                 returnVars.errorOppLineItemsDisplay = errorOppProdList;
             }
             if(errorMessageList.size()>0){
-                returnVars.errorMessageFromAPex = errorMessageList;   
+                Set<String> errorMessageSet = new Set<String>(errorMessageList);
+                returnVars.errorMessageFromAPex = new List<String>(errorMessageSet);   
             }
             returnVars.oppLineItemDisplay = oppProdList;
             returnVarList.add(returnVars);

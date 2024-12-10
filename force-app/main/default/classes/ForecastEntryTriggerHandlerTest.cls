@@ -102,9 +102,16 @@ public class ForecastEntryTriggerHandlerTest {
         setupTestData();
 		List<forecast_entry__c> forecastEntries = [select id,AAR_Split_Owner__r.ownerId,Forecast_Entry__c.Product__c,AAR_Split_Owner__c,Forecast_Q1__c
                                                    ,Forecast_Q2__c,Forecast_Q3__c , Forecast_Q4__c from forecast_entry__c];
-
+		OpportunityLineItemSchedule olis = [select id,OpportunityLineItem.OpportunityId from OpportunityLineItemSchedule limit 1];
         Test.startTest();
        	ForecastEntryTriggerHandler.processForecastEntries(forecastEntries);
+        opportunity oppty = New opportunity (Id = olis.OpportunityLineItem.OpportunityId) ;
+        oppty.stageName = 'Opportunity Identified';
+        //update oppty;
+        olis.ScheduleDate = Date.today().addYears(-1);
+        update olis;
+        ForecastEntryTriggerHandler.processForecastEntries(forecastEntries);
+        Database.executeBatch(new ForecastEntryCalcBatch(), 200);
         Test.stopTest();
 
     }

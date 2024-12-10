@@ -1,4 +1,5 @@
-trigger ForecastEntryTrigger on forecast_entry__c (before insert, before update) {
-    // Call the handler to process forecast entries, filtering by product condition
-    ForecastEntryTriggerHandler.processForecastEntries(Trigger.new);
+trigger ForecastEntryTrigger on forecast_entry__c (after insert, after update) {
+    if (Trigger.isAfter) {
+        ForecastEntryTriggerHandler.processForecastEntries(Trigger.new);
+    }
 }

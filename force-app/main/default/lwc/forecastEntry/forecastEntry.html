@@ -261,75 +261,133 @@
             </table>    
         </lightning-card>
        
-        <div id="filterOptions" style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
-
-            <!-- Filter combobox -->
-            <lightning-combobox 
-                name="myCombobox" 
-                value={value9} 
-                placeholder="Filter" 
-                options={options9} 
-                onchange={handleChangeFilter}
-                style="margin-right: 10px;">
-            </lightning-combobox>
-
-            <!-- Conditional filter input -->
-            <template if:true={displayFilterInput}>
-                <lightning-input
-                    type="text"
-                    value={pillInput}
-                    onchange={handlePillInputChange}
-                    onkeydown={handleKeyDown}
-                    style="margin-right: 10px;">
-                </lightning-input>
-            </template>
-
-            <!-- Alternate filter combobox -->
-            <template if:false={displayFilterInput}>
-                <lightning-combobox 
-                    name="myCombobox1" 
-                    value={filterText} 
-                    placeholder="Select" 
-                    options={filterOptions} 
-                    onchange={handleFilterChange}
-                    style="margin-right: 10px;">
-                </lightning-combobox>
-            </template>
-
-            <!-- Clear filter button -->
-            <lightning-button 
-                label="Clear Filter" 
-                onclick={clearFilter} 
-                class="slds-m-top_small">
-            </lightning-button>
-
-            <!-- Pills and message on a new line -->
-            <div style="flex-basis: 100%;"></div> <!-- Break to next line -->
-
-            <div>
-                <template if:true={pills.length}>
-                    <div>
-                        <template for:each={pills} for:item="pill">
-                            <lightning-pill
-                                key={pill.id}
-                                label={pill.label}
-                                onremove={handleRemovePill}
-                                data-id={pill.id}
-                                class="slds-m-right_small slds-m-bottom_small"
-                            ></lightning-pill>
-                        </template>
-                    </div>
-                </template>
-
-                <template if:false={pills.length}>
-                    <p>No filters added yet.</p>
-                </template>
-            </div>
-        </div>
 
         <lightning-card>
             <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" >
                 <thead class="child-card2">
+                    <tr>
+                        <template if:true={isManager}>
+                            <th class="center-text">
+                                <lightning-input
+                                    type="text"
+                                    onkeydown={handleSellerKeyDown}>
+                                </lightning-input>
+
+                                <template if:true={sellerPills.length}>
+                                    <div>
+                                        <template for:each={sellerPills} for:item="pill">
+                                            <lightning-pill
+                                                key={pill.id}
+                                                label={pill.label}
+                                                onremove={handleSellerRemovePill}
+                                                data-id={pill.id}
+                                                class="slds-m-right_small slds-m-bottom_small"
+                                            ></lightning-pill>
+                                        </template>
+                                    </div>
+                                </template>
+                            </th>
+                        </template>    
+                        <th class="center-text">
+                            <lightning-input
+                                type="text"
+                                onkeydown={handleAdvertiserKeyDown}
+                                style="margin-right: 10px;">
+                            </lightning-input>
+
+                            <template if:true={advertiserPills.length}>
+                                <div>
+                                    <template for:each={advertiserPills} for:item="pill">
+                                        <lightning-pill
+                                            key={pill.id}
+                                            label={pill.label}
+                                            onremove={handleAdvertiserRemovePill}
+                                            data-id={pill.id}
+                                            class="slds-m-right_small slds-m-bottom_small"
+                                        ></lightning-pill>
+                                    </template>
+                                </div>
+                            </template>
+                        </th>
+                        <th class="center-text">
+                            <lightning-input
+                                type="text"
+                                onkeydown={handleAgencyKeyDown}
+                                style="margin-right: 10px;">
+                            </lightning-input>
+
+                            <template if:true={agencyPills.length}>
+                                <div>
+                                    <template for:each={agencyPills} for:item="pill">
+                                        <lightning-pill
+                                            key={pill.id}
+                                            label={pill.label}
+                                            onremove={handleAgencyRemovePill}
+                                            data-id={pill.id}
+                                            class="slds-m-right_small slds-m-bottom_small"
+                                        ></lightning-pill>
+                                    </template>
+                                </div>
+                            </template>
+                        </th>
+                        <th class="center-text">
+                            <lightning-combobox 
+                                name="myCombobox1" 
+                                placeholder="Select" 
+                                options={filterOptions1} 
+                                onchange={handleTypeFilterChange}
+                                style="margin-right: 10px;">
+                            </lightning-combobox>
+
+                            <template if:true={typePills.length}>
+                                <div>
+                                    <template for:each={typePills} for:item="pill">
+                                        <lightning-pill
+                                            key={pill.id}
+                                            label={pill.label}
+                                            onremove={handleTypeRemovePill}
+                                            data-id={pill.id}
+                                            class="slds-m-right_small slds-m-bottom_small"
+                                        ></lightning-pill>
+                                    </template>
+                                </div>
+                            </template>
+
+                        </th>
+                        <th class="center-text">
+                            <lightning-combobox 
+                                name="myCombobox1" 
+                                placeholder="Select" 
+                                options={filterOptions2} 
+                                onchange={handleChannelFilterChange}
+                                style="margin-right: 10px;">
+                            </lightning-combobox>
+
+                            <template if:true={channelPills.length}>
+                                <div>
+                                    <template for:each={channelPills} for:item="pill">
+                                        <lightning-pill
+                                            key={pill.id}
+                                            label={pill.label}
+                                            onremove={handleChannelRemovePill}
+                                            data-id={pill.id}
+                                            class="slds-m-right_small slds-m-bottom_small"
+                                        ></lightning-pill>
+                                    </template>
+                                </div>
+                            </template>
+
+                        </th>
+                        <th></th>
+                        <!-- Bookings -->
+                        <th></th>
+                        <!-- Pipeline -->
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
                     <tr>
                         <template if:true={isManager}>
                             <th class="center-text">Seller</th>
@@ -393,7 +451,7 @@
                                         name="channel" 
                                         placeholder="Select an option"
                                         value={row.Channel}
-                                        options={options}
+                                        options={filterOptions2}
                                         data-id = {row.Id}
                                         onchange={handleChannelChange}>
                                     </lightning-combobox>
@@ -626,8 +684,26 @@
         </div>
     <!-- Footer Slot for Bottom-Right Button -->
         <div slot="footer" style="z-index: 2000" class=" footer  slds-text-align_right">
-            <lightning-button label="Previous" class="slds-m-right_small" variant="brand" onclick={Previous}></lightning-button>
-            <lightning-button label="Next" class="slds-m-right_small" variant="brand" onclick={Next}></lightning-button>
+            <lightning-button label="Previous" class="slds-m-right_small" variant="brand" onclick={handlePrevious}
+                disabled={isPreviousDisabled}></lightning-button>
+            <span class="page-info slds-m-right_small">Page {currentPage} of {totalPages}</span>
+            <lightning-button label="Next" class="slds-m-right_small" variant="brand" onclick={handleNext}
+                disabled={isNextDisabled}></lightning-button>
+            
+
+                <!--<lightning-button
+                    label="Previous"
+                    onclick={handlePrevious}
+                    disabled={isPreviousDisabled}>
+                </lightning-button>
+                <span class="page-info">Page {currentPage} of {totalPages}</span>
+                <lightning-button
+                    label="Next"
+                    onclick={handleNext}
+                    disabled={isNextDisabled}>
+                </lightning-button>-->
+
+
             <lightning-button label="Submit" variant="brand" onclick={submit}></lightning-button>
         </div>
 

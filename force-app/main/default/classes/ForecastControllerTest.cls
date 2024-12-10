@@ -47,6 +47,7 @@ public class ForecastControllerTest {
 
         AAR_Split_Owner__c splitOwner = new AAR_Split_Owner__c(
             Advertiser_Agency_Relationship__c = aar.Id,
+            Account_Forecast__c = forecast.Id,
             Is_Active__c = true
         );
         insert splitOwner;
@@ -103,16 +104,23 @@ public class ForecastControllerTest {
         List<String> Ids = new List<String>();
         Ids.add(FE.Id);
         Test.startTest();
-        ForecastController.ReturnDataClass result = ForecastController.getForecastEntries(AccountId);
-        
+
+        ForecastController.ReturnDataClass result = ForecastController.getForecastEntries(AccountId,10,1,null,null,null,null,null);
+
         result.returnDataList[0].isChanged=true;
         result.returnDataList[0].TradingDeal=true;
         
         ForecastController.processData(result.returnDataList, Ids);
-        
+		
+        List<String> seller = new List<String>{'e'};
+        List<String> advertiser = new List<String>{'Test'};
+        List<String> agency = new List<String>{'Test'};
+        List<String> type = new List<String>{'New','Renewal'};
+        List<String> channel = new List<String>{'Direct','Programmatic'};
+        ForecastController.getForecastEntries(AccountId,10,1,seller,advertiser,agency,type,channel);        
         Test.stopTest();
     }
-
+	
     @IsTest
     static void testRunBatchJob() {
         setupTestData();
@@ -184,4 +192,32 @@ public class ForecastControllerTest {
         Test.stopTest();
 
     }
+    
+    @IsTest
+    static void testActiveCurrencies() {
+        setupTestData();
+        Test.startTest();
+        ForecastController.getActiveCurrencies();
+        Test.stopTest();
+
+    }
+    
+    @isTest
+    static void testConvertCurrencyFields() {
+        // Create test data
+        String userCurrencyIsoCode = UserInfo.getDefaultCurrency();
+
+        // Case 1: Forecast with the same currency as the user's default
+        ForecastController.Forecast sameCurrencyForecast = new ForecastController.Forecast();
+        sameCurrencyForecast.CurrencyIsoCode = userCurrencyIsoCode;
+        sameCurrencyForecast.q11 = 100;
+        sameCurrencyForecast.q21 = 200;
+        sameCurrencyForecast.q31 = 300;
+        sameCurrencyForecast.q41 = 400;
+
+        Test.startTest();
+        ForecastController.Forecast result1 = ForecastController.convertCurrencyFields(sameCurrencyForecast);
+        Test.stopTest();
+    }
+	
 }

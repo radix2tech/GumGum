@@ -12,45 +12,249 @@ import AAR_Agency from '@salesforce/schema/Advertiser_Agency_Relationship__c.Age
 import submitForApproval from '@salesforce/apex/ForecastController.submitForApproval';
 import { NavigationMixin } from 'lightning/navigation';
 import getActiveCurrencies from '@salesforce/apex/ForecastController.getActiveCurrencies';
+import FE_pageSize from '@salesforce/label/c.FE_pageSize';
 
 export default class ForecastEntry extends NavigationMixin(LightningElement) {
 
 
+    @track currentPage = 1;
+    @track totalPages = 0;
+    @track isPreviousDisabled = true;
+    @track isNextDisabled = false;
 
-    @track pills = [];
-    @track pillInput = '';
+    pageSize = FE_pageSize; // Number of rows per page
+    totalRecords = 0;
 
-    handlePillInputChange(event) {
-        this.pillInput = event.target.value;
+    updatePaginationControls() {
+        this.isPreviousDisabled = this.currentPage === 1;
+        this.isNextDisabled = this.currentPage === this.totalPages;
     }
 
-    handleKeyDown(event) {
+    handlePrevious() {
+        if (this.currentPage > 1) {
+
+            this.currentPage--;
+            this.fetchData();
+
+        }
+    }
+
+    handleNext() {
+        if (this.currentPage < this.totalPages) {
+
+            this.currentPage++;
+            this.fetchData();
+
+        }
+    }
+
+
+    //Seller Filter
+    @track sellerPills = [];
+    sellerLabelSet = new Set();
+
+    handleSellerKeyDown(event) {
         if (event.key === 'Enter') {
-            this.handleAddPill();
+            let pillInput = event.target.value;
+            event.target.value = '';
+            if (pillInput.trim()) {
+
+                const newPill = {
+                    id: this.sellerPills.length ? this.sellerPills[this.sellerPills.length - 1].id + 1 : 1,
+                    label: pillInput,
+                    label1: '%'+pillInput+'%'
+                };
+                this.sellerPills = [...this.sellerPills, newPill];
+            }
+
+            this.handleSellerInputSet();
+            
+
         }
     }
 
-    handleAddPill() {
-        if (this.pillInput.trim()) {
-
-            const newPill = {
-                id: this.pills.length ? this.pills[this.pills.length - 1].id + 1 : 1,
-                label: this.pillInput
-            };
-            this.pills = [...this.pills, newPill];
-            this.pillInput = '';
-        }
-
-        this.applyFilter();
-
-    }
-
-    handleRemovePill(event) {
+    handleSellerRemovePill(event) {
         const pillId = parseInt(event.target.dataset.id, 10);
-        this.pills = this.pills.filter(pill => pill.id !== pillId);
+        this.sellerPills = this.sellerPills.filter(pill => pill.id !== pillId);
+        this.handleSellerInputSet();
+    }
+
+    handleSellerInputSet(){
+        this.sellerLabelSet = new Set();
+        this.sellerPills.forEach(pill => {
+            this.sellerLabelSet.add(pill.label1);
+        });
+
+        this.currentPage = 1;
+        this.updatePaginationControls();
+
+        this.fetchData();
+    }
+
+    //Advertiser Filter
+    @track advertiserPills = [];
+    advertiserLabelSet = new Set();
+
+    handleAdvertiserKeyDown(event) {
+        if (event.key === 'Enter') {
+            let pillInput = event.target.value;
+            event.target.value = '';
+            if (pillInput.trim()) {
+
+                const newPill = {
+                    id: this.advertiserPills.length ? this.advertiserPills[this.advertiserPills.length - 1].id + 1 : 1,
+                    label: pillInput,
+                    label1: '%'+pillInput+'%'
+                };
+                this.advertiserPills = [...this.advertiserPills, newPill];
+            }
+
+            this.handleAdvertiserInputSet();
+            
+
+        }
+    }
+
+    handleAdvertiserRemovePill(event) {
+        const pillId = parseInt(event.target.dataset.id, 10);
+        this.advertiserPills = this.advertiserPills.filter(pill => pill.id !== pillId);
+        this.handleAdvertiserInputSet();
+    }
+
+    handleAdvertiserInputSet(){
+        this.advertiserLabelSet = new Set();
+        this.advertiserPills.forEach(pill => {
+            this.advertiserLabelSet.add(pill.label1);
+        });
+        
+        this.currentPage = 1;
+        this.updatePaginationControls();
+
+        this.fetchData();
+    }
+
+    //Agency Filter
+    @track agencyPills = [];
+    agencyLabelSet = new Set();
+
+    handleAgencyKeyDown(event) {
+        if (event.key === 'Enter') {
+            let pillInput = event.target.value;
+            event.target.value = '';
+            if (pillInput.trim()) {
+
+                const newPill = {
+                    id: this.agencyPills.length ? this.agencyPills[this.agencyPills.length - 1].id + 1 : 1,
+                    label: pillInput,
+                    label1: '%'+pillInput+'%'
+                };
+                this.agencyPills = [...this.agencyPills, newPill];
+            }
+
+            this.handleAgencyInputSet();
+            
+
+        }
+    }
+
+    handleAgencyRemovePill(event) {
+        const pillId = parseInt(event.target.dataset.id, 10);
+        this.agencyPills = this.agencyPills.filter(pill => pill.id !== pillId);
+        this.handleAgencyInputSet();
+    }
+
+    handleAgencyInputSet(){
+        this.agencyLabelSet = new Set();
+        this.agencyPills.forEach(pill => {
+            this.agencyLabelSet.add(pill.label1);
+        });
+
+        this.currentPage = 1;
+        this.updatePaginationControls();
+
+        this.fetchData();
+    }
+
+    //Type Filter
+    @track typePills = [];
+    typeLabelSet = new Set();
+
+    handleTypeFilterChange(event) {
+            let pillInput = event.target.value;
+            event.target.value = '';
+            if (pillInput.trim()) {
+
+                const newPill = {
+                    id: this.typePills.length ? this.typePills[this.typePills.length - 1].id + 1 : 1,
+                    label: pillInput,
+                    label1: pillInput
+                };
+                this.typePills = [...this.typePills, newPill];
+            }
+
+            this.handleTypeInputSet();
+
+    }
+
+    handleTypeRemovePill(event) {
+        const pillId = parseInt(event.target.dataset.id, 10);
+        this.typePills = this.typePills.filter(pill => pill.id !== pillId);
+        this.handleTypeInputSet();
+    }
+
+    handleTypeInputSet(){
+        this.typeLabelSet = new Set();
+        this.typePills.forEach(pill => {
+            this.typeLabelSet.add(pill.label1);
+        });
+
+        this.currentPage = 1;
+        this.updatePaginationControls();
+
+        this.fetchData();
+    }
+
+    //Channel Filter
+    @track channelPills = [];
+    channelLabelSet = new Set();
+
+    handleChannelFilterChange(event) {
+            let pillInput = event.target.value;
+            event.target.value = '';
+            if (pillInput.trim()) {
+
+                const newPill = {
+                    id: this.channelPills.length ? this.channelPills[this.channelPills.length - 1].id + 1 : 1,
+                    label: pillInput,
+                    label1: pillInput
+                };
+                this.channelPills = [...this.channelPills, newPill];
+            }
+
+            this.handleChannelInputSet();
+
+    }
+
+    handleChannelRemovePill(event) {
+        const pillId = parseInt(event.target.dataset.id, 10);
+        this.channelPills = this.channelPills.filter(pill => pill.id !== pillId);
+        this.handleChannelInputSet();
+    }
+
+    handleChannelInputSet(){
+        this.channelLabelSet = new Set();
+        this.channelPills.forEach(pill => {
+            this.channelLabelSet.add(pill.label1);
+        });
+
+        this.currentPage = 1;
+        this.updatePaginationControls();
+
+        this.fetchData();
     }
 
     
+
     @track currencyOptions = [];
     @track selectedCurrency;
 
@@ -122,12 +326,12 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
     ];
 
     // Define the picklist options
-    @track options2 = [
+    @track filterOptions1 = [
         { label: 'New', value: 'New' },
         { label: 'Renewal', value: 'Renewal' }
     ];
 
-    @track options = [
+    @track filterOptions2 = [
         { label: 'Direct', value: 'Direct' },
         { label: 'Programmatic', value: 'Programmatic' }
     ];
@@ -194,10 +398,37 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
     @track currentYear;
     @track nextYear;
 
+    async fetchData(){
+        this.isLoading = true;
+
+        console.log('####  this.sellerLabelSet '+ Array.from(this.sellerLabelSet));
+        console.log('####  this.advertiserLabelSet '+ Array.from(this.advertiserLabelSet));
+        console.log('####  this.agencyLabelSet '+ Array.from(this.agencyLabelSet));
+        console.log('####  this.typeLabelSet '+ Array.from(this.typeLabelSet));
+        console.log('####  this.channelLabelSet '+ Array.from(this.channelLabelSet));
+
+        const objResult = await getForecastEntries({ recordId:this.recordId,pageSize: this.pageSize, pageNumber: this.currentPage, sellerLabelSet : Array.from(this.sellerLabelSet), advertiserLabelSet : Array.from(this.advertiserLabelSet), agencyLabelSet : Array.from(this.agencyLabelSet),typeLabelSet :  Array.from(this.typeLabelSet),channelLabelSet :  Array.from(this.channelLabelSet) });
+        this.returnData = objResult.returnDataList;
+
+        this.totalRecords = objResult.totalRecords;
+        this.totalPages = Math.ceil(this.totalRecords / this.pageSize);
+        this.updatePaginationControls();
+
+        this.currencySymbol = objResult.currencySymbol;
+        this.CumulativeData = objResult.data;
+        
+        this.isLoading = false;
+    }
+
     async connectedCallback() {
 
-        const objResult = await getForecastEntries({ recordId:this.recordId});
+        const objResult = await getForecastEntries({ recordId:this.recordId,pageSize: this.pageSize, pageNumber: this.currentPage , sellerLabelSet : null, advertiserLabelSet : null, agencyLabelSet : null, typeLabelSet : null, channelLabelSet : null});
         this.returnData = objResult.returnDataList;
+
+        this.totalRecords = objResult.totalRecords;
+        this.totalPages = Math.ceil(this.totalRecords / this.pageSize);
+        this.updatePaginationControls();
+
         this.currencySymbol = objResult.currencySymbol;
         this.CumulativeData = objResult.data;
         this.isManager = objResult.isManager;
@@ -210,6 +441,8 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
         this.currentYear = new Date().getFullYear();
         this.nextYear = this.currentYear+1;
         this.runBatch();
+
+        this.CaluclateCumulativeData();
     }
 
     // Function to handle submission of forecasts
@@ -226,9 +459,10 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
         });
         this.dispatchEvent(evt);
 
-        const objResult = await getForecastEntries({ recordId:this.recordId});
+        /*const objResult = await getForecastEntries({ recordId:this.recordId,pageSize: this.pageSize, pageNumber: this.currentPage});
         this.returnData = objResult.returnDataList;
-        this.CumulativeData = objResult.data;
+        this.CumulativeData = objResult.data;*/
+        this.fetchData();
 
         this.isLoading = false;
     
@@ -549,9 +783,7 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
 
     async stopPolling() {
         clearInterval(this.pollingInterval); // Clear the interval to stop polling
-        const objResult = await getForecastEntries({ recordId:this.recordId});
-        this.returnData = objResult.returnDataList;
-        this.CumulativeData = objResult.data;
+        this.fetchData();
     }
 
 
@@ -562,6 +794,7 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
         if(objResult == true){
             this.disableBatchButton = false; // Disable button
             this.batchButtonLabel = 'Refresh Data';
+            await this.fetchData();
             this.stopPolling();
         }
 
@@ -623,10 +856,8 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
         this.isModalOpen2 = false;
         this.errorMessage = null;
         this.duplicateRecordLinks = [];
-
-        const objResult = await getForecastEntries({ recordId:this.recordId});
-        this.returnData = objResult.returnDataList;
-        this.CumulativeData = objResult.data;
+        this.runBatch();
+        this.fetchData();
 
     }
 
@@ -744,9 +975,7 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
         this.isLoading = true;
         await createSplitOwner({ recordId: this.SelectedAARId});
 
-        const objResult = await getForecastEntries({ recordId:this.recordId});
-        this.returnData = objResult.returnDataList;
-        this.CumulativeData = objResult.data;
+        this.fetchData();
 
         this.isLoading = false;
 
@@ -782,28 +1011,32 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
         const rowId = event.target.dataset.id;
         await removeAAR({ recordId: rowId});
 
-        const objResult = await getForecastEntries({ recordId:this.recordId});
-        this.returnData = objResult.returnDataList;
-        this.CumulativeData = objResult.data;
+        this.fetchData();
 
         this.isLoading = false;
   
     }
 
     applyFilter() {
+        
 
-        for(let k= 0; k<= this.pills.length; k++){
-
-            console.log('###  this.pills '+this.pills[k].label);
-
-            if(this.value9 == 'Advertiser'){
+        //for(let k= 0; k< this.pills.length; k++){
+            //console.log('### K'+ k);
+            //console.log('###  this.pills '+this.pills[k].label);
+            //continue;
+            /*if(this.value9 == 'Advertiser'){
                 // Loop through the returnData array to find the correct row
                 for (let i = 0; i < this.returnData.length; i++) {
-                    if ( this.returnData[i].Advertiser && this.returnData[i].Advertiser.toLowerCase().includes(this.pills[k].label.toLowerCase())) {
-                        this.returnData[i].isDisplayed = true;
-                    }
-                    else{
-                        this.returnData[i].isDisplayed = false;
+
+                    this.returnData[i].isDisplayed = false;
+                    this.returnData[i].isExpanded = false;
+                    for(let k= 0; k< this.pills.length; k++){
+                        if ( this.returnData[i].Advertiser && this.returnData[i].Advertiser.toLowerCase().includes(this.pills[k].label.toLowerCase())) {
+                            this.returnData[i].isDisplayed = true;
+                        }
+                        else{
+                            //this.returnData[i].isDisplayed = false;
+                        }
                     }
                 }
             }
@@ -811,24 +1044,33 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
             if(this.value9 == 'Seller'){
                 // Loop through the returnData array to find the correct row
                 for (let i = 0; i < this.returnData.length; i++) {
-                    if (this.returnData[i].Seller && this.returnData[i].Seller.toLowerCase().includes(this.pills[k].label.toLowerCase())) {
-                        this.returnData[i].isDisplayed = true;
-                        this.returnData[i].isExpanded = true;
-                    }
-                    else{
-                        this.returnData[i].isDisplayed = false;
-                        this.returnData[i].isExpanded = false;
-                    }
 
-                    for(let j = 0; j < this.returnData[i].ForecastList.length; j++){
-                    if (this.returnData[i].ForecastList[j].OwnerName && this.returnData[i].ForecastList[j].OwnerName.toLowerCase().includes(this.pills[k].label.toLowerCase())) {
+                    this.returnData[i].isDisplayed = false;
+                    this.returnData[i].isExpanded = false;
+                    for(let k= 0; k< this.pills.length; k++){
+
+                        if (this.returnData[i].Seller && this.returnData[i].Seller.toLowerCase().includes(this.pills[k].label.toLowerCase())) {
                             this.returnData[i].isDisplayed = true;
                             this.returnData[i].isExpanded = true;
                         }
                         else{
-                            this.returnData[i].isDisplayed = false;
-                            this.returnData[i].isExpanded = false;
-                        } 
+                            //this.returnData[i].isDisplayed = false;
+                            //this.returnData[i].isExpanded = false;
+                        }
+
+                        for(let j = 0; j < this.returnData[i].ForecastList.length; j++){
+                            //this.returnData[i].isDisplayed = false;
+                            //this.returnData[i].isExpanded = false;
+
+                            if (this.returnData[i].ForecastList[j].OwnerName && this.returnData[i].ForecastList[j].OwnerName.toLowerCase().includes(this.pills[k].label.toLowerCase())) {
+                                this.returnData[i].isDisplayed = true;
+                                this.returnData[i].isExpanded = true;
+                            }
+                            else{
+                                //this.returnData[i].isDisplayed = false;
+                                //this.returnData[i].isExpanded = false;
+                            } 
+                        }
                     }
                 }
             }
@@ -836,11 +1078,17 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
             if(this.value9 == 'Agency'){
                 // Loop through the returnData array to find the correct row
                 for (let i = 0; i < this.returnData.length; i++) {
-                    if (this.returnData[i].Agency && this.returnData[i].Agency.toLowerCase().includes(this.pills[k].label.toLowerCase())) {
-                        this.returnData[i].isDisplayed = true;
-                    }
-                    else{
-                        this.returnData[i].isDisplayed = false;
+                    this.returnData[i].isDisplayed = false;
+                    this.returnData[i].isExpanded = false;
+
+                    for(let k= 0; k< this.pills.length; k++){
+
+                        if (this.returnData[i].Agency && this.returnData[i].Agency.toLowerCase().includes(this.pills[k].label.toLowerCase())) {
+                            this.returnData[i].isDisplayed = true;
+                        }
+                        else{
+                            //this.returnData[i].isDisplayed = false;
+                        }
                     }
                 }
             }
@@ -848,29 +1096,41 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
             if(this.value9 == 'Type'){
                 // Loop through the returnData array to find the correct row
                 for (let i = 0; i < this.returnData.length; i++) {
-                    if (this.returnData[i].Type && this.returnData[i].Type.toLowerCase() == this.pills[k].label.toLowerCase()) {
-                        this.returnData[i].isDisplayed = true;
-                    }
-                    else{
-                        this.returnData[i].isDisplayed = false;
-                    }
+                    this.returnData[i].isDisplayed = false;
+                    this.returnData[i].isExpanded = false;
+
+                    //for(let k= 0; k< this.pills.length; k++){
+
+                        if (this.returnData[i].Type && this.returnData[i].Type.toLowerCase() == this.filterText.toLowerCase()) {
+                            this.returnData[i].isDisplayed = true;
+                        }
+                        else{
+                            //this.returnData[i].isDisplayed = false;
+                        }
+                    //}
                 }
             }
 
             if(this.value9 == 'Channel'){
                 // Loop through the returnData array to find the correct row
                 for (let i = 0; i < this.returnData.length; i++) {
-                    if ( this.returnData[i].Channel && this.returnData[i].Channel.toLowerCase() == this.pills[k].label.toLowerCase()) {
-                        this.returnData[i].isDisplayed = true;
-                    }
-                    else{
-                        this.returnData[i].isDisplayed = false;
-                    }
+                    this.returnData[i].isDisplayed = false;
+                    this.returnData[i].isExpanded = false;
+
+                    //for(let k= 0; k< this.pills.length; k++){
+
+                        if ( this.returnData[i].Channel && this.returnData[i].Channel.toLowerCase() == this.filterText.toLowerCase()) {
+                            this.returnData[i].isDisplayed = true;
+                        }
+                        else{
+                            //this.returnData[i].isDisplayed = false;
+                        }
+                    //}
                 }
             }
 
-        }
-
+        //}
+        */
         this.CaluclateCumulativeData();
     }
 
@@ -895,8 +1155,6 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
                 this.CumulativeData.PipelineNextQuarter =  this.CumulativeData.PipelineNextQuarter + this.returnData[i].PipelineNextQuarter;
 
                 for(let j = 0; j < this.returnData[i].ForecastList.length; j++){
-                    console.log('### this.CumulativeData.q1 '+this.CumulativeData.q1);
-                    console.log('### this.returnData[i].ForecastList[j].q11 '+this.returnData[i].ForecastList[j].q11);
                     if(this.returnData[i].ForecastList[j].q11){
                         this.CumulativeData.q1 = this.CumulativeData.q1 + this.returnData[i].ForecastList[j].q11;
                     }
@@ -928,6 +1186,7 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
             this.returnData[i].isExpanded = false;
 
         }
+        //this.pills = [];
         this.CaluclateCumulativeData();
     }
 
@@ -941,12 +1200,12 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
         { label: 'Channel', value: 'Channel' }
     ];
 
-    @track filterOptions = [];
+    //@track filterOptions = [];
     @track displayFilterInput = true;
     // Handles changes in combobox selection
     handleChangeFilter(event) {
         this.value9 = event.detail.value;
-        if(this.value9 == 'Type' || this.value9 == 'Channel'){
+        /*if(this.value9 == 'Type' || this.value9 == 'Channel'){
             this.displayFilterInput = false;
             if(this.value9 == 'Type'){
                 this.filterOptions = this.options2;
@@ -956,7 +1215,7 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
         }
         else{
             this.displayFilterInput = true;
-        }
+        }*/
     }
 
     
@@ -969,7 +1228,6 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
 
     handleNavigate(event) {
         const rowId = event.target.dataset.id;
-        console.log('#### rowId ' + rowId);
 
         // Check if rowId exists to prevent errors
         if (rowId) {
