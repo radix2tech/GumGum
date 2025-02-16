@@ -14,6 +14,6 @@ public class ForecastEntryCalcBatch implements Database.Batchable<SObject>, Sche
     }
 
     public void execute(SchedulableContext sc) {
-        Database.executeBatch(new ForecastEntryCalcBatch(), 200);
+        Database.executeBatch(new ForecastEntryCalcBatch(), 10);
     }
 }

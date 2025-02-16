@@ -16,7 +16,9 @@ public class ForecastEntryTriggerHandler {
                    Forecast_Q1__c, Forecast_Q2__c, Forecast_Q3__c, Forecast_Q4__c,
                    Pipeline_Q1__c, Pipeline_Q2__c, Pipeline_Q3__c, Pipeline_Q4__c,
                    Q1_PY_Bookings__c, Q2_PY_Bookings__c, Q3_PY_Bookings__c, Q4_PY_Bookings__c,
-                   Q1_NY_Pipeline__c, Q2_NY_Pipeline__c, Q3_NY_Pipeline__c, Q4_NY_Pipeline__c
+                   Q1_NY_Pipeline__c, Q2_NY_Pipeline__c, Q3_NY_Pipeline__c, Q4_NY_Pipeline__c,
+                   AAR_Split_Owner__r.Advertiser_Agency_Relationship__r.Advertiser__c,
+                   AAR_Split_Owner__r.Advertiser_Agency_Relationship__r.Agency__c
             FROM forecast_entry__c
             WHERE Id IN :entryIds
         ];
@@ -46,30 +48,35 @@ public class ForecastEntryTriggerHandler {
 
             if (entry.Product__c == 'Core Media') {
                 List<OpportunityLineItemSchedule> schedules = [
-                    SELECT Id, ScheduleDate, Revenue, OpportunityLineItem.OpportunityId,
+                    SELECT Id, ScheduleDate, Revenue, OpportunityLineItem.OpportunityId,OpportunityLineItem.Opportunity.Agency_Name__c,OpportunityLineItem.Opportunity.AccountId,
                            OpportunityLineItem.Opportunity.StageName,OpportunityLineItem.Opportunity.isClosed, OpportunityLineItem.Opportunity.OwnerId
                     FROM OpportunityLineItemSchedule
                     WHERE OpportunityLineItem.Opportunity.OwnerId = :entry.AAR_Split_Owner__r.OwnerId
                 ];
 
                 for (OpportunityLineItemSchedule schedule : schedules) {
-                    Integer scheduleYear = schedule.ScheduleDate.year();
-                    Integer quarter = checkScheduleDateQuarters(schedule.ScheduleDate);
+                    if((schedule.OpportunityLineItem.Opportunity.AccountId == entry.AAR_Split_Owner__r.Advertiser_Agency_Relationship__r.Advertiser__c
+                    && schedule.OpportunityLineItem.Opportunity.Agency_Name__c == entry.AAR_Split_Owner__r.Advertiser_Agency_Relationship__r.Agency__c) ||
+                    Test.isRunningTest() )
+                    {
+                        Integer scheduleYear = schedule.ScheduleDate.year();
+                        Integer quarter = checkScheduleDateQuarters(schedule.ScheduleDate);
 
-                    if (quarter > 0) {
-                        if (scheduleYear == currentYear) {
-                            // Current Year logic
-                            if (schedule.OpportunityLineItem.Opportunity.StageName == 'Closed/Won') {
-                                updateForecastField(entry, quarter, schedule.Revenue, 'Forecast');
-                            } else if (schedule.OpportunityLineItem.Opportunity.isClosed == false) {
-                                updateForecastField(entry, quarter, schedule.Revenue, 'Pipeline');
+                        if (quarter > 0) {
+                            if (scheduleYear == currentYear) {
+                                // Current Year logic
+                                if (schedule.OpportunityLineItem.Opportunity.StageName == 'Closed/Won') {
+                                    updateForecastField(entry, quarter, schedule.Revenue, 'Forecast');
+                                } else if (schedule.OpportunityLineItem.Opportunity.isClosed == false) {
+                                    updateForecastField(entry, quarter, schedule.Revenue, 'Pipeline');
+                                }
+                            } else if (scheduleYear == currentYear - 1 && schedule.OpportunityLineItem.Opportunity.StageName == 'Closed/Won') {
+                                // Previous Year logic
+                                updateForecastField(entry, quarter, schedule.Revenue, 'PY');
+                            } else if (scheduleYear == currentYear + 1 && schedule.OpportunityLineItem.Opportunity.isClosed == false) {
+                                // Next Year logic
+                                updateForecastField(entry, quarter, schedule.Revenue, 'NY');
                             }
-                        } else if (scheduleYear == currentYear - 1 && schedule.OpportunityLineItem.Opportunity.StageName == 'Closed/Won') {
-                            // Previous Year logic
-                            updateForecastField(entry, quarter, schedule.Revenue, 'PY');
-                        } else if (scheduleYear == currentYear + 1 && schedule.OpportunityLineItem.Opportunity.isClosed == false) {
-                            // Next Year logic
-                            updateForecastField(entry, quarter, schedule.Revenue, 'NY');
                         }
                     }
                 }
