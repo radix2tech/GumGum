@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KPI_requirements</fullName>
+    <active>false</active>
+    <description>At 25%, make Primary KPI and Secondary KPI fields required. If NA is chosen for Secondary KPI, then Tertiary KPI can be optional.</description>
+    <errorConditionFormula>OR
+(
+AND(
+ RecordType.DeveloperName =&quot;Advertising&quot;,
+ ISPICKVAL(StageName, &quot;Negotiations&quot;),
+ ISBLANK(TEXT( Primary_KPI__c))
+),
+AND(
+ RecordType.DeveloperName =&quot;Advertising&quot;,
+ ISPICKVAL(StageName, &quot;Negotiations&quot;),
+ ISBLANK(TEXT( Secondary_KPI__c))
+))</errorConditionFormula>
+    <errorDisplayField>Primary_KPI__c</errorDisplayField>
+    <errorMessage>Please enter the Primary, Secondary, or Tertiary KPI.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Verity Data Type --></label>
+    <name>Verity_Data_Type__c</name>
+    <picklistValues>
+        <masterLabel>Brand Safety</masterLabel>
+        <translation><!-- Brand Safety --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contextual</masterLabel>
+        <translation><!-- Contextual --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom Segment</masterLabel>
+        <translation><!-- Custom Segment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sentiment</masterLabel>
+        <translation><!-- Sentiment --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

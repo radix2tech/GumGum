@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount_for_Email_Subject__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(CurrencyIsoCode) &amp; &quot; &quot; &amp;
+IF(
+	Amount &gt;= 1000000,
+	TEXT(FLOOR(Amount / 1000000)) &amp; &quot;,&quot;,
+	&quot;&quot;) &amp;
+	IF(
+	Amount &gt;= 1000,
+	RIGHT(TEXT(FLOOR(Amount / 1000)), 3) &amp; &quot;,&quot;,
+	&quot;&quot;) &amp;
+	RIGHT(TEXT(FLOOR(Amount)), 3)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Amount for Email Subject</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

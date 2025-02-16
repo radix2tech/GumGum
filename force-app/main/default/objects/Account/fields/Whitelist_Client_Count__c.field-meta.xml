@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Whitelist_Client_Count__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(INCLUDES( Whitelist_Client_List__c, &quot;AT&amp;T&quot;), 1,0) + 
+IF(INCLUDES( Whitelist_Client_List__c, &quot;Coca Cola&quot;), 1,0) + 
+IF(INCLUDES( Whitelist_Client_List__c, &quot;GTB&quot;), 1,0) + 
+IF(INCLUDES( Whitelist_Client_List__c, &quot;Kargo&quot;), 1,0) + 
+IF(INCLUDES( Whitelist_Client_List__c, &quot;Publisher Hitlist&quot;), 1,0) + 
+IF(INCLUDES( Whitelist_Client_List__c, &quot;SC Johnson - Display&quot;), 1,0) + 
+IF(INCLUDES( Whitelist_Client_List__c, &quot;Omnicom&quot;), 1,0) + 
+IF(INCLUDES( Whitelist_Client_List__c, &quot;Ford&quot;), 1,0) + 
+IF(INCLUDES( Whitelist_Client_List__c, &quot;Lincoln&quot;), 1,0) + 
+IF(INCLUDES( Whitelist_Client_List__c, &quot;GumGum&quot;), 1,0) + 
+IF(INCLUDES( Whitelist_Client_List__c, &quot;SC Johnson - Video&quot;), 1,0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Whitelist Client Count (inactive)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

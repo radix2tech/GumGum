@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the Account ID of the related Agency in this opportunity and only shown if the Account is an agency (Account Type = Agency) --></help>
+    <label><!-- Agency Account ID --></label>
+    <name>Agency_Account_ID__c</name>
+</CustomFieldTranslation>

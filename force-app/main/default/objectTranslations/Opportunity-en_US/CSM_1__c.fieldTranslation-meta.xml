@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Strategist/Sr. #1 --></label>
+    <name>CSM_1__c</name>
+    <relationshipLabel><!-- Opportunities (Strategist/Sr. #1) --></relationshipLabel>
+</CustomFieldTranslation>

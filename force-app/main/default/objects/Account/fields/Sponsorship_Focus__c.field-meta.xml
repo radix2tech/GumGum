@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sponsorship_Focus__c</fullName>
+    <description>for &quot;Brand&quot; or &quot;Agency&quot; type accounts to identify which leagues they focus their sponsorship monies on</description>
+    <externalId>false</externalId>
+    <inlineHelpText>for &quot;Brand&quot; or &quot;Agency&quot; type accounts to identify which leagues they focus their sponsorship monies on</inlineHelpText>
+    <label>Sponsorship Focus</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>League</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

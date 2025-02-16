@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Billing</fullName>
+    <active>true</active>
+    <description>Requires billing detail to notify Accounting Team.</description>
+    <errorConditionFormula>and(
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+NOT( $Permission.Bypass_Opportunity_Validation ),
+Notify_Accounting__c ,
+OR(
+RecordType.Name = &quot;Advertising&quot;,
+RecordType.Name = &quot;Activation&quot;),
+ispickval(Channel__c, &quot;Direct&quot;),
+
+or(
+ispickval( Billing_Provider__c, &quot; &quot;),
+ispickval(Monthly_Phase_Goals__c,&quot;&quot;),
+isblank(Insertion_Order__c),
+isblank(Customer_Mailing_Address__c),
+isblank(Customer_Billing_Email_Address__c),
+ispickval(IO_Type__c,&quot;&quot;),
+isblank(IO_Campaign_Name__c),
+isblank(IO_Campaign_ID__c),
+isblank(IO_Client_Name__c)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Notify_Accounting__c</errorDisplayField>
+    <errorMessage>Notification not sent. All billing details are required to send Accounting notification.</errorMessage>
+</ValidationRule>

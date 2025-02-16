@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Publishing</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Publisher</value>
+    </filters>
+    <label>Publisher Opportunities</label>
+    <sharedTo>
+        <roleAndSubordinates>Publisher</roleAndSubordinates>
+        <roleAndSubordinates>Publisher_Operations</roleAndSubordinates>
+        <roleAndSubordinates>Publisher_Sales</roleAndSubordinates>
+    </sharedTo>
+</ListView>

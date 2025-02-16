@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outreach_Date_required_when_Renewal</fullName>
+    <active>false</active>
+    <description>Make Outreach Date a requirement when Sports Opportunity Type is Renewal</description>
+    <errorConditionFormula>AND(
+ RecordTypeId =&quot;0120P0000001w5t&quot;,
+ISPICKVAL(Type, &quot;Renewal&quot;),
+ISBLANK(Outreach_Date__c)
+)</errorConditionFormula>
+    <errorMessage>Outreach Date is required when the opportunity Type is Renewal.</errorMessage>
+</ValidationRule>

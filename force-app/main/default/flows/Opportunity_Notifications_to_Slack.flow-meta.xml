@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Closed_Won_Opportunity_Alert</name>
+        <label>Closed Won Opportunity Alert</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>ClosedOpportunityMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a1l4U00000C4q72QAB</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>New_Opportunity_Slack_Alert</name>
+        <label>New Opportunity Slack Alert</label>
+        <locationX>314</locationX>
+        <locationY>455</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>NewOpptyMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a1l4U00000C4qb3QAB</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <name>Stage_Name</name>
+        <label>Stage Name</label>
+        <locationX>314</locationX>
+        <locationY>335</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Closed_Won</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed/Won</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Closed_Won_Opportunity_Alert</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Closed Won</label>
+        </rules>
+        <rules>
+            <name>Opportunity_Identified</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Opportunity Identified</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Opportunity_Slack_Alert</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Opportunity Identified</label>
+        </rules>
+    </decisions>
+    <description>This flow is added to send channel alerts to slack when a new opportunity with stage name : opportunity identified or if an opportunity is at stage : closed won for an EMEA Opportunities</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>ClosedOpportunityMessage</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Opportunity_Owner_Full_Name__c} &amp; &apos;  just closed opportunity &apos; &amp; {!$Record.Name} &amp; &apos; in &apos; &amp; TEXT({!$Record.Opportunity_Region__c}) &amp; &apos; with currency &apos; &amp; TEXT({!$Record.CurrencyIsoCode}) &amp; &apos; in the amount of &apos; &amp; TEXT({!$Record.Amount})&amp;&apos;.&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>NewOpptyMessage</name>
+        <dataType>String</dataType>
+        <expression>&apos;A new opportunity &apos; &amp;{!$Record.Name}&amp; &apos; was created in &apos; &amp;TEXT({!$Record.Opportunity_Region__c})&amp; &apos; with currency &apos; &amp;  TEXT({!$Record.CurrencyIsoCode})&amp; &apos; in the amount of &apos; &amp; {!TotalOrderedAmount} &amp;&apos;.&apos;</expression>
+    </formulas>
+    <formulas>
+        <description>Formula field that sets total ordered amount to zero if there is no value in that field upon creation</description>
+        <name>TotalOrderedAmount</name>
+        <dataType>String</dataType>
+        <expression>IF(ISBLANK({!$Record.Amount}), TEXT(0), TEXT({!$Record.Amount} ))</expression>
+    </formulas>
+    <interviewLabel>Opportunity Notifications to Slack {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity Notifications to Slack</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Stage_Name</targetReference>
+        </connector>
+        <filterFormula>AND((OR(TEXT({!$Record.StageName}) = &apos;Closed/Won&apos;,TEXT({!$Record.StageName}) = &apos;Opportunity Identified&apos;)) ,
+OR (TEXT({!$Record.Opportunity_Region__c}) = &apos;EMEA&apos;,
+      TEXT({!$Record.Opportunity_Region__c}) = &apos;EMEA - Belgium&apos;,
+     TEXT({!$Record.Opportunity_Region__c}) = &apos;EMEA - France&apos;,
+     TEXT({!$Record.Opportunity_Region__c}) = &apos;EMEA - Germany&apos;,
+     TEXT({!$Record.Opportunity_Region__c}) = &apos;EMEA - Netherlands&apos;,
+    TEXT({!$Record.Opportunity_Region__c}) = &apos;EMEA - Nordics&apos;,
+    TEXT({!$Record.Opportunity_Region__c}) = &apos;EMEA - Poland&apos;,
+   TEXT({!$Record.Opportunity_Region__c}) = &apos;EMEA - Spain&apos;,
+  TEXT({!$Record.Opportunity_Region__c}) = &apos;EMEA - Italy&apos;,
+   TEXT({!$Record.Opportunity_Region__c}) = &apos;EMEA - UK&apos;)
+)</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

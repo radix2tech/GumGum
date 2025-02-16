@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>APAC - Independents</fullName>
+        <default>false</default>
+        <label>APAC - Independents</label>
+    </customValue>
+    <customValue>
+        <fullName>Japan</fullName>
+        <default>false</default>
+        <label>APAC - Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>New Zealand</fullName>
+        <default>false</default>
+        <label>APAC - New Zealand</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW</fullName>
+        <default>false</default>
+        <label>APAC - NSW</label>
+    </customValue>
+    <customValue>
+        <fullName>APAC - QLD</fullName>
+        <default>false</default>
+        <label>APAC - QLD</label>
+    </customValue>
+    <customValue>
+        <fullName>APAC - SA</fullName>
+        <default>false</default>
+        <label>APAC - SA</label>
+    </customValue>
+    <customValue>
+        <fullName>APAC_South East Asia</fullName>
+        <default>false</default>
+        <label>APAC - South East Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>VIC</fullName>
+        <default>false</default>
+        <label>APAC - VIC</label>
+    </customValue>
+    <customValue>
+        <fullName>APAC - WA</fullName>
+        <default>false</default>
+        <label>APAC - WA</label>
+    </customValue>
+    <customValue>
+        <fullName>Canada</fullName>
+        <default>false</default>
+        <label>Canada</label>
+    </customValue>
+    <customValue>
+        <fullName>EMEA - Belgium</fullName>
+        <default>false</default>
+        <label>EMEA - Belgium</label>
+    </customValue>
+    <customValue>
+        <fullName>EMEA - France</fullName>
+        <default>false</default>
+        <label>EMEA - France</label>
+    </customValue>
+    <customValue>
+        <fullName>EMEA - Germany</fullName>
+        <default>false</default>
+        <label>EMEA - Germany</label>
+    </customValue>
+    <customValue>
+        <fullName>EMEA - International</fullName>
+        <default>false</default>
+        <label>EMEA - International</label>
+    </customValue>
+    <customValue>
+        <fullName>EMEA - Italy</fullName>
+        <default>false</default>
+        <label>EMEA - Italy</label>
+    </customValue>
+    <customValue>
+        <fullName>EMEA - Netherlands</fullName>
+        <default>false</default>
+        <label>EMEA - Netherlands</label>
+    </customValue>
+    <customValue>
+        <fullName>EMEA - Nordics</fullName>
+        <default>false</default>
+        <label>EMEA - Nordics</label>
+    </customValue>
+    <customValue>
+        <fullName>EMEA - Poland</fullName>
+        <default>false</default>
+        <label>EMEA - Poland</label>
+    </customValue>
+    <customValue>
+        <fullName>EMEA - Spain</fullName>
+        <default>false</default>
+        <label>EMEA - Spain</label>
+    </customValue>
+    <customValue>
+        <fullName>EMEA - UK</fullName>
+        <default>false</default>
+        <label>EMEA - UK</label>
+    </customValue>
+    <customValue>
+        <fullName>LATAM</fullName>
+        <default>false</default>
+        <label>LATAM</label>
+    </customValue>
+    <customValue>
+        <fullName>US - Central</fullName>
+        <default>false</default>
+        <label>US - Central</label>
+    </customValue>
+    <customValue>
+        <fullName>US - East</fullName>
+        <default>false</default>
+        <label>US - East</label>
+    </customValue>
+    <customValue>
+        <fullName>US - West</fullName>
+        <default>false</default>
+        <label>US - West</label>
+    </customValue>
+    <customValue>
+        <fullName>EMEA</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EMEA</label>
+    </customValue>
+    <customValue>
+        <fullName>EMEA - Switzerland</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EMEA - Switzerland</label>
+    </customValue>
+    <masterLabel>Region</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

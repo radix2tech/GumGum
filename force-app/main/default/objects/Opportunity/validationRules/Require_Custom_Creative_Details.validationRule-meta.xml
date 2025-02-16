@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Custom_Creative_Details</fullName>
+    <active>true</active>
+    <errorConditionFormula>and( 
+NOT( $Permission.Bypass_Opportunity_Validation ),
+
+ $User.Bypass_Opportunity_Validation__c = FALSE ,
+Submit_for_Approval__c = true, 
+or(
+ ispickval(Custom_Request_Unit__c,&quot;&quot;),
+ isblank(Need_Response_By__c),
+ isblank(Comments__c)
+ )
+)</errorConditionFormula>
+    <errorDisplayField>Submit_for_Approval__c</errorDisplayField>
+    <errorMessage>Custom Creative Type, Response Date and Comments must be filled out to request Custom Creative.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Source_Verity__c</fullName>
+    <externalId>false</externalId>
+    <label>Opportunity Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Inbound - Demo request</fullName>
+                <default>false</default>
+                <label>Inbound - Demo request</label>
+            </value>
+            <value>
+                <fullName>Inbound - Partner referral</fullName>
+                <default>false</default>
+                <label>Inbound - Partner referral</label>
+            </value>
+            <value>
+                <fullName>Inbound - Pub Dev Referral</fullName>
+                <default>false</default>
+                <label>Inbound - Pub Dev Referral</label>
+            </value>
+            <value>
+                <fullName>Outbound</fullName>
+                <default>false</default>
+                <label>Outbound</label>
+            </value>
+            <value>
+                <fullName>Outbound - Executive Team</fullName>
+                <default>false</default>
+                <label>Outbound - Executive Team</label>
+            </value>
+            <value>
+                <fullName>Outbound - Media sales team</fullName>
+                <default>false</default>
+                <label>Outbound - Media sales team</label>
+            </value>
+            <value>
+                <fullName>Outbound - Media SDR team</fullName>
+                <default>false</default>
+                <label>Outbound - Media SDR team</label>
+            </value>
+            <value>
+                <fullName>Outbound - SDR (Matthew)</fullName>
+                <default>false</default>
+                <label>Outbound - SDR (Matthew)</label>
+            </value>
+            <value>
+                <fullName>Outbound - William</fullName>
+                <default>false</default>
+                <label>Outbound - William</label>
+            </value>
+            <value>
+                <fullName>Outbound - SDR (David)</fullName>
+                <default>false</default>
+                <label>Outbound - SDR (David)</label>
+            </value>
+            <value>
+                <fullName>Outbound - Masha</fullName>
+                <default>false</default>
+                <label>Outbound - Masha</label>
+            </value>
+            <value>
+                <fullName>Outbound - Larson</fullName>
+                <default>false</default>
+                <label>Outbound - Larson</label>
+            </value>
+            <value>
+                <fullName>Outbound - SDR (Tyler)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Outbound - SDR (Tyler)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

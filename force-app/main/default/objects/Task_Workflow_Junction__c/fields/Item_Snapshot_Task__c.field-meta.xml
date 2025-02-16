@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Item_Snapshot_Task__c</fullName>
+    <externalId>false</externalId>
+    <label>Item Snapshot Task</label>
+    <referenceTo>Item_Snapshot_Task__c</referenceTo>
+    <relationshipLabel>Task Workflow Juctions</relationshipLabel>
+    <relationshipName>Task_Workflow_Juctions</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_Reason_Competitor</fullName>
+    <active>false</active>
+    <description>This forces a competitor to be entered (or N/A if the seller doesn&apos;t know) when a Sports opportunity is lost</description>
+    <errorConditionFormula>and( 
+$RecordType.Name = &quot;Sports&quot;, 
+ISPICKVAL(StageName,&quot;Closed/Lost&quot;), 
+ISBLANK(TEXT(Winning_Competitor__c)),
+(Opp_Tag_Sports__c = FALSE))</errorConditionFormula>
+    <errorMessage>Please enter a competitor.</errorMessage>
+</ValidationRule>

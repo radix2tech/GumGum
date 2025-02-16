@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- IO Type --></label>
+    <name>IO_Type__c</name>
+    <picklistValues>
+        <masterLabel>Actualized IO</masterLabel>
+        <translation><!-- Actualized IO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Original IO</masterLabel>
+        <translation><!-- Original IO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Revised IO - Budget Cut</masterLabel>
+        <translation><!-- Revised IO - Budget Cut --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Revised IO - Incremental</masterLabel>
+        <translation><!-- Revised IO - Incremental --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Revised IO - Optimizations</masterLabel>
+        <translation><!-- Revised IO - Optimizations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Revised IO - Other</masterLabel>
+        <translation><!-- Revised IO - Other --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The Billing Entity account where invoices should be sent to. --></help>
+    <label><!-- Billing Entity --></label>
+    <name>Billing_Entity__c</name>
+    <relationshipLabel><!-- Opportunities (Billing Entity) --></relationshipLabel>
+</CustomFieldTranslation>

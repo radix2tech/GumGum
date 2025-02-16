@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Outbound SDR</name>
+    <queueMembers>
+        <users>
+            <user>0054u000006vlnaqao_colleen.dempsey@ic.gumgum.com</user>
+            <user>0054u000006vlnyqao_darren.moss@ic.gumgum.com</user>
+            <user>evan.morgan@ic.gumgum.com</user>
+            <user>0054u000006vlnoqao_stephen.flink@ic.gumgum.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

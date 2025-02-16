@@ -246,7 +246,13 @@ public with sharing class EB_OpportunityProductExtTest {
             OpportunityProductSchedulerController.InputVariables inputVars = new OpportunityProductSchedulerController.InputVariables();
             inputVars.oppLineItem = oppList;
             inputVarList.add(inputVars);  
-            OpportunityProductSchedulerController.createSchedules(inputVarList);  
+            OpportunityProductSchedulerController.createSchedules(inputVarList);
+            List<OpportunityLineItemSchedule> olisListActual = [SELECT Id,OpportunityLineItemId,Actual_Revenue_Verity__c,ScheduleDate from OpportunityLineItemSchedule WHERE OpportunityLineItemId in :oppList];
+            for(OpportunityLineItemSchedule olis: olisListActual){
+                olis.Actual_Revenue_Verity__c = 200;
+            }
+            update olisListActual;
+            OpportunityProductSchedulerController.createSchedules(inputVarList);
             Test.StopTest();
             
         }

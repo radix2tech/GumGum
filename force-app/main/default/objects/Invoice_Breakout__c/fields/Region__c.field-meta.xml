@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Which region is the expense serving?</inlineHelpText>
+    <label>Region</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>All Domestic</fullName>
+                <default>true</default>
+                <label>All Domestic</label>
+            </value>
+            <value>
+                <fullName>Domestic: East</fullName>
+                <default>false</default>
+                <label>Domestic: East</label>
+            </value>
+            <value>
+                <fullName>Domestic: Midwest</fullName>
+                <default>false</default>
+                <label>Domestic: Midwest</label>
+            </value>
+            <value>
+                <fullName>Domestic: West</fullName>
+                <default>false</default>
+                <label>Domestic: West</label>
+            </value>
+            <value>
+                <fullName>APAC: Australia</fullName>
+                <default>false</default>
+                <label>APAC: Australia</label>
+            </value>
+            <value>
+                <fullName>APAC: Japan</fullName>
+                <default>false</default>
+                <label>APAC: Japan</label>
+            </value>
+            <value>
+                <fullName>EMEA: United Kingdom</fullName>
+                <default>false</default>
+                <label>EMEA: United Kingdom</label>
+            </value>
+            <value>
+                <fullName>All Regions</fullName>
+                <default>false</default>
+                <label>All Regions</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field is populated based on what the lead manually inputted on the form field “Campaign Timing” from a contact form on our website. --></help>
+    <label><!-- Campaign Timing --></label>
+    <name>Campaign_Timing__c</name>
+</CustomFieldTranslation>

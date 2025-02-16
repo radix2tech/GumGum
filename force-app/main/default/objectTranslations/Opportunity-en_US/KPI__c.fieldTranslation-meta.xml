@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- KPI&apos;s --></label>
+    <name>KPI__c</name>
+    <picklistValues>
+        <masterLabel>Bounce Rate / Landing Page Yield</masterLabel>
+        <translation><!-- Bounce Rate / Landing Page Yield --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brand Awareness Lift</masterLabel>
+        <translation><!-- Brand Awareness Lift --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CPA / Conversions</masterLabel>
+        <translation><!-- CPA / Conversions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CTR</masterLabel>
+        <translation><!-- CTR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Engagement</masterLabel>
+        <translation><!-- Engagement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reach</masterLabel>
+        <translation><!-- Reach --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales/Consideration Lift</masterLabel>
+        <translation><!-- Sales/Consideration Lift --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Time Spent</masterLabel>
+        <translation><!-- Time Spent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VCR</masterLabel>
+        <translation><!-- VCR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Viewability</masterLabel>
+        <translation><!-- Viewability --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

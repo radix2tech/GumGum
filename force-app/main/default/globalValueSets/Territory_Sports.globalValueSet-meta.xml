@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Chris Mike (North/Central)</fullName>
+        <default>false</default>
+        <label>Chris Mike (North/Central)</label>
+    </customValue>
+    <customValue>
+        <fullName>Hilary Brown (Southwest)</fullName>
+        <default>false</default>
+        <label>Hilary Brown (Southwest)</label>
+    </customValue>
+    <customValue>
+        <fullName>Joe Pinaire (South)</fullName>
+        <default>false</default>
+        <label>Joe Pinaire (South)</label>
+    </customValue>
+    <customValue>
+        <fullName>OPEN (Northeast)</fullName>
+        <default>false</default>
+        <label>OPEN (Northeast)</label>
+    </customValue>
+    <customValue>
+        <fullName>OPEN (Mid-Atlantic/Great Lakes)</fullName>
+        <default>false</default>
+        <label>OPEN (Mid-Atlantic/Great Lakes)</label>
+    </customValue>
+    <customValue>
+        <fullName>AJ Sheth (Rights Holders)</fullName>
+        <default>false</default>
+        <label>AJ Sheth (Rights Holders)</label>
+    </customValue>
+    <customValue>
+        <fullName>TBD (EMEA Rep)</fullName>
+        <default>false</default>
+        <label>TBD (EMEA Rep)</label>
+    </customValue>
+    <customValue>
+        <fullName>TBD (Brands)</fullName>
+        <default>false</default>
+        <label>TBD (Brands)</label>
+    </customValue>
+    <customValue>
+        <fullName>TBD</fullName>
+        <default>false</default>
+        <label>TBD</label>
+    </customValue>
+    <customValue>
+        <fullName>Anthony Valentino</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Anthony Valentino</label>
+    </customValue>
+    <masterLabel>Territory (Sports)</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Quarter_Amount__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+AND(
+ Today() &gt;= DATE(Year(Today()),1,1), Today() &lt;= Date(Year(Today()),3,31)
+),
+ Q1_Running_Revenue__c ,
+IF(
+AND(
+ Today() &gt;= DATE(Year(Today()),4,1), Today() &lt;= Date(Year(Today()),6,30)
+),
+ Q2_Running_Revenue__c ,
+IF(
+AND(
+ Today() &gt;= DATE(Year(Today()),7,1), Today() &lt;= Date(Year(Today()),9,30)
+),
+ Q3_Running_Revenue__c ,
+IF(
+AND(
+ Today() &gt;= DATE(Year(Today()),10,1), Today() &lt;= Date(Year(Today()),12,31)
+),
+ Q4_Running_Revenue__c , 0))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Current Quarter Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

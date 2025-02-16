@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Entity__c</fullName>
+    <externalId>false</externalId>
+    <label>Entity</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GumGum, Inc</fullName>
+                <default>true</default>
+                <label>GumGum, Inc</label>
+            </value>
+            <value>
+                <fullName>GumGum Australia Pty Ltd</fullName>
+                <default>false</default>
+                <label>GumGum Australia Pty Ltd</label>
+            </value>
+            <value>
+                <fullName>GumGum Japan K.K.</fullName>
+                <default>false</default>
+                <label>GumGum Japan K.K.</label>
+            </value>
+            <value>
+                <fullName>GumGum UK Ltd</fullName>
+                <default>false</default>
+                <label>GumGum UK Ltd</label>
+            </value>
+            <value>
+                <fullName>Just Premium</fullName>
+                <default>false</default>
+                <label>Just Premium</label>
+            </value>
+            <value>
+                <fullName>PXYZ Australia</fullName>
+                <default>false</default>
+                <label>PXYZ Australia</label>
+            </value>
+            <value>
+                <fullName>PXYZ EMEA</fullName>
+                <default>false</default>
+                <label>PXYZ EMEA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

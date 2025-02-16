@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- New Lead --></label>
+        <name>DaScoopComposer__Groove_Default</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- New Lead --></label>
+        <name>Groove_New_Lead</name>
+    </fieldSets>
+    <layouts>
+        <layout>Advertising</layout>
+        <sections>
+            <label><!-- Align.ly --></label>
+            <section>Align.ly</section>
+        </sections>
+        <sections>
+            <label><!-- Business Line --></label>
+            <section>Business Line</section>
+        </sections>
+        <sections>
+            <label><!-- Hubspot Information --></label>
+            <section>Hubspot Information</section>
+        </sections>
+        <sections>
+            <label><!-- LinkedIn Company Profile --></label>
+            <section>LinkedIn Company Profile</section>
+        </sections>
+        <sections>
+            <label><!-- LinkedIn Member Profile --></label>
+            <section>LinkedIn Member Profile</section>
+        </sections>
+        <sections>
+            <label><!-- Timeframes --></label>
+            <section>Timeframes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Groove - Lead Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Groove Engagement Data --></label>
+            <section>Groove Engagement Data</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Lead Layout</layout>
+        <sections>
+            <label><!-- Business Line --></label>
+            <section>Business Line</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Publisher Sales</layout>
+        <sections>
+            <label><!-- Business Line --></label>
+            <section>Business Line</section>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <section>Products</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Lead --></label>
+        <name>Lead</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Because we send marketing material that merges the first name, please include a first name for this lead. --></errorMessage>
+        <name>First_Name_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- CompanyId should be a numeric value --></errorMessage>
+        <name>LID__Check_CompanyId_Value</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- CompanyId should be a numeric value --></errorMessage>
+        <name>LID__Check_Company_Id_Value</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The current owner of the account is active, therefore you cannot change ownership. Contact a system administrator if you feel you received this in error. --></errorMessage>
+        <name>LeadOwnerChangeRestriction</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please complete Recycled Lead Reason --></errorMessage>
+        <name>Lead_Status_Recycled</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please complete Rejection Lead Reason --></errorMessage>
+        <name>Lead_Status_Unqualified</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Lead Source can not be changed on leads synced with HubSpot --></errorMessage>
+        <name>Prevent_Lead_Source_Change</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendGmail --></label>
+        <name>SendGmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- dc3Check --></label>
+        <name>dupcheck__dc3Check</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- dc3Convert --></label>
+        <name>dupcheck__dc3Convert</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- dc3Merge --></label>
+        <name>dupcheck__dc3Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_To_Reply_List --></label>
+        <name>replyapp__Add_To_Reply_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_to_Reply --></label>
+        <name>replyapp__Add_to_Reply</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Push_to_campaign --></label>
+        <name>replyapp__Push_to_campaign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Push_to_campaign_List --></label>
+        <name>replyapp__Push_to_campaign_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_email_via_Reply --></label>
+        <name>replyapp__Send_email_via_Reply</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_to_Slack --></label>
+        <name>slackv2__Send_to_Slack</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Slack_Alerts --></label>
+        <name>slackv2__Slack_Alerts</name>
+    </webLinks>
+</CustomObjectTranslation>

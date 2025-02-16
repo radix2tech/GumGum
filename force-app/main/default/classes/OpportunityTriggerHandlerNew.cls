@@ -7,6 +7,7 @@ Change Request : CR-002(11-07-2023) Method - updateCurrencyRateBeforeUpdate -Add
 Change Request : CR-003(27-10-2023) Updated the Code where Opportunity_Record_Types__mdt fetch recordTypes
 Change Request : CR-004(01-04-2024) Updated the code to populate Net_Total_Ordered_Amount_1__c on Opportunity with aggregate of Net_Total_Price__c(OpportunityLineItem)
 Change Request : CR-005(2024-09-15) For Verity - Demand, On change of Voiced Budget, recalculate the products
+Change Request : CR-006(2025-01-30) For Verity - Demand, On change of Voiced Budget, fixed the bug on verity actuals during products recalculation
 */
 public without sharing class OpportunityTriggerHandlerNew {
     
@@ -410,8 +411,9 @@ system.debug('Exception: '+e);
                             oliId2TotalPriceMap.put(oli.Id,priceBookEntryId2VerityRevenueMap.get(oli.PricebookEntryId)*oli.Opportunity.Voiced_Budget__c*oli.of_Budget__c/10000);  
                         } 
                     }
-                    establishSchedule(oliList,oliId2TotalPriceMap,oliIdScheduleDate2ActualRevenueMap);
                     delete olisList;
+                    establishSchedule(oliList,oliId2TotalPriceMap,oliIdScheduleDate2ActualRevenueMap);
+                    
                     //update Unit_Price__c on Opportunity Product
                     List<OpportunityLineItem> oliListToUpdate = new List<OpportunityLineItem>();
                     for(OpportunityLineItem oppLineItem: oliList){ 

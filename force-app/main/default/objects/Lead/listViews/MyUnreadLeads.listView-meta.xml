@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyUnreadLeads</fullName>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.FIRST_NAME</columns>
+    <columns>LEAD.LAST_NAME</columns>
+    <columns>LEAD.TITLE</columns>
+    <columns>Temperature__c</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>Request_a_Demo__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LEAD.UNREAD</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.Lead</value>
+    </filters>
+    <label>My Unread Leads</label>
+</ListView>

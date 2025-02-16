@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- My Role Involves --></label>
+    <name>My_Role_Involves__c</name>
+    <picklistValues>
+        <masterLabel>Media buying</masterLabel>
+        <translation><!-- Media buying --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Social media</masterLabel>
+        <translation><!-- Social media --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

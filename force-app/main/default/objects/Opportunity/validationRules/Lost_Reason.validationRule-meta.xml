@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_Reason</fullName>
+    <active>true</active>
+    <description>Requires Lost Reason and Details for Closed Lost</description>
+    <errorConditionFormula>AND(
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+ ISPICKVAL(StageName , &quot;Closed/Lost&quot;),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+OR(
+ISBLANK(TEXT(Lost_Reason_new__c)),
+ISBLANK( Lost_Details_Why__c )),
+OR(
+ RecordType.Name  =&quot;Advertising&quot;,
+ RecordType.Name =&quot;Activation&quot;,
+ RecordType.Name =&quot;Platform&quot;,
+ RecordType.Name =&quot;Open_Market&quot;,
+ RecordType.Name =&quot;Verity&quot;,
+ RecordType.Name =&quot;Video&quot;,
+ RecordType.Name =&quot;Attention_Intelligence_Platform&quot;
+))</errorConditionFormula>
+    <errorDisplayField>Lost_Reason_new__c</errorDisplayField>
+    <errorMessage>Please select the Lost Reason and Loss Details</errorMessage>
+</ValidationRule>

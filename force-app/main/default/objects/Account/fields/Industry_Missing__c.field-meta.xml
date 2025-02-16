@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry_Missing__c</fullName>
+    <description>Industry is missing a value; used for oppty page</description>
+    <externalId>false</externalId>
+    <formula>IF(
+AND(
+RecordType.Name = &quot;Advertising&quot; ,
+
+ISBLANK(TEXT( Industry  ))),TRUE,FALSE)</formula>
+    <inlineHelpText>Industry is missing a value; used for oppty page</inlineHelpText>
+    <label>Industry Missing</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

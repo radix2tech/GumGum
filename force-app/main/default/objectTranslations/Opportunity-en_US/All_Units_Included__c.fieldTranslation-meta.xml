@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- All Units Included --></label>
+    <name>All_Units_Included__c</name>
+    <picklistValues>
+        <masterLabel>6-sec Canvas Video</masterLabel>
+        <translation><!-- 6-sec Canvas Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Added Value</masterLabel>
+        <translation><!-- Added Value --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Desktop Outstream Skin</masterLabel>
+        <translation><!-- Desktop Outstream Skin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Desktop Scroller</masterLabel>
+        <translation><!-- Desktop Scroller --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Desktop Skin</masterLabel>
+        <translation><!-- Desktop Skin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Display</masterLabel>
+        <translation><!-- Display --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GumGum Native</masterLabel>
+        <translation><!-- GumGum Native --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GumGum Standard</masterLabel>
+        <translation><!-- GumGum Standard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GumGum Stories</masterLabel>
+        <translation><!-- GumGum Stories --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hangtime</masterLabel>
+        <translation><!-- Hangtime --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hoverboard</masterLabel>
+        <translation><!-- Hoverboard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Article Shoppable</masterLabel>
+        <translation><!-- In-Article Shoppable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Article Video</masterLabel>
+        <translation><!-- In-Article Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Content Video - No Banner</masterLabel>
+        <translation><!-- In-Content Video - No Banner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Game</masterLabel>
+        <translation><!-- In-Game --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Image</masterLabel>
+        <translation><!-- In-Image --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Image - Interactive</masterLabel>
+        <translation><!-- In-Image - Interactive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Image 6-Second Canvas Video - No Banner</masterLabel>
+        <translation><!-- In-Image 6-Second Canvas Video - No Banner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Image 728x90</masterLabel>
+        <translation><!-- In-Image 728x90 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Image Animated</masterLabel>
+        <translation><!-- In-Image Animated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Image Canvas</masterLabel>
+        <translation><!-- In-Image Canvas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Image Canvas - Interactive</masterLabel>
+        <translation><!-- In-Image Canvas - Interactive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Image Embedded Video</masterLabel>
+        <translation><!-- In-Image Embedded Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Image Expandable</masterLabel>
+        <translation><!-- In-Image Expandable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Image Frame</masterLabel>
+        <translation><!-- In-Image Frame --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Image Frame - Interactive</masterLabel>
+        <translation><!-- In-Image Frame - Interactive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Image/In-Screen Blend</masterLabel>
+        <translation><!-- In-Image/In-Screen Blend --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Screen</masterLabel>
+        <translation><!-- In-Screen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Screen - Interactive</masterLabel>
+        <translation><!-- In-Screen - Interactive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Screen Animated</masterLabel>
+        <translation><!-- In-Screen Animated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Screen Embedded Video</masterLabel>
+        <translation><!-- In-Screen Embedded Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Screen Embedded Video - No Banner</masterLabel>
+        <translation><!-- In-Screen Embedded Video - No Banner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Screen Expandable</masterLabel>
+        <translation><!-- In-Screen Expandable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Screen Expandable Corner</masterLabel>
+        <translation><!-- In-Screen Expandable Corner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Screen Expandable Display</masterLabel>
+        <translation><!-- In-Screen Expandable Display --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Screen Expandable Video</masterLabel>
+        <translation><!-- In-Screen Expandable Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Screen Frame</masterLabel>
+        <translation><!-- In-Screen Frame --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Screen Frame - Interactive</masterLabel>
+        <translation><!-- In-Screen Frame - Interactive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Screen Side</masterLabel>
+        <translation><!-- In-Screen Side --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Slot</masterLabel>
+        <translation><!-- In-Slot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Video Corner</masterLabel>
+        <translation><!-- In-Video Corner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Video PIP</masterLabel>
+        <translation><!-- In-Video PIP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Video Squeezeback</masterLabel>
+        <translation><!-- In-Video Squeezeback --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inline Billboard</masterLabel>
+        <translation><!-- Inline Billboard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mobile Scroller</masterLabel>
+        <translation><!-- Mobile Scroller --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mobile Skin</masterLabel>
+        <translation><!-- Mobile Skin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Page Peel</masterLabel>
+        <translation><!-- Page Peel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Placeholder</masterLabel>
+        <translation><!-- Placeholder --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre-Roll</masterLabel>
+        <translation><!-- Pre-Roll --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Production Fee</masterLabel>
+        <translation><!-- Production Fee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PushUp Leaderboard</masterLabel>
+        <translation><!-- PushUp Leaderboard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Skins</masterLabel>
+        <translation><!-- Skins --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Social Display</masterLabel>
+        <translation><!-- Social Display --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Superskin</masterLabel>
+        <translation><!-- Superskin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>V.I. Analytics and Reporting</masterLabel>
+        <translation><!-- V.I. Analytics and Reporting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Velocity</masterLabel>
+        <translation><!-- Velocity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Skins</masterLabel>
+        <translation><!-- Video Skins --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Solution</masterLabel>
+        <translation><!-- Video Solution --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

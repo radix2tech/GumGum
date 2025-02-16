@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This checkbox will be used by automation to identify opporturnities that must be considered for processing the OLIs --></help>
+    <label><!-- Re-calculate Products --></label>
+    <name>Re_calculate_Products__c</name>
+</CustomFieldTranslation>

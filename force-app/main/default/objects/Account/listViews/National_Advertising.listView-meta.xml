@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>National_Advertising</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Region__c</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>ACCOUNT.LAST_UPDATE</columns>
+    <columns>X2022_Data_Clean_Up_Signoff__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Advertising</value>
+    </filters>
+    <filters>
+        <field>National__c</field>
+        <operation>equals</operation>
+        <value>Yes</value>
+    </filters>
+    <label>National Advertising</label>
+</ListView>

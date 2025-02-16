@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- This is the CPM rate that we are charging the buyer to
+offset the campaign, which will be added to the CPM of the media.
+$0.10 : Use on standards IAB deals (always on) example GG Display. 
+$0.25 : Core media sales
+$0.00 : If the client does NOT want to off-set the campaign, and only wants to run against low-carbon sites -->
+    </help>
+    <label><!-- GMP Offset rate --></label>
+    <name>GMP_Offset_rate__c</name>
+    <picklistValues>
+        <masterLabel>0.00</masterLabel>
+        <translation><!-- 0.00 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0.10</masterLabel>
+        <translation><!-- 0.10 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0.25</masterLabel>
+        <translation><!-- 0.25 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

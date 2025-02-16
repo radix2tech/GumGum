@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field is checked when at least one Targeting record related to this opportunity has the Type field filled out. --></help>
+    <label><!-- Targeting Complete --></label>
+    <name>Targeting_Complete__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notify_Accounting_Campaign_End_checkbox</fullName>
+    <active>true</active>
+    <description>Notify Accounting and Notify Accounting - Campaign End checkboxes cannot both be checked.</description>
+    <errorConditionFormula>AND(
+Notify_Accounting__c   = TRUE, 
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+ Notify_Accounting_Campaign_End__c =TRUE)</errorConditionFormula>
+    <errorMessage>Notify Accounting and Notify Accounting - Campaign End checkboxes cannot both be checked.</errorMessage>
+</ValidationRule>

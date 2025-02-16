@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Gross Revenue on all products excluding In-Game --></help>
+    <label><!-- Total Core Ordered Amount --></label>
+    <name>Total_Core_Ordered_Amount__c</name>
+</CustomFieldTranslation>

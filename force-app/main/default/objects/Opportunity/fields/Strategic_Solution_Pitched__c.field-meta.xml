@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Strategic_Solution_Pitched__c</fullName>
+    <description>Created as part of  https://gumgum.jira.com/browse/SOP-1878</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select which strategic solutions were pitched to the client for this opportunity</inlineHelpText>
+    <label>Strategic Solution Pitched</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AIP</fullName>
+                <default>false</default>
+                <label>AIP</label>
+            </value>
+            <value>
+                <fullName>In-Game</fullName>
+                <default>false</default>
+                <label>In-Game</label>
+            </value>
+            <value>
+                <fullName>In-Video</fullName>
+                <default>false</default>
+                <label>In-Video</label>
+            </value>
+            <value>
+                <fullName>Verity Data- Video PMP</fullName>
+                <default>false</default>
+                <label>Verity Data- Video PMP</label>
+            </value>
+            <value>
+                <fullName>Verity Data- Pre-Bid</fullName>
+                <default>false</default>
+                <label>Verity Data- Pre-Bid</label>
+            </value>
+            <value>
+                <fullName>Verity Data- Display/Native PMP</fullName>
+                <default>false</default>
+                <label>Verity Data- Display/Native PMP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

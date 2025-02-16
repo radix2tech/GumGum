@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Japan Queue</name>
+    <queueMembers>
+        <users>
+            <user>momoko.kaneko@gumgum.com</user>
+            <user>0050p000007vntoqa0_naokazu.wakaguri@gumgum.com</user>
+            <user>ryo.matsumoto@gumgum.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Relevant_Business_Line__c</fullName>
+    <externalId>false</externalId>
+    <label>Relevant Business Line</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GumGum Media</fullName>
+                <default>false</default>
+                <label>GumGum Media</label>
+            </value>
+            <value>
+                <fullName>In-Game</fullName>
+                <default>false</default>
+                <label>In-Game</label>
+            </value>
+            <value>
+                <fullName>In-Video</fullName>
+                <default>false</default>
+                <label>In-Video</label>
+            </value>
+            <value>
+                <fullName>Multiple</fullName>
+                <default>false</default>
+                <label>Multiple</label>
+            </value>
+            <value>
+                <fullName>Open Market</fullName>
+                <default>false</default>
+                <label>Open Market</label>
+            </value>
+            <value>
+                <fullName>Publisher Development</fullName>
+                <default>false</default>
+                <label>Publisher Development</label>
+            </value>
+            <value>
+                <fullName>PXYZ AIP</fullName>
+                <default>false</default>
+                <label>PXYZ AIP</label>
+            </value>
+            <value>
+                <fullName>PXYZ Media</fullName>
+                <default>false</default>
+                <label>PXYZ Media</label>
+            </value>
+            <value>
+                <fullName>Verity for Publishers</fullName>
+                <default>false</default>
+                <label>Verity for Publishers</label>
+            </value>
+            <value>
+                <fullName>Verity PMP</fullName>
+                <default>false</default>
+                <label>Verity PMP</label>
+            </value>
+            <value>
+                <fullName>Verity Pre-bid</fullName>
+                <default>false</default>
+                <label>Verity Pre-bid</label>
+            </value>
+            <value>
+                <fullName>Verity Video PMP</fullName>
+                <default>false</default>
+                <label>Verity Video PMP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

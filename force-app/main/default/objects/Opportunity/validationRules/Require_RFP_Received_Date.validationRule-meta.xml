@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_RFP_Received_Date</fullName>
+    <active>true</active>
+    <description>RFP Received Date is required to move to Proposal stage.</description>
+    <errorConditionFormula>and(
+NOT( $Permission.Bypass_Opportunity_Validation ),
+
+ $User.Bypass_Opportunity_Validation__c = FALSE ,
+OR(
+ RecordType.Name = &quot;Advertising&quot;,
+ RecordType.Name = &quot;Activation&quot;),
+ ispickval(StageName, &quot;proposal&quot;),
+ ispickval(Channel__c, &quot;Direct&quot;),
+ isblank(RFP_Received_Date__c)
+)</errorConditionFormula>
+    <errorDisplayField>RFP_Received_Date__c</errorDisplayField>
+    <errorMessage>RFP Received Date is required to move to Proposal stage.</errorMessage>
+</ValidationRule>

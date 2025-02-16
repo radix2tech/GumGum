@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_Reason</fullName>
+    <active>true</active>
+    <description>Lost Reason must be filled out when Lost status is chosen.</description>
+    <errorConditionFormula>AND(
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+NOT( $Permission.Bypass_Account_Validation ),
+ RecordType.Name = &quot;Publisher&quot;,
+ISPICKVAL(Status__c, &quot;Lost&quot;),
+ISPICKVAL(Lost_Reason__c, &quot;&quot;)    
+)</errorConditionFormula>
+    <errorDisplayField>Lost_Reason__c</errorDisplayField>
+    <errorMessage>Please enter Lost Reason.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Owner_Region__c</fullName>
+    <description>&quot;Opportunity Region&quot; auto populates User Region based on the Account Owner&apos;s Region. It is derived from the picklist &quot;User Region&quot; which is a value in user settings required for every user and represents the Region that the sales rep/account manager is selling into, or alternatively the operations or other personnel&apos;s primary regional location. It is first converted to a text field &quot;User Region Desc&quot; and used in formulas to calculate the Account and Opportunity Region. Via Celigo integrator.io, the Opportunity Region is mapped to the Netsuite Customer Sales Order Subsidiary.</description>
+    <externalId>false</externalId>
+    <formula>TEXT(Owner.User_Region__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This field is a read-only formula. &quot;Opportunity Region&quot; auto populates based on the Opportunity Owner&apos;s Region. It is derived from the picklist &quot;User Region&quot; which is a value in user settings required for every user and represents the Region that the sales rep/account manager is selling into, or alternatively the operations or other personnel&apos;s primary regional location.</inlineHelpText>
+    <label>Opportunity Owner Region</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

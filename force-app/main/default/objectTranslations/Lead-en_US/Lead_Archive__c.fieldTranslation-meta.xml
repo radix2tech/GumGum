@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Allows to log notes for leads archived for RingLead connection --></help>
+    <label><!-- Lead Archive --></label>
+    <name>Lead_Archive__c</name>
+</CustomFieldTranslation>

@@ -5,12 +5,64 @@ public class ForecastController {
     static Integer totalRecords = 0;
     static Set<Id> AllAFRecords = new Set<Id>();
     
+    public static Map<String,DatedConversionRate> conversionRate = new Map<String,DatedConversionRate>();
+
+    public static Decimal getConvertedRateFromUSD(String currencyCode,Decimal amount){
+
+        if(conversionRate == null || conversionRate.isEmpty()){
+
+            // Query all latest conversion rates for all currencies
+            List<DatedConversionRate> DatedConversionRates = [
+                SELECT ConversionRate, IsoCode, StartDate
+                FROM DatedConversionRate
+            ];
+
+            // Step 3: Populate the map with the conversion rates
+            for (DatedConversionRate rate : DatedConversionRates) {
+                if(conversionRate.containsKey(rate.IsoCode) && conversionRate.get(rate.IsoCode).StartDate < rate.startDate ){
+                    conversionRate.remove(rate.IsoCode);
+                }
+                
+                conversionRate.put(rate.IsoCode,rate);
+                
+                
+            }
+        }
+
+        return conversionRate.get(currencyCode).ConversionRate * amount;
+    }
+
+    public static Decimal getConvertedRateFromUSD1(String currencyCode){
+
+        if(conversionRate == null || conversionRate.isEmpty()){
+
+            // Query all latest conversion rates for all currencies
+            List<DatedConversionRate> DatedConversionRates = [
+                SELECT ConversionRate, IsoCode, StartDate
+                FROM DatedConversionRate
+            ];
+
+            // Step 3: Populate the map with the conversion rates
+            for (DatedConversionRate rate : DatedConversionRates) {
+                if(conversionRate.containsKey(rate.IsoCode) && conversionRate.get(rate.IsoCode).StartDate < rate.startDate ){
+                    conversionRate.remove(rate.IsoCode);
+                }
+                conversionRate.put(rate.IsoCode,rate);
+            }
+        }
+        return conversionRate.get(currencyCode).ConversionRate;
+    }
+
+
     public static Forecast convertCurrencyFields(Forecast f){
         Forecast convForecast = new Forecast(f);
-        String userCurrencyIsoCode = UserInfo.getDefaultCurrency ();
-        if(f.currencyISOCode == userCurrencyIsoCode)
-            return convForecast;
-        
+         String userCurrencyIsoCode = UserInfo.getDefaultCurrency();
+        if(f.currencyISOCode == null || f.currencyISOCode == userCurrencyIsoCode){
+           f.currencyISOCode =  userCurrencyIsoCode;
+           return convForecast;
+        }
+       
+        system.debug('#### f.currencyISOCode'+f.currencyISOCode);
         DatedConversionRate dcr = [SELECT ConversionRate 
                                 FROM DatedConversionRate 
                                 WHERE IsoCode = :f.currencyISOCode 
@@ -27,17 +79,17 @@ public class ForecastController {
 
     @AuraEnabled(cacheable=false)
     public static ReturnDataClass  getForecastEntries(String recordId, Integer pageSize, Integer pageNumber ,List<String> sellerLabelSet, List<String> advertiserLabelSet ,List<String> agencyLabelSet,List<String> typeLabelSet, List<String> channelLabelSet) {
-        system.debug('### sellerLabelSet '+sellerLabelSet);
-        system.debug('### advertiserLabelSet '+advertiserLabelSet);
-        system.debug('### agencyLabelSet '+agencyLabelSet);
-        system.debug('### typeLabelSet '+typeLabelSet);
-        system.debug('### channelLabelSet '+channelLabelSet);
 
         List<Data> returnDataList = new List<Data>();
         CumulativeData data = new CumulativeData();
         ReturnDataClass rd = new ReturnDataClass();
 
         String currentUsersCurrency = UserInfo.getDefaultCurrency();
+        Decimal CurrentUserConversionRate = 1;
+        if(currentUsersCurrency != 'USD'){
+            CurrentUserConversionRate = getConvertedRateFromUSD1(currentUsersCurrency);
+            //CurrentUserConversionRate = 1/CurrentUserConversionRate;
+        }
 
         Integer AccessLevel = getCurrentUserAccess(rd);
 
@@ -55,30 +107,53 @@ public class ForecastController {
         System.debug('AFAggregateResult1: ' + AFAggregateResult1);
 
         data.BookingsCurrentYear = (Decimal)AFAggregateResult1[0].get('totalBookingsCurrentYear') ;
+        data.BookingsCurrentYear =  (data.BookingsCurrentYear != null ? data.BookingsCurrentYear : 0) * CurrentUserConversionRate;
+
         data.BookingsNextYear = (Decimal)AFAggregateResult1[0].get('totalBookingNextYear') ;
+        data.BookingsNextYear = (data.BookingsNextYear != null ? data.BookingsNextYear : 0) * CurrentUserConversionRate;
+
         data.PipelineCurrentQuarter = (Decimal)AFAggregateResult1[0].get('totalPipelineCurrentQuarter') ;
+        data.PipelineCurrentQuarter = (data.PipelineCurrentQuarter != null ? data.PipelineCurrentQuarter : 0) * CurrentUserConversionRate;
+
         data.PipelineNextQuarter = (Decimal)AFAggregateResult1[0].get('totalPipelineNextQuarter') ;
+        data.PipelineNextQuarter = (data.PipelineNextQuarter != null ? data.PipelineNextQuarter : 0) * CurrentUserConversionRate;
 
-
-        AggregateResult[] AFAggregateResult2 = [SELECT 
-            SUM(Forecast_Q11__c) Total_Forecast_Q11,
-            SUM(Forecast_Q21__c) Total_Forecast_Q21,
-            SUM(Forecast_Q31__c) Total_Forecast_Q31,
-            SUM(Forecast_Q41__c) Total_Forecast_Q41
-        FROM 
-            Forecast_Entry__c
-        WHERE 
-            AAR_Split_Owner__r.Account_Forecast__c IN :AllAFRecords AND 
-            IsActive__c = true];
+        String AFAggregateResultQuery2 = 'SELECT SUM(Forecast_Q11__c) Total_Forecast_Q11,  SUM(Forecast_Q21__c) Total_Forecast_Q21, SUM(Forecast_Q31__c) Total_Forecast_Q31,  SUM(Forecast_Q41__c) Total_Forecast_Q41, SUM(Forecast_Q1__c) Total_Forecast_Q1,SUM(Forecast_Q2__c) Total_Forecast_Q2, SUM(Forecast_Q3__c) Total_Forecast_Q3, SUM(Forecast_Q4__c) Total_Forecast_Q4 FROM Forecast_Entry__c  WHERE AAR_Split_Owner__r.Account_Forecast__c IN :AllAFRecords AND '+ SellerForecastEntryConditionQuery +' IsActive__c = true'+ AccessConditionCumulative;
+        AggregateResult[] AFAggregateResult2 = Database.query(AFAggregateResultQuery2);
 
         data.q1 = (Decimal)AFAggregateResult2[0].get('Total_Forecast_Q11') ;
+        data.q1 = (data.q1 != null ? data.q1 : 0) * CurrentUserConversionRate;
+
         data.q2 = (Decimal)AFAggregateResult2[0].get('Total_Forecast_Q21') ;
+        data.q2 = (data.q2 != null ? data.q2 : 0) * CurrentUserConversionRate;
+
         data.q3 = (Decimal)AFAggregateResult2[0].get('Total_Forecast_Q31') ;
+        data.q3 = (data.q3 != null ? data.q3 : 0) * CurrentUserConversionRate;
+
         data.q4 = (Decimal)AFAggregateResult2[0].get('Total_Forecast_Q41') ;
+        data.q4 = (data.q4 != null ? data.q4 : 0) * CurrentUserConversionRate;
+
         data.ForecastNextYear = (data.q1 != null ? data.q1 : 0) + 
                                 (data.q2 != null ? data.q2 : 0) + 
                                 (data.q3 != null ? data.q3 : 0) + 
                                 (data.q4 != null ? data.q4 : 0);
+
+        data.CYq1 = (Decimal)AFAggregateResult2[0].get('Total_Forecast_Q1') ;
+        data.CYq1 = (data.CYq1 != null ? data.CYq1 : 0) * CurrentUserConversionRate;
+
+        data.CYq2 = (Decimal)AFAggregateResult2[0].get('Total_Forecast_Q2') ;
+        data.CYq2 = (data.CYq2 != null ? data.CYq2 : 0) * CurrentUserConversionRate;
+
+        data.CYq3 = (Decimal)AFAggregateResult2[0].get('Total_Forecast_Q3') ;
+        data.CYq3 = (data.CYq3 != null ? data.CYq3 : 0) * CurrentUserConversionRate;
+
+        data.CYq4 = (Decimal)AFAggregateResult2[0].get('Total_Forecast_Q4') ;
+        data.CYq4 = (data.CYq4 != null ? data.CYq4 : 0) * CurrentUserConversionRate;
+
+        data.ForecastCY = (data.CYq1 != null ? data.CYq1 : 0) + 
+                                (data.CYq2 != null ? data.CYq2 : 0) + 
+                                (data.CYq3 != null ? data.CYq3 : 0) + 
+                                (data.CYq4 != null ? data.CYq4 : 0);                        
 
         //Process Relationship data to be sent to UI
         for(Account_Forecast__c AF : AFList){
@@ -87,6 +162,8 @@ public class ForecastController {
 
             //Capture Forecast data
             returnData.Id = AF.Id;
+            returnData.AARId = AF.Advertiser_Agency_Relationship__c;
+            system.debug('### returnData.Id ' +returnData.Id);
             returnData.Seller = AF.Advertiser_Agency_Relationship__r.Advertiser__r.Owner.Name;
             returnData.Advertiser = AF.Advertiser_Agency_Relationship__r.Advertiser__r.Name;
             returnData.AdvertiserId = AF.Advertiser_Agency_Relationship__r.Advertiser__c;
@@ -102,26 +179,28 @@ public class ForecastController {
             returnData.PipelineCurrentQuarter= AF.Pipeline_Current_Quarter__c ;
             returnData.PipelineNextQuarter= AF.Pipeline_Next_Quarter__c ;
 
-            if(sellerLabelSet!= null && !sellerLabelSet.isEmpty()){
+            /*if(sellerLabelSet!= null && !sellerLabelSet.isEmpty()){
                 returnData.isExpanded = true;
-            }
-            
-
+            }*/
 
             returnData.ForecastList = new List<Forecast>();
             //Get Forecast Entry Data
             for(AAR_Split_Owner__c SplitOwner : AF.AAR_Split_Owners__r){
                 for(Forecast_Entry__c FE : SplitOwner.Forecast_Entries__r){
                     
+                    if(sellerLabelSet!= null && !sellerLabelSet.isEmpty()){
+                        returnData.isExpanded = true;
+                    }
+
                     Forecast forecastRecord = new Forecast();
                     forecastRecord.Id = FE.Id;
-                    forecastRecord.OwnerName = FE.AAR_Split_Owner__r.Owner.Name;
+                    forecastRecord.OwnerName = FE.AAR_Split_Owner__r.Owner__r.Name;
                     forecastRecord.SplitOwnerRecId = FE.AAR_Split_Owner__c;
                     forecastRecord.name = FE.Product__c;
-                    forecastRecord.q1 = FE.Forecast_Q1__c;
-                    forecastRecord.q2 = FE.Forecast_Q2__c;
-                    forecastRecord.q3 = FE.Forecast_Q3__c;
-                    forecastRecord.q4 = FE.Forecast_Q4__c;
+                    forecastRecord.q1 = FE.Q1_PY_Bookings__c;
+                    forecastRecord.q2 = FE.Q2_PY_Bookings__c;
+                    forecastRecord.q3 = FE.Q3_PY_Bookings__c;
+                    forecastRecord.q4 = FE.Q4_PY_Bookings__c;
                     forecastRecord.q11 = FE.Forecast_Q11__c;
                     forecastRecord.q21 = FE.Forecast_Q21__c;
                     forecastRecord.q31 = FE.Forecast_Q31__c;
@@ -155,6 +234,11 @@ public class ForecastController {
         return rd;
     }
 
+    public static String SellerForecastEntryConditionQuery = '';
+    public static string AccessCondition = '';
+    public static string AccessConditionCumulative = '';
+    public static Set<Id> allSubordinateUsers = new Set<Id>();
+
     @AuraEnabled 
     public static List<Account_Forecast__c> getAFList(Integer AccessLevel, String recordId,Integer pageSize, Integer pageNumber,List<String> sellerLabelSet, List<String> advertiserLabelSet, List<String> agencyLabelSet, List<String> typeLabelSet, List<String> channelLabelSet){
 
@@ -162,18 +246,26 @@ public class ForecastController {
 
         String SellerConditionQuery = '';
         String SellerForecastConditionQuery = '';
+
+        //String SellerForecastEntryConditionQuery = '';
+
         if(sellerLabelSet!= null && !sellerLabelSet.isEmpty()){
             List<String> sellerConditions = new List<String>();
             List<String> sellerForecastConditions = new List<String>();
 
+            List<String> sellerForecastEntryConditions = new List<String>();
+
             for (String pattern : sellerLabelSet) {
                 sellerConditions.add('Advertiser_Agency_Relationship__r.Advertiser__r.Owner.Name LIKE \'' + pattern + '\'');
-                sellerForecastConditions.add('Owner.Name LIKE \'' + pattern + '\'');
+                sellerForecastConditions.add('Owner__r.Name LIKE \'' + pattern + '\'');
+
+                sellerForecastEntryConditions.add('Owner__r.Name LIKE \'' + pattern + '\'');
             }
 
             SellerConditionQuery = ' ( ' + String.join(sellerConditions, ' OR ') + ') AND ';
             SellerForecastConditionQuery = 'ID IN ( SELECT Account_Forecast__c FROM AAR_Split_Owner__c WHERE ( ' + String.join(sellerForecastConditions, ' OR ') + ')) AND';
-            system.debug('#### SellerConditonQuery'+SellerConditionQuery);
+
+            SellerForecastEntryConditionQuery = 'AAR_Split_Owner__c IN ( SELECT ID FROM AAR_Split_Owner__c WHERE ( ' + String.join(sellerForecastEntryConditions, ' OR ') + ')) AND';
         }
 
         String AdvertiserConditionQuery = '';
@@ -185,7 +277,6 @@ public class ForecastController {
             }
 
             AdvertiserConditionQuery = ' ( ' + String.join(AdvertiserConditions, ' OR ') + ') AND ';
-            system.debug('#### AdvertiserConditionQuery'+AdvertiserConditionQuery);
         }
         
 
@@ -230,13 +321,21 @@ public class ForecastController {
 
         Integer offset = (pageNumber - 1) * pageSize;
 
-        String AccessCondition = '';
+
         String AccountCondition = '';
         
         if(AccessLevel == 2){
-            AccessCondition = ' AND (Owner_s_Manager__c = \''+UserInfo.getUserId()+'\' OR OwnerId = \''+UserInfo.getUserId()+'\') ';
+            //List<User> allSubordinateUsers = getAllSubordinateUsers(UserInfo.getUserId());
+            allSubordinateUsers = getAllSubordinates(UserInfo.getUserRoleId());
+            if(allSubordinateUsers != null && !allSubordinateUsers.isEmpty()){
+                AccessCondition = ' AND ( Owner__c = \''+UserInfo.getUserId()+'\' OR Owner__c IN :allSubordinateUsers ) ';
+                AccessConditionCumulative = ' AND ( AAR_Split_Owner__r.Owner__c = \''+UserInfo.getUserId()+'\' OR AAR_Split_Owner__r.Owner__c IN :allSubordinateUsers ) ';
+            }else{
+                AccessCondition = ' AND Owner__c = \''+UserInfo.getUserId()+'\'';
+                AccessConditionCumulative = ' AND AAR_Split_Owner__r.Owner__c = \''+UserInfo.getUserId()+'\'';
+            }
         }else if(AccessLevel == 3){
-            AccessCondition = ' AND OwnerId = \''+UserInfo.getUserId()+'\'';
+            AccessCondition = ' AND Owner__c = \''+UserInfo.getUserId()+'\'';
         }
 
         if(recordId != null){
@@ -250,6 +349,9 @@ public class ForecastController {
 
         String query1 = 'SELECT Id FROM Account_Forecast__c WHERE '+SellerConditionQuery+AdvertiserConditionQuery+AgencyConditionQuery+TypeConditionQuery+ChannelConditionQuery+' ID IN (SELECT Account_Forecast__c FROM AAR_Split_Owner__c WHERE Is_Active__c = true ' + AccessCondition + ')' + AccountCondition + ' ORDER BY Advertiser_Agency_Relationship__r.Advertiser__r.Name';
         String query2 = 'SELECT Id FROM Account_Forecast__c WHERE '+SellerForecastConditionQuery+AdvertiserConditionQuery+AgencyConditionQuery+TypeConditionQuery+ChannelConditionQuery+' ID IN (SELECT Account_Forecast__c FROM AAR_Split_Owner__c WHERE Is_Active__c = true ' + AccessCondition + ')' + AccountCondition + ' ORDER BY Advertiser_Agency_Relationship__r.Advertiser__r.Name';
+
+        system.debug('## query1 '+query1);
+        system.debug('## query2 '+query2);
 
         AFList1 = Database.query(query1);
         AFList2 = Database.query(query2);
@@ -268,11 +370,11 @@ public class ForecastController {
 
         List<Account_Forecast__c> AFList3 = new List<Account_Forecast__c>();
 
-        //String query3 = 'SELECT Id, Type__c, Channel__c, Trading_Deal__c, Advertiser_Agency_Relationship__c, Advertiser_Agency_Relationship__r.Agency__c, Advertiser_Agency_Relationship__r.Agency__r.Name, Advertiser_Agency_Relationship__r.Advertiser__c, Advertiser_Agency_Relationship__r.Advertiser__r.Name, Advertiser_Agency_Relationship__r.Advertiser__r.Owner.Name, CONVERTCURRENCY(Booking_Next_Year__c), CONVERTCURRENCY(Bookings_Current_Year__c), CONVERTCURRENCY(Pipeline_Current_Quarter__c), CONVERTCURRENCY(Pipeline_Next_Quarter__c), (SELECT Id, (SELECT Id, AAR_Split_Owner__r.Owner.Name, Product__c, Forecast_Q1__c, Forecast_Q2__c, Forecast_Q3__c, Forecast_Q4__c, Forecast_Q11__c, Forecast_Q21__c, Forecast_Q31__c, Forecast_Q41__c, CurrencyIsoCode, Forecast_Sum__c FROM Forecast_Entries__r WHERE IsActive__c = true) FROM AAR_Split_Owners__r WHERE Is_Active__c = true ' + AccessCondition + ' ORDER BY Owner.Name) FROM Account_Forecast__c WHERE '+SellerConditionQuery+AdvertiserConditionQuery+AgencyConditionQuery+TypeConditionQuery+ChannelConditionQuery+' ID IN (SELECT Account_Forecast__c FROM AAR_Split_Owner__c WHERE Is_Active__c = true ' + AccessCondition + ')' + AccountCondition + ' ORDER BY Advertiser_Agency_Relationship__r.Advertiser__r.Name LIMIT ' + pageSize + ' OFFSET ' + offset;
+        //String query3 = 'SELECT Id, Type__c, Channel__c, Trading_Deal__c, Advertiser_Agency_Relationship__c, Advertiser_Agency_Relationship__r.Agency__c, Advertiser_Agency_Relationship__r.Agency__r.Name, Advertiser_Agency_Relationship__r.Advertiser__c, Advertiser_Agency_Relationship__r.Advertiser__r.Name, Advertiser_Agency_Relationship__r.Advertiser__r.Owner.Name, CONVERTCURRENCY(Booking_Next_Year__c), CONVERTCURRENCY(Bookings_Current_Year__c), CONVERTCURRENCY(Pipeline_Current_Quarter__c), CONVERTCURRENCY(Pipeline_Next_Quarter__c), (SELECT Id, (SELECT Id, AAR_Split_Owner__r.Owner__r.Name, Product__c, Forecast_Q1__c, Forecast_Q2__c, Forecast_Q3__c, Forecast_Q4__c, Forecast_Q11__c, Forecast_Q21__c, Forecast_Q31__c, Forecast_Q41__c, CurrencyIsoCode, Forecast_Sum__c FROM Forecast_Entries__r WHERE IsActive__c = true) FROM AAR_Split_Owners__r WHERE Is_Active__c = true ' + AccessCondition + ' ORDER BY Owner__r.Name) FROM Account_Forecast__c WHERE '+SellerConditionQuery+AdvertiserConditionQuery+AgencyConditionQuery+TypeConditionQuery+ChannelConditionQuery+' ID IN (SELECT Account_Forecast__c FROM AAR_Split_Owner__c WHERE Is_Active__c = true ' + AccessCondition + ')' + AccountCondition + ' ORDER BY Advertiser_Agency_Relationship__r.Advertiser__r.Name LIMIT ' + pageSize + ' OFFSET ' + offset;
         
         String idsString = String.join(new List<Id>(AFMap2.keySet()), '\',\'');
 
-        String query3 = 'SELECT Id, Type__c, Channel__c, Trading_Deal__c, Advertiser_Agency_Relationship__c, Advertiser_Agency_Relationship__r.Agency__c, Advertiser_Agency_Relationship__r.Agency__r.Name, Advertiser_Agency_Relationship__r.Advertiser__c, Advertiser_Agency_Relationship__r.Advertiser__r.Name, Advertiser_Agency_Relationship__r.Advertiser__r.Owner.Name, CONVERTCURRENCY(Booking_Next_Year__c), CONVERTCURRENCY(Bookings_Current_Year__c), CONVERTCURRENCY(Pipeline_Current_Quarter__c), CONVERTCURRENCY(Pipeline_Next_Quarter__c), (SELECT Id, (SELECT Id, AAR_Split_Owner__r.Owner.Name, Product__c, CONVERTCURRENCY(Forecast_Q1__c), CONVERTCURRENCY(Forecast_Q2__c), CONVERTCURRENCY(Forecast_Q3__c), CONVERTCURRENCY(Forecast_Q4__c), CONVERTCURRENCY(Forecast_Q11__c), CONVERTCURRENCY(Forecast_Q21__c), CONVERTCURRENCY(Forecast_Q31__c),CONVERTCURRENCY(Forecast_Q41__c), CurrencyIsoCode, CONVERTCURRENCY(Forecast_Sum__c) FROM Forecast_Entries__r WHERE IsActive__c = true) FROM AAR_Split_Owners__r WHERE Is_Active__c = true ' + AccessCondition + ' ORDER BY Owner.Name) FROM Account_Forecast__c WHERE Id IN (\'' + idsString + '\') LIMIT ' + pageSize + ' OFFSET ' + offset;
+        String query3 = 'SELECT Id, Type__c, Channel__c, Trading_Deal__c, Advertiser_Agency_Relationship__c, Advertiser_Agency_Relationship__r.Agency__c, Advertiser_Agency_Relationship__r.Agency__r.Name, Advertiser_Agency_Relationship__r.Advertiser__c, Advertiser_Agency_Relationship__r.Advertiser__r.Name, Advertiser_Agency_Relationship__r.Advertiser__r.Owner.Name, CONVERTCURRENCY(Booking_Next_Year__c), CONVERTCURRENCY(Bookings_Current_Year__c), CONVERTCURRENCY(Pipeline_Current_Quarter__c), CONVERTCURRENCY(Pipeline_Next_Quarter__c), (SELECT Id, (SELECT Id, AAR_Split_Owner__r.Owner__r.Name, Product__c, CONVERTCURRENCY(Q1_PY_Bookings__c), CONVERTCURRENCY(Q2_PY_Bookings__c), CONVERTCURRENCY(Q3_PY_Bookings__c), CONVERTCURRENCY(Q4_PY_Bookings__c),CONVERTCURRENCY(Forecast_Q1__c), CONVERTCURRENCY(Forecast_Q2__c), CONVERTCURRENCY(Forecast_Q3__c), CONVERTCURRENCY(Forecast_Q4__c), CONVERTCURRENCY(Forecast_Q11__c), CONVERTCURRENCY(Forecast_Q21__c), CONVERTCURRENCY(Forecast_Q31__c),CONVERTCURRENCY(Forecast_Q41__c), CurrencyIsoCode, CONVERTCURRENCY(Forecast_Sum__c) FROM Forecast_Entries__r WHERE '+ SellerForecastEntryConditionQuery +' IsActive__c = true) FROM AAR_Split_Owners__r WHERE Is_Active__c = true ' + AccessCondition + ' ORDER BY Owner__r.Name) FROM Account_Forecast__c WHERE Id IN (\'' + idsString + '\') LIMIT ' + pageSize + ' OFFSET ' + offset;
         AFList3 = Database.query(query3);
 
         return AFList3;
@@ -286,26 +388,29 @@ public class ForecastController {
 
         for(Data dataRecord : returnDataList){
             // Check if the current dataRecord has changed
+            Account_Forecast__c AF = new Account_Forecast__c();
             if(dataRecord.isChanged){
                 // Create a new Account_Forecast__c record
-                Account_Forecast__c AF = new Account_Forecast__c();
+                AF = new Account_Forecast__c();
                 AF.Id = dataRecord.Id; // Set the ID of the record
                 AF.Channel__c = dataRecord.Channel; // Set the Channel field
                 AF.Trading_Deal__c = dataRecord.TradingDeal; // Set the Trading Deal field
                 AFList.add(AF); // Add the record to the AFList
+                system.debug('### AF.Id '+AF.Id);
             }
-
+            
 
             for(Forecast forecastRecord : dataRecord.ForecastList){
+                system.debug('### forecastRecord'+forecastRecord);
                 // Check if the current forecastRecord has changed
                 if(forecastRecord.isChanged){
                     // Create a new Forecast_Entry__c record
                     Forecast_Entry__c FE = new Forecast_Entry__c();
                     FE.Product__c = forecastRecord.name; // Set the Product field
-                    FE.Forecast_Q1__c = forecastRecord.q1; // Set Q1 forecast
-                    FE.Forecast_Q2__c = forecastRecord.q2; // Set Q2 forecast
-                    FE.Forecast_Q3__c = forecastRecord.q3; // Set Q3 forecast
-                    FE.Forecast_Q4__c = forecastRecord.q4; // Set Q4 forecast
+                    //FE.Forecast_Q1__c = forecastRecord.q1; // Set Q1 forecast
+                    //FE.Forecast_Q2__c = forecastRecord.q2; // Set Q2 forecast
+                    //FE.Forecast_Q3__c = forecastRecord.q3; // Set Q3 forecast
+                    //FE.Forecast_Q4__c = forecastRecord.q4; // Set Q4 forecast
 
                     // Set additional forecast fields for quarters 11 to 41
                     forecastRecord = convertCurrencyFields(forecastRecord);
@@ -314,26 +419,52 @@ public class ForecastController {
                     FE.Forecast_Q31__c = forecastRecord.q31;
                     FE.Forecast_Q41__c = forecastRecord.q41;
                     FE.currencyISOCode = forecastRecord.currencyISOCode;
+                   
+
                     
-                    //FE.AAR_Split_Owner__c = forecastRecord.OwnerId; // Set the owner field
-                    if(forecastRecord.Id != null) 
-                        FE.Id = forecastRecord.Id; // Set the owner field
+                     // Set the owner field
+                    //if(forecastRecord.Id != null && forecastRecord.Id.length() == 18) 
+                    //FE.Id = forecastRecord.Id; // Set the owner field
                     FE.IsActive__c = true; 
 
-                    forecastList.add(FE); 
+                    //forecastList.add(FE); 
 
                     // If the forecastRecord has a valid ID (18 characters long), create an inactive record
-                    /*if(forecastRecord.Id.length() == 18){
-                        FE = new Forecast_Entry__c(); 
-                        FE.Id = forecastRecord.Id; 
-                        FE.IsActive__c = false; 
-                        forecastList.add(FE); 
-                    }*/	
+                    if(forecastRecord.Id.length() == 18){
+                        FE.AAR_Split_Owner__c = forecastRecord.SplitOwnerRecId;
+                        Forecast_Entry__c FE1 = new Forecast_Entry__c(); 
+                        FE1.Id = forecastRecord.Id; 
+                        FE1.IsActive__c = false; 
+                        forecastList.add(FE1); 
+                        system.debug('### FE1 '+FE1);
+                    }else{
+                        List<AAR_Split_Owner__c> splitOwner = [SELECT Id,Owner__c,Is_Active__c FROM AAR_Split_Owner__c  
+                                                                                            WHERE Account_Forecast__c = :dataRecord.Id 
+                                                                                            AND Owner__c = :UserInfo.getUserId() LIMIT 1];
+                        if(splitOwner != null && !splitOwner.isEmpty()){
+                            FE.AAR_Split_Owner__c = splitOwner[0].Id;
+                            if(!splitOwner[0].Is_Active__c)
+                            {
+                                splitOwner[0].Is_Active__c = true;
+                                Update splitOwner;
+                            }
+                        }else{
+                            AAR_Split_Owner__c AARSplitOwnerRecord = new AAR_Split_Owner__c();
+                            AARSplitOwnerRecord.Advertiser_Agency_Relationship__c = [SELECT Advertiser_Agency_Relationship__c FROM Account_Forecast__c WHERE Id =:dataRecord.Id LIMIT 1].Advertiser_Agency_Relationship__c;
+                            AARSplitOwnerRecord.Is_Active__c = true;
+                            insert AARSplitOwnerRecord;
+                            FE.AAR_Split_Owner__c = AARSplitOwnerRecord.Id;
+                        }
+                        
+                    }
+                    system.debug('### FE '+FE);
+                    forecastList.add(FE);
                 }
             }
         }
 
         // Loop through each ID in the deletedForecastList
+        if(deletedForecastList!=null)
         for(String Id : deletedForecastList){
             // If the ID is valid (18 characters long), create an inactive forecast entry
             if(Id.length() == 18){
@@ -381,7 +512,7 @@ public class ForecastController {
     //Get Relationships
     @AuraEnabled(cacheable=true)
     public static List<Advertiser_Agency_Relationship__c> getAARs(String searchTerm) {
-        return [SELECT Id, Name ,Advertiser_Agency_Name__c FROM Advertiser_Agency_Relationship__c WHERE (Name LIKE :('%' + searchTerm + '%') OR  Advertiser_Agency_Name__c LIKE :('%' + searchTerm + '%')) AND ID NOT IN (SELECT Advertiser_Agency_Relationship__c FROM AAR_Split_Owner__c WHERE  Is_Active__c = true AND OwnerId = :UserInfo.getUserId()) LIMIT 5];
+        return [SELECT Id, Name ,Advertiser_Agency_Name__c FROM Advertiser_Agency_Relationship__c WHERE (Name LIKE :('%' + searchTerm + '%') OR  Advertiser_Agency_Name__c LIKE :('%' + searchTerm + '%')) AND ID NOT IN (SELECT Advertiser_Agency_Relationship__c FROM AAR_Split_Owner__c WHERE  Is_Active__c = true AND Owner__c = :UserInfo.getUserId()) LIMIT 5];
     }
 
     //Create split
@@ -389,7 +520,7 @@ public class ForecastController {
     public static void createSplitOwner(String recordId) {
         AAR_Split_Owner__c AARSplitOwnerRecord;
         try{
-            AARSplitOwnerRecord = [SELECT Id FROM AAR_Split_Owner__c Where Advertiser_Agency_Relationship__c = :recordId AND OwnerId = :UserInfo.getUserId() AND Is_Active__c = false limit 1];
+            AARSplitOwnerRecord = [SELECT Id FROM AAR_Split_Owner__c Where Advertiser_Agency_Relationship__c = :recordId AND Owner__c = :UserInfo.getUserId() AND Is_Active__c = false limit 1];
             AARSplitOwnerRecord.Is_Active__c = true;
             update AARSplitOwnerRecord;
             
@@ -481,6 +612,74 @@ public class ForecastController {
         }
         return currencies;
     }
+    
+    public static List<User> getAllSubordinateUsers(Id managerId) {
+        List<User> allSubordinates = new List<User>();
+        List<Id> currentManagers = new List<Id>{managerId};
+    
+        // Governor limits tracking
+        Integer maxSOQL = Limits.getLimitQueries();          // Total allowed SOQL queries
+        Integer maxDML = Limits.getLimitDmlStatements();     // Total allowed DML statements
+        Integer maxCPU = Limits.getLimitCpuTime();           // Total allowed CPU time in ms
+        Integer maxHeap = Limits.getLimitHeapSize();         // Total allowed heap size in bytes
+    
+        while (!currentManagers.isEmpty()) {
+            // Check SOQL limits
+            if (Limits.getQueries() + 1 > maxSOQL) {
+                System.debug('SOQL limit reached!');
+                break;
+            }
+    
+            // Check CPU time limits
+            if (Limits.getCpuTime() > maxCPU - 10) { // Leave 10 ms buffer
+                System.debug('CPU time limit is close!');
+                break;
+            }
+    
+            // Query to fetch subordinates
+            List<User> subordinates = [SELECT Id, Name, Email, ManagerId
+                                       FROM User
+                                       WHERE ManagerId IN :currentManagers];
+    
+            // Check heap size limits
+            if (Limits.getHeapSize() > maxHeap - 50000) { // Leave 50KB buffer
+                System.debug('Heap size limit is close!');
+                break;
+            }
+    
+            // Add to the result list
+            allSubordinates.addAll(subordinates);
+    
+            // Prepare the next set of managers
+            currentManagers = new List<Id>();
+            for (User subordinate : subordinates) {
+                currentManagers.add(subordinate.Id);
+            }
+        }
+    
+        return allSubordinates;
+    }
+
+     public static Set<Id> getAllSubordinates(String roleId) {
+        List<String> subordinateRoleIds = new List<String>();
+        fetchSubordinateRoles(roleId, subordinateRoleIds);
+
+        if (!subordinateRoleIds.isEmpty()) {
+            Map<Id, User> userMap = new Map<Id, User>([SELECT Id, Name, Email FROM User WHERE UserRoleId IN :subordinateRoleIds]);
+            return userMap.keySet();
+        } else {
+            return null;
+        }
+    }
+
+    private static void fetchSubordinateRoles(String roleId, List<String> subordinateRoleIds) {
+        List<UserRole> roles = [SELECT Id FROM UserRole WHERE ParentRoleId = :roleId];
+        for (UserRole role : roles) {
+            subordinateRoleIds.add(role.Id);
+            fetchSubordinateRoles(role.Id, subordinateRoleIds); // Recursive call
+        }
+    }
+
 
     //Inner Class to return result to LWC
     public Class ReturnDataClass{
@@ -506,6 +705,8 @@ public class ForecastController {
     public class Data {
         @AuraEnabled
         public String Id { get; set; }
+        @AuraEnabled
+        public String AARId { get; set; }
         @AuraEnabled   
         public String Seller { get; set; }
         @AuraEnabled
@@ -542,7 +743,6 @@ public class ForecastController {
         public Boolean isChanged  { get; set; }
         @AuraEnabled
         public Boolean isDisplayed  { get; set; }
-
         @AuraEnabled
         public Decimal ForecastSum { get; set; }
 
@@ -650,6 +850,18 @@ public class ForecastController {
         @AuraEnabled
         public Decimal ForecastNextYear { get; set; }
 
+        @AuraEnabled
+        public Decimal CYq1 { get; set; }
+        @AuraEnabled
+        public Decimal CYq2 { get; set; }
+        @AuraEnabled
+        public Decimal CYq3 { get; set; }
+        @AuraEnabled
+        public Decimal CYq4 { get; set; }
+
+        @AuraEnabled
+        public Decimal ForecastCY { get; set; }
+
         public CumulativeData() {
             this.BookingsCurrentYear = 0;
             this.BookingsNextYear = 0;
@@ -661,6 +873,12 @@ public class ForecastController {
             this.q3 = 0;
             this.q4 = 0;
             this.ForecastNextYear = 0;
+
+            this.CYq1 = 0;
+            this.CYq2 = 0;
+            this.CYq3 = 0;
+            this.CYq4 = 0;
+            this.ForecastCY = 0;
 
         }
 

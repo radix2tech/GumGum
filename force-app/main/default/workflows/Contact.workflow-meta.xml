@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Datestamp_Date_Moved_to_MQL</fullName>
+        <field>Date_Moved_to_MQL__c</field>
+        <formula>TODAY()</formula>
+        <name>Datestamp Date Moved to MQL</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Datestamp_Date_Moved_to_SAL</fullName>
+        <field>Date_Moved_to_SAL__c</field>
+        <formula>TODAY()</formula>
+        <name>Datestamp Date Moved to SAL</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Datestamp_Date_Moved_to_SQL</fullName>
+        <field>Date_Moved_to_SQL__c</field>
+        <formula>TODAY()</formula>
+        <name>Datestamp Date Moved to SQL</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Last_Lifecycle_Stage_Change_Date</fullName>
+        <field>Last_Lifecycle_Stage_Change_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Last Lifecycle Stage Change Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lifecycle_Stage_Change</fullName>
+        <field>Lifecycle_Stage__c</field>
+        <literalValue>Marketing Qualified Lead</literalValue>
+        <name>Lifecycle Stage Change</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Sports_Contact</fullName>
+        <field>Sports_Contact__c</field>
+        <literalValue>1</literalValue>
+        <name>Update &quot;Sports Contact&quot;</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Sports_Contact_2</fullName>
+        <field>Sports_Contact__c</field>
+        <literalValue>0</literalValue>
+        <name>Update &quot;Sports Contact&quot; 2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_to_Unknown</fullName>
+        <field>Email_Validation_Result__c</field>
+        <literalValue>Unknown</literalValue>
+        <name>Update to Unknown</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>DaScoopComposer__Notify_Groove</fullName>
+        <apiVersion>45.0</apiVersion>
+        <description>Sends an outbound message to Groove with the record ID and owner ID. This is used for real-time auto-import to Groove Flow.</description>
+        <endpointUrl>https://app.grooveapp.com/salesforce/updates</endpointUrl>
+        <fields>Id</fields>
+        <fields>OwnerId</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>dan.friedman@gumgum.com</integrationUser>
+        <name>Notify Groove (Managed)</name>
+        <protected>true</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>Check Sports Contact</fullName>
+        <actions>
+            <name>Update_Sports_Contact</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <criteriaItems>
+            <field>Contact.Contact_Owner_Role__c</field>
+            <operation>contains</operation>
+            <value>Sports</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.OwnerId</field>
+            <operation>contains</operation>
+            <value>Bayli,Beavers</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Sports</value>
+        </criteriaItems>
+        <description>Auto-check the &quot;Sports Contact&quot; field for contacts owned by sports</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>DaScoopComposer__Notify Groove on Contact Created %28Managed%29</fullName>
+        <actions>
+            <name>DaScoopComposer__Notify_Groove</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>false</active>
+        <description>This WF rule can be activated if you want to notify Groove that a new contact was created. That way Groove can e.g. instantly import the contact to a Groove Flow that has auto import enabled (and meets the auto-import rules of that Flow).</description>
+        <formula>ISNEW()</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Datestamp Date Moved to MQL %28Contact%29</fullName>
+        <actions>
+            <name>Datestamp_Date_Moved_to_MQL</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 AND 2) OR (3 AND 4)</booleanFilter>
+        <criteriaItems>
+            <field>Contact.Lifecycle_Stage__c</field>
+            <operation>equals</operation>
+            <value>Marketing Qualified Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Date_Moved_to_MQL__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Lifecycle_Stage__c</field>
+            <operation>equals</operation>
+            <value>Sales Accepted Lead,Sales Qualified Lead,Opportunity</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Date_Moved_to_MQL__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Datestamp Date Moved to SAL %28Contact%29</fullName>
+        <actions>
+            <name>Datestamp_Date_Moved_to_SAL</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 AND 2) OR (3 AND 4)</booleanFilter>
+        <criteriaItems>
+            <field>Contact.Lifecycle_Stage__c</field>
+            <operation>equals</operation>
+            <value>Sales Accepted Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Date_Moved_to_SAL__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Lifecycle_Stage__c</field>
+            <operation>equals</operation>
+            <value>Sales Qualified Lead,Opportunity</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Date_Moved_to_SAL__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Datestamp Date Moved to SQL %28Contact%29</fullName>
+        <actions>
+            <name>Datestamp_Date_Moved_to_SQL</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 AND 2) OR (3 AND 4)</booleanFilter>
+        <criteriaItems>
+            <field>Contact.Lifecycle_Stage__c</field>
+            <operation>equals</operation>
+            <value>Sales Qualified Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Date_Moved_to_SQL__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Lifecycle_Stage__c</field>
+            <operation>equals</operation>
+            <value>Opportunity</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Date_Moved_to_SQL__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Datestamp Lifecycle Stage Change Date %28Contact%29</fullName>
+        <actions>
+            <name>Last_Lifecycle_Stage_Change_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED(Lifecycle_Stage__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Mark Demo Request as MQL %28Contact%29</fullName>
+        <actions>
+            <name>Lifecycle_Stage_Change</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 OR 2) AND 3 AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Contact.Request_a_Demo__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Request_a_Demo_Demo_Request_Form__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Date_Moved_to_MQL__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Date_Moved_to_SAL__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Date_Moved_to_SQL__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Email Validation Result field</fullName>
+        <actions>
+            <name>Update_to_Unknown</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED(Email)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

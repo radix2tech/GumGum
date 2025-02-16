@@ -11,6 +11,16 @@ tr.collapsible-row td {
     padding-bottom: 10px;
 }
 
+th,td {
+    border-top: 0.25px solid #dddbda; /* Left border */;
+    border-bottom: 0.25px solid #dddbda; /* Left border */;
+    border-left: 0.25px solid #dddbda; /* Left border */
+    border-right: 0.25px solid #dddbda; /* Right border */
+
+}
+
+
+
 .lightning-button-icon {
     transition: transform 0.2s ease;
 }
@@ -64,7 +74,20 @@ footer {
 }
 
 .left-aligned {
-    text-align: left; /* Align text to the left */
+    text-align: left; /* Aligns the button text */
+    justify-content: flex-start; /* Aligns the text inside the button */
+    display: flex; /* Required for justify-content to work */
+}
+
+.left-aligned-button {
+    text-align: left;
+    display: block; /* Allows full width for alignment */
+    justify-content: flex-start; /* Align text to the left */
+    padding: 0.5rem 0.5rem; /* Optional: Add padding for button feel */
+    cursor: pointer; /* Makes it look clickable */
+}
+.left-aligned-button:hover {
+    background-color: #f3f2f2; /* Optional: Add hover effect */
 }
 
 .multi-row-cell div {
@@ -107,6 +130,13 @@ footer {
 }
 
 .child-card {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: black; /* Keeps the card background intact */
+}
+
+.child-card2 {
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -220,13 +250,6 @@ footer {
 
 :host {
     font-family: var(--sds-text-font-family, 'Salesforce Sans', Arial, sans-serif);
-}
-
-.child-card2 {
-    position: sticky;
-    top: 100px;
-    z-index: 1000;
-    background-color: black; /* Keeps the card background intact */
 }
 
 .slds-m-around_medium {

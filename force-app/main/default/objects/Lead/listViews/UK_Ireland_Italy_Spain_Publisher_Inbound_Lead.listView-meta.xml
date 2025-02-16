@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UK_Ireland_Italy_Spain_Publisher_Inbound_Lead</fullName>
+    <filterScope>Queue</filterScope>
+    <label>UK/Ireland/Italy/Spain Publisher Inbound</label>
+    <queue>UK_Ireland_Italy_Spain_Publisher_Inbound</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

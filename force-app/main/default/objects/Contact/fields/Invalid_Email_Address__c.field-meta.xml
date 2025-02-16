@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invalid_Email_Address__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If the email address is updated, the checkbox should uncheck if it was previously checked. This will allow sellers to easily keep track of contacts that we may not have the right email address of or who may have left the company that we&apos;re not aware of.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field will check off when an email bounces from Hubspot</inlineHelpText>
+    <label>Invalid Email Address</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

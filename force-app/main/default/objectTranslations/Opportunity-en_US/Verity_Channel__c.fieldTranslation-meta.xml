@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Verity Channel --></label>
+    <name>Verity_Channel__c</name>
+    <picklistValues>
+        <masterLabel>Audio</masterLabel>
+        <translation><!-- Audio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Connected TV</masterLabel>
+        <translation><!-- Connected TV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>High-Impact Display</masterLabel>
+        <translation><!-- High-Impact Display --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Native</masterLabel>
+        <translation><!-- Native --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Online Video</masterLabel>
+        <translation><!-- Online Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Standard Display</masterLabel>
+        <translation><!-- Standard Display --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

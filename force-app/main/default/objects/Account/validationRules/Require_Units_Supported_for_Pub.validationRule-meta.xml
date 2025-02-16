@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Units_Supported_for_Pub</fullName>
+    <active>false</active>
+    <description>For pub accounts, this rule makes it a requirement to fill out the &quot;Units Supported&quot; field.</description>
+    <errorConditionFormula>and(
+ RecordType.Name = &quot;Publisher&quot;,
+ ispickval(Status__c , &quot;100% - Closed/Won!&quot;),
+isblank( Units_Supported__c ))</errorConditionFormula>
+    <errorDisplayField>Units_Supported__c</errorDisplayField>
+    <errorMessage>Must specify which units are supported to mark Won.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NA_Verity_Agency_Brand_Inbound_Queue_Lead</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Verity Agency/Brand Inbound Queue</label>
+    <queue>Verity_Agency_Brand_Inbound_Queue</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

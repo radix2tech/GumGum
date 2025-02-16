@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- GumTank Session --></label>
+    <name>GumTank_Session__c</name>
+    <picklistValues>
+        <masterLabel>Thursday 1/19/17  10:00 AM - 12:00 PM PST</masterLabel>
+        <translation><!-- Thursday 1/19/17  10:00 AM - 12:00 PM PST --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thursday 1/26/17  10:00 AM - 12:00 PM PST</masterLabel>
+        <translation><!-- Thursday 1/26/17  10:00 AM - 12:00 PM PST --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thursday 1/5/17  10:00 AM - 12:00 PM PST</masterLabel>
+        <translation><!-- Thursday 1/5/17  10:00 AM - 12:00 PM PST --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thursday 2/16/17  10:00 AM - 12:00 PM PST</masterLabel>
+        <translation><!-- Thursday 2/16/17  10:00 AM - 12:00 PM PST --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thursday 2/2/17  10:00 AM - 12:00 PM PST</masterLabel>
+        <translation><!-- Thursday 2/2/17  10:00 AM - 12:00 PM PST --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thursday 2/23/17  10:00 AM - 12:00 PM PST</masterLabel>
+        <translation><!-- Thursday 2/23/17  10:00 AM - 12:00 PM PST --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thursday 2/9/17  10:00 AM - 12:00 PM PST</masterLabel>
+        <translation><!-- Thursday 2/9/17  10:00 AM - 12:00 PM PST --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thursday 3/16/17  10:00 AM - 12:00 PM PST</masterLabel>
+        <translation><!-- Thursday 3/16/17  10:00 AM - 12:00 PM PST --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thursday 3/2/17  10:00 AM - 12:00 PM PST</masterLabel>
+        <translation><!-- Thursday 3/2/17  10:00 AM - 12:00 PM PST --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thursday 3/23/17  10:00 AM - 12:00 PM PST</masterLabel>
+        <translation><!-- Thursday 3/23/17  10:00 AM - 12:00 PM PST --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thursday 3/30/17  10:00 AM - 12:00 PM PST</masterLabel>
+        <translation><!-- Thursday 3/30/17  10:00 AM - 12:00 PM PST --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thursday 3/9/17  10:00 AM - 12:00 PM PST</masterLabel>
+        <translation><!-- Thursday 3/9/17  10:00 AM - 12:00 PM PST --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Captures if a Verity product has been added to this Opportunity --></help>
+    <label><!-- Verity Product Added --></label>
+    <name>Verity_Product_Added__c</name>
+</CustomFieldTranslation>

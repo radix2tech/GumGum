@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Tier_Image__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT( Account_Tier__c )&amp; &quot;&quot;
+&amp;
+IF(ISPICKVAL( Account_Tier__c , &quot;Missing Tier&quot;), &quot;⚠&quot;,
+IF(ISPICKVAL( Account_Tier__c , &quot;Platinum&quot;), IMAGE(&quot;/resource/1666041304000/GraphicsPackNew/fatcow/farmfresh/32/award_star_bronze_3.png&quot;,&quot; &quot;),
+IF(ISPICKVAL( Account_Tier__c , &quot;Gold&quot;), &quot;🥇&quot;,
+IF(ISPICKVAL(  Account_Tier__c , &quot;Silver&quot;), &quot;🥈&quot;,
+IF(ISPICKVAL(  Account_Tier__c , &quot;Bronze&quot;), &quot;🥉&quot;,
+&quot;⚠&quot;)))))</formula>
+    <label>Account Tier</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

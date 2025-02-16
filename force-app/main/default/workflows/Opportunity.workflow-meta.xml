@@ -1,0 +1,3269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Alert_fellow_approvers</fullName>
+        <description>Alert fellow approvers</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>travis@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Alert_fellow_approvers_of_approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Alert_fellow_approvers1</fullName>
+        <description>Alert fellow approvers</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>sarah@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tman@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Alert_fellow_approvers_of_approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Alert_fellow_approversv1</fullName>
+        <description>Alert fellow approvers</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>sarah@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tman@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Alert_fellow_approvers_of_approval</template>
+    </alerts>
+    <alerts>
+        <fullName>CBD_Live_Campaign_Alert</fullName>
+        <description>CBD Live Campaign Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>emanuela@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/PubCampaignLiveAlert</template>
+    </alerts>
+    <alerts>
+        <fullName>Close_Date_Expiration_Email_Alert</fullName>
+        <description>Opp Warning - Past Close Date</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>travis@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Opp_Warning_Past_Close_Date_2</template>
+    </alerts>
+    <alerts>
+        <fullName>Complete_Programmatic_Section</fullName>
+        <description>Complete Programmatic Section</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ian@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>Account_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>PSM__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>Salesperson__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Fill_out_Programmatic_section</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Em</fullName>
+        <description>Pharma Live Campaign Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>emanuela@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/PubCampaignLiveAlert</template>
+    </alerts>
+    <alerts>
+        <fullName>Enter_Voiced_Budget</fullName>
+        <description>Enter Voiced Budget</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ian@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>Account_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>PSM__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>Salesperson__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Enter_Voiced_Budget_in_Programmatic_section</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_Approval_JP</fullName>
+        <description>Exception Approval JP</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>0050p000007vntoqa0_naokazu.wakaguri@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_Approval_NA</fullName>
+        <description>Exception Approval NA</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_Approval_Submission_Belgium</fullName>
+        <ccEmails>expedite@gumgum.com</ccEmails>
+        <description>Exception Approval Belgium</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_Approval_UK</fullName>
+        <description>Exception Approval UK</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>jess.aylett@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>peter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_Germany</fullName>
+        <description>Exception Approval Germany</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>peter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>simon.tritsch@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_NN</fullName>
+        <description>Exception Approval NN</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>0054u00000ejs2dqat_frank.sueltmann@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>peter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_Recalled</fullName>
+        <ccEmails>maria.higgins@gumgum.com</ccEmails>
+        <description>Exception Recalled</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>travis@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Recalled</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_and_Custom_Creative_Email_Alert_Belgium</fullName>
+        <description>Exception and Custom Creative Email Alert Belgium</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Custom_Creative_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_and_Custom_Creative_Email_Alert_Germany</fullName>
+        <description>Exception and Custom Creative Email Alert_Germany</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>peter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>simon.tritsch@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Custom_Creative_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_and_Custom_Creative_Email_Alert_JP</fullName>
+        <ccEmails>maria.higgins@gumgum.com</ccEmails>
+        <description>Exception and Custom Creative Email Alert_JP</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>0050p000007vntoqa0_naokazu.wakaguri@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Custom_Creative_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_and_Custom_Creative_Email_Alert_NN</fullName>
+        <description>Exception and Custom Creative Email Alert_NN</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>0054u00000ejs2dqat_frank.sueltmann@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>peter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Custom_Creative_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_and_Custom_Creative_Email_Alert_Other_EMEA</fullName>
+        <description>Exception and Custom Creative Email Alert_Other_EMEA</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>jeremy.pacome@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>peter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Custom_Creative_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_and_Custom_Creative_Email_Alert_UK</fullName>
+        <description>Exception and Custom Creative Email Alert_UK</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>jess.aylett@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>peter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Custom_Creative_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_and_Custom_Creative_Email_Alert_US</fullName>
+        <description>Exception and Custom Creative Email Alert_NA</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Custom_Creative_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_and_Expedited_Custom_Creative_Email_Alert_AUS_NZ_SEA</fullName>
+        <description>Exception Expedited and Custom Creative Email Alert AUS/NZ/SEA</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Expedite_Exception_CustomCreative_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_and_Expedited_Custom_Creative_Email_Alert_EMEA</fullName>
+        <description>Exception Expedited and Custom Creative Email Alert other EMEA</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>jeremy.pacome@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>peter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Expedite_Exception_CustomCreative_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_and_Expedited_Custom_Creative_Email_Alert_Germ</fullName>
+        <description>Exception Expedited and Custom Creative Email Alert_Germany</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>peter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>simon.tritsch@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Expedite_Exception_CustomCreative_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_and_Expedited_Custom_Creative_Email_Alert_JP</fullName>
+        <ccEmails>maria.higgins@gumgum.com</ccEmails>
+        <description>Exception Expedited and Custom Creative Email Alert JP</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>0050p000007vntoqa0_naokazu.wakaguri@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Expedite_Exception_CustomCreative_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_and_Expedited_Custom_Creative_Email_Alert_NA</fullName>
+        <description>Exception Expedited and Custom Creative Email Alert NA</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Expedite_Exception_CustomCreative_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_and_Expedited_Custom_Creative_Email_Alert_NN</fullName>
+        <description>Exception Expedited and Custom Creative Email Alert_NN</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>0054u00000ejs2dqat_frank.sueltmann@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>peter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Expedite_Exception_CustomCreative_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Exception_and_Expedited_Custom_Creative_Email_Alert_UK</fullName>
+        <description>Exception Expedited and Custom Creative Email Alert UK</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>jess.aylett@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>peter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Expedite_Exception_CustomCreative_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Expedite_and_Custom_Creative_Email_Alert_Belgium</fullName>
+        <ccEmails>maria.higgins@gumgum.com</ccEmails>
+        <description>Expedited and Custom Creative Email Alert Belgium</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>0054u000006vabpqao_rob.garber@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>patrick.edlefsen@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Expedite_CustomCreative_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Expedite_and_Custom_Creative_Email_Alert_UK</fullName>
+        <ccEmails>maria.higgins@gumgum.com</ccEmails>
+        <description>Expedited and Custom Creative Email Alert UK</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>0054u000006vabpqao_rob.garber@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>rob@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Expedite_CustomCreative_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Expedited_Approval_Submission_Belgium</fullName>
+        <ccEmails>expedite@gumgum.com</ccEmails>
+        <description>Expedited Approval Submitted Belgium</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Expedite_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Expedited_Approval_Submission_Germany</fullName>
+        <ccEmails>expedite@gumgum.com</ccEmails>
+        <description>Expedited Approval Submission Germany</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>peter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>simon.tritsch@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Expedite_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Expedited_Approval_Submission_Japan</fullName>
+        <ccEmails>expedite@gumgum.com, maria.higgins@gumgum.com</ccEmails>
+        <description>Expedited Approval Submission Japan</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>0050p000007vntoqa0_naokazu.wakaguri@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Expedite_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Expedited_Approval_Submission_NA</fullName>
+        <ccEmails>expedite@gumgum.com</ccEmails>
+        <description>Expedited Approval Submitted NA</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Expedite_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Expedited_Approval_Submission_NN</fullName>
+        <ccEmails>expedite@gumgum.com</ccEmails>
+        <description>Expedited Approval Submission NN</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>0054u00000ejs2dqat_frank.sueltmann@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>peter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Expedite_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Expedited_Approval_Submission_UK</fullName>
+        <ccEmails>expedite@gumgum.com</ccEmails>
+        <description>Expedited Approval Submitted UK</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>jess.aylett@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>peter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Expedite_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Expedited_CustomCreative_Approval_submission_NA</fullName>
+        <description>Expedited and Custom Creative Approval Submission NA</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Expedite_CustomCreative_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Expedited_and_Exception_Approval_submission_Belgium</fullName>
+        <ccEmails>maria.higgins@gumgum.com</ccEmails>
+        <description>Expedited And Exception Approval Submission Belgium</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>0054u000006vabpqao_rob.garber@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>patrick.edlefsen@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Expedite_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Expedited_and_Exception_Approval_submission_Germany</fullName>
+        <description>Expedited And Exception Approval Submission Germany</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>peter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>simon.tritsch@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Expedite_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Expedited_and_Exception_Approval_submission_JP</fullName>
+        <ccEmails>maria.higgins@gumgum.com</ccEmails>
+        <description>Expedited And Exception Approval Submission JP</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>0050p000007vntoqa0_naokazu.wakaguri@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Expedite_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Expedited_and_Exception_Approval_submission_NA</fullName>
+        <description>Expedited And Exception Approval Submission_NorthAm</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Expedite_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Expedited_and_Exception_Approval_submission_NN</fullName>
+        <description>Expedited And Exception Approval Submission NN</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>0054u00000ejs2dqat_frank.sueltmann@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>peter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Expedite_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Expedited_and_Exception_Approval_submission_UK</fullName>
+        <description>Expedited And Exception Approval Submission UK</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>jess.aylett@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>peter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Exception_Expedite_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Mid_Campaign_Date</fullName>
+        <description>Mid Campaign Date Email</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Account Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>maria.higgins@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Mid_Campaign_Date_AM_Notification_1671210796976</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_AM</fullName>
+        <description>Notify AM</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Account_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Notify_AM</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Accounting</fullName>
+        <ccEmails>adops@gumgum.com,</ccEmails>
+        <ccEmails>amexec@gumgum.com,</ccEmails>
+        <ccEmails>accounting@gumgum.com,</ccEmails>
+        <ccEmails>dpatterson@gumgum.com,</ccEmails>
+        <ccEmails>jill@gumgum.com</ccEmails>
+        <description>Notify Accounting</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Account_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>User__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Notify_Accounting</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Accounting_Campaign_End</fullName>
+        <ccEmails>amexec@gumgum.com,</ccEmails>
+        <ccEmails>accounting@gumgum.com,</ccEmails>
+        <ccEmails>adops@gumgum.com</ccEmails>
+        <description>Notify Accounting - Campaign End</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Account_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Notify_Accounting_Campaign_End</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Accounting_Phase_End</fullName>
+        <ccEmails>amexec@gumgum.com,</ccEmails>
+        <ccEmails>accounting@gumgum.com,</ccEmails>
+        <ccEmails>adops@gumgum.com</ccEmails>
+        <description>Notify Accounting - Phase End</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Account_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Notify_Accounting_Phase_End</template>
+    </alerts>
+    <alerts>
+        <fullName>Opp_Notice_Payment_Terms</fullName>
+        <ccEmails>jshoihet@gumgum.com, dfennell@gumgum.com</ccEmails>
+        <description>Opp Notice - Payment Terms</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Opp_Notice_Payment_Terms</template>
+    </alerts>
+    <alerts>
+        <fullName>Opp_Notice_Placeholder_Product</fullName>
+        <description>Opp Notice - Placeholder Product</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Account_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Opp_Notice_Placeholder_Product</template>
+    </alerts>
+    <alerts>
+        <fullName>Opp_Update_25</fullName>
+        <description>Opp Update - 25%</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CSM_1__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Opp_Update_25</template>
+    </alerts>
+    <alerts>
+        <fullName>Opp_Update_50</fullName>
+        <description>Opp Update - 50%</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Account_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Opp_Update_50</template>
+    </alerts>
+    <alerts>
+        <fullName>Opp_Update_90</fullName>
+        <ccEmails>dfennell@gumgum.com, jshoihet@gumgum.com, victoria@gumgum.com</ccEmails>
+        <description>Opp Update - Pub - 90%</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Opp_Update_90</template>
+    </alerts>
+    <alerts>
+        <fullName>Opp_Warning_CPM</fullName>
+        <ccEmails>shoihet@gumgum.com</ccEmails>
+        <description>Opp Warning - CPM</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Opp_Warning_CPM</template>
+    </alerts>
+    <alerts>
+        <fullName>Opportunity_Approval_Status</fullName>
+        <description>Opportunity Approval Status</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <recipient>Account Executive</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Account Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Ad Ops Lead</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Agency Relations</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Channel Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Client Solutions Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Covering Seller</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Designer</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Engineer</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Executive Sponsor</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Lead Qualifier</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Opportunity Owner</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Pre-Sales Consultant</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Sales Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>travis@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>AR_Member__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>Account_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>CSM_1__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>CSM_2__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>Salesperson__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>User__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Opportunity_Approval_Status</template>
+    </alerts>
+    <alerts>
+        <fullName>Opportunity_Approval_Status_Japan</fullName>
+        <ccEmails>maria.higgins@gumgum.com</ccEmails>
+        <description>Opportunity Approval Status Japan</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Account Executive</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Account Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>0050p000007vntoqa0_naokazu.wakaguri@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>travis@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>Account_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>Salesperson__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Opportunity_Approval_Status</template>
+    </alerts>
+    <alerts>
+        <fullName>Opportunity_Approval_Status_Misc</fullName>
+        <ccEmails>maria.higgins@gumgum.com</ccEmails>
+        <description>Opportunity Approval Status Misc</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Account Executive</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Account Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Ad Ops Lead</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Agency Relations</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Client Solutions Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Designer</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Engineer</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Opportunity Owner</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>travis@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>AR_Member__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>Account_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>CSM_1__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>CSM_2__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>LastModifiedById</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>PSM__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>Salesperson__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>User__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Opportunity_Approval_Status</template>
+    </alerts>
+    <alerts>
+        <fullName>Opportunity_Approval_Status_UK</fullName>
+        <ccEmails>maria.higgins@gumgum.com</ccEmails>
+        <description>Opportunity Approval Status UK</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Account Executive</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Account Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Channel Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Executive Sponsor</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Lead Qualifier</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Pre-Sales Consultant</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Sales Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>travis@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>AR_Member__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>Account_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>CSM_1__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>CSM_2__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>Salesperson__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>User__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Opportunity_Approval_Status</template>
+    </alerts>
+    <alerts>
+        <fullName>Programmatic_Opp_is_Live_Alert</fullName>
+        <ccEmails>programmatic@gumgum.com</ccEmails>
+        <description>Programmatic Opp is Live Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Account_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>PSM__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Programmatic_Campaign_Live_Alert</template>
+    </alerts>
+    <alerts>
+        <fullName>Programmatic_Opp_is_Live_Alert_UK</fullName>
+        <ccEmails>programmatic@gumgum.com, UKSales@GumGum.com</ccEmails>
+        <description>Programmatic Opp is Live Alert - UK</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>louise@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>Account_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>PSM__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Programmatic_Campaign_Live_Alert</template>
+    </alerts>
+    <alerts>
+        <fullName>Pub_Sales_AM_Assigned</fullName>
+        <description>Pub Sales - AM Assigned</description>
+        <protected>false</protected>
+        <recipients>
+            <field>User__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Pub_Sales/Pub_Sales_AM_Assigned</template>
+    </alerts>
+    <alerts>
+        <fullName>RFP_250k</fullName>
+        <description>RFP &gt;250k</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>alexandra@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ariana@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>bplomion@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jdimiceli@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kelcie@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>lbarrett@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>owen@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>som@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>travis@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/RFP_250k</template>
+    </alerts>
+    <alerts>
+        <fullName>RFP_500k</fullName>
+        <description>RFP &gt;500k</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>bplomion@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>lbarrett@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/RFP_250k</template>
+    </alerts>
+    <alerts>
+        <fullName>Red_Flag_Alert</fullName>
+        <description>Red Flag Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>adam@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ian@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>Account_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>PSM__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Red_Flag_Alert</template>
+    </alerts>
+    <alerts>
+        <fullName>Red_Flag_Alert_EMEA</fullName>
+        <ccEmails>waqar.shaik@ic.gumgum.com</ccEmails>
+        <description>Red Flag Alert - EMEA</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>0054u000006vabpqao_rob.garber@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>0054u00000ejs2dqat_frank.sueltmann@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>005uw000000rzlliac_rod.da.rosa@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>adam@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>aimie.leonard@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>amin.rarmoul@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>anouschka.flierman@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>dennis.pekel@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>grace@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jasmin.heetfeld@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jeremy.pacome@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jess.aylett@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>maria.caceres@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>marie@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mgrant@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>nino.bavelaar@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>patrick@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>peter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>rebecca.moyer@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>simon.tritsch@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tatiana.de.wind@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Red_Flag_Alert_EMEA</template>
+    </alerts>
+    <alerts>
+        <fullName>Risky_Creative_Launched</fullName>
+        <ccEmails>pubdev@gumgum.com</ccEmails>
+        <description>Risky Creative Launched</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Risky_Creative_Campain</template>
+    </alerts>
+    <alerts>
+        <fullName>Sold_Campaign_Email</fullName>
+        <ccEmails>campaign-announcements@gumgum.com</ccEmails>
+        <description>Sold Campaign Email</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>valerie@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Sold_Campaign_Email_Visualforce_v2</template>
+    </alerts>
+    <alerts>
+        <fullName>Sold_campaign_existing_business_250k</fullName>
+        <ccEmails>campaign-announcements@gumgum.com</ccEmails>
+        <description>Sold campaign - existing business - $250k+</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>maria.higgins@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>valerie@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Sold_Campaign_Email_Visualforce</template>
+    </alerts>
+    <alerts>
+        <fullName>Sold_campaign_existing_business_250k_less</fullName>
+        <ccEmails>campaign-announcements@gumgum.com</ccEmails>
+        <description>Sold campaign - existing business - &lt;$250k</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>som@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>valerie@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Sold_Campaign_Email_Visualforce_Kaching</template>
+    </alerts>
+    <alerts>
+        <fullName>Sold_campaign_new_business_250k</fullName>
+        <ccEmails>campaign-announcements@gumgum.com</ccEmails>
+        <description>Sold campaign - new business - $250k+</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>som@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>valerie@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Sold_Campaign_Email_Visualforce_signed</template>
+    </alerts>
+    <alerts>
+        <fullName>Sold_campaign_new_business_250k_less</fullName>
+        <ccEmails>campaign-announcements@gumgum.com</ccEmails>
+        <description>Sold campaign - new business - &lt; $250k</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>som@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>valerie@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Sold_Campaign_Email_Visualforce_new</template>
+    </alerts>
+    <alerts>
+        <fullName>Strategic_Account_opportunity_created</fullName>
+        <ccEmails>whitney@gumgum.com</ccEmails>
+        <description>Strategic Marketing Account or Influenced opportunity created</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>alexandra@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>annabel@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ariana@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kimberly@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Marketing_Email_Templates/Strategic_Account</template>
+    </alerts>
+    <alerts>
+        <fullName>Travis_Japan_Notify</fullName>
+        <description>Travis Japan Notify</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>lbarrett@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>travis@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Advertising/Notify_Travis_Exception_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>test</fullName>
+        <description>test</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>matthew.vallortigara@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Alert_fellow_approvers_of_approval</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>AM_Approval_Status_Recalled</fullName>
+        <field>AM_Approval__c</field>
+        <literalValue>Recalled</literalValue>
+        <name>AM Approval Status - Recalled</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>AM_Approval_Status_Submitted</fullName>
+        <field>AM_Approval__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>AM Approval Status - Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Accounting_Notification_Timestamp</fullName>
+        <field>Accounting_Notification_Timestamp__c</field>
+        <formula>now()</formula>
+        <name>Accounting Notification Timestamp</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Add_Account_Name_to_Opp_Name</fullName>
+        <field>Name</field>
+        <formula>Account.Name &amp; &quot; - &quot; &amp; Name</formula>
+        <name>Add Account Name to Opp Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Status_Update_to_Resubmitted</fullName>
+        <field>Approval_Status_Custom_Creative_Ad__c</field>
+        <literalValue>Re-Submitted</literalValue>
+        <name>Approval Status Update to Resubmitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Status_Update_to_Submitted</fullName>
+        <description>When request is submitted to Ad Ops - Travis for Review and Approval the field is updated</description>
+        <field>Approval_Status_Custom_Creative_Ad__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Approval Status Update to Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Calculate_Q1_Running_Revenue</fullName>
+        <field>Q1_Running_Revenue__c</field>
+        <formula>IF( 
+AND( 
+AND( 
+Start_Date2__c &gt;= DATE(YEAR(Today()),1,1), 
+Start_Date2__c &lt;= DATE(YEAR(Today()),3,31) 
+), 
+AND( 
+End_Date2__c &gt;= DATE(YEAR(Today()),1,1), 
+End_Date2__c &lt;= DATE(YEAR(Today()),3,31) 
+) 
+), 
+Amount, 
+IF( 
+AND( 
+Start_Date2__c &lt; DATE(YEAR(Today()),1,1), 
+AND( 
+End_Date2__c &gt;= DATE(YEAR(Today()),1,1), 
+End_Date2__c &lt;= DATE(YEAR(Today()),3,31) 
+) 
+), 
+(Amount / Flight_Length__c ) * ABS(((DATE(YEAR(Today()),1,1))-Start_Date2__c)-Flight_Length__c), 
+IF( 
+AND( 
+AND( 
+Start_Date2__c &gt;= DATE(YEAR(Today()),1,1), 
+Start_Date2__c &lt;= DATE(YEAR(Today()),3,31) 
+), 
+End_Date2__c &gt; DATE(YEAR(Today()),3,31) 
+), 
+(Amount / Flight_Length__c ) * ABS((End_Date2__c - DATE(YEAR(Today()),3,31))-Flight_Length__c), 
+IF( 
+AND( 
+Start_Date2__c &lt; DATE(YEAR(Today()),1,1), 
+End_Date2__c &gt; DATE(YEAR(Today()),3,31) 
+), 
+(Amount / Flight_Length__c) * ABS(((End_Date2__c - DATE(YEAR(Today()),4,1))+(DATE(YEAR(Today()),1,1))+1-Start_Date2__c)- Flight_Length__c), 0 ))))</formula>
+        <name>Calculate Q1 Running Revenue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Calculate_Q2_Running_Revenue</fullName>
+        <field>Q2_Running_Revenue__c</field>
+        <formula>IF( 
+AND( 
+AND( 
+Start_Date2__c &gt;= DATE(YEAR(Today()),4,1), 
+Start_Date2__c &lt;= DATE(YEAR(Today()),6,30) 
+), 
+AND( 
+End_Date2__c &gt;= DATE(YEAR(Today()),4,1), 
+End_Date2__c &lt;= DATE(YEAR(Today()),6,30) 
+) 
+), 
+Amount, 
+IF( 
+AND( 
+Start_Date2__c &lt; DATE(YEAR(Today()),4,1), 
+AND( 
+End_Date2__c &gt;= DATE(YEAR(Today()),4,1), 
+End_Date2__c &lt;= DATE(YEAR(Today()),6,30) 
+) 
+), 
+(Amount / Flight_Length__c ) * ABS(((DATE(YEAR(Today()),4,1))-Start_Date2__c)-Flight_Length__c), 
+IF( 
+AND( 
+AND( 
+Start_Date2__c &gt;= DATE(YEAR(Today()),4,1), 
+Start_Date2__c &lt;= DATE(YEAR(Today()),6,30) 
+), 
+End_Date2__c &gt; DATE(YEAR(Today()),6,30) 
+), 
+(Amount / Flight_Length__c ) * ABS((End_Date2__c - DATE(YEAR(Today()),6,30))-Flight_Length__c), 
+IF( 
+AND( 
+Start_Date2__c &lt; DATE(YEAR(Today()),4,1), 
+End_Date2__c &gt; DATE(YEAR(Today()),6,30) 
+), 
+(Amount / Flight_Length__c) * ABS((((End_Date2__c - DATE(YEAR(Today()),7,1))+(DATE(YEAR(Today()),3,31))-Start_Date2__c))- Flight_Length__c), 0 ))))</formula>
+        <name>Calculate Q2 Running Revenue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Calculate_Q3_Running_Revenue</fullName>
+        <field>Q3_Running_Revenue__c</field>
+        <formula>IF( 
+AND( 
+AND( 
+Start_Date2__c &gt;= DATE(YEAR(Today()),7,1), 
+Start_Date2__c &lt;= DATE(YEAR(Today()),9,30) 
+), 
+AND( 
+End_Date2__c &gt;= DATE(YEAR(Today()),7,1), 
+End_Date2__c &lt;= DATE(YEAR(Today()),9,30) 
+) 
+), 
+Amount, 
+IF( 
+AND( 
+Start_Date2__c &lt; DATE(YEAR(Today()),7,1), 
+AND( 
+End_Date2__c &gt;= DATE(YEAR(Today()),7,1), 
+End_Date2__c &lt;= DATE(YEAR(Today()),9,30) 
+) 
+), 
+(Amount / Flight_Length__c ) * ABS(((DATE(YEAR(Today()),7,1))-Start_Date2__c)-Flight_Length__c), 
+IF( 
+AND( 
+AND( 
+Start_Date2__c &gt;= DATE(YEAR(Today()),7,1), 
+Start_Date2__c &lt;= DATE(YEAR(Today()),9,30) 
+), 
+End_Date2__c &gt; DATE(YEAR(Today()),9,30) 
+), 
+(Amount / Flight_Length__c ) * ABS((End_Date2__c - DATE(YEAR(Today()),9,30))-Flight_Length__c), 
+IF( 
+AND( 
+Start_Date2__c &lt; DATE(YEAR(Today()),7,1), 
+End_Date2__c &gt; DATE(YEAR(Today()),9,30) 
+), 
+(Amount / Flight_Length__c) * ABS((((End_Date2__c - DATE(YEAR(Today()),10,1))+(DATE(YEAR(Today()),6,30))-Start_Date2__c))- Flight_Length__c+2), 0 ))))</formula>
+        <name>Calculate Q3 Running Revenue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Calculate_Q4_Running_Revenue</fullName>
+        <field>Q4_Running_Revenue__c</field>
+        <formula>IF( 
+AND( 
+AND( 
+Start_Date2__c &gt;= DATE(YEAR(Today()),10,1), 
+Start_Date2__c &lt;= DATE(YEAR(Today()),12,31) 
+), 
+AND( 
+End_Date2__c &gt;= DATE(YEAR(Today()),10,1), 
+End_Date2__c &lt;= DATE(YEAR(Today()),12,31) 
+) 
+), 
+Amount, 
+IF( 
+AND( 
+Start_Date2__c &lt; DATE(YEAR(Today()),10,1), 
+AND( 
+End_Date2__c &gt;= DATE(YEAR(Today()),10,1), 
+End_Date2__c &lt;= DATE(YEAR(Today()),12,31) 
+) 
+), 
+(Amount / Flight_Length__c ) * ABS(((DATE(YEAR(Today()),10,1))-Start_Date2__c)-Flight_Length__c+2), 
+IF( 
+AND( 
+AND( 
+Start_Date2__c &gt;= DATE(YEAR(Today()),10,1), 
+Start_Date2__c &lt;= DATE(YEAR(Today()),12,31) 
+), 
+End_Date2__c &gt; DATE(YEAR(Today()),12,31) 
+), 
+(Amount / Flight_Length__c ) * ABS((End_Date2__c - DATE(YEAR(Today()),12,31))-Flight_Length__c), 
+IF( 
+AND( 
+Start_Date2__c &lt; DATE(YEAR(Today()),10,1), 
+End_Date2__c &gt; DATE(YEAR(Today()),12,31) 
+), 
+(Amount / Flight_Length__c) * ABS((((End_Date2__c - DATE(YEAR(Today()),12,31))-1+(DATE(YEAR(Today()),9,30))-Start_Date2__c))- Flight_Length__c), 0 ))))</formula>
+        <name>Calculate Q4 Running Revenue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Campaign_Status</fullName>
+        <field>Campaign_Status__c</field>
+        <literalValue>Campaign Ended</literalValue>
+        <name>Campaign Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Custom_Creative_Ad_Approval_Status_Updat</fullName>
+        <field>Product_Approval_Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Custom Creative Ad Approval Status Updat</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Custom_Creative_Ad_Field_Update_1</fullName>
+        <description>When email alert goes to Travis, request status field gets updated to Submitted</description>
+        <field>Approval_Status_Custom_Creative_Ad__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Custom Creative Ad Field Update 1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Custom_Creative_Ad_Rejection_Status</fullName>
+        <field>Approval_Status_Custom_Creative_Ad__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Custom Creative Ad Rejection Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Custom_Creative_Ad_Request_Approved</fullName>
+        <field>Approval_Status_Custom_Creative_Ad__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Custom Creative Ad Request Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Custom_Creative_Status_Approved</fullName>
+        <field>Approval_Status_Custom_Creative_Ad__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Custom Creative Status - Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Custom_Creative_Status_Product_Approve</fullName>
+        <field>Approval_Status_Custom_Creative_Ad__c</field>
+        <literalValue>Approved by Product Team</literalValue>
+        <name>Custom Creative Status - Product Approve</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Custom_Creative_Status_Recalled</fullName>
+        <field>Approval_Status_Custom_Creative_Ad__c</field>
+        <literalValue>Recalled</literalValue>
+        <name>Custom Creative Status Recalled</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Custom_Creative_Status_Rejected</fullName>
+        <field>Approval_Status_Custom_Creative_Ad__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Custom Creative Status - Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Custom_Creative_Status_Update</fullName>
+        <field>Approval_Status_Custom_Creative_Ad__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Custom Creative Status Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Datestamp_Date_Moved_to_Closed_Won_Lost</fullName>
+        <field>Date_Moved_to_Closed_Won_Lost__c</field>
+        <formula>TODAY()</formula>
+        <name>Datestamp Date Moved to Closed Won/Lost</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Datestamp_Date_Moved_to_Proposal</fullName>
+        <field>Date_Moved_to_Proposal__c</field>
+        <formula>TODAY()</formula>
+        <name>Datestamp Date Moved to Proposal</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Disable_Send_Sold_Campaign_Email</fullName>
+        <description>Unchecks the box that would trigger the Send Sold Campaign Email</description>
+        <field>Send_Sold_Campaign_Email_to_Company__c</field>
+        <literalValue>0</literalValue>
+        <name>Disable Send Sold Campaign Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Exception_Approval_Status_Submitted</fullName>
+        <field>Exception_Approval__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Exception Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Exception_Approved_Field_Update</fullName>
+        <field>Exception_Approval__c</field>
+        <literalValue>Exception Approved</literalValue>
+        <name>Exception Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Exception_Status_Recalled</fullName>
+        <field>Exception_Approval__c</field>
+        <literalValue>Recalled</literalValue>
+        <name>Exception Status Recalled</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Exception_Status_Rejected</fullName>
+        <field>Exception_Approval__c</field>
+        <literalValue>Exception Rejected</literalValue>
+        <name>Exception Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Expedite_Status_Approved</fullName>
+        <field>Expediting_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Expedite Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Expedite_Status_Recalled</fullName>
+        <field>Exception_Approval__c</field>
+        <literalValue>Recalled</literalValue>
+        <name>Expedite Status Recalled</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Expedite_Status_Rejected</fullName>
+        <field>Expediting_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Expedite Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Impressions_Delivering_Update_Date</fullName>
+        <field>Date_of_Impressions_Delivering_hidden__c</field>
+        <formula>TODAY()</formula>
+        <name>Impressions Delivering Update Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Indicate_AM_Approval</fullName>
+        <field>AM_Approval__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Indicate AM Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Indicate_AM_Rejection</fullName>
+        <field>AM_Approval__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Indicate AM Rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Notify_Accounting_Checkbox_equals_true</fullName>
+        <field>Notify_Accounting__c</field>
+        <literalValue>1</literalValue>
+        <name>Notify Accounting Checkbox equals true</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opportunity_Update_Close_Date</fullName>
+        <description>Updates opportunity close date to current date</description>
+        <field>CloseDate</field>
+        <formula>DATE( YEAR(TODAY()) , (MONTH(TODAY())), DAY(TODAY()))</formula>
+        <name>Opportunity - Update Close Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pledge_Probability_Update_when_closed_wo</fullName>
+        <field>Finance_Pledge_Probability__c</field>
+        <formula>1</formula>
+        <name>Pledge Probability Update when closed/wo</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pledge_Update_When_Opp_Closed_Won</fullName>
+        <field>Finance_Pledge__c</field>
+        <literalValue>Closed</literalValue>
+        <name>Pledge Update When Opp Closed/Won</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Product_Approval_Status_Submitted</fullName>
+        <field>Product_Approval_Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Update Product Approval Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RFP_Sent_Date</fullName>
+        <field>RFP_Submitted_Date__c</field>
+        <formula>Today()</formula>
+        <name>RFP Sent Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Resubmission_Field_Update</fullName>
+        <field>Product_Approval_Status__c</field>
+        <literalValue>Re-Submitted</literalValue>
+        <name>Resubmission Field Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Send_Sold_Campaign_Email_to_Company</fullName>
+        <description>when an opportunity is closed/won, automatically check this box to true</description>
+        <field>Send_Sold_Campaign_Email_to_Company__c</field>
+        <literalValue>1</literalValue>
+        <name>Send Sold Campaign Email to Company</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Custom_Ad_Submission_Checkbox_to_F</fullName>
+        <field>Submit_for_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>Set Custom Ad Submission Checkbox to F</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Custom_Creative_Status_to_Approved</fullName>
+        <field>Approval_Status_Custom_Creative_Ad__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Custom Creative Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Custom_Creative_Status_to_Needs_Appr</fullName>
+        <field>Approval_Status_Custom_Creative_Ad__c</field>
+        <literalValue>Needs Approval</literalValue>
+        <name>Set Custom Creative Status to Needs Appr</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Custom_Creative_Status_to_Rejected</fullName>
+        <field>Approval_Status_Custom_Creative_Ad__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Custom Creative Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Custom_Creative_Status_to_Submitted</fullName>
+        <field>Approval_Status_Custom_Creative_Ad__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Custom Creative Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_Negotiations</fullName>
+        <field>StageName</field>
+        <literalValue>Negotiations</literalValue>
+        <name>Stage - Negotiations</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_Pending_Outcome</fullName>
+        <field>StageName</field>
+        <literalValue>Approved / Outcome Pending</literalValue>
+        <name>Stage - Pending Outcome</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Uncheck_Notify_Accounting</fullName>
+        <field>Notify_Accounting__c</field>
+        <literalValue>0</literalValue>
+        <name>Uncheck Notify Accounting</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Uncheck_Request_CC</fullName>
+        <field>Submit_for_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>Uncheck Request CC</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Uncheck_Request_Exception</fullName>
+        <field>Request_Exception_2__c</field>
+        <literalValue>0</literalValue>
+        <name>Uncheck Request Exception</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Uncheck_Request_Expedite</fullName>
+        <field>Request_Expedite_c__c</field>
+        <literalValue>0</literalValue>
+        <name>Uncheck Request Expedite</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Uncheck_Request_Expedite_Japan</fullName>
+        <field>Request_Expedite_c__c</field>
+        <literalValue>0</literalValue>
+        <name>Uncheck Request Expedite Japan</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Closed_Date</fullName>
+        <field>CloseDate</field>
+        <formula>TODAY()</formula>
+        <name>Update Closed Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Exception_Approval_Resubmit</fullName>
+        <field>Exception_Approval__c</field>
+        <literalValue>Requires Re-submission</literalValue>
+        <name>Update Exception Approval Resubmit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Expedited_Status</fullName>
+        <field>Expediting_Approval_Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Expedite Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Placeholder_Email_Date</fullName>
+        <description>Used to update the date the daily email will send to AM regarding placeholder accounts on opportunities.</description>
+        <field>Next_Placeholder_Email__c</field>
+        <formula>Today()</formula>
+        <name>Update Placeholder Email Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Pledge_Probability_to_0</fullName>
+        <description>Updates Pledge Probability to 0% when an opp is closed/lost</description>
+        <field>Finance_Pledge_Probability__c</field>
+        <formula>0</formula>
+        <name>Update Pledge Probability to 0%</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Resubmission_Status</fullName>
+        <field>Approval_Status_Custom_Creative_Ad__c</field>
+        <literalValue>Needs Approval</literalValue>
+        <name>Update Resubmission Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>notify_accounting_campaign_end</fullName>
+        <field>Notify_Accounting_Campaign_End__c</field>
+        <literalValue>1</literalValue>
+        <name>notify accounting campaign end</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_won_campaign_field_to_true</fullName>
+        <field>Won_Campaign__c</field>
+        <literalValue>1</literalValue>
+        <name>update won campaign field to true</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>Advertising_Api_Opportunity_Integration</fullName>
+        <apiVersion>46.0</apiVersion>
+        <endpointUrl>https://advertising-api-v2.prod.va.ggops.com/salesforce/opportunity</endpointUrl>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>integration.api.salesforce@gumgum.com</integrationUser>
+        <name>Advertising Api Opportunity Integration</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>Advertising_Api_Opportunity_Test</fullName>
+        <apiVersion>46.0</apiVersion>
+        <endpointUrl>https://aa-1011-salesforce-integration.advertising-api-v2.dev.va.ggops.com/salesforce/opportunity</endpointUrl>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>collin@gumgum.com</integrationUser>
+        <name>Advertising Api OpportunityTest</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>CBD Live Alert</fullName>
+        <actions>
+            <name>CBD_Live_Campaign_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Industry</field>
+            <operation>equals</operation>
+            <value>CPG</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed/Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Campaign_Status__c</field>
+            <operation>equals</operation>
+            <value>Live</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Category__c</field>
+            <operation>equals</operation>
+            <value>Cannabis</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Alert Emanuela Ali when CBD campaign is live</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Close Date Expiration Alert</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.CloseDate</field>
+            <operation>lessThan</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>notEqual</operation>
+            <value>Closed/Won,Closed/Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Close_Date_Expiration_Email_Alert</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Complete Programmatic section</fullName>
+        <actions>
+            <name>Complete_Programmatic_Section</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Channel__c</field>
+            <operation>equals</operation>
+            <value>Programmatic</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed/Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Campaign_Status__c</field>
+            <operation>equals</operation>
+            <value>Campaign Cancelled,Campaign Ended</value>
+        </criteriaItems>
+        <description>Once a programmatic campaign ends or cancels, the PSM gets an email alert asking them to complete the programmatic section.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Date Moved to Closed %28Won%2FLost%29</fullName>
+        <actions>
+            <name>Datestamp_Date_Moved_to_Closed_Won_Lost</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>ISChanged(StageName)&amp;&amp; ISPICKVAL( StageName , &quot;Closed Won&quot;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Enter Voiced Budget</fullName>
+        <actions>
+            <name>Enter_Voiced_Budget</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Channel__c</field>
+            <operation>equals</operation>
+            <value>Programmatic</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed/Won</value>
+        </criteriaItems>
+        <description>Once a programmatic opportunity updates to closed/won, the PSM gets an email alert asking them to enter the Voiced Budget.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>If the Total Ordered Amount %28standard Amount%29 is Changed%2C List the Total in a Separate Field</fullName>
+        <active>false</active>
+        <description>If the Total Ordered Amount (standard Amount) is Changed, List the Total in a Separate Field. This is to allow roll-up summaries to the Account since Multi-Currency doesn&apos;t allow for roll-ups.</description>
+        <formula>OR(
+ISCHANGED(Amount),
+NOT((ISBLANK(Amount))))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Inventory%2FScale Concerns and Site List</fullName>
+        <active>false</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.Lost_Reason_new__c</field>
+            <operation>equals</operation>
+            <value>Inventory/Scale Concerns</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Lost_Reason_new__c</field>
+            <operation>equals</operation>
+            <value>Site List</value>
+        </criteriaItems>
+        <description>Email alert for Dan Fennel whenever the Closed/Lost reason is either Inventory/Scale Concern or Site List</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify AM</fullName>
+        <actions>
+            <name>Notify_AM</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Submit_to_Ad_Manager__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Notify AM when the opportunity has been submitted to Ad Manager.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify Accounting</fullName>
+        <actions>
+            <name>Notify_Accounting</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Accounting_Notification_Timestamp</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Uncheck_Notify_Accounting</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Notify_Accounting__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed/Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify Accounting - Campaign End</fullName>
+        <actions>
+            <name>notify_accounting_campaign_end</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.End_Date2__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed/Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Campaign_Status__c</field>
+            <operation>equals</operation>
+            <value>Campaign Ended</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Channel__c</field>
+            <operation>equals</operation>
+            <value>Direct</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Record_Type_ID__c</field>
+            <operation>equals</operation>
+            <value>012U00000001pHJ</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Notify_Accounting_Campaign_End</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Opportunity.End_Date2__c</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Opp Cloned</fullName>
+        <actions>
+            <name>Disable_Send_Sold_Campaign_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Mark off field that Opp. is a clone, thus preventing Send Sold Campaign Email will not send immediately.</description>
+        <formula>AND(
+   ISCLONE(),
+   $User.Bypass_Opportunity_Validation__c = False
+   )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity %28Advertising%29 - Name</fullName>
+        <actions>
+            <name>Add_Account_Name_to_Opp_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Advertising</value>
+        </criteriaItems>
+        <description>Add the account name to opportunity names</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity %28Advertising%29 - SEND Daily Emails to AM about Placeholder Product</fullName>
+        <actions>
+            <name>Opp_Notice_Placeholder_Product</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Advertising</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Placeholder_Product_Exists__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Probability</field>
+            <operation>greaterOrEqual</operation>
+            <value>50</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Next_Placeholder_Email__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Channel__c</field>
+            <operation>notEqual</operation>
+            <value>Programmatic</value>
+        </criteriaItems>
+        <description>This is the second of two workflow rules that work together to send a daily email alert to the AM if there is a placeholder product on an opportunity with a probability &gt;= 50%</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Update_Placeholder_Email_Date</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Opportunity.Next_Placeholder_Email__c</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Opportunity %28Advertising%29 - SET Daily Emails to AM about Placeholder Product</fullName>
+        <actions>
+            <name>Update_Placeholder_Email_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Advertising</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Placeholder_Product_Exists__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Probability</field>
+            <operation>greaterOrEqual</operation>
+            <value>50</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Channel__c</field>
+            <operation>notEqual</operation>
+            <value>Programmatic</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>This is the first of two workflow rules that work together to send a daily email alert to the AM if there is a placeholder product on an opportunity with a probability &gt;= 50%</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity %28Advertising%29 - Update Close Date when Won%2FLost</fullName>
+        <actions>
+            <name>Opportunity_Update_Close_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Advertising</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed/Won,Closed/Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Workflow rule for opportunities with record type &quot;Advertising&quot; to always time stamp the Close Date when Won/Lost to the current date regardless of if there was a value previously.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity %28Advertising%29 25%25 Probability Notification</fullName>
+        <actions>
+            <name>Opp_Update_25</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Probability</field>
+            <operation>greaterOrEqual</operation>
+            <value>25</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Advertising</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Notify CSM when probability is at 25%.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity %28Advertising%29 50%25 Probability Notification</fullName>
+        <actions>
+            <name>Opp_Update_50</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Probability</field>
+            <operation>greaterOrEqual</operation>
+            <value>50</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Advertising</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Channel__c</field>
+            <operation>notEqual</operation>
+            <value>Programmatic</value>
+        </criteriaItems>
+        <description>Notify AM when probability is at 50%.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Out By Convenience %28Publisher Sales%29</fullName>
+        <active>false</active>
+        <booleanFilter>3 AND (1 OR 2)</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.Partner_Out_By_Convenience__c</field>
+            <operation>equals</operation>
+            <value>N/A</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.GumGum_Out_By_Convenience__c</field>
+            <operation>equals</operation>
+            <value>N/A</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Publisher Sales</value>
+        </criteriaItems>
+        <description>When Partner or GumGum Out By Convenience is not set, send an email notification.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Pharma Live Alert</fullName>
+        <actions>
+            <name>Email_Em</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Industry</field>
+            <operation>equals</operation>
+            <value>Pharma</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed/Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Campaign_Status__c</field>
+            <operation>equals</operation>
+            <value>Live</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Alert Emanuela Ali when Pharma campaign is live</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Pledge Probability Update</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Finance_Pledge__c</field>
+            <operation>equals</operation>
+            <value>Commit- Confident</value>
+        </criteriaItems>
+        <description>When Pledge is updated, automatic update to the pledge probability</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Pledge Update When Opp Closed%2FWon</fullName>
+        <actions>
+            <name>Pledge_Probability_Update_when_closed_wo</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Pledge_Update_When_Opp_Closed_Won</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed/Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Programmatic Campaign Live Alert</fullName>
+        <actions>
+            <name>Programmatic_Opp_is_Live_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Channel__c</field>
+            <operation>equals</operation>
+            <value>Programmatic</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed/Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Impression_Delivering__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Opportunity_Region__c</field>
+            <operation>notEqual</operation>
+            <value>EMEA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Alert the PSM, Seller, Sellers Manager, AM, and Ian Barbo when a Programmatic Opp is live</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Programmatic Campaign Live Alert - UK</fullName>
+        <actions>
+            <name>Programmatic_Opp_is_Live_Alert_UK</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Channel__c</field>
+            <operation>equals</operation>
+            <value>Programmatic</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed/Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Impression_Delivering__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Opportunity_Region__c</field>
+            <operation>equals</operation>
+            <value>EMEA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Alert the PSM, Seller, Sellers Manager, AM, and Ian Barbo when a Programmatic Opp is live</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Proposal Team Timeliness</fullName>
+        <active>false</active>
+        <description>Helps verify if the Proposal Team is creating their proposals on time</description>
+        <formula>AND(
+Probability = 0.25, 
+RecordType.DeveloperName = &quot;Advertising&quot;, 
+TEXT(Channel__c) = &quot;Direct&quot;,
+ISBLANK(RFP_Submitted_Date__c ),
+Now() &gt;  RFP_Due_Date__c)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Pub Sales - AM Assigned</fullName>
+        <actions>
+            <name>Pub_Sales_AM_Assigned</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.User__c</field>
+            <operation>contains</operation>
+            <value>kira erickson,emanuela ali,victoria dekhtyar,maya bitton</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Publisher Sales</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Pub Sales - Opp Update - 90%25</fullName>
+        <actions>
+            <name>Opp_Update_90</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Publisher Sales</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Probability</field>
+            <operation>greaterOrEqual</operation>
+            <value>90</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.IsClosed</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>When a Publisher Sales opportunity reaches 90%, notify the appropriate individuals.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RFP %3E250k Received</fullName>
+        <actions>
+            <name>RFP_250k</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Total_Ordered_Amount_Dollars__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>250000</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RFP_Received_Date__c</field>
+            <operation>lessOrEqual</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Send an alert any time a 250k+ RFP is received</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RFP %3E500k Received</fullName>
+        <actions>
+            <name>RFP_500k</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Total_Ordered_Amount_Dollars__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>500000</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RFP_Received_Date__c</field>
+            <operation>lessOrEqual</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Send an alert any time a 500k+ RFP is received</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Risky Creative Campain</fullName>
+        <actions>
+            <name>Risky_Creative_Launched</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Risky_Creative__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Start_Date2__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>workflow to alert publisher team that a risky creative campaign has launched</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Running Revenue</fullName>
+        <actions>
+            <name>Calculate_Q1_Running_Revenue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Calculate_Q2_Running_Revenue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Calculate_Q3_Running_Revenue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Calculate_Q4_Running_Revenue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>Amount &gt;= 0 
+&amp;&amp; RecordTypeId = &quot;012U00000001pHJ&quot;</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sold Campaign Email to Company</fullName>
+        <actions>
+            <name>Sold_Campaign_Email</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Send_Sold_Campaign_Email_to_Company__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed/Won</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sold campaign - existing business %24250k%2B</fullName>
+        <actions>
+            <name>Sold_campaign_existing_business_250k</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>update_won_campaign_field_to_true</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>existing business closes opportunity with $250k+ ordered amount</description>
+        <formula>AND( 
+     Amount &gt;= 250000,
+     OR(
+         RecordType.Name = &quot;Advertising&quot;,
+         RecordType.Name = &quot;Verity - Demand&quot;,
+         RecordType.Name = &quot;Verity - Platform&quot;,
+         RecordType.Name = &quot;Verity - Publisher&quot;
+
+         ),
+     !CONTAINS(Account_Name_as_String__c,&quot;Apple Inc.&quot;),   
+     ISPICKVAL(StageName,&quot;Closed/Won&quot;),
+     ISCHANGED(StageName),
+     $User.Bypass_Opportunity_Validation__c = False,
+     OR(
+         ISPICKVAL ( Type , &quot;Existing Business&quot;),
+         ISPICKVAL ( Type , &quot;Renewal&quot; ),
+         ISPICKVAL ( Type , &quot;Renewal Business&quot;)
+        )
+   )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sold campaign - existing business %3C250k</fullName>
+        <actions>
+            <name>Sold_campaign_existing_business_250k_less</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>update_won_campaign_field_to_true</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>existing business closes opportunity with less than $250k ordered amount</description>
+        <formula>AND ( 
+      Amount &lt; 250000 , 
+      Amount &gt; 1 , 
+      OR(
+         RecordType.Name = &quot;Advertising&quot;,
+         RecordType.Name = &quot;Verity - Demand&quot;,
+         RecordType.Name = &quot;Verity - Platform&quot;,
+         RecordType.Name = &quot;Verity - Publisher&quot;
+
+         ),
+      !CONTAINS( Account_Name_as_String__c , &quot;Apple Inc.&quot; ),
+      ISPICKVAL ( StageName , &quot;Closed/Won&quot; ), 
+      ISCHANGED ( StageName ), 
+      $User.Bypass_Opportunity_Validation__c = False,
+      OR(
+           ISPICKVAL ( Type , &quot;Existing Business&quot; ), 
+           ISPICKVAL ( Type , &quot;Renewal&quot; ),
+           ISPICKVAL ( Type , &quot;Renewal Business&quot; )  
+         )
+    )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sold campaign - new business - %24250k%2B</fullName>
+        <actions>
+            <name>Sold_campaign_new_business_250k</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>update_won_campaign_field_to_true</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>new business closes opportunity with more than $250k ordered amount</description>
+        <formula>AND( 
+    OR(
+         RecordType.Name = &quot;Advertising&quot;,
+         RecordType.Name = &quot;Verity - Demand&quot;,
+         RecordType.Name = &quot;Verity - Platform&quot;,
+         RecordType.Name = &quot;Verity - Publisher&quot;
+
+      ),
+    $User.Bypass_Opportunity_Validation__c = False,	
+    Amount &gt;= 250000 ,
+    !CONTAINS( Account_Name_as_String__c , &quot;Apple Inc.&quot; ),
+    ISPICKVAL ( StageName , &quot;Closed/Won&quot; ),
+    ISCHANGED ( StageName ),
+    OR(
+       ISPICKVAL ( Type , &quot;New Business&quot; ),
+       ISPICKVAL ( Type , &quot;New Line of Business&quot; ),
+       ISPICKVAL ( Type , &quot;Prospect&quot; ) 
+      )
+
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sold campaign - new business - %3C %24250k</fullName>
+        <actions>
+            <name>Sold_campaign_new_business_250k_less</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>update_won_campaign_field_to_true</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>new business closes opportunity with less than $250k ordered amount</description>
+        <formula>AND(
+     OR(
+         RecordType.Name = &quot;Advertising&quot;,
+         RecordType.Name = &quot;Verity - Demand&quot;,
+         RecordType.Name = &quot;Verity - Platform&quot;,
+         RecordType.Name = &quot;Verity - Publisher&quot;
+       ),
+     Amount &lt; 250000,
+     Amount &gt; 1,
+     
+     !CONTAINS( Account_Name_as_String__c , &quot;Apple Inc.&quot; ),
+     ISPICKVAL ( StageName , &quot;Closed/Won&quot; ),
+     ISCHANGED ( StageName ),
+     $User.Bypass_Opportunity_Validation__c = False,
+     OR(
+         ISPICKVAL (Type , &quot;New Business&quot;),
+         ISPICKVAL ( Type , &quot;New Line of Business&quot; ),
+         ISPICKVAL ( Type , &quot;Prospect&quot; ) 
+        )
+     
+    )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Strategic Account opportunity created</fullName>
+        <actions>
+            <name>Strategic_Account_opportunity_created</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>(1 AND 2) OR (3 AND 4)</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Opportunity Identified</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Strategic_Accounts__c</field>
+            <operation>includes</operation>
+            <value>2020 Strategic Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Opportunity Identified</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Strategic_Marketing_Influenced__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Email alert for strategic marketing when a strategic account or a strategic marketing influenced account has an opportunity created</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Submit to Ad Manager</fullName>
+        <actions>
+            <name>Advertising_Api_Opportunity_Integration</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Submit_to_Ad_Manager__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Submits the opportunity to Ad Manager as a campaign.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Close Date on Closed Lost</fullName>
+        <actions>
+            <name>Update_Closed_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed/Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.CloseDate</field>
+            <operation>greaterThan</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Impressions Delivering Date field</fullName>
+        <actions>
+            <name>Impressions_Delivering_Update_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Impression_Delivering__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Notify Accounting Checbkox to True</fullName>
+        <actions>
+            <name>Notify_Accounting_Checkbox_equals_true</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed/Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Channel__c</field>
+            <operation>equals</operation>
+            <value>Direct</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Record_Type_ID__c</field>
+            <operation>equals</operation>
+            <value>012U00000001pHJ</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Pledge Probability to 0%25</fullName>
+        <actions>
+            <name>Update_Pledge_Probability_to_0</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed/Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Opportunity_Validation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Update Pledge Probability to 0% when opp is closed/lost</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

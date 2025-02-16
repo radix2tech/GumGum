@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Barter_Trading_Deal__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose the applicable Trading / Barter deal. Values are populated based on the Opportunity Region selected.</inlineHelpText>
+    <label>Barter / Trading Deal</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Opportunity_Region__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>APAC - APEX</fullName>
+                <default>false</default>
+                <label>APAC - APEX</label>
+            </value>
+            <value>
+                <fullName>APAC - Bohemia</fullName>
+                <default>false</default>
+                <label>APAC - Bohemia</label>
+            </value>
+            <value>
+                <fullName>APAC - DAN - SEA</fullName>
+                <default>false</default>
+                <label>APAC - DAN - SEA</label>
+            </value>
+            <value>
+                <fullName>APAC - GroupM - SEA</fullName>
+                <default>false</default>
+                <label>APAC - GroupM - SEA</label>
+            </value>
+            <value>
+                <fullName>APAC - Havas</fullName>
+                <default>false</default>
+                <label>APAC - Havas</label>
+            </value>
+            <value>
+                <fullName>APAC - IPG - AU</fullName>
+                <default>false</default>
+                <label>APAC - IPG - AU</label>
+            </value>
+            <value>
+                <fullName>APAC - IPG - SEA</fullName>
+                <default>false</default>
+                <label>APAC - IPG - SEA</label>
+            </value>
+            <value>
+                <fullName>APAC - OMG</fullName>
+                <default>false</default>
+                <label>APAC - OMG</label>
+            </value>
+            <value>
+                <fullName>APAC - OMG - SEA</fullName>
+                <default>false</default>
+                <label>APAC - OMG - SEA</label>
+            </value>
+            <value>
+                <fullName>APAC - Omnet</fullName>
+                <default>false</default>
+                <label>APAC - Omnet</label>
+            </value>
+            <value>
+                <fullName>APAC - Saatchi</fullName>
+                <default>false</default>
+                <label>APAC - Saatchi</label>
+            </value>
+            <value>
+                <fullName>APAC - Saatchi - SEA</fullName>
+                <default>false</default>
+                <label>APAC - Saatchi - SEA</label>
+            </value>
+            <value>
+                <fullName>BE - Blue2Purple</fullName>
+                <default>false</default>
+                <label>BE - Blue2Purple</label>
+            </value>
+            <value>
+                <fullName>BE - GroupM</fullName>
+                <default>false</default>
+                <label>BE - GroupM</label>
+            </value>
+            <value>
+                <fullName>BE - IPG</fullName>
+                <default>false</default>
+                <label>BE - IPG</label>
+            </value>
+            <value>
+                <fullName>BE - Publicis</fullName>
+                <default>false</default>
+                <label>BE - Publicis</label>
+            </value>
+            <value>
+                <fullName>BE - Space</fullName>
+                <default>false</default>
+                <label>BE - Space</label>
+            </value>
+            <value>
+                <fullName>BE - Zigt</fullName>
+                <default>false</default>
+                <label>BE - Zigt</label>
+            </value>
+            <value>
+                <fullName>CA - APEX</fullName>
+                <default>false</default>
+                <label>CA - APEX</label>
+            </value>
+            <value>
+                <fullName>CA - GroupM GMI</fullName>
+                <default>false</default>
+                <label>CA - GroupM GMI</label>
+            </value>
+            <value>
+                <fullName>CA - Orion</fullName>
+                <default>false</default>
+                <label>CA - Orion</label>
+            </value>
+            <value>
+                <fullName>DE - Dentsu</fullName>
+                <default>false</default>
+                <label>DE - Dentsu</label>
+            </value>
+            <value>
+                <fullName>DE - Fischer</fullName>
+                <default>false</default>
+                <label>DE - Fischer</label>
+            </value>
+            <value>
+                <fullName>DE - GroupM</fullName>
+                <default>false</default>
+                <label>DE - GroupM</label>
+            </value>
+            <value>
+                <fullName>DE - OMD</fullName>
+                <default>false</default>
+                <label>DE - OMD</label>
+            </value>
+            <value>
+                <fullName>Intl. - Adidas</fullName>
+                <default>false</default>
+                <label>Intl. - Adidas</label>
+            </value>
+            <value>
+                <fullName>Intl. - Aramco</fullName>
+                <default>false</default>
+                <label>Intl. - Aramco</label>
+            </value>
+            <value>
+                <fullName>Intl. - CoE</fullName>
+                <default>false</default>
+                <label>Intl. - CoE</label>
+            </value>
+            <value>
+                <fullName>Intl. - Dell</fullName>
+                <default>false</default>
+                <label>Intl. - Dell</label>
+            </value>
+            <value>
+                <fullName>Intl. - Merkle</fullName>
+                <default>false</default>
+                <label>Intl. - Merkle</label>
+            </value>
+            <value>
+                <fullName>JP - Carta Holdings</fullName>
+                <default>false</default>
+                <label>JP - Carta Holdings</label>
+            </value>
+            <value>
+                <fullName>JP - Dentsu</fullName>
+                <default>false</default>
+                <label>JP - Dentsu</label>
+            </value>
+            <value>
+                <fullName>JP - GroupM</fullName>
+                <default>false</default>
+                <label>JP - GroupM</label>
+            </value>
+            <value>
+                <fullName>NL - APEX</fullName>
+                <default>false</default>
+                <label>NL - APEX</label>
+            </value>
+            <value>
+                <fullName>NL - Artefact</fullName>
+                <default>false</default>
+                <label>NL - Artefact</label>
+            </value>
+            <value>
+                <fullName>NL - Dentsu</fullName>
+                <default>false</default>
+                <label>NL - Dentsu</label>
+            </value>
+            <value>
+                <fullName>NL - IPG</fullName>
+                <default>false</default>
+                <label>NL - IPG</label>
+            </value>
+            <value>
+                <fullName>NL - OMG</fullName>
+                <default>false</default>
+                <label>NL - OMG</label>
+            </value>
+            <value>
+                <fullName>NL - Orion</fullName>
+                <default>false</default>
+                <label>NL - Orion</label>
+            </value>
+            <value>
+                <fullName>NL - Publicis</fullName>
+                <default>false</default>
+                <label>NL - Publicis</label>
+            </value>
+            <value>
+                <fullName>UK - Active</fullName>
+                <default>false</default>
+                <label>UK - Active</label>
+            </value>
+            <value>
+                <fullName>UK - Agyle</fullName>
+                <default>false</default>
+                <label>UK - Agyle</label>
+            </value>
+            <value>
+                <fullName>UK - Apex</fullName>
+                <default>false</default>
+                <label>UK - Apex</label>
+            </value>
+            <value>
+                <fullName>UK - Astus</fullName>
+                <default>false</default>
+                <label>UK - Astus</label>
+            </value>
+            <value>
+                <fullName>UK - Bicycle</fullName>
+                <default>false</default>
+                <label>UK - Bicycle</label>
+            </value>
+            <value>
+                <fullName>UK - Dentsu</fullName>
+                <default>false</default>
+                <label>UK - Dentsu</label>
+            </value>
+            <value>
+                <fullName>UK - Expedia</fullName>
+                <default>false</default>
+                <label>UK - Expedia</label>
+            </value>
+            <value>
+                <fullName>UK - GMI</fullName>
+                <default>false</default>
+                <label>UK - GMI</label>
+            </value>
+            <value>
+                <fullName>UK - GoodStuff/Assembly</fullName>
+                <default>false</default>
+                <label>UK - GoodStuff/Assembly</label>
+            </value>
+            <value>
+                <fullName>UK - GroupM</fullName>
+                <default>false</default>
+                <label>UK - GroupM</label>
+            </value>
+            <value>
+                <fullName>UK - Havas</fullName>
+                <default>false</default>
+                <label>UK - Havas</label>
+            </value>
+            <value>
+                <fullName>UK - Innocean</fullName>
+                <default>false</default>
+                <label>UK - Innocean</label>
+            </value>
+            <value>
+                <fullName>UK - IPG/Matterkind (non orion)</fullName>
+                <default>false</default>
+                <label>UK - IPG/Matterkind (non orion)</label>
+            </value>
+            <value>
+                <fullName>UK - McCann Central</fullName>
+                <default>false</default>
+                <label>UK - McCann Central</label>
+            </value>
+            <value>
+                <fullName>UK - Miroma</fullName>
+                <default>false</default>
+                <label>UK - Miroma</label>
+            </value>
+            <value>
+                <fullName>UK - Nestle</fullName>
+                <default>false</default>
+                <label>UK - Nestle</label>
+            </value>
+            <value>
+                <fullName>UK - OMG</fullName>
+                <default>false</default>
+                <label>UK - OMG</label>
+            </value>
+            <value>
+                <fullName>UK - Omnet</fullName>
+                <default>false</default>
+                <label>UK - Omnet</label>
+            </value>
+            <value>
+                <fullName>UK - omniGOV</fullName>
+                <default>false</default>
+                <label>UK - omniGOV</label>
+            </value>
+            <value>
+                <fullName>UK - orion</fullName>
+                <default>false</default>
+                <label>UK - Orion</label>
+            </value>
+            <value>
+                <fullName>UK - Publicis</fullName>
+                <default>false</default>
+                <label>UK - Publicis</label>
+            </value>
+            <value>
+                <fullName>UK - Specialist Works</fullName>
+                <default>false</default>
+                <label>UK - Specialist Works</label>
+            </value>
+            <value>
+                <fullName>UK - the7stars</fullName>
+                <default>false</default>
+                <label>UK - the7stars</label>
+            </value>
+            <value>
+                <fullName>US - Active International</fullName>
+                <default>false</default>
+                <label>US - Active International</label>
+            </value>
+            <value>
+                <fullName>US - APEX</fullName>
+                <default>false</default>
+                <label>US - APEX</label>
+            </value>
+            <value>
+                <fullName>US - Dentsu</fullName>
+                <default>false</default>
+                <label>US - Dentsu</label>
+            </value>
+            <value>
+                <fullName>US - Horizon</fullName>
+                <default>false</default>
+                <label>US - Horizon</label>
+            </value>
+            <value>
+                <fullName>US - Orion</fullName>
+                <default>false</default>
+                <label>US - Orion</label>
+            </value>
+            <value>
+                <fullName>US - SparkFoundry</fullName>
+                <default>false</default>
+                <label>US - SparkFoundry</label>
+            </value>
+            <value>
+                <fullName>APAC - IPG AU</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>APAC - IPG AU</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - Active</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - Agyle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - Apex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - Astus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - Bicycle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - Dentsu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - Expedia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - GMI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - GoodStuff/Assembly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - GroupM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - Havas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - Innocean</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - IPG/Matterkind (non orion)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - McCann Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - Miroma</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - Nestle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - OMG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - Omnet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - omniGOV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - orion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - Publicis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - Specialist Works</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - UK</controllingFieldValue>
+            <valueName>UK - the7stars</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC - WA</controllingFieldValue>
+            <controllingFieldValue>APAC - SA</controllingFieldValue>
+            <controllingFieldValue>APAC - Independents</controllingFieldValue>
+            <controllingFieldValue>NSW</controllingFieldValue>
+            <controllingFieldValue>VIC</controllingFieldValue>
+            <controllingFieldValue>New Zealand</controllingFieldValue>
+            <controllingFieldValue>APAC - QLD</controllingFieldValue>
+            <valueName>APAC - APEX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC - WA</controllingFieldValue>
+            <controllingFieldValue>APAC - SA</controllingFieldValue>
+            <controllingFieldValue>APAC - Independents</controllingFieldValue>
+            <controllingFieldValue>NSW</controllingFieldValue>
+            <controllingFieldValue>VIC</controllingFieldValue>
+            <controllingFieldValue>New Zealand</controllingFieldValue>
+            <controllingFieldValue>APAC - QLD</controllingFieldValue>
+            <valueName>APAC - Bohemia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC - WA</controllingFieldValue>
+            <controllingFieldValue>APAC - SA</controllingFieldValue>
+            <controllingFieldValue>APAC - Independents</controllingFieldValue>
+            <controllingFieldValue>NSW</controllingFieldValue>
+            <controllingFieldValue>VIC</controllingFieldValue>
+            <controllingFieldValue>New Zealand</controllingFieldValue>
+            <controllingFieldValue>APAC - QLD</controllingFieldValue>
+            <valueName>APAC - Havas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC - WA</controllingFieldValue>
+            <controllingFieldValue>APAC - SA</controllingFieldValue>
+            <controllingFieldValue>APAC - Independents</controllingFieldValue>
+            <controllingFieldValue>NSW</controllingFieldValue>
+            <controllingFieldValue>VIC</controllingFieldValue>
+            <controllingFieldValue>New Zealand</controllingFieldValue>
+            <controllingFieldValue>APAC - QLD</controllingFieldValue>
+            <valueName>APAC - IPG - AU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC - WA</controllingFieldValue>
+            <controllingFieldValue>APAC - SA</controllingFieldValue>
+            <controllingFieldValue>APAC - Independents</controllingFieldValue>
+            <controllingFieldValue>NSW</controllingFieldValue>
+            <controllingFieldValue>VIC</controllingFieldValue>
+            <controllingFieldValue>New Zealand</controllingFieldValue>
+            <controllingFieldValue>APAC - QLD</controllingFieldValue>
+            <valueName>APAC - OMG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC - WA</controllingFieldValue>
+            <controllingFieldValue>APAC - SA</controllingFieldValue>
+            <controllingFieldValue>APAC - Independents</controllingFieldValue>
+            <controllingFieldValue>NSW</controllingFieldValue>
+            <controllingFieldValue>VIC</controllingFieldValue>
+            <controllingFieldValue>New Zealand</controllingFieldValue>
+            <controllingFieldValue>APAC - QLD</controllingFieldValue>
+            <valueName>APAC - Omnet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC - WA</controllingFieldValue>
+            <controllingFieldValue>APAC - SA</controllingFieldValue>
+            <controllingFieldValue>APAC - Independents</controllingFieldValue>
+            <controllingFieldValue>NSW</controllingFieldValue>
+            <controllingFieldValue>VIC</controllingFieldValue>
+            <controllingFieldValue>New Zealand</controllingFieldValue>
+            <controllingFieldValue>APAC - QLD</controllingFieldValue>
+            <valueName>APAC - Saatchi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - Belgium</controllingFieldValue>
+            <valueName>BE - Blue2Purple</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - Belgium</controllingFieldValue>
+            <valueName>BE - GroupM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - Belgium</controllingFieldValue>
+            <valueName>BE - IPG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - Belgium</controllingFieldValue>
+            <valueName>BE - Publicis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - Belgium</controllingFieldValue>
+            <valueName>BE - Space</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - Belgium</controllingFieldValue>
+            <valueName>BE - Zigt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - International</controllingFieldValue>
+            <valueName>Intl. - Adidas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - International</controllingFieldValue>
+            <valueName>Intl. - Aramco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - International</controllingFieldValue>
+            <valueName>Intl. - CoE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - International</controllingFieldValue>
+            <valueName>Intl. - Dell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - International</controllingFieldValue>
+            <valueName>Intl. - Merkle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - Germany</controllingFieldValue>
+            <valueName>DE - Dentsu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - Germany</controllingFieldValue>
+            <valueName>DE - Fischer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - Germany</controllingFieldValue>
+            <valueName>DE - GroupM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - Germany</controllingFieldValue>
+            <valueName>DE - OMD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - Netherlands</controllingFieldValue>
+            <valueName>NL - APEX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - Netherlands</controllingFieldValue>
+            <valueName>NL - Artefact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - Netherlands</controllingFieldValue>
+            <valueName>NL - Dentsu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - Netherlands</controllingFieldValue>
+            <valueName>NL - IPG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - Netherlands</controllingFieldValue>
+            <valueName>NL - OMG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - Netherlands</controllingFieldValue>
+            <valueName>NL - Orion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA - Netherlands</controllingFieldValue>
+            <valueName>NL - Publicis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC_South East Asia</controllingFieldValue>
+            <valueName>APAC - DAN - SEA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC_South East Asia</controllingFieldValue>
+            <valueName>APAC - GroupM - SEA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC_South East Asia</controllingFieldValue>
+            <valueName>APAC - IPG - SEA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC_South East Asia</controllingFieldValue>
+            <valueName>APAC - OMG - SEA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC_South East Asia</controllingFieldValue>
+            <valueName>APAC - Saatchi - SEA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>CA - APEX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>CA - GroupM GMI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>CA - Orion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>JP - Carta Holdings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>JP - Dentsu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>JP - GroupM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - Central</controllingFieldValue>
+            <controllingFieldValue>US - East</controllingFieldValue>
+            <controllingFieldValue>US - West</controllingFieldValue>
+            <valueName>US - Active International</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - Central</controllingFieldValue>
+            <controllingFieldValue>US - East</controllingFieldValue>
+            <controllingFieldValue>US - West</controllingFieldValue>
+            <valueName>US - APEX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - Central</controllingFieldValue>
+            <controllingFieldValue>US - East</controllingFieldValue>
+            <controllingFieldValue>US - West</controllingFieldValue>
+            <valueName>US - Dentsu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - Central</controllingFieldValue>
+            <controllingFieldValue>US - East</controllingFieldValue>
+            <controllingFieldValue>US - West</controllingFieldValue>
+            <valueName>US - Horizon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - Central</controllingFieldValue>
+            <controllingFieldValue>US - East</controllingFieldValue>
+            <controllingFieldValue>US - West</controllingFieldValue>
+            <valueName>US - Orion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - Central</controllingFieldValue>
+            <controllingFieldValue>US - East</controllingFieldValue>
+            <controllingFieldValue>US - West</controllingFieldValue>
+            <valueName>US - SparkFoundry</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Incumbent_Provider__c</fullName>
+    <externalId>false</externalId>
+    <label>Incumbent Contextual Provider</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Comscore</fullName>
+                <default>false</default>
+                <label>Comscore</label>
+            </value>
+            <value>
+                <fullName>Double Verify</fullName>
+                <default>false</default>
+                <label>Double Verify</label>
+            </value>
+            <value>
+                <fullName>IBM/Watson Advertising</fullName>
+                <default>false</default>
+                <label>IBM/Watson Advertising</label>
+            </value>
+            <value>
+                <fullName>Integral Ad Science</fullName>
+                <default>false</default>
+                <label>Integral Ad Science</label>
+            </value>
+            <value>
+                <fullName>Internally Developed</fullName>
+                <default>false</default>
+                <label>Internally Developed</label>
+            </value>
+            <value>
+                <fullName>Oracle/Grapeshot</fullName>
+                <default>false</default>
+                <label>Oracle/Grapeshot</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Peer39</fullName>
+                <default>false</default>
+                <label>Peer39</label>
+            </value>
+            <value>
+                <fullName>TTD Contextual</fullName>
+                <default>false</default>
+                <label>TTD Contextual</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

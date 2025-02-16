@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_Details_Other_Archive</fullName>
+    <active>false</active>
+    <description>This forces details to be entered when Other under Lost Reason was chosen.
+No longer needed as of 11/10/2022; no longer allow &quot;Other&quot; loss reason</description>
+    <errorConditionFormula>and( 
+OR(ISPICKVAL(Lost_Reason_new__c,&quot;Other&quot;),
+ISPICKVAL(Lost_Reason_new__c,&quot;Site List&quot;),
+ISPICKVAL(Lost_Reason_new__c,&quot;Unsupported Product Feature&quot;)),
+isblank(Lost_Details_Why__c) 
+)</errorConditionFormula>
+    <errorDisplayField>Lost_Details_Why__c</errorDisplayField>
+    <errorMessage>Please enter Lost Details.</errorMessage>
+</ValidationRule>

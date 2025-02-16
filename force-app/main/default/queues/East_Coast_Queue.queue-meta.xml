@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>East Coast Queue</name>
+    <queueMembers>
+        <users>
+            <user>morgan@ic.gumgum.com</user>
+            <user>nico@gumgum.com</user>
+            <user>srascoe_deactivated@gumgum.com.old</user>
+            <user>valerie@gumgum.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

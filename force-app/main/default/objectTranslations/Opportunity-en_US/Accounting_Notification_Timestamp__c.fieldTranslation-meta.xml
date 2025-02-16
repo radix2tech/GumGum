@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Field is automatically populated when Accounting is notified. --></help>
+    <label><!-- Notification Timestamp --></label>
+    <name>Accounting_Notification_Timestamp__c</name>
+</CustomFieldTranslation>

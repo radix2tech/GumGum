@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- After 5 Bus Day Mid Campaign --></label>
+    <name>After_5_Bus_Day_Mid_Campaign__c</name>
+</CustomFieldTranslation>

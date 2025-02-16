@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NY_Pipeline_Total__c</fullName>
+    <externalId>false</externalId>
+    <formula>Q1_NY_Pipeline__c + Q2_NY_Pipeline__c + Q3_NY_Pipeline__c + Q4_NY_Pipeline__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>NY Pipeline Total</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Ordered_Units2__c</fullName>
+    <description>With the architecture change, we had to create a new field that pulled units from the products instead of the packages object.</description>
+    <externalId>false</externalId>
+    <label>Total Ordered Units</label>
+    <summarizedField>OpportunityLineItem.Quantity</summarizedField>
+    <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

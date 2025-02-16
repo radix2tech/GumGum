@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Ads_East_Manager_5_Molly_Crystal</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <description>Allow Crystal to Modify Accounts belonging to Molly</description>
+        <label>Ads East Manager 5 Molly to Ads East Manager 1</label>
+        <sharedTo>
+            <role>East_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Ads_East_Manager_5</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

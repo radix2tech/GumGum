@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Salesloft_Person_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Salesloft Person Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Open</fullName>
+                <default>false</default>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>Working</fullName>
+                <default>false</default>
+                <label>Working</label>
+            </value>
+            <value>
+                <fullName>Closed-Converted</fullName>
+                <default>false</default>
+                <label>Closed-Converted</label>
+            </value>
+            <value>
+                <fullName>Closed-Not Converted</fullName>
+                <default>false</default>
+                <label>Closed-Not Converted</label>
+            </value>
+            <value>
+                <fullName>Bounced</fullName>
+                <default>false</default>
+                <label>Bounced</label>
+            </value>
+            <value>
+                <fullName>Do Not Contact</fullName>
+                <default>false</default>
+                <label>Do Not Contact</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Replied</fullName>
+                <default>false</default>
+                <label>Replied</label>
+            </value>
+            <value>
+                <fullName>Nurture</fullName>
+                <default>false</default>
+                <label>Nurture</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

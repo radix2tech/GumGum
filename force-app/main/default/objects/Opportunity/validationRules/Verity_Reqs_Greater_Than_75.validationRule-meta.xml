@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verity_Reqs_Greater_Than_75</fullName>
+    <active>false</active>
+    <description>Require at &gt;75%: Deal Type, Payment Terms, Payment Schedule, Total URLs, Units (Millions), Deal Value, Deal Discount Percent, Deal Discount Months</description>
+    <errorConditionFormula>AND(
+ RecordType.DeveloperName=&quot;Verity&quot;,
+  Probability &gt;0.75,
+ OR(
+ISBLANK( TEXT( Deal_Type_Verity__c ) ),
+ISBLANK( TEXT(  Payment_Term__c  ) ),
+ISBLANK( TEXT(   Payment_Schedule__c   ) ),
+ISBLANK(  Total_URLs__c     ),
+ISBLANK(   Units_Millions__c      ),
+ISBLANK(   Deal_Value__c      ),
+ISBLANK(   Deal_Discount_Percent__c      ),
+ISBLANK( TEXT( Deal_Discount_Months__c )      )
+
+) 
+ )</errorConditionFormula>
+    <errorMessage>At 75%, please enter Deal Type, Payment Terms, Payment Schedule, Total URLs, Units (Millions), Deal Value, Deal Discount Percent, and Deal Discount Months.</errorMessage>
+</ValidationRule>

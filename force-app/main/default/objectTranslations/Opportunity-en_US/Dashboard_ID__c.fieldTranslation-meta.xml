@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the 5 digit number associated with the Ad Manager campaign --></help>
+    <label><!-- Ad Manager ID --></label>
+    <name>Dashboard_ID__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Blocker_Other_Details</fullName>
+    <active>true</active>
+    <description>If Other is selected in Blocker, the details are required</description>
+    <errorConditionFormula>AND(
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+ISPICKVAL(Blocker__c , &quot;Other&quot;),
+ISBLANK( Blocker_Other_Details__c ) 
+)</errorConditionFormula>
+    <errorMessage>Please enter Blocker Other Details</errorMessage>
+</ValidationRule>

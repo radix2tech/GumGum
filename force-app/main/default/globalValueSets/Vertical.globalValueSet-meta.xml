@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Auto</fullName>
+        <default>false</default>
+        <label>Auto</label>
+    </customValue>
+    <customValue>
+        <fullName>Business &amp; Finance</fullName>
+        <default>false</default>
+        <label>Business &amp; Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>Entertainment</fullName>
+        <default>false</default>
+        <label>Entertainment</label>
+    </customValue>
+    <customValue>
+        <fullName>Fashion</fullName>
+        <default>false</default>
+        <label>Fashion</label>
+    </customValue>
+    <customValue>
+        <fullName>Food &amp; Drink</fullName>
+        <default>false</default>
+        <label>Food &amp; Drink</label>
+    </customValue>
+    <customValue>
+        <fullName>Gaming</fullName>
+        <default>false</default>
+        <label>Gaming</label>
+    </customValue>
+    <customValue>
+        <fullName>Health &amp; Wellness</fullName>
+        <default>false</default>
+        <label>Health &amp; Wellness</label>
+    </customValue>
+    <customValue>
+        <fullName>Home &amp; Garden</fullName>
+        <default>false</default>
+        <label>Home &amp; Garden</label>
+    </customValue>
+    <customValue>
+        <fullName>Humor</fullName>
+        <default>false</default>
+        <label>Humor</label>
+    </customValue>
+    <customValue>
+        <fullName>Lifestyles</fullName>
+        <default>false</default>
+        <label>Lifestyles</label>
+    </customValue>
+    <customValue>
+        <fullName>Miscellaneous</fullName>
+        <default>false</default>
+        <label>Miscellaneous</label>
+    </customValue>
+    <customValue>
+        <fullName>News</fullName>
+        <default>false</default>
+        <label>News</label>
+    </customValue>
+    <customValue>
+        <fullName>Social Networks</fullName>
+        <default>false</default>
+        <label>Social Networks</label>
+    </customValue>
+    <customValue>
+        <fullName>Sports</fullName>
+        <default>false</default>
+        <label>Sports</label>
+    </customValue>
+    <customValue>
+        <fullName>Technology</fullName>
+        <default>false</default>
+        <label>Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>Travel</fullName>
+        <default>false</default>
+        <label>Travel</label>
+    </customValue>
+    <masterLabel>Vertical</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

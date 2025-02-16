@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- In-Slot Sub Products --></label>
+    <name>In_Slot_Sub_Products__c</name>
+    <picklistValues>
+        <masterLabel>In-Slot</masterLabel>
+        <translation><!-- In-Slot --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If box is checked-marked means it is ok to call on. Unchecked means not ok to call on by Open Market --></help>
+    <label><!-- Available for Calling On (Open Market) --></label>
+    <name>Approved_for_Claiming_Open_Market__c</name>
+</CustomFieldTranslation>

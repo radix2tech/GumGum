@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>AIP</fullName>
+        <default>false</default>
+        <label>AIP</label>
+    </customValue>
+    <customValue>
+        <fullName>EMEA Media</fullName>
+        <default>false</default>
+        <label>EMEA Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Marketing</fullName>
+        <default>false</default>
+        <label>Global Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>JAPAC Media</fullName>
+        <default>false</default>
+        <label>JAPAC Media</label>
+    </customValue>
+    <customValue>
+        <fullName>NA Media</fullName>
+        <default>false</default>
+        <label>NA Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Verity</fullName>
+        <default>false</default>
+        <label>Verity</label>
+    </customValue>
+    <customValue>
+        <fullName>VI</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>VI</label>
+    </customValue>
+    <customValue>
+        <fullName>HR</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>HR</label>
+    </customValue>
+    <customValue>
+        <fullName>Tech</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tech</label>
+    </customValue>
+    <customValue>
+        <fullName>Execs</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Execs</label>
+    </customValue>
+    <customValue>
+        <fullName>Europe</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Europe</label>
+    </customValue>
+    <customValue>
+        <fullName>Central Marketing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Central Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Japan</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>SalesOps</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>SalesOps</label>
+    </customValue>
+    <customValue>
+        <fullName>Sports</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sports</label>
+    </customValue>
+    <customValue>
+        <fullName>NA Programmatic</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NA Programmatic</label>
+    </customValue>
+    <customValue>
+        <fullName>Growth</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Growth</label>
+    </customValue>
+    <customValue>
+        <fullName>Australia &amp; NZ</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Australia &amp; NZ</label>
+    </customValue>
+    <customValue>
+        <fullName>NA Sales - East</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NA Sales - East</label>
+    </customValue>
+    <customValue>
+        <fullName>NA Sales - Central &amp; Canada</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NA Sales - Central &amp; Canada</label>
+    </customValue>
+    <customValue>
+        <fullName>NA Sales - West</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NA Sales - West</label>
+    </customValue>
+    <customValue>
+        <fullName>NA Pub Dev</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NA PubDev</label>
+    </customValue>
+    <customValue>
+        <fullName>International (Besides Europe, Australia &amp; NZ)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>International (Besides Europe, Australia, New Zealand and Japan)</label>
+    </customValue>
+    <masterLabel>Department</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

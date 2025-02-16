@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Integration_Details</fullName>
+    <active>false</active>
+    <description>If Other in Integration is selected details are required</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Integration__c , &quot;Other&quot;),
+ISBLANK( Integration_Other_Details__c ) 
+)</errorConditionFormula>
+    <errorMessage>Please enter the Integration Other Details</errorMessage>
+</ValidationRule>

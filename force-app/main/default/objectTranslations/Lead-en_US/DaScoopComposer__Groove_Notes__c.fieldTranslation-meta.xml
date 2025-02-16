@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Contains notes that are surfaced in Groove&apos;s sidebar by default. --></help>
+    <label><!-- Groove Notes --></label>
+    <name>DaScoopComposer__Groove_Notes__c</name>
+</CustomFieldTranslation>

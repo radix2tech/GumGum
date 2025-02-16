@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Product_NonProgrammatic_Oppty</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+				TEXT(Channel__c) &lt;&gt; &quot;Programmatic&quot;,
+				$User.Bypass_Opportunity_Validation__c = FALSE,
+				ISCHANGED( StageName ),
+    TEXT(StageName) = &quot;Closed/Won&quot;,
+				Placeholder_Product_Count__c &gt;0,
+				OR(
+        RecordType.Name = &quot;Advertising&quot; ,
+        RecordType.Name = &quot;Activation&quot; , 
+        RecordType.Name = &quot;Attention_Intelligence_Platform&quot; 
+				  )
+				)</errorConditionFormula>
+    <errorMessage>You must update the products (and remove any placeholder products) when changing an opportunity to Closed Won</errorMessage>
+</ValidationRule>

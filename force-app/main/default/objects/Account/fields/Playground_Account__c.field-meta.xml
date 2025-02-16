@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Playground_Account__c</fullName>
+    <description>Flags accounts owned by the Playground team (based on role name) and if active</description>
+    <externalId>false</externalId>
+    <formula>IF(
+AND(
+ Owner.IsActive = TRUE,
+CONTAINS( Owner.UserRole.Name , &quot;Playground&quot;)), TRUE, FALSE)</formula>
+    <inlineHelpText>Flags accounts owned by an active Playground user</inlineHelpText>
+    <label>Playground Account</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Updates Multiple Products Start and End Date</description>
+    <flowDefinition>Opportunity_Update_Multiple_Products_Start_and_End_Date</flowDefinition>
+    <label>Update Products</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

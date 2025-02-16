@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Expedite_Details</fullName>
+    <active>true</active>
+    <errorConditionFormula>and( 
+Request_Expedite_c__c = true, 
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+NOT( $Permission.Bypass_Opportunity_Validation ),
+or(
+ isblank(Expedited_Type__c),
+ isblank(Reason_for_Expediting__c),
+ isblank(Departments_Needed_for_Expediting__c)
+ )
+)</errorConditionFormula>
+    <errorDisplayField>Request_Expedite_c__c</errorDisplayField>
+    <errorMessage>Expedite Type, Justification and Departments Needed Must be filled out to request Expedite.</errorMessage>
+</ValidationRule>

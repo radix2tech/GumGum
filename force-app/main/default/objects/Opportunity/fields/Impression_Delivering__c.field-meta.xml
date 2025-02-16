@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Impression_Delivering__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>PSMs to select this checkbox when a Programmatic campaign is live and the impressions are delivering</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select this field when a programmatic campaign is live and impressions are delivering</inlineHelpText>
+    <label>Impressions Delivering?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

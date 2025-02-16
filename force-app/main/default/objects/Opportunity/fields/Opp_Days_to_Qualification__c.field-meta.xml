@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opp_Days_to_Qualification__c</fullName>
+    <description># of Days from Creation of Opp to the Date Moved to a Qualified Stage</description>
+    <externalId>false</externalId>
+    <formula>(Date_Qualified__c) - DATEVALUE(CreatedDate)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText># of Days from Creation of Opp to the Date Moved to a Qualified Stage</inlineHelpText>
+    <label>Opp Days to Qualification</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

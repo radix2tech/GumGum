@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Gross Revenue only on In-Video Products --></help>
+    <label><!-- Total In-Video Ordered Amount --></label>
+    <name>Total_In_Video_Ordered_Amount__c</name>
+</CustomFieldTranslation>

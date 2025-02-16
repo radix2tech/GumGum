@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Incremental_Amount__c</fullName>
+    <externalId>false</externalId>
+    <label>Incremental Amount</label>
+    <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+    <summaryFilterItems>
+        <field>OpportunityLineItem.Incremental_New__c</field>
+        <operation>equals</operation>
+        <value>Incremental - Campaign Extended (Advertising), Incremental - Client Requested (Advertising), Incremental - GumGum Requested (Advertising), Incremental - Optimizations Between Units (Advertising)</value>
+    </summaryFilterItems>
+    <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

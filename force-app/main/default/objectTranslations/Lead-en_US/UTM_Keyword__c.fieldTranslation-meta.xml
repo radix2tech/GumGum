@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Tracks which keyword term a website visitor came from. This is specifically used for paid search ads --></help>
+    <label><!-- UTM Keyword --></label>
+    <name>UTM_Keyword__c</name>
+</CustomFieldTranslation>

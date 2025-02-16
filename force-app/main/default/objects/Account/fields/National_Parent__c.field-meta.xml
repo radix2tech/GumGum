@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>National_Parent__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT( Parent.National__c )</formula>
+    <inlineHelpText>Yes is National
+No is not National</inlineHelpText>
+    <label>National Parent?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

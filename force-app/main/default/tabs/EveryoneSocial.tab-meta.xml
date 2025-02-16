@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>EveryoneSocial User App</description>
+    <frameHeight>600</frameHeight>
+    <hasSidebar>false</hasSidebar>
+    <label>EveryoneSocial</label>
+    <motif>Custom11: Star</motif>
+    <url>https://gumgum.everyonesocial.app</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

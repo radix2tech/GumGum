@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Custom_Fields__c</fullName>
+    <externalId>false</externalId>
+    <label>Number of Custom Fields</label>
+    <summaryFilterItems>
+        <field>Item_Snapshot_Field__c.Field_Api_Name__c</field>
+        <operation>contains</operation>
+        <value>__c</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Item_Snapshot_Field__c.Item_Snapshot__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

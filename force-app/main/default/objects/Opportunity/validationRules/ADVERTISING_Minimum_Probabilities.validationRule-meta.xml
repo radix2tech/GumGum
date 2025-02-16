@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ADVERTISING_Minimum_Probabilities</fullName>
+    <active>false</active>
+    <description>Can&apos;t set probability below the default minimum for the stage.  If the opportunity is not to the minimum level of probability, we should not spend additional company resources yet.</description>
+    <errorConditionFormula>AND(
+RecordType.Name = &quot;Advertising&quot;,
+(Text(StageName) = &quot;Opportunity Identified&quot; &amp;&amp; Probability &lt; Value(&quot;0.1&quot;)) ||
+(Text(StageName) = &quot;Proposal&quot; &amp;&amp; Probability &lt; Value(&quot;0.25&quot;)) ||
+(Text(StageName) = &quot;Negotiations&quot; &amp;&amp; Probability &lt; Value(&quot;0.1&quot;)) ||
+(Text(StageName) = &quot;Approved / Outcome Pending&quot; &amp;&amp; Probability &lt; Value(&quot;0.1&quot;)) ||
+(Text(StageName) = &quot;Closed/Won&quot; &amp;&amp; Probability &lt; Value(&quot;1&quot;)) ||
+(Text(StageName) = &quot;Closed/Lost&quot; &amp;&amp; Probability &gt; Value(&quot;0.0&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>Probability</errorDisplayField>
+    <errorMessage>Can&apos;t set probability below the default minimum for the stage.  If the opportunity is not to the minimum level of probability, we should not spend additional company resources yet.</errorMessage>
+</ValidationRule>

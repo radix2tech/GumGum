@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Territory_Sports__c</fullName>
+    <description>Temporary field to assist in account cleanup and segmentation for the Sports Sales org</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Temporary field to assist in account cleanup and segmentation for the Sports Sales org</inlineHelpText>
+    <label>Territory (Sports)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Territory_Sports</valueSetName>
+    </valueSet>
+</CustomField>

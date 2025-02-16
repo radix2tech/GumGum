@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Original_Won_Amount__c</fullName>
+    <description>SOP-3380 - Captures the Total Ordered Amount when the opportunity Moved to Closed/Won</description>
+    <externalId>false</externalId>
+    <label>Original Won Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>4</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

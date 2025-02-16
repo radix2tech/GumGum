@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Re_calculate_Products__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This is used to drive the automation for re-calculation of placeholder when OLIs have been inserted for the month.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This checkbox will be used by automation to identify opporturnities that must be considered for processing the OLIs</inlineHelpText>
+    <label>Re-calculate Products</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

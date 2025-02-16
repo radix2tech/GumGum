@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_Needs__c</fullName>
+    <externalId>false</externalId>
+    <label>Special Needs</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Content</fullName>
+                <default>false</default>
+                <label>No Content</label>
+            </value>
+            <value>
+                <fullName>No Embedded Video</fullName>
+                <default>false</default>
+                <label>No Embedded Video</label>
+            </value>
+            <value>
+                <fullName>No II Canvas</fullName>
+                <default>false</default>
+                <label>No II Canvas</label>
+            </value>
+            <value>
+                <fullName>No IS Display</fullName>
+                <default>false</default>
+                <label>No IS Display</label>
+            </value>
+            <value>
+                <fullName>No IS Half Takeover</fullName>
+                <default>false</default>
+                <label>No IS Half Takeover</label>
+            </value>
+            <value>
+                <fullName>No IS Takeover Full</fullName>
+                <default>false</default>
+                <label>No IS Takeover Full</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

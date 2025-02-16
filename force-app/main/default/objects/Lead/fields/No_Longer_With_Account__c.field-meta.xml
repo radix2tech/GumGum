@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Longer_With_Account__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This checkbox is checked when the lead is no longer with the account.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This checkbox is checked when the lead is no longer with the account.</inlineHelpText>
+    <label>No Longer With Account</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

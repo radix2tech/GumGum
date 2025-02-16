@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_MC_Qualifying</fullName>
+    <active>false</active>
+    <description>Main Competitor field is required at GGS qualification stage and higher</description>
+    <errorConditionFormula>AND (
+  OR (
+     RecordType.Name = &quot;Sports&quot;,
+     ISPICKVAL(StageName, &quot;Opportunity Qualified&quot;),
+     ISPICKVAL(StageName, &quot;Deep Dive Meetings Completed&quot;),
+     ISPICKVAL(StageName, &quot;Proposal&quot;),
+     ISPICKVAL(StageName, &quot;Negotiations&quot;),
+     ISPICKVAL(StageName, &quot;Approved&quot;),
+     ISPICKVAL(StageName, &quot;Pledge&quot;),
+     ISPICKVAL(StageName, &quot;Closed/Won&quot;)),
+ISPICKVAL(Main_Competitor__c,&quot;&quot;)
+)</errorConditionFormula>
+    <errorMessage>Please select a main competitor</errorMessage>
+</ValidationRule>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Prospecting</fullName>
+                <default>false</default>
+                <label>Prospecting</label>
+            </value>
+            <value>
+                <fullName>15% - Prospecting</fullName>
+                <default>false</default>
+                <label>15% - Prospecting</label>
+            </value>
+            <value>
+                <fullName>25% - Responsive</fullName>
+                <default>false</default>
+                <label>25% - Responsive</label>
+            </value>
+            <value>
+                <fullName>50% - Negotiation</fullName>
+                <default>false</default>
+                <label>50% - Negotiation</label>
+            </value>
+            <value>
+                <fullName>75% - Closing</fullName>
+                <default>false</default>
+                <label>75% - Closing</label>
+            </value>
+            <value>
+                <fullName>100% - Closed/Won!</fullName>
+                <default>false</default>
+                <label>100% - Closed/Won!</label>
+            </value>
+            <value>
+                <fullName>Lost</fullName>
+                <default>false</default>
+                <label>Lost</label>
+            </value>
+            <value>
+                <fullName>Potential</fullName>
+                <default>false</default>
+                <label>Potential</label>
+            </value>
+            <value>
+                <fullName>Intro Call</fullName>
+                <default>false</default>
+                <label>Intro Call</label>
+            </value>
+            <value>
+                <fullName>CV Demo with DMs</fullName>
+                <default>false</default>
+                <label>CV Demo with DMs</label>
+            </value>
+            <value>
+                <fullName>Workflow Demo with Top DDS</fullName>
+                <default>false</default>
+                <label>Workflow Demo with Top DDS</label>
+            </value>
+            <value>
+                <fullName>Legal &amp; Terms</fullName>
+                <default>false</default>
+                <label>Legal &amp; Terms</label>
+            </value>
+            <value>
+                <fullName>Customer</fullName>
+                <default>false</default>
+                <label>Customer</label>
+            </value>
+            <value>
+                <fullName>Bad Fit</fullName>
+                <default>false</default>
+                <label>Bad Fit</label>
+            </value>
+            <value>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+                <label>Canceled</label>
+            </value>
+            <value>
+                <fullName>Closed/Denied</fullName>
+                <default>false</default>
+                <label>Closed/Denied</label>
+            </value>
+            <value>
+                <fullName>Approach</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Approach</label>
+            </value>
+            <value>
+                <fullName>In contact</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>In contact</label>
+            </value>
+            <value>
+                <fullName>Live - PMP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Live - PMP</label>
+            </value>
+            <value>
+                <fullName>Live - RTB</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Live - RTB</label>
+            </value>
+            <value>
+                <fullName>Request - Call</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Request - Call</label>
+            </value>
+            <value>
+                <fullName>Request - Call 2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Request - Call 2</label>
+            </value>
+            <value>
+                <fullName>Request - LI</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Request - LI</label>
+            </value>
+            <value>
+                <fullName>Request - Mail</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Request - Mail</label>
+            </value>
+            <value>
+                <fullName>Request - Mail 2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Request - Mail 2</label>
+            </value>
+            <value>
+                <fullName>Request - Web</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Request - Web</label>
+            </value>
+            <value>
+                <fullName>Request - Web 2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Request - Web 2</label>
+            </value>
+            <value>
+                <fullName>Request -LI 2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Request -LI 2</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

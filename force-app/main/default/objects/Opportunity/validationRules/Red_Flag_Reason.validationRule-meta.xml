@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Red_Flag_Reason</fullName>
+    <active>true</active>
+    <description>If the red flag is not checked return the error message</description>
+    <errorConditionFormula>AND
+(Red_Flag__c = TRUE,
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+NOT( $Permission.Bypass_Opportunity_Validation ),
+ISBLANK(TEXT(Red__c))
+)</errorConditionFormula>
+    <errorDisplayField>Red__c</errorDisplayField>
+    <errorMessage>Please select a Red Flag reason.</errorMessage>
+</ValidationRule>

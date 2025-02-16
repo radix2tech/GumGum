@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select the Department the budget is coming out of --></help>
+    <label><!-- Department --></label>
+    <name>Department__c</name>
+    <picklistValues>
+        <masterLabel>All Departments</masterLabel>
+        <translation><!-- All Departments --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Engineering</masterLabel>
+        <translation><!-- Engineering --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Executive</masterLabel>
+        <translation><!-- Executive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation><!-- Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>People Operations</masterLabel>
+        <translation><!-- People Operations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Programmatic</masterLabel>
+        <translation><!-- Programmatic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Publisher Development</masterLabel>
+        <translation><!-- Publisher Development --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales (Regional Marketing)</masterLabel>
+        <translation><!-- Sales (Regional Marketing) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

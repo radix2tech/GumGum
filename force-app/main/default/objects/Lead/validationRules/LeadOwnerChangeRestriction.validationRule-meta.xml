@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LeadOwnerChangeRestriction</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+ISCHANGED ( OwnerId ),
+PRIORVALUE ( OwnerId ) &lt;&gt; $User.Id ,
+$User.ProfileId = &apos;00eU0000000J7n2&apos; ,
+PRIORVALUE ( Owner_is_Active__c ) = TRUE
+)</errorConditionFormula>
+    <errorMessage>The current owner of the account is active, therefore you cannot change ownership. Contact a system administrator if you feel you received this in error.</errorMessage>
+</ValidationRule>

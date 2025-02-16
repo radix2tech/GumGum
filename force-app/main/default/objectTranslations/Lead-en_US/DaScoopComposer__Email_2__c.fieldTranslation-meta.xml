@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- describes the secondary email address of this lead. --></help>
+    <label><!-- Email 2 --></label>
+    <name>DaScoopComposer__Email_2__c</name>
+</CustomFieldTranslation>

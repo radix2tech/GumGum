@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Need_Start_Date</fullName>
+    <active>false</active>
+    <description>Disabled because we no longer use this field &quot;Old start date&quot; and now use contract date; and we no longer have a stage named Created Proposal so this VR was not working for months!
+This might be edited and reimplemented upon discussion</description>
+    <errorConditionFormula>AND(ISBLANK( Start_Date2__c ),ISPICKVAL( StageName,&quot;Create Proposal&quot;))&amp;&amp; RecordTypeId = &quot;012U00000001pHJ&quot;</errorConditionFormula>
+    <errorDisplayField>Start_Date__c</errorDisplayField>
+    <errorMessage>Enter Start Date</errorMessage>
+</ValidationRule>

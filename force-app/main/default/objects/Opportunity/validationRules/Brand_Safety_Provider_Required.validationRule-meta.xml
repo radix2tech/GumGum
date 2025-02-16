@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brand_Safety_Provider_Required</fullName>
+    <active>false</active>
+    <errorConditionFormula>and(
+ isblank(Brand_Safety_Provider__c), 
+ Probability &gt; 0.50,
+ RecordType.Name = &quot;Advertising&quot;,
+ ispickval(Channel__c, &quot;Direct&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Brand_Safety_Provider__c</errorDisplayField>
+    <errorMessage>Field required beyond 50% win probability.</errorMessage>
+</ValidationRule>

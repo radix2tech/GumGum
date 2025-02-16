@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Product --></label>
+    <name>Product__c</name>
+    <picklistValues>
+        <masterLabel>CTV</masterLabel>
+        <translation><!-- CTV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Core Media</masterLabel>
+        <translation><!-- Core Media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data</masterLabel>
+        <translation><!-- Data --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OLV</masterLabel>
+        <translation><!-- OLV --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

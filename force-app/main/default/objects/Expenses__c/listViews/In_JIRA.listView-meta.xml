@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>In_JIRA</fullName>
+    <columns>NAME</columns>
+    <columns>Department__c</columns>
+    <columns>Marketing_Category__c</columns>
+    <columns>Expense_Amount__c</columns>
+    <columns>Expense_Status__c</columns>
+    <columns>Invoice_Attached__c</columns>
+    <columns>Invoice_Date__c</columns>
+    <columns>Invoice_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>In JIRA</label>
+</ListView>

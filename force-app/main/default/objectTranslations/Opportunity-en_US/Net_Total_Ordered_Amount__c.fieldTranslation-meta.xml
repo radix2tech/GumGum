@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The sum of Net Revenue on Core, In-Game and In-Video Products --></help>
+    <label><!-- Net Total Ordered Amount Deprecated --></label>
+    <name>Net_Total_Ordered_Amount__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Multicultural_Details__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please include any additional Multicultural Details, (i.e. 60% Hispanic, 40% Black, etc.)</inlineHelpText>
+    <label>Multicultural Details</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

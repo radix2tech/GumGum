@@ -1,0 +1,2227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Targeting</fullName>
+    <active>true</active>
+    <label>Targeting</label>
+    <picklistValues>
+        <picklist>Behavioral__c</picklist>
+        <values>
+            <fullName>Both</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>First Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Third Party</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Campaign_Country__c</picklist>
+        <values>
+            <fullName>AD - Andorra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AE - United Arab Emirates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AF - Afghanistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AG - Antigua and Barbuda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AI - Anguilla</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AL - Albania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AM - Armenia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO - Angola</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AQ - Antarctica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR - Argentina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS - American Samoa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AT - Austria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AU - Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AW - Aruba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AX - Åland Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AZ - Azerbaijan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA - Bosnia and Herzegovina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BB - Barbados</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BD - Bangladesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BE - Belgium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BF - Burkina Faso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BG - Bulgaria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BH - Bahrain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BI - Burundi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BJ - Benin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BL - Saint Barthélemy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BM - Bermuda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BN - Brunei Darussalam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BO - Bolivia %28Plurinational State of%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BQ - Bonaire%2C Sint Eustatius and Saba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR - Brazil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BS - Bahamas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BT - Bhutan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BV - Bouvet Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BW - Botswana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BY - Belarus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BZ - Belize</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CA - Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC - Cocos %28Keeling%29 Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD - Congo %28Democratic Republic of the%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CF - Central African Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CG - Congo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CH - Switzerland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CI - Côte d%27Ivoire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CK - Cook Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CL - Chile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CM - Cameroon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN - China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CO - Colombia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CR - Costa Rica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CU - Cuba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CV - Cabo Verde</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CW - Curaçao</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CX - Christmas Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CY - Cyprus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CZ - Czech Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE - Germany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DJ - Djibouti</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DK - Denmark</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DM - Dominica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DO - Dominican Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DZ - Algeria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EC - Ecuador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EE - Estonia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EG - Egypt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EH - Western Sahara</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ER - Eritrea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ES - Spain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ET - Ethiopia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FI - Finland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FJ - Fiji</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FK - Falkland Islands %28Malvinas%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FM - Micronesia %28Federated States of%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FO - Faroe Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FR - France</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GA - Gabon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GB - United Kingdom of Great Britain and Northern Ireland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GD - Grenada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GE - Georgia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GF - French Guiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GG - Guernsey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GH - Ghana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GI - Gibraltar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GL - Greenland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GM - Gambia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GN - Guinea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GP - Guadeloupe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GQ - Equatorial Guinea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GR - Greece</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GS - South Georgia and the South Sandwich Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GT - Guatemala</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GU - Guam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GW - Guinea-Bissau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GY - Guyana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HK - Hong Kong</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HM - Heard Island and McDonald Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HN - Honduras</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR - Croatia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HT - Haiti</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HU - Hungary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ID - Indonesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IE - Ireland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IL - Israel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IM - Isle of Man</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN - India</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IO - British Indian Ocean Territory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IQ - Iraq</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IR - Iran %28Islamic Republic of%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IS - Iceland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT - Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JE - Jersey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JM - Jamaica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JO - Jordan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JP - Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KE - Kenya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KG - Kyrgyzstan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KH - Cambodia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KI - Kiribati</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KM - Comoros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KN - Saint Kitts and Nevis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KP - Korea %28Democratic People%27s Republic of%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KR - Korea %28Republic of%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KW - Kuwait</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KY - Cayman Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KZ - Kazakhstan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LA - Lao People%27s Democratic Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LB - Lebanon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LC - Saint Lucia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LI - Liechtenstein</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LK - Sri Lanka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LR - Liberia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LS - Lesotho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LT - Lithuania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LU - Luxembourg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LV - Latvia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LY - Libya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA - Morocco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MC - Monaco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MD - Moldova %28Republic of%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ME - Montenegro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MF - Saint Martin %28French part%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MG - Madagascar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MH - Marshall Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MK - Macedonia %28the former Yugoslav Republic of%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ML - Mali</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MM - Myanmar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MN - Mongolia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MO - Macao</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MP - Northern Mariana Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MQ - Martinique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MR - Mauritania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MS - Montserrat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MT - Malta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MU - Mauritius</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MV - Maldives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MW - Malawi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MX - Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MY - Malaysia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MZ - Mozambique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA - Namibia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NC - New Caledonia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NE - Niger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NF - Norfolk Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NG - Nigeria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NI - Nicaragua</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NL - Netherlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NO - Norway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NP - Nepal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NR - Nauru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NU - Niue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NZ - New Zealand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OM - Oman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA - Panama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PE - Peru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PF - French Polynesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PG - Papua New Guinea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PH - Philippines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PK - Pakistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PL - Poland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PM - Saint Pierre and Miquelon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PN - Pitcairn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PR - Puerto Rico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PS - Palestine%2C State of</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PT - Portugal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PW - Palau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PY - Paraguay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QA - Qatar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RE - Réunion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RO - Romania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RS - Serbia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RU - Russian Federation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RW - Rwanda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA - Saudi Arabia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SB - Solomon Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SC - Seychelles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD - Sudan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SE - Sweden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SG - Singapore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SH - Saint Helena%2C Ascension and Tristan da Cunha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SI - Slovenia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SJ - Svalbard and Jan Mayen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SK - Slovakia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SL - Sierra Leone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SM - San Marino</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SN - Senegal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SO - Somalia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR - Suriname</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SS - South Sudan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ST - Sao Tome and Principe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SV - El Salvador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SX - Sint Maarten %28Dutch part%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SY - Syrian Arab Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SZ - Swaziland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TC - Turks and Caicos Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TD - Chad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TF - French Southern Territories</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TG - Togo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TH - Thailand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TJ - Tajikistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TK - Tokelau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TL - Timor-Leste</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TM - Turkmenistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TN - Tunisia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TO - Tonga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TR - Turkey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TT - Trinidad and Tobago</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TV - Tuvalu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TW - Taiwan%2C Province of China%5Ba%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TZ - Tanzania%2C United Republic of</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UA - Ukraine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UG - Uganda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UM - United States Minor Outlying Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - United States of America</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>UY - Uruguay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UZ - Uzbekistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VA - Holy See</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VC - Saint Vincent and the Grenadines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VE - Venezuela %28Bolivarian Republic of%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VG - Virgin Islands %28British%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VI - Virgin Islands %28U%2ES%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VN - Viet Nam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VU - Vanuatu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WF - Wallis and Futuna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WS - Samoa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YE - Yemen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YT - Mayotte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZA - South Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZM - Zambia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZW - Zimbabwe</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Campaign_DMA__c</picklist>
+        <values>
+            <fullName>500 - Portland-Auburn ME</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>501 - New York NY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>502 - Binghamton NY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>503 - Macon GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>504 - Philadelphia PA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>505 - Detroit MI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>506 - Boston MA-Manchester NH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>507 - Savannah GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>508 - Pittsburgh PA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>509 - Ft%2E Wayne IN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>510 - Cleveland-Akron %28Canton%29 OH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>511 - Washington DC %28Hagerstown MD%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>512 - Baltimore MD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>513 - Flint-Saginaw-Bay City MI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>514 - Buffalo NY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>515 - Cincinnati OH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>516 - Erie PA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>517 - Charlotte NC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>518 - Greensboro-High Point-Winston Salem NC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>519 - Charleston SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>520 - Augusta GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>521 - Providence RI-New Bedford MA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>522 - Columbus GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>523 - Burlington VT-Plattsburgh NY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>524 - Atlanta GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>525 - Albany GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>526 - Utica NY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>527 - Indianapolis IN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>528 - Miami-Ft%2E Lauderdale FL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>529 - Louisville KY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>530 - Tallahassee FL-Thomasville GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>531 - Tri-Cities TN-VA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>532 - Albany-Schenectady-Troy NY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>533 - Hartford %26 New Haven CT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>534 - Orlando-Daytona Beach-Melbourne FL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>535 - Columbus OH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>536 - Youngstown OH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>537 - Bangor ME</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>538 - Rochester NY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>539 - Tampa-St%2E Petersburg %28Sarasota%29 FL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>540 - Traverse City-Cadillac MI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>541 - Lexington KY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>542 - Dayton OH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>543 - Springfield-Holyoke MA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>544 - Norfolk-Portsmouth-Newport News VA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>545 - Greenville-New Bern-Washington NC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>546 - Columbia SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>547 - Toledo OH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>548 - West Palm Beach-Ft%2E Pierce FL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>549 - Watertown NY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>550 - Wilmington NC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>551 - Lansing MI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>552 - Presque Isle ME</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>553 - Marquette MI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>554 - Wheeling WV-Steubenville OH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>555 - Syracuse NY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>556 - Richmond-Petersburg VA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>557 - Knoxville TN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>558 - Lima OH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>559 - Bluefield-Beckley-Oak Hill WV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>560 - Raleigh-Durham %28Fayetteville%29 NC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>561 - Jacksonville FL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>563 - Grand Rapids-Kalamazoo-Battle Creek MI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>564 - Charleston-Huntington WV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>565 - Elmira NY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>566 - Harrisburg-Lancaster-Lebanon-York PA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>567 - Greenville-Spartanburg SC-Asheville NC-Anderson SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>569 - Harrisonburg VA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>570 - Florence-Myrtle Beach SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>571 - Ft%2E Myers-Naples FL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>573 - Roanoke-Lynchburg VA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>574 - Johnstown-Altoona PA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>575 - Chattanooga TN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>576 - Salisbury MD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>577 - Wilkes Barre-Scranton PA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>581 - Terre Haute IN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>582 - Lafayette IN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>583 - Alpena MI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>584 - Charlottesville VA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>588 - South Bend-Elkhart IN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>592 - Gainesville FL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>596 - Zanesville OH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>597 - Parkersburg WV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>598 - Clarksburg-Weston WV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>600 - Corpus Christi TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>602 - Chicago IL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>603 - Joplin MO-Pittsburg KS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>604 - Columbia-Jefferson City MO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>605 - Topeka KS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>606 - Dothan AL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>609 - St%2E Louis MO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>610 - Rockford IL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>611 - Rochester MN-Mason City IA-Austin MN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>612 - Shreveport LA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>613 - Minneapolis-St%2E Paul MN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>616 - Kansas City MO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>617 - Milwaukee WI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>618 - Houston TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>619 - Springfield MO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>622 - New Orleans LA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>623 - Dallas-Ft%2E Worth TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>624 - Sioux City IA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>625 - Waco-Temple-Bryan TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>626 - Victoria TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>627 - Wichita Falls TX %26 Lawton OK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>628 - Monroe LA-El Dorado AR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>630 - Birmingham AL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>631 - Ottumwa IA-Kirksville MO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>632 - Paducah KY-Cape Girardeau MO-Harrisburg-Mount Vernon IL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>633 - Odessa-Midland TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>634 - Amarillo TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>635 - Austin TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>636 - Harlingen-Weslaco-Brownsville-McAllen TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>637 - Cedar Rapids-Waterloo-Iowa City %26 Dubuque IA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>638 - St%2E Joseph MO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>639 - Jackson TN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>640 - Memphis TN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>641 - San Antonio TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>642 - Lafayette LA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>643 - Lake Charles LA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>644 - Alexandria LA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>647 - Greenwood-Greenville MS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>648 - Champaign %26 Springfield-Decatur IL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>649 - Evansville IN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>650 - Oklahoma City OK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>651 - Lubbock TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>652 - Omaha NE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>656 - Panama City FL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>657 - Sherman TX-Ada OK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>658 - Green Bay-Appleton WI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>659 - Nashville TN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>661 - San Angelo TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>662 - Abilene-Sweetwater TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>669 - Madison WI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>670 - Ft%2E Smith-Fayetteville-Springdale-Rogers AR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>671 - Tulsa OK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>673 - Columbus-Tupelo-West Point MS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>675 - Peoria-Bloomington IL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>676 - Duluth MN-Superior WI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>678 - Wichita-Hutchinson KS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>679 - Des Moines-Ames IA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>682 - Davenport IA-Rock Island-Moline IL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>686 - Mobile AL-Pensacola %28Ft%2E Walton Beach%29 FL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>687 - Minot-Bismarck-Dickinson%28Williston%29 ND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>691 - Huntsville-Decatur %28Florence%29 AL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>692 - Beaumont-Port Arthur TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>693 - Little Rock-Pine Bluff AR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>698 - Montgomery %28Selma%29 AL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>702 - La Crosse-Eau Claire WI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>705 - Wausau-Rhinelander WI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>709 - Tyler-Longview%28Lufkin %26 Nacogdoches%29 TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>710 - Hattiesburg-Laurel MS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>711 - Meridian MS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>716 - Baton Rouge LA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>717 - Quincy IL-Hannibal MO-Keokuk IA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>718 - Jackson MS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>722 - Lincoln %26 Hastings-Kearney NE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>724 - Fargo-Valley City ND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>725 - Sioux Falls%28Mitchell%29 SD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>734 - Jonesboro AR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>736 - Bowling Green KY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>737 - Mankato MN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>740 - North Platte NE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>743 - Anchorage AK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>744 - Honolulu HI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>745 - Fairbanks AK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>746 - Biloxi-Gulfport MS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>747 - Juneau AK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>749 - Laredo TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>751 - Denver CO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>752 - Colorado Springs-Pueblo CO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>753 - Phoenix AZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>754 - Butte-Bozeman MT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>755 - Great Falls MT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>756 - Billings MT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>757 - Boise ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>758 - Idaho Falls-Pocatello ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>759 - Cheyenne WY-Scottsbluff NE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>760 - Twin Falls ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>762 - Missoula MT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>764 - Rapid City SD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>765 - El Paso TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>766 - Helena MT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>767 - Casper-Riverton WY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>770 - Salt Lake City UT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>771 - Yuma AZ-El Centro CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>773 - Grand Junction-Montrose CO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>789 - Tucson %28Sierra Vista%29 AZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>790 - Albuquerque-Santa Fe NM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>798 - Glendive MT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>800 - Bakersfield CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>801 - Eugene OR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>802 - Eureka CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>803 - Los Angeles CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>804 - Palm Springs CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>807 - San Francisco-Oakland-San Jose CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>810 - Yakima-Pasco-Richland-Kennewick WA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>811 - Reno NV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>813 - Medford-Klamath Falls OR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>819 - Seattle-Tacoma WA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>820 - Portland OR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>821 - Bend OR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>825 - San Diego CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>828 - Monterey-Salinas CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>839 - Las Vegas NV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>855 - Santa Barbara-Santa Maria-San Luis Obispo CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>862 - Sacramento-Stockton-Modesto CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>866 - Fresno-Visalia CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>868 - Chico-Redding CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>881 - Spokane WA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Campaign_State_Province__c</picklist>
+        <values>
+            <fullName>AK - Alaska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AL - Alabama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR - Arkansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AZ - Arizona</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alberta - AB - Alberta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>British Columbia - BC - British Columbia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CA - California</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CO - Colorado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT - Connecticut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DC - District Of Columbia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE - Delaware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FL - Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GA - Georgia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HI - Hawaii</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IA - Iowa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ID - Idaho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IL - Illinois</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN - Indiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KS - Kansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KY - Kentucky</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LA - Louisiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA - Massachusetts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MD - Maryland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ME - Maine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MI - Michigan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MN - Minnesota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MO - Missouri</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MS - Mississippi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MT - Montana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manitoba - MB - Manitoba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NC - North Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ND - North Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NE - Nebraska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NH - New Hampshire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NJ - New Jersey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NM - New Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NV - Nevada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NY - New York</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Brunswick - NB - New Brunswick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Newfoundland and Labrador - NL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northwest Territories - NT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nova Scotia - NS - Nova Scotia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nunavut - NU - Nunavut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OH - Ohio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OK - Oklahoma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OR - Oregon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ontario - ON - Ontario</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA - Pennsylvania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prince Edward Island - PE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quebec - QC - Quebec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RI - Rhode Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SC - South Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD - South Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saskatchewan - SK - Saskatchewan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TN - Tennessee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TX - Texas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UT - Utah</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VA - Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VT - Vermont</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA - Washington</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WI - Wisconsin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WV - West Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WY - Wyoming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yukon - YT - Yukon</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category_Exclusivity__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Audience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Behavioral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keyword</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vertical</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vertical__c</picklist>
+        <values>
+            <fullName>Automotive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fashion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gaming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Humor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lifetstyle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miscellaneous</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>News</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ron</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Networks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

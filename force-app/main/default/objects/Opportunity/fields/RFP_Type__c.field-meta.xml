@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFP_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>RFP Type</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Formal RFP</fullName>
+                <default>false</default>
+                <label>Formal RFP</label>
+            </value>
+            <value>
+                <fullName>RFI</fullName>
+                <default>false</default>
+                <label>RFI</label>
+            </value>
+            <value>
+                <fullName>Programmatic Inquiry</fullName>
+                <default>false</default>
+                <label>Programmatic Inquiry</label>
+            </value>
+            <value>
+                <fullName>N/A (Mocks or any one off reason for a created SF opportunity)</fullName>
+                <default>false</default>
+                <label>N/A (Mocks or any one off reason for a created SF opportunity)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Verity CS Manager --></label>
+    <name>Verity_CS_Manager__c</name>
+    <relationshipLabel><!-- Opportunities (Verity CS Manager) --></relationshipLabel>
+</CustomFieldTranslation>

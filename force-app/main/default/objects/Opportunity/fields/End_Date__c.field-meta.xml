@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_Date__c</fullName>
+    <description>Enter in the End date of the campaign</description>
+    <externalId>false</externalId>
+    <inlineHelpText>To edit this date, simply ensure that the product end dates are correct. This field will reflect the latest end date of the products.</inlineHelpText>
+    <label>End Date (old)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

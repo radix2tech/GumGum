@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Video Sub-Products --></label>
+    <name>Video_Sub_Products__c</name>
+    <picklistValues>
+        <masterLabel>In-Content Display</masterLabel>
+        <translation><!-- In-Content Display --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Content Video</masterLabel>
+        <translation><!-- In-Content Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Content Video Display</masterLabel>
+        <translation><!-- In-Content Video Display --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

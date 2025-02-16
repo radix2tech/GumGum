@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>for uesrs to see specific in app guidance</description>
+    <isLicensed>false</isLicensed>
+    <label>In-App Guidance</label>
+</CustomPermission>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Listing_for_Sarah_Rascoe</fullName>
+    <booleanFilter>1 AND 2</booleanFilter>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.INDUSTRY</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>Inactive__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Account_Region__c</columns>
+    <columns>Account_Manager__c</columns>
+    <columns>ACCOUNT.CURRENCY_ISO_CODE</columns>
+    <columns>ACCOUNT.ADDRESS1_COUNTRY</columns>
+    <columns>X2022_Data_Clean_Up_Signoff__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Advertising</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>contains</operation>
+        <value>Rascoe</value>
+    </filters>
+    <label>Account Listing for Sarah Rascoe</label>
+</ListView>

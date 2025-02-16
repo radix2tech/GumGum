@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Lead_CC_Ben_on_HOT_Lead_Creation</fullName>
+        <ccEmails>Ben@gumgum.com</ccEmails>
+        <description>Lead - CC Ben on HOT Lead Creation</description>
+        <protected>false</protected>
+        <senderAddress>marketing@gumgum.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Lead_Assignment_Templates/Lead_HOT_HTML_New_assignment_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Lead_CC_Som_on_COLD_Lead_Creation</fullName>
+        <ccEmails>som@gumgum.com</ccEmails>
+        <description>Lead - CC Som on COLD Lead Creation</description>
+        <protected>false</protected>
+        <senderAddress>marketing@gumgum.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Lead_Assignment_Templates/Lead_COLD_HTML_New_assignment_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Lead_CC_Som_on_HOT_Lead_Creation</fullName>
+        <ccEmails>som@gumgum.com</ccEmails>
+        <description>Lead - CC Som on HOT Lead Creation</description>
+        <protected>false</protected>
+        <senderAddress>marketing@gumgum.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Lead_Assignment_Templates/Lead_HOT_HTML_New_assignment_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Lead_HOT_new_owner_notification</fullName>
+        <description>Lead (HOT) - new owner notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>marketing@gumgum.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Lead_Assignment_Templates/Lead_HOT_HTML_New_assignment_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>MQL_Not_Followed_Up</fullName>
+        <description>MQL Not Followed Up</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>arichter@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>marketing@gumgum.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Lead_Assignment_Templates/MQL_Not_Followed_Up</template>
+    </alerts>
+    <alerts>
+        <fullName>MQL_Received</fullName>
+        <description>MQL Received</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>marketing@gumgum.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Lead_Assignment_Templates/MQL_Received</template>
+    </alerts>
+    <alerts>
+        <fullName>New_DMEXCO_2017_Lead_Email</fullName>
+        <description>New DMEXCO 2017 Lead Email</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>bayli@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>som@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>marketing@gumgum.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Lead_Assignment_Templates/Lead_HOT_HTML_New_assignment_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Lead_Email_Alert</fullName>
+        <description>New Lead Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>marketing@gumgum.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Lead_Assignment_Templates/Lead_NEW_HTML_New_assignment_notification_2</template>
+    </alerts>
+    <alerts>
+        <fullName>Warm_or_Hot_Lead_Follow_up_within_24_hours</fullName>
+        <description>Warm or Hot Lead- Follow up within 24 hours</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>tman@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>marketing@gumgum.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Lead_Assignment_Templates/Warm_or_Hot_Lead_Follow_up_within_24_hours</template>
+    </alerts>
+    <alerts>
+        <fullName>Warm_or_Hot_Lead_No_Action_Within_48_Hours</fullName>
+        <description>Warm or Hot Lead- No Action Within 48 Hours</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>som@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>valerie@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Lead_Assignment_Templates/Warm_or_Hot_Lead_No_Action_Within_48_Hours</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Datestamp_Date_Moved_to_MQL</fullName>
+        <field>Date_Moved_to_MQL__c</field>
+        <formula>TODAY()</formula>
+        <name>Datestamp Date Moved to MQL</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Datestamp_Date_Moved_to_SAL</fullName>
+        <field>Date_Moved_to_SAL__c</field>
+        <formula>TODAY()</formula>
+        <name>Datestamp Date Moved to SAL</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Datestamp_Date_Moved_to_SQL</fullName>
+        <field>Date_Moved_to_SQL__c</field>
+        <formula>TODAY()</formula>
+        <name>Datestamp Date Moved to SQL</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Last_Lifecycle_Stage_Change_Date</fullName>
+        <field>Last_Lifecycle_Stage_Change_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Last Lifecycle Stage Change Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lifecycle_Stage_Change</fullName>
+        <field>Hubspot_Lifecycle_Stage__c</field>
+        <literalValue>Marketing Qualified Lead</literalValue>
+        <name>Lifecycle Stage Change</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Populate_City_from_IP_City</fullName>
+        <field>City</field>
+        <formula>IP_City__c</formula>
+        <name>Populate City from IP City</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Populate_Country</fullName>
+        <description>Populates Country field from IP Country field</description>
+        <field>Country</field>
+        <formula>IP_Country__c</formula>
+        <name>Populate Country</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Populate_State_from_IP_State</fullName>
+        <field>State</field>
+        <formula>IP_State__c</formula>
+        <name>Populate State from IP State</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Request_a_Demo_Form</fullName>
+        <description>Updates the checkbox field if the prospect filled out a form through hubspot</description>
+        <field>Request_a_Demo_Demo_Request_Form__c</field>
+        <literalValue>1</literalValue>
+        <name>Update Request a Demo (Form)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Sports_Lead</fullName>
+        <field>Sports_Lead__c</field>
+        <literalValue>1</literalValue>
+        <name>Update &quot;Sports Lead&quot;</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>DaScoopComposer__Notify_Groove</fullName>
+        <apiVersion>45.0</apiVersion>
+        <description>Sends an outbound message to Groove with the record ID and owner ID. This is used for real-time auto-import to Groove Flow.</description>
+        <endpointUrl>https://app.grooveapp.com/salesforce/updates</endpointUrl>
+        <fields>Id</fields>
+        <fields>OwnerId</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>dan.friedman@gumgum.com</integrationUser>
+        <name>Notify Groove (Managed)</name>
+        <protected>true</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>DaScoopComposer__Notify Groove on Lead Created %28Managed%29</fullName>
+        <actions>
+            <name>DaScoopComposer__Notify_Groove</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>false</active>
+        <description>This WF rule can be activated if you want to notify Groove that a new lead was created. That way Groove can e.g. instantly import the lead to a Groove Flow that has auto import enabled (and meets the auto-import rules of that Flow).</description>
+        <formula>ISNEW()</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Datestamp Date Moved to MQL %28Lead%29</fullName>
+        <actions>
+            <name>Datestamp_Date_Moved_to_MQL</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 AND 2) OR (3 AND 4)</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Hubspot_Lifecycle_Stage__c</field>
+            <operation>equals</operation>
+            <value>Marketing Qualified Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Date_Moved_to_MQL__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Hubspot_Lifecycle_Stage__c</field>
+            <operation>equals</operation>
+            <value>Sales Accepted Lead,Sales Qualified Lead,Opportunity</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Date_Moved_to_MQL__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Datestamp Date Moved to SAL %28Lead%29</fullName>
+        <actions>
+            <name>Datestamp_Date_Moved_to_SAL</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 AND 2) OR (3 AND 4)</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Hubspot_Lifecycle_Stage__c</field>
+            <operation>equals</operation>
+            <value>Sales Accepted Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Date_Moved_to_SAL__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Hubspot_Lifecycle_Stage__c</field>
+            <operation>equals</operation>
+            <value>Sales Qualified Lead,Opportunity</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Date_Moved_to_SAL__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Datestamp Date Moved to SQL %28Lead%29</fullName>
+        <actions>
+            <name>Datestamp_Date_Moved_to_SQL</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 AND 2) OR (3 AND 4)</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Hubspot_Lifecycle_Stage__c</field>
+            <operation>equals</operation>
+            <value>Sales Qualified Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Date_Moved_to_SQL__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Hubspot_Lifecycle_Stage__c</field>
+            <operation>equals</operation>
+            <value>Opportunity</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Date_Moved_to_SQL__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Datestamp Lifecycle Stage Change Date %28Lead%29</fullName>
+        <actions>
+            <name>Last_Lifecycle_Stage_Change_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED(Hubspot_Lifecycle_Stage__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>MQL- follow up within 24 hours</fullName>
+        <actions>
+            <name>MQL_Received</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Status</field>
+            <operation>equals</operation>
+            <value>Marketing Qualified</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>MQL_Not_Followed_Up</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>48</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Mark Demo Request as MQL %28Lead%29</fullName>
+        <actions>
+            <name>Lifecycle_Stage_Change</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 OR 2 OR 8) AND 3 AND 4 AND 5 AND 6 AND 7</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Request_a_Demo__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Request_a_Demo_Yes_No__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Date_Moved_to_MQL__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Date_Moved_to_SAL__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Date_Moved_to_SQL__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Recent_Conversion__c</field>
+            <operation>contains</operation>
+            <value>Sports</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Recent_Conversion__c</field>
+            <operation>contains</operation>
+            <value>Demo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Request_a_Demo_Demo_Request_Form__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Mark Demo Request on Lead</fullName>
+        <actions>
+            <name>Update_Request_a_Demo_Form</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Recent_Conversion__c</field>
+            <operation>contains</operation>
+            <value>Sports Demo,Sports Sponsorship Valuation | GumGum: Sponsorship Demo Request,Sports - Demo</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Lead Workflow</fullName>
+        <actions>
+            <name>New_Lead_Email_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <description>Email the new owner (or queue members) when a new lead is created or the owner changes (and the current user didn&apos;t assign the lead to themselves).</description>
+        <formula>AND(
+	OR(
+	   ISCHANGED( OwnerId ),
+	   ISNEW()
+	), 
+	OwnerId &lt;&gt; $User.Id,
+	OwnerId &lt;&gt; &quot;005U00000070Iup&quot; 
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

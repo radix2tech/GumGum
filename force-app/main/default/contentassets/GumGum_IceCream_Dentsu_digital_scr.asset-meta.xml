@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>true</isVisibleByExternalUsers>
+    <language>en_US</language>
+    <masterLabel>GumGum_IceCream_Dentsu_digital_scr</masterLabel>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>GumGum Ice-Cream - Dentsu digital screen image (2).png</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

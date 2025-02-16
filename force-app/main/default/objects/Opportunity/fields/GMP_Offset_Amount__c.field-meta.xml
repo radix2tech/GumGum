@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GMP_Offset_Amount__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the amount that we are charging the buyer to
+offset the emissions of this campaign. This is a pass-through cost that will be
+entirely used to offset the emissions from the campaign.</inlineHelpText>
+    <label>GMP Offset Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

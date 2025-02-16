@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Marketing region; this is not the region naming for the account and opportunity --></help>
+    <label><!-- Sub-Region --></label>
+    <name>Sub_Region__c</name>
+    <picklistValues>
+        <masterLabel>APAC - Australia</masterLabel>
+        <translation><!-- APAC - Australia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APAC - Japan</masterLabel>
+        <translation><!-- APAC - Japan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APAC - New Zealand</masterLabel>
+        <translation><!-- APAC - New Zealand --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Canada</masterLabel>
+        <translation><!-- Canada --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMEA - Belgium</masterLabel>
+        <translation><!-- EMEA - Belgium --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMEA - France</masterLabel>
+        <translation><!-- EMEA - France --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMEA - Germany</masterLabel>
+        <translation><!-- EMEA - Germany --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMEA - Italy</masterLabel>
+        <translation><!-- EMEA - Italy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMEA - Netherlands</masterLabel>
+        <translation><!-- EMEA - Netherlands --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMEA - Nordics</masterLabel>
+        <translation><!-- EMEA - Nordics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMEA - Spain</masterLabel>
+        <translation><!-- EMEA - Spain --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMEA - UK</masterLabel>
+        <translation><!-- EMEA - UK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LATAM</masterLabel>
+        <translation><!-- LATAM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>United States</masterLabel>
+        <translation><!-- United States --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

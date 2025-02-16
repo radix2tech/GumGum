@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Opp_Close_Date_Agency__c</fullName>
+    <description>Agency Opportunity Last Closed Won Date of record types (Advertising, Activation, Playground Attention Intelligence Platform, Open Market, Verity, Video)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Agency Opportunity Last Closed Won Date of record types (Advertising, Activation, Playground Attention Intelligence Platform, Open Market, Verity, Video)</inlineHelpText>
+    <label>Last Opp Close Date - Agency</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

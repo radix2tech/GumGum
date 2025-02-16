@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Capabilities__c</fullName>
+    <externalId>false</externalId>
+    <label>Capabilities</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Activity analytics</fullName>
+                <default>false</default>
+                <label>Activity analytics</label>
+            </value>
+            <value>
+                <fullName>AI sales assistant</fullName>
+                <default>false</default>
+                <label>AI sales assistant</label>
+            </value>
+            <value>
+                <fullName>Attribution</fullName>
+                <default>false</default>
+                <label>Attribution</label>
+            </value>
+            <value>
+                <fullName>Content hosting and analytics</fullName>
+                <default>false</default>
+                <label>Content hosting and analytics</label>
+            </value>
+            <value>
+                <fullName>Email analytics</fullName>
+                <default>false</default>
+                <label>Email analytics</label>
+            </value>
+            <value>
+                <fullName>Forecasting and pipeline management</fullName>
+                <default>false</default>
+                <label>Forecasting and pipeline management</label>
+            </value>
+            <value>
+                <fullName>Marketing operations</fullName>
+                <default>false</default>
+                <label>Marketing operations</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

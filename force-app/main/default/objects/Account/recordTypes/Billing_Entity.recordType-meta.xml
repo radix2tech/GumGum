@@ -1,0 +1,4817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Entity</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>GG_Advertising</compactLayoutAssignment>
+    <description>Netsuite Billing Customers Only</description>
+    <label>Billing Entity</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>ABM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content downloads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gifting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GumGum Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hosted Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inside Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LinkedIn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LinkedIn Premium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PPC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paid Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partnerships</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Press</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quiz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Prospecting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsored Tradeshow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Winmo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Account_Priority__c</picklist>
+        <values>
+            <fullName>A%2B %28Top Client%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-  %28Top Client%2C lower budget%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B%2B  %28Secondary Client%2C High%29%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B- %28Secondary%2C Low Budget%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C %28Opportunistic%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Account_Region__c</picklist>
+        <values>
+            <fullName>APAC - Independents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - QLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - SA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - WA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC_South East Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Belgium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - France</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Germany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Netherlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Nordics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Poland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Spain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LATAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Zealand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Account_Status2__c</picklist>
+        <values>
+            <fullName>Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client %28thru Agency%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client %28thru Parent%2FChild%2FSibling%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Former Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Former Client %28thru Agency%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Former Client %28thru Parent%2FChild%2FSibling%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Prospect %28related to Client%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect %28related to Former Client%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Account_Status__c</picklist>
+        <values>
+            <fullName>Active Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive Client</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Account_Tier__c</picklist>
+        <values>
+            <fullName>Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 4</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>UnTiered</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Approval_Step__c</picklist>
+        <values>
+            <fullName>Final</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>First</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Auto_Collections__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Capabilities__c</picklist>
+        <values>
+            <fullName>AI sales assistant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Activity analytics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Attribution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content hosting and analytics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email analytics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forecasting and pipeline management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing operations</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Airlines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alcohol</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel%2FFootwear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto Manufacturers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baby%2FChild Products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking%2FInvesting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beauty %28hair%2C fragrance%2C cosmetics%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadcast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannabis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Casinos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Computers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Convenience%2FGas Station</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit cards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cruises</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dealers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Distributors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Educational institutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy Producers %28oil%2C gas%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fitness%2FSporting Goods</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Furniture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gaming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grocery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health %26 Fitness Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health and Fitness Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health%2FWellness products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare services%2Fsupplies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Appliances</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Entertainment%2FOTT%2FStreaming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Products%2FServices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Household products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industry associations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance %28non-healthcare%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live Events %26 Attractions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live Sports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lodging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lottery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MVPD %28Multi-Channel Video Programming Distributor%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Devices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motion Pictures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Movie Theaters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Consumer Goods</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Consumer Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part Manufacturing%2FRetail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal care %28oral%2C skin%2C grooming%2C vitamins%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pet products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharmacy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political%2Finterest group organizations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publishers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real Estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rental cars</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Restaurants</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Streaming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TV%2FMovie Production %26 Distribution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telco%2FCable Operator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telephone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Television</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tobacco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tourism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utilities %28power%2C gas%2C water%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video Games</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eCommerce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eSports</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Client_Auto_Renew__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Client_Reference__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Client_Status__c</picklist>
+        <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Covid Loss</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Contacted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One-Time Deal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewed Early</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewed Late</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Country__c</picklist>
+        <values>
+            <fullName>Afghanistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Albania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Algeria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andorra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Angola</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Antigua and Barbuda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Argentina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armenia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Austria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Azerbaijan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bahrain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bangladesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barbados</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belarus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belgium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belize</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bhutan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bolivia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bosnia and Herzegovina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Botswana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brazil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brunei</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bulgaria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burkina Faso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burundi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cabo Verde</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cambodia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cameroon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central African Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colombia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comoros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congo%2C Democratic Republic of the</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congo%2C Republic of the</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Costa Rica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Croatia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cuba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cyprus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Czech Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Côte d%E2%80%99Ivoire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denmark</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Djibouti</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dominica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dominican Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>East Timor %28Timor-Leste%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ecuador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Egypt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>El Salvador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equatorial Guinea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eritrea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Estonia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eswatini</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethiopia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiji</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>France</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gabon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Georgia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Germany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ghana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greece</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grenada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guatemala</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guinea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guinea-Bissau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guyana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haiti</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Honduras</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hungary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iceland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>India</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indonesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iran</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iraq</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ireland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Israel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jamaica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jordan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kazakhstan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kenya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kiribati</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Korea%2C North</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Korea%2C South</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kosovo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kuwait</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kyrgyzstan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latvia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lebanon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lesotho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liberia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Libya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liechtenstein</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lithuania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Luxembourg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Madagascar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malawi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malaysia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maldives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mali</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marshall Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mauritania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mauritius</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micronesia%2C Federated States of</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moldova</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monaco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mongolia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Montenegro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Morocco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mozambique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Myanmar %28Burma%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Namibia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nauru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nepal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Netherlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Zealand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nicaragua</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Niger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nigeria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Macedonia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Norway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pakistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Palau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Panama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Papua New Guinea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paraguay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philippines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portugal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qatar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Romania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Russia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rwanda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saint Kitts and Nevis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saint Lucia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saint Vincent and the Grenadines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Samoa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>San Marino</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sao Tome and Principe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saudi Arabia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senegal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Serbia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seychelles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sierra Leone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singapore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slovakia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slovenia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solomon Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somalia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sri Lanka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sudan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sudan%2C South</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suriname</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sweden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switzerland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Syria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taiwan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tajikistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tanzania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thailand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Bahamas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Gambia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Togo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tonga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trinidad and Tobago</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tunisia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turkey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turkmenistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tuvalu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uganda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ukraine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Arab Emirates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Kingdom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United States</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uruguay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uzbekistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vanuatu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vatican City</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venezuela</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vietnam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yemen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zambia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zimbabwe</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Solution__c</picklist>
+        <values>
+            <fullName>Blinkfire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HookIt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Horizm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MVP Index</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nielsen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shikenso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stream Engine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YouGov%2FSMG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zoomph</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DOZISF__ZoomInfo_Enrich_Status__c</picklist>
+        <values>
+            <fullName>Enriched</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error Occurred in Instant Enrich</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error Occurred in Scheduled Enrich</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insufficient Credits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Match</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Enriched - Not Under Management</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DSP_Formats__c</picklist>
+        <values>
+            <fullName>Value 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Value 2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DaScoopComposer__Account_Tags__c</picklist>
+        <values>
+            <fullName>Churned Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cur%2E Effort</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Current Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost Opportunity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting Scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting%2C no Opportunity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open Opportunity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Past Effort</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Untouched</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DaScoopComposer__Engagement_Status__c</picklist>
+        <values>
+            <fullName>No Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Past Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recent Engagement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Grade__c</picklist>
+        <values>
+            <fullName>A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Arts %26 Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto and Recreational Vehicles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer Goods</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government %26 Non-Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hobbies %26 Interests</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home %26 Garden%2FFurnishings%2FDurable Goods</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other CPG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel and Leisure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>League__c</picklist>
+        <values>
+            <fullName>ATP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ATP Tour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allsvenskan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Australian Football League</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Big Bash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bundesliga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canadian Football League</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Championship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Divionsforeningen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ekstraklasa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eliteserien</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English Championship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English County Cricket</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eredivisie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Esports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Euroleague</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formula 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formula E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indycar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LPGA Tour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>La Liga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ligue 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MLB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MLR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MLS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MiLB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motorsports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NASCAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCAA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NFL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NHL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NHRA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NRL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overwatch League</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PBR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PGA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PGA Tour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premier League</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premiership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Primeira Liga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pro League</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pro14</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scottish Premiership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Serie A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Premier League</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UCI World Tour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vitality T20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WNBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WTA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lost_Reason__c</picklist>
+        <values>
+            <fullName>Advertiser Conflict</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPMs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Display ONLY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Interest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No New Partners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Please Explain Below%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Terms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Fit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reporting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revenue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UX</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Media_Channel_Broadcast__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Media_Channel_Social__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Media_Channel_Streaming__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>National__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subsidiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership_Type__c</picklist>
+        <values>
+            <fullName>Branch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Division</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Independent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subsidiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Term__c</picklist>
+        <values>
+            <fullName>Net 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Function__c</picklist>
+        <values>
+            <fullName>Attribution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biz Dev</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consultants</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Gen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing Automation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presentation %26 Fileshare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Enablement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product__c</picklist>
+        <values>
+            <fullName>In-Image</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Screen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Publisher_Tier__c</picklist>
+        <values>
+            <fullName>Mid Tail %2F Long Tail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategic</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RH_Category__c</picklist>
+        <values>
+            <fullName>Event %2F Organizer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Governing Body</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media %2F Broadcaster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ownership Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venue %2F Facility</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ROI_Tracker__c</picklist>
+        <values>
+            <fullName>Cannes Chicago</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannes LA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannes London</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hamptons 2017 Weekend 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hamptons 2017 Weekend 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hamptons 2017 Weekend 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hamptons 2017 Weekend 4</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Regional_ROI_Tracker__c</picklist>
+        <values>
+            <fullName>2017 NA Sales East - BATSU Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 NA Sales East - Cadreon Happy Hour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 NA Sales East - Catch Dinner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 NA Sales East - Converse Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 NA Sales East - Lululemon Shopping Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 NA Sales East - Manicure Event at BPI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 NA Sales East - Pizza Making</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 NA Sales East - Q4 Winner - Cece - Dear Evan Hansen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 NA Sales East - Sur La Table Cooking Class</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 NA Sales East Blue Hill at Stone Barn Dinner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 NA Sales East- Sprint Shopping Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 NA Sales West STAPLES Kings vs Blues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 NA Sales West STAPLES Kings vs Maple Leafs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 NA Sales West STAPLES Lakers vs Golden State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 NA Sales West STAPLES Lakers vs Pelicans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 UK Cereal Killer Cafe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 UK Mindshare Huddle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Aroma Workshop Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Canada Justin Timberlake Concert Suite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Canada Leafs vs%2E Penguins Suite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Nordstrom Shopping Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Red Wings Suite - OCT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Minneapolis i612 Halloween Sponsorship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West October STAPLES Game</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- D%2EC Adweek</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q4 NA Sales East - Comedy Club Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency Thought Leaders NYC Dinner 7%2F25%2F17</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>August NA Sales West Benefit 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>August NA Sales West Cuyana 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>August NA Sales West Hourglass 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>August NA Sales West Kiehl%27s 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>August NA Sales West Kiehls SF 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>August NA Sales West Sushi %40 Carat 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESPYS 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>July NA Sales West Benefit 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA Sales Midwest Bruno Mars Concert 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA Sales Midwest DFWIMA iHack Sponsorship 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA Sales Midwest Detroit City Soccer Game 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA Sales Midwest Detroit Thought Leadership Dinner 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA Sales Midwest Eat%2E Drink%2E Critique%21 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA Sales Midwest SapientRazorfish Golf Outing Sponsorship 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NYC Comedy Club Event 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK London Fashion Week 2017</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SaaSOptics_Instance__c</picklist>
+        <values>
+            <fullName>UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Special_Needs__c</picklist>
+        <values>
+            <fullName>No Content</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Embedded Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No II Canvas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No IS Display</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No IS Half Takeover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No IS Takeover Full</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sponsorship_Focus__c</picklist>
+        <values>
+            <fullName>ATP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ATP Tour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allsvenskan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Australian Football League</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Big Bash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bundesliga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canadian Football League</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Championship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Divionsforeningen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ekstraklasa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eliteserien</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English Championship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English County Cricket</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eredivisie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Esports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Euroleague</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formula 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formula E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indycar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LPGA Tour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>La Liga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ligue 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MLB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MLR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MLS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MiLB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motorsports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NASCAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCAA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NFL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NHL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NHRA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NRL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overwatch League</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PBR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PGA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PGA Tour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premier League</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premiership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Primeira Liga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pro League</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pro14</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scottish Premiership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Serie A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Premier League</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UCI World Tour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vitality T20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WNBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WTA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sport__c</picklist>
+        <values>
+            <fullName>American Football</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Athletics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aussie Rules Football</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Badminton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baseball</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Basketball</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bowling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boxing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collegiate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Combat Sports %28MMA%2C Kickboxing%2C etc%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cricket</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cycling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Darts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Drone Racing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equestrian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extreme Sports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Football %28Soccer%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Golf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Halls of Fame</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Handball</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hockey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Horse Racing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ice Hockey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kabaddi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lacrosse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mass Participation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motorsport</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Netball</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rodeo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rugby League</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rugby Union</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sailing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Snooker%2FPool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Squash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swimming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Table Tennis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tennis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Volleyball</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weightlifting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Winter Sports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrestling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>esports</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>State_Province__c</picklist>
+        <values>
+            <fullName>Alabama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alaska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alberta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>American Samoa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arizona</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arkansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>British Columbia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>California</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colorado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connecticut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delaware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>District of Columbia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Federated States of Micronesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Georgia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hawaii</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Idaho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Illinois</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iowa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kentucky</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Louisiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manitoba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marshall Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maryland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Massachusetts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michigan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minnesota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mississippi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missouri</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Montana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nebraska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nevada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Brunswick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Hampshire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Jersey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New York</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Newfoundland and Labrador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northern Mariana Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northwest Territories</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nova Scotia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nunavut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ohio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oklahoma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ontario</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oregon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Palau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pennsylvania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prince Edward Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puerto Rico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quebec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rhode Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saskatchewan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tennessee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utah</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vermont</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virgin Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washington</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wisconsin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wyoming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yukon</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>100%25 - Closed%2FWon%21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%25 - Prospecting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25%25 - Responsive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50%25 - Negotiation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>75%25 - Closing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CV Demo with DMs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canceled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed%2FDenied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intro Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal %26 Terms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Potential</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospecting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow Demo with Top DDS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Strategic_Accounts__c</picklist>
+        <values>
+            <fullName>2017 Strategic Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 Strategic Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q4 Strategic Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Strategic Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2019 1H Strategic Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2019 2H Strategic Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2020 1H Strategic Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2020 Strategic Account</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Team__c</picklist>
+        <values>
+            <fullName>Field Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inside Sales</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Territory_Sports__c</picklist>
+        <values>
+            <fullName>AJ Sheth %28Rights Holders%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chris Mike %28North%2FCentral%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hilary Brown %28Southwest%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joe Pinaire %28South%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OPEN %28Mid-Atlantic%2FGreat Lakes%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OPEN %28Northeast%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TBD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TBD %28Brands%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TBD %28EMEA Rep%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>3rd Party Supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency VIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing Entity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DSP or Trading Desk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Esports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Federation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Influencer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publisher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reporter %2F Analyst</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rights Holder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SSP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student %2F Job Seeker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VC and Angel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vendor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Units_Supported__c</picklist>
+        <values>
+            <fullName>In-Image</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Screen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slot</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vendor_Type__c</picklist>
+        <values>
+            <fullName>Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Individual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venue</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vertical__c</picklist>
+        <values>
+            <fullName>Auto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business %26 Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fashion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Drink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gaming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health %26 Wellness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home %26 Garden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Humor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lifestyles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miscellaneous</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>News</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Networks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Whitelist_Client_List__c</picklist>
+        <values>
+            <fullName>AT%26T</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coca Cola</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ford</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GTB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GumGum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kargo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lincoln</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omnicom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publisher Hitlist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SC Johnson - Display</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SC Johnson - Video</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>X2018_Events_ROI_Tracker__c</picklist>
+        <values>
+            <fullName>018 NA Sales Midwest Detroit Tigers Opening Day Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 NA Sales East - Q4 Winner - Cece - Dear Evan Hansen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 NA Sales East - Q4 Winner- Cece - Dear Evan Hansen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 NA Sales East- Sprint Shopping Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017 NA Sales West sfBig Holiday Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 AUS Ashton Media%27s Programmatic Summit%2C Sydney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 AUS Breakfast with Wavemaker and Mediacom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 AUS Christmas Coffee Cart PHD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 AUS Cider %26 Sweater Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 AUS Comexposium %2F ad%3Atech Sydney 2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 AUS Cork %26 Chroma Night</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 AUS Grape Grazing Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 AUS Marketing Masterclass MELB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 AUS Masterclass SYDNEY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 AUS Mumbrella 360</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 AUS Pitch2Punch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 AUS Wavemaker Sweater %26 Cider Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 AUS Zenith %26 Starcom Breakfast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Advertising Week Asia Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 August NA Sales Dodgers Game</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 CES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Campaign Breakfast - Chicago</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Campaign Breakfast - New York</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Central %26 Canada IAB Brand Safety Roadshow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Central Marketing Candy Club Valentines Day</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Clorox iConnect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Dallas - Bring Cannes To You</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Detroit - Bring Cannes To You</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Digiday Publishing Summit Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Digiday Sponsorship Event with Eyeota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Digital Marketing SF Masterclassing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Europe We Bring Cannes To You</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 February NA Sales STAPLES Lakers vs Phoenix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 January NA Sales STAPLES Kings vs Pittsburgh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Japan Adtech Tokyo with Wes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Japan CCI Seminar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Japan Creative Cafe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Japan Digiday Publishing Summit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Japan Digital Marketing Seminar with P%26F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Japan Internet Forum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Japan Marketing Seminar%3A Seminarinfo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Japan Media Briefing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Japan WeWork Event%3A UMAMI x GumGum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 June NA Sales SF Cannes Lazy Bear Dinner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 March NA Sales STAPLES Kings vs Columbus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Digiday Media Buying%2FAgency Summit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Digiday Media Buying%2FAgency Summit October</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Programmatic Digiday Programmatic Summit - May</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Pub Dev Digiday Publishing Summit Barcelona</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Pub Dev Digiday Publishing Summit Vail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Pub Dev Mastros Dinner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Pub Dev Mediavine Publisher Conference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Pub Dev Rangers Game</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Pub Dev Vail Chalet Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Boston Cannes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Central %26 Canada We Bring Cannes To You</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Chicago Bears Game</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Chicago Soul Cycle Class</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East Cannes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East Q3 - Hamptons VIP Week</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East Q3 - Hamptons Weekday VIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East Q3 - Hamptons Weekend 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East Q3 - Hamptons Weekend 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East Q3 - Hamptons Weekend 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East Q3 - Hamptons Weekend 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East Q3 Masterclassing NYC Beauty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East Think N Drink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East We Bring Cannes To You</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Amnet Cocktail Class</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Boots Cooking Class</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Cheese Making Class</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Cooking Class with Bully Pulpit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Grilled Cheese Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- J3 Beauty Bite Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Lululemon Seaport Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Mister Krisp Cake ABM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Mixology Class</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Momofoko Cake Making Class</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Nestle Happy Hour Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Nissan%2FInfiniti March Madness Happy Hour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Pernod March Madness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Solstice TJX Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Starbucks Happy Hour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Target Team Eataly Dinner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Thought Leader Dinner March</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Valentines Day Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Wine %26 Cheese Night with Reese%27s</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Wine Tasting SE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales East- Zenith Soccer Bumper Balls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest AIRE Spa Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Acai Happy Hour at Mindshare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Ad Club Toronto Ski Day</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Ada Street Dinner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Aroma Workshop Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Canada Ad Club Golf Day Foursomes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Canada Agency Panel Night</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Canada Digital Day Sponsorship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Canada Drake Concert Suite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Chuan Spa Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Cincinnati Reds Suite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Cinco de Mayo Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Cruz Blanca Brewery Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Dallas Cooking Class</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Dallas Ice Cream Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Dallas P%21nk Suite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Detroit City Soccer Game</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Detroit Lions Suite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Detroit Red Wings Partial Season Tickets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Detroit Red Wings Suite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Detroit Tigers Opening Day Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Detroit Tigers Q2%2FQ3 Ticket Package</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Justin Timberlake Suite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Kaiser Tiger Curling Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Kansas City Big 12 Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Kendra Scott Shopping Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Lagunita%27s Brewery Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Lollapalooza Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Minneapolis Six Degrees Workout Class</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Minneapolis i612 Karaoke Night Sponsorship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Nordstrom Shopping Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Red Wings Q1 Games</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Royal Palms Shuffleboard Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest Spa Event with Jim Beam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest i612 Event Sponsorship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Midwest i612 Event Sponsorship - September</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales Minneapolis i612 Halloween Sponsorship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West April STAPLES Clippers vs Lakers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West April STAPLES Game</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West China Live Reunion Dinner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West Dodgers Game May</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West EMT Reunion Dinner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West Entertainment Breakfast Table</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West Halloween Costume Shopping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West LA Chateau Marmont</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West LA Marketing Event TBD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West March STAPLES Game</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West May Dodgers Game</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West Mediasmith Sponsorship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West November STAPLES Game</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West October STAPLES Game</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West SF Benefit Beauty Bash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West SF Cavallo Point Cooking Class</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West SF Kiehls Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West SF Kiehls Event - Sept</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West SF Patio Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West SF Warriors Game</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West Seattle Hulu Reunion Dinner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West UM Reunion Dinner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West We Bring Cannes To You</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sports E3 Expo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sports Esports Activate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sports Intersport Brand Engagement %26 Content Summit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sports NBA Revenue Workshop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sports NSF Spring Summit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sports The Vertical Series%3A Sports Tech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Non-Marketing Super Bowl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Non-Marketing Super Bowl - Friday Night Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Non-Marketing Super Bowl - Players Tailgate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Non-Marketing Super Bowl - Saturday Dinner with Sports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Octopus Media Colombia Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Pepcom %40 CES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Allbirds and 360i</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Aunt Jake%27s with EL %26 BS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- BATSU with Chase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Ben %26 Jerry%27s Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Ben %26 Jerrys with OMD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Boston Cannes Pool Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Bowling with NDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Bowlmor with JC Penny</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- City Surf and Massages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Dinner with Audi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Enchanted Evening</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Golf Night with Microsoft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Grand Banks with Sprint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Happy Hour with 87AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Kick Axe Throwing with Carnival</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- LuLu with R2I</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Mean Girls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Nike Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Nordstrom Pizza Night with Bethesda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Omelettes with Bully Pulpit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Omlettes with ICF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Omlettes with Planit Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Reebok Shopping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- THD HH and Dinner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q2 NA Sales East- Yankees with Nestle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East - Pizza Making with Canon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East - Programmatic Hamptons House</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Balthazar with Malibu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Blue Mercury with WMI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Boston Golf Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Cadreon HH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Citi Programmatic Lunch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Converse Creation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- D%2EC Adweek</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Egghead with Metavision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Infiniti Converse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Joe%27s Seafood with Bully Pulpit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Kick Axe with Amnet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Lashes with lego</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- LuLu Lemon with New Balance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Lulu with Mullen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- MSFT Spa Night</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Maggie Reillys with Chase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Marriott Cooking Class</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Mister Krisp Cake</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- ModCo HH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Pizza Making with Volvo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- School of Rock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Spa with ACS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Spa with IHG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Spa with Post</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Spa with Sanofi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Spa with The Martin Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Spa with Unilever</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Spa with Weight Watchers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 NA Sales East- Wrecking Club with Citi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q3 National DMEXCO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q4 NA Sales East - Comedy Club Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q4 NA Sales East - PHD Halloween Candy Bar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q4 NA Sales East- BATSU%21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q4 NA Sales East- Cookie Do</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q4 NA Sales East- EMP VIP Dinner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q4 NA Sales East- Holiday Party with Cadreon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q4 NA Sales East- One World Trade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q4 NA Sales East- Spa at Peninsula with Subway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q4 NA Sales East- Spa with 7 Eleven</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q4 NA Sales East- Spa with Havas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q4 NA Sales East- The ONE Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Sports Leaders in Sport%3A Sports Business Summit London</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Strategic Advertising Week London</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Strategic Advertising Week New York - GumGum Happy Hour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Strategic Breakfast Debate with Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Strategic IAB Annual Leadership Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Strategic Mobile World Congress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Strategic We Bring Cannes To You</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Tech CVPR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 The Drum Breakfast - London</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 The Drum Breakfast - New York</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Tokyo Lunch %26 Learn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 UK Boxing Match Hospitatlity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 UK Drum Awards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 UK GumGum World Cup Happy Hour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 UK Halloween Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 UK IAB Engage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 UK IPG%2FInitiative Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 UK MediaWow Washbags</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 UK Mediacom Picnic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 UK Pancake Day Crepe Carts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 UK Performance Marketing Awards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 UK Polo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 UK Publicis IQ Academy Lunch and Learn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 UK Publicis L%26D Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 UK Rugby Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 UK Starcom Crazy Golf Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 UK Starcom Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 UK Winerama Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Unltd%2E Big Clash - Melbourne</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Unltd%2E Big Clash - Sydney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Wine Tasting Happy Hour at CES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018_Mini ABM_Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018_Mini ABM_Ubisoft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018_Mini ABM_Xbox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUS 2018 Melbourne Cup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hamptons House 2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Masterclassing NYC Beauty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA Sales East Think And Drink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q4 2018 NA Sales East- JD Power Lunch with Audi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q4 2018 NA Sales East- Spa Night with LG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WOMEN OF GUMGUM WELCOME DINNER JAPAN</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>X2019_Events_ROI_Tracker__c</picklist>
+        <values>
+            <fullName>2018 NA Sales Midwest Spa Event with Jim Beam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West Holiday Cuyana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West Holiday Sunglass Hut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 NA Sales West SF Baarc Lunch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q4 NA Sales East- Cookie Do</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q4 NA Sales East- Holiday Party with Cadreon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q4 NA Sales East- Spa at Peninsula with Subway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018 Q4 NA Sales East- The ONE Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2019 IAB Annual Leadership Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2019 Japan- GumGum x beBit%3A Digital Marketing Seminar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2019 NA Digiday Media Buying Summit %28February%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2019 NA Pub Dev Digiday Publishing Summit Vail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>celigo_sfnsio__Channel_Tier__c</picklist>
+        <values>
+            <fullName>Distributor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>End User</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Reseller</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>celigo_sfnsio__Credit_Hold__c</picklist>
+        <values>
+            <fullName>Auto</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Off</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

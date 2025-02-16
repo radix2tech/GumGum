@@ -1,0 +1,4411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GumGum_Sports</fullName>
+    <active>false</active>
+    <businessProcess>Sports</businessProcess>
+    <compactLayoutAssignment>Improved_Compact_Layout</compactLayoutAssignment>
+    <label>Sports</label>
+    <picklistValues>
+        <picklist>AM_Approval__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Submitted</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Recalled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requires Re-submission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Account_Type__c</picklist>
+        <values>
+            <fullName>Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Federation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>League</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Team</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Agency_Discount__c</picklist>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Agency_Relations_Products__c</picklist>
+        <values>
+            <fullName>1-Pager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ABM Activation Option</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Prototype</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsorship</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>All_Units_Included__c</picklist>
+        <values>
+            <fullName>In-Article Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Image</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Image - Interactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Image Animated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Image Canvas - Interactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Image Frame</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Image Frame - Interactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Screen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Screen - Interactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Screen Animated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Screen Embedded Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Screen Frame</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Screen Frame - Interactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-image Embedded Video</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Approval_Status_Custom_Creative_Ad__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request not submitted</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Request submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Approval_Type__c</picklist>
+        <values>
+            <fullName>Exception %26 Custom Creative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exception-Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expedite %26 Custom Creative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expedite %26 Exception</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expedite%2C Exception %26 Custom Creative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expedite-Only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Barter_Agency__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evergreen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ICON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orion</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Barter_Trading_Deal__c</picklist>
+        <values>
+            <fullName>APAC - Bohemia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - Havas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - OMG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - Omnet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - Saatchi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BE - Blue2Purple</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BE - GroupM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BE - IPG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BE - Publicis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BE - Space</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BE - Zigt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CA - APEX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CA - GroupM GMI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CA - Orion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE - Dentsu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE - Fischer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE - GroupM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE - OMD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intl%2E - Adidas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intl%2E - Aramco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intl%2E - Dell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intl%2E - Merkle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JP - Dentsu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JP - GroupM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NL - Dentsu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NL - IPG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NL - OMG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NL - Publicis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - Agyle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - Apex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - Astus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - Bicycle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - Dentsu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - Expedia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - GMI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - GoodStuff%2FAssembly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - GroupM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - Havas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - IPG%2FMatterkind %28non orion%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - Innocean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - McCann Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - Miroma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - Nestle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - OMG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - Omnet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - Publicis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - Specialist Works</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - omniGOV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - orion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK - the7stars</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - APEX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - Active International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - Dentsu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - Horizon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - Orion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - SparkFoundry</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Barter_Trading_Discount__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Billing_Provider__c</picklist>
+        <values>
+            <fullName>Atlas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DCM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DoubleVerify</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flashtalking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GumGum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Innovid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MediaPlex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nielsen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pointroll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sizmek</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smart AdServer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TravelSpike</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Blocker__c</picklist>
+        <values>
+            <fullName>Brand Safety vs%2E IAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dashboard UI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Accuracy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ease of Actionable Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ease of Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Works with Competitor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CPM_Type__c</picklist>
+        <values>
+            <fullName>Estimated CPM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Segment CPM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Campaign_Status__c</picklist>
+        <values>
+            <fullName>Campaign Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campaign Ended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campaign Paused</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering is Setting Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In QA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In With Creative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In between phases</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In with AdBuilder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live%2C Creative Refresh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ready to Go</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Assets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Client Creative Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Pixels%2FTags</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Video</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Channel__c</picklist>
+        <values>
+            <fullName>Direct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Programmatic</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contains_New_Products__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Country__c</picklist>
+        <values>
+            <fullName>Afghanistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Albania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Algeria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andorra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Angola</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Antigua and Barbuda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Argentina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armenia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Austria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Azerbaijan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bahrain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bangladesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barbados</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belarus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belgium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belize</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bhutan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bolivia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bosnia and Herzegovina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Botswana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brazil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brunei</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bulgaria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burkina Faso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burundi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cabo Verde</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cambodia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cameroon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central African Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colombia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comoros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congo%2C Democratic Republic of the</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congo%2C Republic of the</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Costa Rica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Croatia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cuba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cyprus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Czech Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Côte d%E2%80%99Ivoire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denmark</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Djibouti</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dominica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dominican Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>East Timor %28Timor-Leste%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ecuador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Egypt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>El Salvador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equatorial Guinea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eritrea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Estonia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eswatini</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethiopia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiji</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>France</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gabon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Georgia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Germany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ghana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greece</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grenada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guatemala</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guinea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guinea-Bissau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guyana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haiti</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Honduras</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hungary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iceland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>India</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indonesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iran</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iraq</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ireland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Israel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jamaica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jordan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kazakhstan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kenya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kiribati</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Korea%2C North</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Korea%2C South</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kosovo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kuwait</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kyrgyzstan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latvia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lebanon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lesotho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liberia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Libya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liechtenstein</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lithuania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Luxembourg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Madagascar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malawi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malaysia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maldives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mali</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marshall Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mauritania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mauritius</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micronesia%2C Federated States of</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moldova</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monaco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mongolia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Montenegro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Morocco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mozambique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Myanmar %28Burma%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Namibia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nauru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nepal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Netherlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Zealand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nicaragua</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Niger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nigeria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Macedonia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Norway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pakistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Palau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Panama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Papua New Guinea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paraguay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philippines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portugal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qatar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Romania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Russia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rwanda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saint Kitts and Nevis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saint Lucia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saint Vincent and the Grenadines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Samoa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>San Marino</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sao Tome and Principe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saudi Arabia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senegal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Serbia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seychelles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sierra Leone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singapore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slovakia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slovenia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solomon Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somalia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sri Lanka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sudan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sudan%2C South</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suriname</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sweden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switzerland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Syria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taiwan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tajikistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tanzania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thailand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Bahamas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Gambia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Togo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tonga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trinidad and Tobago</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tunisia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turkey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turkmenistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tuvalu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uganda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ukraine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Arab Emirates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Kingdom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United States</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uruguay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uzbekistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vanuatu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vatican City</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venezuela</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vietnam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yemen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zambia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zimbabwe</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Custom_Request_Unit__c</picklist>
+        <values>
+            <fullName>Custom Ad Unit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Targeting %28non-image recognition%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Image Recognition Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real-time Feed Integration</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DMP__c</picklist>
+        <values>
+            <fullName>Adobe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LiveRamp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lotame</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neustar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oracle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premutive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DSP_Verity__c</picklist>
+        <values>
+            <fullName>A9</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AcuityAds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AdForm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adelphic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adobe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amobee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Centro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DV360</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MediaMath</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Trade Desk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Undertone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verizon DSP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Xandr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zeta DSP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DSP__c</picklist>
+        <values>
+            <fullName>Adobe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AppNexus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DBM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DataXu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MediaMath</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TheTradeDesk</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deal_Discount_Months__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deal_Type_Verity__c</picklist>
+        <values>
+            <fullName>Full Beta %5B6 Month Beta%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Option 1 %5B12 Months - No Discount%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Option 2 %5B12 Months - 3 Months Free%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Option 3 %5B18 Months - 6 Months Free%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Option 4 %5B12 Months - 6 Months Free%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Option 5 %5B24 Months - 12 Months Free%5D</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deal_Type__c</picklist>
+        <values>
+            <fullName>IO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ToS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Delivery__c</picklist>
+        <values>
+            <fullName>Full Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Delivery</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Departments_Needed_for_Expediting__c</picklist>
+        <values>
+            <fullName>AdOps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Creative%2FDesign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering%2FCreative Development</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Device_Type__c</picklist>
+        <values>
+            <fullName>Cross Device</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desktop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile%2FTablet</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Discard_Reason__c</picklist>
+        <values>
+            <fullName>Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Error</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>End_Timezone__c</picklist>
+        <values>
+            <fullName>America%2FLos_Angeles</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Asia%2FTokyo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Australia%2FSydney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Europe%2FLondon</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estimates_Include_Remnant__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event2__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Exception_Approval__c</picklist>
+        <values>
+            <fullName>Exception Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exception Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Exception</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Recalled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requires Re-submission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Exception_Type__c</picklist>
+        <values>
+            <fullName>Below Floor Rates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Below Minimum Spend %28Overall Campaign%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Below Minimum Spend %28Research Study%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extra Creative Fees%2FWaiver Creative Fees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Higher %25 Added Value Impressions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Creative Unit Versions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Out Clause %28Less than 7 days%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Expedited_Type__c</picklist>
+        <values>
+            <fullName>Rolling Launch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rush Campaign</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Expediting_Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Finance_Pledge__c</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GMP_Offset_rate__c</picklist>
+        <values>
+            <fullName>%240%2E00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%240%2E10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%240%2E25</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Green_Media_Product_GMP_Campaign__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Guarantee_Country__c</picklist>
+        <values>
+            <fullName>AD - Andorra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AE - United Arab Emirates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AF - Afghanistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AG - Antigua and Barbuda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AI - Anguilla</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AL - Albania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AM - Armenia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO - Angola</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AQ - Antarctica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR - Argentina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS - American Samoa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AT - Austria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AU - Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AW - Aruba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AX - Åland Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AZ - Azerbaijan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA - Bosnia and Herzegovina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BB - Barbados</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BD - Bangladesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BE - Belgium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BF - Burkina Faso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BG - Bulgaria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BH - Bahrain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BI - Burundi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BJ - Benin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BL - Saint Barthélemy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BM - Bermuda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BN - Brunei Darussalam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BO - Bolivia %28Plurinational State of%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BQ - Bonaire%2C Sint Eustatius and Saba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR - Brazil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BS - Bahamas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BT - Bhutan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BV - Bouvet Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BW - Botswana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BY - Belarus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BZ - Belize</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CA - Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC - Cocos %28Keeling%29 Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD - Congo %28Democratic Republic of the%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CF - Central African Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CG - Congo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CH - Switzerland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CI - Côte d%27Ivoire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CK - Cook Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CL - Chile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CM - Cameroon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN - China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CO - Colombia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CR - Costa Rica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CU - Cuba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CV - Cabo Verde</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CW - Curaçao</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CX - Christmas Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CY - Cyprus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CZ - Czech Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE - Germany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DJ - Djibouti</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DK - Denmark</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DM - Dominica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DO - Dominican Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DZ - Algeria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EC - Ecuador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EE - Estonia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EG - Egypt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EH - Western Sahara</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ER - Eritrea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ES - Spain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ET - Ethiopia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FI - Finland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FJ - Fiji</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FK - Falkland Islands %28Malvinas%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FM - Micronesia %28Federated States of%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FO - Faroe Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FR - France</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GA - Gabon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GB - United Kingdom of Great Britain and Northern Ireland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GD - Grenada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GE - Georgia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GF - French Guiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GG - Guernsey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GH - Ghana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GI - Gibraltar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GL - Greenland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GM - Gambia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GN - Guinea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GP - Guadeloupe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GQ - Equatorial Guinea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GR - Greece</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GS - South Georgia and the South Sandwich Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GT - Guatemala</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GU - Guam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GW - Guinea-Bissau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GY - Guyana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HK - Hong Kong</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HM - Heard Island and McDonald Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HN - Honduras</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR - Croatia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HT - Haiti</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HU - Hungary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ID - Indonesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IE - Ireland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IL - Israel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IM - Isle of Man</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN - India</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IO - British Indian Ocean Territory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IQ - Iraq</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IR - Iran %28Islamic Republic of%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IS - Iceland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT - Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JE - Jersey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JM - Jamaica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JO - Jordan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JP - Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KE - Kenya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KG - Kyrgyzstan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KH - Cambodia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KI - Kiribati</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KM - Comoros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KN - Saint Kitts and Nevis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KP - Korea %28Democratic People%27s Republic of%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KR - Korea %28Republic of%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KW - Kuwait</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KY - Cayman Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KZ - Kazakhstan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LA - Lao People%27s Democratic Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LB - Lebanon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LC - Saint Lucia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LI - Liechtenstein</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LK - Sri Lanka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LR - Liberia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LS - Lesotho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LT - Lithuania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LU - Luxembourg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LV - Latvia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LY - Libya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA - Morocco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MC - Monaco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MD - Moldova %28Republic of%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ME - Montenegro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MF - Saint Martin %28French part%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MG - Madagascar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MH - Marshall Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MK - Macedonia %28the former Yugoslav Republic of%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ML - Mali</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MM - Myanmar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MN - Mongolia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MO - Macao</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MP - Northern Mariana Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MQ - Martinique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MR - Mauritania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MS - Montserrat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MT - Malta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MU - Mauritius</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MV - Maldives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MW - Malawi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MX - Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MY - Malaysia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MZ - Mozambique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA - Namibia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NC - New Caledonia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NE - Niger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NF - Norfolk Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NG - Nigeria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NI - Nicaragua</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NL - Netherlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NO - Norway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NP - Nepal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NR - Nauru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NU - Niue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NZ - New Zealand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OM - Oman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA - Panama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PE - Peru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PF - French Polynesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PG - Papua New Guinea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PH - Philippines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PK - Pakistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PL - Poland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PM - Saint Pierre and Miquelon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PN - Pitcairn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PR - Puerto Rico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PS - Palestine%2C State of</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PT - Portugal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PW - Palau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PY - Paraguay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QA - Qatar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RE - Réunion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RO - Romania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RS - Serbia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RU - Russian Federation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RW - Rwanda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA - Saudi Arabia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SB - Solomon Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SC - Seychelles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD - Sudan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SE - Sweden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SG - Singapore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SH - Saint Helena%2C Ascension and Tristan da Cunha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SI - Slovenia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SJ - Svalbard and Jan Mayen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SK - Slovakia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SL - Sierra Leone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SM - San Marino</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SN - Senegal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SO - Somalia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR - Suriname</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SS - South Sudan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ST - Sao Tome and Principe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SV - El Salvador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SX - Sint Maarten %28Dutch part%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SY - Syrian Arab Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SZ - Swaziland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TC - Turks and Caicos Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TD - Chad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TF - French Southern Territories</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TG - Togo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TH - Thailand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TJ - Tajikistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TK - Tokelau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TL - Timor-Leste</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TM - Turkmenistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TN - Tunisia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TO - Tonga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TR - Turkey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TT - Trinidad and Tobago</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TV - Tuvalu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TW - Taiwan%2C Province of China%5Ba%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TZ - Tanzania%2C United Republic of</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UA - Ukraine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UG - Uganda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UM - United States Minor Outlying Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - United States of America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UY - Uruguay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UZ - Uzbekistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VA - Holy See</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VC - Saint Vincent and the Grenadines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VE - Venezuela %28Bolivarian Republic of%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VG - Virgin Islands %28British%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VI - Virgin Islands %28U%2ES%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VN - Viet Nam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VU - Vanuatu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WF - Wallis and Futuna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WS - Samoa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YE - Yemen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YT - Mayotte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZA - South Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZM - Zambia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZW - Zimbabwe</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GumGum_Out_By_Convenience__c</picklist>
+        <values>
+            <fullName>30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>90</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IO_Type__c</picklist>
+        <values>
+            <fullName>Actualized IO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Original IO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revised IO - Budget Cut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revised IO - Incremental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revised IO - Optimizations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revised IO - Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>In_Demo_Billing2__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OCR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VCE</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Incumbent_Provider__c</picklist>
+        <values>
+            <fullName>Comscore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Double Verify</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IBM%2FWatson Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integral Ad Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internally Developed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oracle%2FGrapeshot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peer39</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Insertion_Order_Payment_Terms__c</picklist>
+        <values>
+            <fullName>Net 120</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 75</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 90</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Integration_Status__c</picklist>
+        <values>
+            <fullName>Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Started</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work In Progress</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>KPI__c</picklist>
+        <values>
+            <fullName>Bounce Rate %2F Landing Page Yield</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand Awareness Lift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPA %2F Conversions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CTR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales%2FConsideration Lift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Time Spent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VCR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Viewability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LID__DeliveryInstallationStatus__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yet to begin</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Language__c</picklist>
+        <values>
+            <fullName>English</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>French</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spanish</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Existing Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GumGum Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hosted Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Press</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Prospecting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Winmo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Loss_Reason__c</picklist>
+        <values>
+            <fullName>Scale Issues</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lost_Reason_new__c</picklist>
+        <values>
+            <fullName>Agency Lost the Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campaign No Longer Happening</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change in Tactic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Covid-19</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Creative Lead Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inventory%2FScale Concerns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsupported Product Feature</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mock_Requested__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Monthly_Phase_Goals__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Multicultural_Segments_Included__c</picklist>
+        <values>
+            <fullName>AAPI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Black</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hispanic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indigenous</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LGBTQ%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Multicultural_Targeting__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Native_Sub_Product__c</picklist>
+        <values>
+            <fullName>In-Article</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Feed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>New_Tactic__c</picklist>
+        <values>
+            <fullName>Publisher Direct%2FEndemic Site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shift to Content</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shift to Pre-roll Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shift to Social%2FSearch</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Operating_Expense__c</picklist>
+        <values>
+            <fullName>Less 15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Undefined</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opportunity_Region_Country__c</picklist>
+        <values>
+            <fullName>APAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LATAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opportunity_Region__c</picklist>
+        <values>
+            <fullName>APAC - QLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - SA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - WA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Belgium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - France</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Germany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Netherlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Nordics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Poland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Spain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LATAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Zealand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opportunity_Source_Verity__c</picklist>
+        <values>
+            <fullName>Outbound</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Outcomes_Data__c</picklist>
+        <values>
+            <fullName>BLS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BYOD %E2%80%93 Brand Lift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BYOD %E2%80%93 Conversions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BYOD %E2%80%93 Standard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benchmarks Only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Partner_Out_By_Convenience__c</picklist>
+        <values>
+            <fullName>30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>90</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Schedule__c</picklist>
+        <values>
+            <fullName>Annually</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quarterly</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Term__c</picklist>
+        <values>
+            <fullName>Net 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 60</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Platform_2__c</picklist>
+        <values>
+            <fullName>CM360</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DV360</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TTD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Xandr</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Platform_Sub_Products__c</picklist>
+        <values>
+            <fullName>Passback</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Platform</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Interest__c</picklist>
+        <values>
+            <fullName>Direct Selling Opportunity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GumGum%27s Demand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SSAI</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_KPI__c</picklist>
+        <values>
+            <fullName>Action Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand Awareness Lift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPQA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CTR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foot Traffic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landing Page Yield</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Play Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales%2FConsideration Lift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Traffic Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VCR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video Views</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Viewability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Use_Case__c</picklist>
+        <values>
+            <fullName>Brand Safety</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pro_rated__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product__c</picklist>
+        <values>
+            <fullName>In-Image</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Screen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_s__c</picklist>
+        <values>
+            <fullName>In-Image</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Screen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Video</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RFP_Type__c</picklist>
+        <values>
+            <fullName>Formal RFP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA %28Mocks or any one off reason for a created SF opportunity%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Programmatic Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFI</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RFP__c</picklist>
+        <values>
+            <fullName>Incoming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proactive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Red__c</picklist>
+        <values>
+            <fullName>Campaign geo too small</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KPI not a good fit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to pull accurate avails</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Response_Led_by_Strategist_Sr__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SSP__c</picklist>
+        <values>
+            <fullName>Amazon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Index Exchange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Magnite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OpenX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pubmatic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verizon Media</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Secondary_KPI__c</picklist>
+        <values>
+            <fullName>Action Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand Awareness Lift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPQA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CTR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foot Traffic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landing Page Yield</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Play Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales%2FConsideration Lift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Traffic Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VCR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video Views</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Viewability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Self_Attribution_Source__c</picklist>
+        <values>
+            <fullName>Blog</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bot Crawler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chat GPT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GG Ads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industry News</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partnership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Past work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Podcast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Programmatic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TV Ad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WOM %2F Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Search</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Solicited_Open_Exchange__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Special_Needs__c</picklist>
+        <values>
+            <fullName>No Content</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Embedded Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No II Canvas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No IS Display</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No IS Half Takeover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No IS Takeover Full</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Strategic_Solution_Pitched__c</picklist>
+        <values>
+            <fullName>AIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Game</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verity Data- Display%2FNative PMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verity Data- Pre-Bid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verity Data- Video PMP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Team_of_Record__c</picklist>
+        <values>
+            <fullName>APAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tertiary_KPI__c</picklist>
+        <values>
+            <fullName>Action Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand Awareness Lift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPQA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CTR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foot Traffic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landing Page Yield</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Play Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales%2FConsideration Lift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Traffic Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VCR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video Views</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Viewability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Trend_Targeting__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>New Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal Business</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Agreement__c</picklist>
+        <values>
+            <fullName>Gross</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Verity_Channel__c</picklist>
+        <values>
+            <fullName>Audio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connected TV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High-Impact Display</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Native</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard Display</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Verity_Data_Type__c</picklist>
+        <values>
+            <fullName>Brand Safety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contextual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Segment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sentiment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Verity_Segment_Type__c</picklist>
+        <values>
+            <fullName>Brand Safety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contextual</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Verity_Type__c</picklist>
+        <values>
+            <fullName>Pre-Bid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SaaS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video PMP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vertical_Industry__c</picklist>
+        <values>
+            <fullName>Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto and recreational Vehicles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment%2FMedia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Issues and Causes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Life Stages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misc%2E Businesses and Industries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Music%2C Sports%2C and Live Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Politics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research Firm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel and Leisure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Video_Partner__c</picklist>
+        <values>
+            <fullName>IRIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JW</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Video_Player__c</picklist>
+        <values>
+            <fullName>Brightcove</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JW Player</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SDK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video%2Ejs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Video_Sub_Products__c</picklist>
+        <values>
+            <fullName>In-Content Display</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Content Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Content Video Display</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>celigo_sfnsio__Bill_To_Tier__c</picklist>
+        <values>
+            <fullName>Distributor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>End User</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Reseller</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>celigo_sfnsio__Ship_To_Tier__c</picklist>
+        <values>
+            <fullName>Distributor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>End User</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Reseller</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

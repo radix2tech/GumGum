@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicates whether or not the given email was successful during outbound activity --></help>
+    <label><!-- Email Validation Result --></label>
+    <name>Email_Validation_Result__c</name>
+    <picklistValues>
+        <masterLabel>Invalid</masterLabel>
+        <translation><!-- Invalid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown</masterLabel>
+        <translation><!-- Unknown --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Valid</masterLabel>
+        <translation><!-- Valid --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

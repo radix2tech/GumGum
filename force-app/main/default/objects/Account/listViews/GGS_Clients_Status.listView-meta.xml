@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GGS_Clients_Status</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Alt_Acct_Name__c</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>Client_Status__c</columns>
+    <columns>Territory_Sports__c</columns>
+    <columns>SaaSOptics_Instance__c</columns>
+    <columns>SaaSOptics_Profile__c</columns>
+    <columns>Renewal_Date_Client__c</columns>
+    <columns>Total_ARR_Client__c</columns>
+    <columns>Total_MRR_Client1__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Account_Manager__c</columns>
+    <columns>Client_Status_Details__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Sports</value>
+    </filters>
+    <filters>
+        <field>Account_Status2__c</field>
+        <operation>equals</operation>
+        <value>Client</value>
+    </filters>
+    <label>GGS Client Status</label>
+</ListView>

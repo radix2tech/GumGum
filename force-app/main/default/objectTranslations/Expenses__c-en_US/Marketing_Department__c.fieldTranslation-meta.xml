@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Marketing Department --></label>
+    <name>Marketing_Department__c</name>
+    <picklistValues>
+        <masterLabel>Corp Comms</masterLabel>
+        <translation><!-- Corp Comms --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CreativeContent</masterLabel>
+        <translation><!-- CreativeContent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMEA</masterLabel>
+        <translation><!-- EMEA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JapanAPAC</masterLabel>
+        <translation><!-- JapanAPAC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing Ops</masterLabel>
+        <translation><!-- Marketing Ops --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NA Experiential</masterLabel>
+        <translation><!-- NA Experiential --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

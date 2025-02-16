@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- SSP --></label>
+    <name>SSP__c</name>
+    <picklistValues>
+        <masterLabel>Amazon</masterLabel>
+        <translation><!-- Amazon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Google</masterLabel>
+        <translation><!-- Google --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Index Exchange</masterLabel>
+        <translation><!-- Index Exchange --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Iris.TV</masterLabel>
+        <translation><!-- Iris.TV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JW Player</masterLabel>
+        <translation><!-- JW Player --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Magnite</masterLabel>
+        <translation><!-- Magnite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OpenX</masterLabel>
+        <translation><!-- OpenX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pubmatic</masterLabel>
+        <translation><!-- Pubmatic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SpotX</masterLabel>
+        <translation><!-- SpotX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Teads</masterLabel>
+        <translation><!-- Teads --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>The MediaGrid</masterLabel>
+        <translation><!-- The MediaGrid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verizon Media</masterLabel>
+        <translation><!-- Verizon Media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Xandr Curate</masterLabel>
+        <translation><!-- Xandr Curate --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Primary Use Case --></label>
+    <name>Primary_Use_Case__c</name>
+    <picklistValues>
+        <masterLabel>Brand Safety</masterLabel>
+        <translation><!-- Brand Safety --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CTV Analysis</masterLabel>
+        <translation><!-- CTV Analysis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contextual Classification</masterLabel>
+        <translation><!-- Contextual Classification --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom Segmentation</masterLabel>
+        <translation><!-- Custom Segmentation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DMP Integration</masterLabel>
+        <translation><!-- DMP Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Image Analysis</masterLabel>
+        <translation><!-- Image Analysis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Major Events</masterLabel>
+        <translation><!-- Major Events --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Page Analysis</masterLabel>
+        <translation><!-- Page Analysis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre-bid DSP</masterLabel>
+        <translation><!-- Pre-bid DSP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sentiment</masterLabel>
+        <translation><!-- Sentiment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Text Analysis</masterLabel>
+        <translation><!-- Text Analysis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Threat Detection/Brand Safety</masterLabel>
+        <translation><!-- Threat Detection/Brand Safety --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Top Keywords</masterLabel>
+        <translation><!-- Top Keywords --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Analysis</masterLabel>
+        <translation><!-- Video Analysis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video PMP</masterLabel>
+        <translation><!-- Video PMP --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

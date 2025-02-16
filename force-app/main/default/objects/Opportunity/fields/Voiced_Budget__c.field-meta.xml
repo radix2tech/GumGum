@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Voiced_Budget__c</fullName>
+    <description>Enter Voiced Budget for programmatic opportunities.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field contains 100% of spend before fees, data, etc. (i.e. what the client is willing to spend overall).</inlineHelpText>
+    <label>Voiced Budget</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Currency</type>
+</CustomField>

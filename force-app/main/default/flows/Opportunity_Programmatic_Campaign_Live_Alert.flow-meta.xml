@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Programmatic_Opp_is_Live_Alert</name>
+        <label>Programmatic Opp is Live Alert</label>
+        <locationX>506</locationX>
+        <locationY>384</locationY>
+        <actionName>Opportunity.Programmatic_Opp_is_Live_Alert</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Programmatic_Opp_is_Live_Alert_UK</name>
+        <label>Programmatic Opp is Live Alert - UK</label>
+        <locationX>242</locationX>
+        <locationY>384</locationY>
+        <actionName>Opportunity.Programmatic_Opp_is_Live_Alert_UK</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>62.0</apiVersion>
+    <decisions>
+        <name>Region</name>
+        <label>Region</label>
+        <locationX>374</locationX>
+        <locationY>276</locationY>
+        <defaultConnector>
+            <targetReference>Programmatic_Opp_is_Live_Alert</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Other</defaultConnectorLabel>
+        <rules>
+            <name>EMEA</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opportunity_Region__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>EMEA</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Programmatic_Opp_is_Live_Alert_UK</targetReference>
+            </connector>
+            <label>EMEA</label>
+        </rules>
+    </decisions>
+    <description>This flow send an email alert to Alert the PSM, Seller, Seller&apos;s Manager, and AMs when a Programmatic Opp is live</description>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity - Programmatic Campaign Live Alert {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity - Programmatic Campaign Live Alert</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>AND(
+          {!$User.Bypass_Opportunity_Validation__c} = False,
+         TEXT({!$Record.Channel__c}) = &apos;Programmatic&apos;,
+         TEXT({!$Record.StageName}) = &apos;Closed/Won&apos;,
+         {!$Record.Impression_Delivering__c}
+         )</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Region</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

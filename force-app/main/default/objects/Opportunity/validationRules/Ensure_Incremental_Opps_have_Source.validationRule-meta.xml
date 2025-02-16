@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ensure_Incremental_Opps_have_Source</fullName>
+    <active>true</active>
+    <description>Prevent Incremental Opportunities from being created without a Source Opportunity.</description>
+    <errorConditionFormula>RecordTypeId = &quot;012550000000IhF&quot; &amp;&amp;
+	
+ $User.Bypass_Opportunity_Validation__c = FALSE &amp;&amp;
+NOT( $Permission.Bypass_Opportunity_Validation )&amp;&amp;
+ISNULL(Opportunity_Source__c)</errorConditionFormula>
+    <errorMessage>Incremental Opportunities must have a Source Opportunity</errorMessage>
+</ValidationRule>

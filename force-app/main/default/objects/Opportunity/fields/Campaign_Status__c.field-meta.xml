@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Campaign Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Waiting for Assets</fullName>
+                <default>false</default>
+                <label>Waiting for Assets</label>
+            </value>
+            <value>
+                <fullName>In With Creative</fullName>
+                <default>false</default>
+                <label>In with Creative</label>
+            </value>
+            <value>
+                <fullName>In with AdBuilder</fullName>
+                <default>false</default>
+                <label>In with AdBuilder</label>
+            </value>
+            <value>
+                <fullName>Waiting for Client Creative Approval</fullName>
+                <default>false</default>
+                <label>Waiting for Client Creative Approval</label>
+            </value>
+            <value>
+                <fullName>Waiting for Video</fullName>
+                <default>false</default>
+                <label>Waiting for Video</label>
+            </value>
+            <value>
+                <fullName>Waiting for Pixels/Tags</fullName>
+                <default>false</default>
+                <label>Waiting for Pixels/Tags</label>
+            </value>
+            <value>
+                <fullName>Engineering is Setting Up</fullName>
+                <default>false</default>
+                <label>Engineering Is Setting Up</label>
+            </value>
+            <value>
+                <fullName>In QA</fullName>
+                <default>false</default>
+                <label>In QA</label>
+            </value>
+            <value>
+                <fullName>Ready to Go</fullName>
+                <default>false</default>
+                <label>Ready to Go</label>
+            </value>
+            <value>
+                <fullName>Live</fullName>
+                <default>false</default>
+                <label>Live</label>
+            </value>
+            <value>
+                <fullName>Live, Creative Refresh</fullName>
+                <default>false</default>
+                <label>Live, Creative Refresh</label>
+            </value>
+            <value>
+                <fullName>In between phases</fullName>
+                <default>false</default>
+                <label>In Between Phases</label>
+            </value>
+            <value>
+                <fullName>Campaign Paused</fullName>
+                <default>false</default>
+                <label>Campaign Paused</label>
+            </value>
+            <value>
+                <fullName>Campaign Cancelled</fullName>
+                <default>false</default>
+                <label>Campaign Cancelled</label>
+            </value>
+            <value>
+                <fullName>Campaign Ended</fullName>
+                <default>false</default>
+                <label>Campaign Ended</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

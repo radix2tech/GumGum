@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Reason provided by salesperson on why PSM should not reach out --></help>
+    <label><!-- Reason Not Solicited Open Exchange --></label>
+    <name>Reason_Not_Solicited_Open_Exchange__c</name>
+</CustomFieldTranslation>

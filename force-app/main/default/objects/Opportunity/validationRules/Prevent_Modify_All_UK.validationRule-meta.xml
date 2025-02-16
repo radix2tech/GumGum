@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Modify_All_UK</fullName>
+    <active>true</active>
+    <description>Does not allow the Ads UK MD and Ads UK Director roles from changing any opportunities that do not have an opportunity region of &quot;EMEA UK&quot;. This was created as a result of their request to be able to modify all opportunities for UK via permission set</description>
+    <errorConditionFormula>AND(
+     $User.Bypass_Opportunity_Validation__c = FALSE,
+     OR(
+         CONTAINS( $UserRole.Name , &apos;Ads UK_MD&apos;) ,
+         CONTAINS( $UserRole.Name , &apos;Ads UK_Director&apos;)
+        ),
+      NOT (ISPICKVAL( Opportunity_Region__c ,&apos;EMEA - UK&apos;)),
+      NOT (ISPICKVAL( Opportunity_Region__c ,&apos;EMEA - International&apos;))
+   )</errorConditionFormula>
+    <errorMessage>Ads UK VP and Director are not allowed to edit opportunities if the Opportunity Region is not &quot;EMEA - UK&quot;</errorMessage>
+</ValidationRule>

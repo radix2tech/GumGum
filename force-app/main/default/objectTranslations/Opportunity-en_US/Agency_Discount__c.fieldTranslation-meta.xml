@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Agency Discount --></label>
+    <name>Agency_Discount__c</name>
+    <picklistValues>
+        <masterLabel>10%</masterLabel>
+        <translation><!-- 10% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>15%</masterLabel>
+        <translation><!-- 15% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>20%</masterLabel>
+        <translation><!-- 20% --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

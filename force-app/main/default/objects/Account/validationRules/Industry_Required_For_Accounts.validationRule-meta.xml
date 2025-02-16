@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry_Required_For_Accounts</fullName>
+    <active>true</active>
+    <description>Required Industry only for those accounts that are not agency in advertising and playground record types</description>
+    <errorConditionFormula>AND( 
+     $User.Bypass_Opportunity_Validation__c = FALSE,
+     NOT( $Permission.Bypass_Account_Validation ),
+     ISNEW(),
+     Converted__c = FALSE, 
+     RecordType.Name = &quot;Advertising&quot;,
+     NOT(ISPICKVAL(Type, &quot;Agency&quot;)),
+     NOT(ISPICKVAL(Type, &quot;Agency Group&quot;)),
+     ISBLANK(Text( Industry )),
+     OR(
+         $User.ProfileId = &quot;00eU0000000J7n2&quot;,
+         $User.ProfileId = &quot;00eU0000000po22&quot;,
+         $User.ProfileId = &quot;00eU0000000JCOd&quot;,
+         $User.ProfileId = &quot;00e4U000001604u&quot;,
+         $User.ProfileId = &quot;00e0P000000xYeQ&quot;,
+         $User.ProfileId = &quot;00e0P000000KPVm&quot;,
+         $User.ProfileId = &quot;00e0P000000KPVh&quot;,
+         $User.ProfileId = &quot;00e0P000000GpIM&quot;,
+         $User.ProfileId = &quot;00e0P000000GpIC&quot; 
+       )
+  
+)</errorConditionFormula>
+    <errorDisplayField>Industry</errorDisplayField>
+    <errorMessage>All advertising accounts must have an Industry selected except Agencies and Agency Group</errorMessage>
+</ValidationRule>

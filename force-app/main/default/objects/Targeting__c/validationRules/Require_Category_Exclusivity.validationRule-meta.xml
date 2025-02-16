@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Category_Exclusivity</fullName>
+    <active>true</active>
+    <description>If Event is filled out then &quot;Category Exclusivity is a required dropdown field</description>
+    <errorConditionFormula>AND(
+  NOT(ISBLANK( Event2__c ) ),
+  ISPICKVAL( Category_Exclusivity__c, &quot;&quot; )
+)</errorConditionFormula>
+    <errorMessage>Please enter the Catgeory Exclusivity</errorMessage>
+</ValidationRule>

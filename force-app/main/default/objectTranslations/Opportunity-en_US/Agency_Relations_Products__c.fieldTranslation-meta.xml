@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Strategic Marketing Output --></label>
+    <name>Agency_Relations_Products__c</name>
+    <picklistValues>
+        <masterLabel>1-Pager</masterLabel>
+        <translation><!-- 1-Pager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ABM Activation Option</masterLabel>
+        <translation><!-- ABM Activation Option --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom Presentation</masterLabel>
+        <translation><!-- Custom Presentation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom Prototype</masterLabel>
+        <translation><!-- Custom Prototype --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mock</masterLabel>
+        <translation><!-- Mock --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Research</masterLabel>
+        <translation><!-- Research --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sponsorship</masterLabel>
+        <translation><!-- Sponsorship --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

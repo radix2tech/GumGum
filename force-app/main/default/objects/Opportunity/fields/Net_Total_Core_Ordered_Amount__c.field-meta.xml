@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Net_Total_Core_Ordered_Amount__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Net Revenue on all products excluding In-Game and In-Video, which is calculated as either 50% of Gross (No Barter / Trading Deal Account) or 35% of Gross (Yes Barter / Trading Deal Account)</inlineHelpText>
+    <label>Net Total Core Ordered Amount</label>
+    <precision>16</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

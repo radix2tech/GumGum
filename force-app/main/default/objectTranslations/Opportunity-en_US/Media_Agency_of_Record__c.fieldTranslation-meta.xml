@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Populate this field with the Agency of Record when the ‘Agency’ field is populated with a Principal Buying Unit --></help>
+    <label><!-- Media Agency of Record --></label>
+    <name>Media_Agency_of_Record__c</name>
+    <relationshipLabel><!-- Opportunities (Media Agency of Record) --></relationshipLabel>
+</CustomFieldTranslation>

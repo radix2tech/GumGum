@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Budget Category Content Flight (e.g., $1MM_Skincare brand_Beauty Content_7/21/22 - 8/3/22) --></help>
+    <label><!-- Sponsorship Details --></label>
+    <name>Sponsorship_Details__c</name>
+</CustomFieldTranslation>

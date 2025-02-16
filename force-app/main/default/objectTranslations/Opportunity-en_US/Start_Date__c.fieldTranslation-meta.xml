@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- To edit this date, simply ensure that the product start dates are correct.  This field will reflect the earliest start date of the products. --></help>
+    <label><!-- Start Date (old) --></label>
+    <name>Start_Date__c</name>
+</CustomFieldTranslation>

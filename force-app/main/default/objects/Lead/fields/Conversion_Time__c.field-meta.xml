@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conversion_Time__c</fullName>
+    <businessStatus>Active</businessStatus>
+    <description>Conversion Time from when the Lead was created</description>
+    <externalId>false</externalId>
+    <formula>(ConvertedDate - DATEVALUE(CreatedDate))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This field subtracts the converted date from the created date</inlineHelpText>
+    <label>Conversion Time</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

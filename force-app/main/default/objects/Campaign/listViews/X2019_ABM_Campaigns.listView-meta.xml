@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2019_ABM_Campaigns</fullName>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>Region__c</columns>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>Location__c</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <columns>CAMPAIGN.NUM_RESPONSES</columns>
+    <columns>Expense_Sum__c</columns>
+    <columns>Cost_Per_Lead__c</columns>
+    <columns>Key_Takeaway__c</columns>
+    <columns>CAMPAIGN.NUM_OPPORTUNITIES</columns>
+    <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN.ACTIVE</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>CAMPAIGN.NAME</field>
+        <operation>contains</operation>
+        <value>ABM</value>
+    </filters>
+    <filters>
+        <field>CAMPAIGN.START_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_YEAR</value>
+    </filters>
+    <label>2019 ABM Campaigns</label>
+</ListView>

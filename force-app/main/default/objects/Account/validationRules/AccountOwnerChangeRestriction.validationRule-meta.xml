@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccountOwnerChangeRestriction</fullName>
+    <active>true</active>
+    <description>Only allows Sales Ops, Grace and Maria from changing ownership of Accounts</description>
+    <errorConditionFormula>AND(
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+Converted__c = FALSE,
+RecordType.Name &lt;&gt; &quot;verity&quot;,
+    ISCHANGED(OwnerId),
+
+    NOT($Permission.Change_Owner)
+)</errorConditionFormula>
+    <errorMessage>You don&apos;t have permissions to change account owner; please reach out to Salesforce support team at Salesforcesupport@gumgum.com</errorMessage>
+</ValidationRule>

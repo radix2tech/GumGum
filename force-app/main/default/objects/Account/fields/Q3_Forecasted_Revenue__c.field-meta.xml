@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Q3_Forecasted_Revenue__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Forecasted Revenue for Q3 of this year based on the Sales Bottoms Up file</inlineHelpText>
+    <label>Q3 Forecasted Revenue</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Currency</type>
+</CustomField>

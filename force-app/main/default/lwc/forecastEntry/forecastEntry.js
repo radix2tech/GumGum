@@ -214,6 +214,59 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
         this.fetchData();
     }
 
+
+    @track sortBy;
+    @track sortDirection;
+
+    get isSellerSortedAsc() {
+        return this.sortBy === 'Seller' && this.sortDirection === 'asc';
+    }
+    get isSellerSortedDesc() {
+        return this.sortBy === 'Seller' && this.sortDirection === 'desc';
+    }
+
+    get isAdvertiserSortedAsc() {
+        return this.sortBy === 'Advertiser' && this.sortDirection === 'asc';
+    }
+    get isAdvertiserSortedDesc() {
+        return this.sortBy === 'Advertiser' && this.sortDirection === 'desc';
+    }
+
+    get isAgencySortedAsc() {
+        return this.sortBy === 'Agency' && this.sortDirection === 'asc';
+    }
+    get isAgencySortedDesc() {
+        return this.sortBy === 'Agency' && this.sortDirection === 'desc';
+    }
+
+     handleSort(event) {
+        const field = event.currentTarget.dataset.field;
+        const isSameField = this.sortBy === field;
+        this.sortDirection = isSameField
+        ? this.sortDirection === 'asc'
+            ? 'desc'
+            : 'asc'
+        : 'asc';
+        this.sortBy = field;
+
+        this.sortData(field, this.sortDirection);
+    }
+
+    sortData(field, direction) {
+        const parseValue = (value) =>
+        typeof value === 'string' ? value.toLowerCase() : value;
+        const isAscending = direction === 'asc';
+
+        this.returnData = [...this.returnData].sort((a, b) => {
+        const valA = parseValue(a[field]);
+        const valB = parseValue(b[field]);
+
+        if (valA < valB) return isAscending ? -1 : 1;
+        if (valA > valB) return isAscending ? 1 : -1;
+        return 0;
+        });
+    }
+
     //Channel Filter
     @track channelPills = [];
     channelLabelSet = new Set();
@@ -395,8 +448,10 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
         }, 200);
     }
 
+    @track previousYear;
     @track currentYear;
     @track nextYear;
+    @track forecastYear;
 
     async fetchData(){
         this.isLoading = true;
@@ -440,9 +495,19 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
 
         this.currentYear = new Date().getFullYear();
         this.nextYear = this.currentYear+1;
+        this.forecastYear = this.currentYear;
+        this.previousYear = this.currentYear-1;
+        
+        if(this.isLastQuarter()){
+            this.forecastYear = this.forecastYear + 1; 
+        }
         this.runBatch();
 
-        this.CaluclateCumulativeData();
+    }
+
+    isLastQuarter() {
+        const currentMonth = new Date().getMonth() + 1; // getMonth() returns 0-based month
+        return currentMonth >= 10 && currentMonth <= 12;
     }
 
     // Function to handle submission of forecasts
@@ -486,7 +551,8 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
     handleTypeChange(event){
         const TradingDeal = event.target.checked;
         const rowId = event.target.dataset.id;
-
+        console.log('#### rowId '+rowId);
+        console.log('#### TradingDeal '+TradingDeal);
         // Loop through the returnData array to find the correct row
         for (let i = 0; i < this.returnData.length; i++) {
             if (this.returnData[i].Id === rowId) {
@@ -608,7 +674,8 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
         const forecastId = event.target.dataset.id;  // Gets the dynamic ID
         const rowId = event.target.dataset.row;  // Gets the dynamic name
 
-
+        console.log('### forecastId'+forecastId);
+        console.log('### rowId'+rowId);
         // Loop through the returnData array to find the correct row
         for (let i = 0; i < this.returnData.length; i++) {
             if (this.returnData[i].Id === rowId) {
@@ -720,7 +787,7 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
 
     handleAdd(event) {
         const rowId = event.target.dataset.id;  // Gets the dynamic ID
-
+        console.log('### rowId '+rowId);
         // Loop through returnData to find the correct row
         for (let i = 0; i < this.returnData.length; i++) {
             if (this.returnData[i].Id === rowId) {
@@ -731,10 +798,10 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
                 const newForecastItem = {
                     Id: `${Date.now()}`, // Unique ID based on current timestamp
                     name: 'Core Media', 
-                    /*q1: 0.0,
-                    q2: 0.0,
-                    q3: 0.0,
-                    q4: 0.0,*/
+                    /*q11: 0.0,
+                    q21: 0.0,
+                    q31: 0.0,
+                    q41: 0.0,*/
                     displayAdd:true,
                     isChanged:true
                 };
@@ -794,6 +861,7 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
         if(objResult == true){
             this.disableBatchButton = false; // Disable button
             this.batchButtonLabel = 'Refresh Data';
+            await this.fetchData();
             this.stopPolling();
         }
 
@@ -855,7 +923,7 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
         this.isModalOpen2 = false;
         this.errorMessage = null;
         this.duplicateRecordLinks = [];
-
+        this.runBatch();
         this.fetchData();
 
     }
@@ -1014,215 +1082,6 @@ export default class ForecastEntry extends NavigationMixin(LightningElement) {
 
         this.isLoading = false;
   
-    }
-
-    applyFilter() {
-        
-
-        //for(let k= 0; k< this.pills.length; k++){
-            //console.log('### K'+ k);
-            //console.log('###  this.pills '+this.pills[k].label);
-            //continue;
-            /*if(this.value9 == 'Advertiser'){
-                // Loop through the returnData array to find the correct row
-                for (let i = 0; i < this.returnData.length; i++) {
-
-                    this.returnData[i].isDisplayed = false;
-                    this.returnData[i].isExpanded = false;
-                    for(let k= 0; k< this.pills.length; k++){
-                        if ( this.returnData[i].Advertiser && this.returnData[i].Advertiser.toLowerCase().includes(this.pills[k].label.toLowerCase())) {
-                            this.returnData[i].isDisplayed = true;
-                        }
-                        else{
-                            //this.returnData[i].isDisplayed = false;
-                        }
-                    }
-                }
-            }
-
-            if(this.value9 == 'Seller'){
-                // Loop through the returnData array to find the correct row
-                for (let i = 0; i < this.returnData.length; i++) {
-
-                    this.returnData[i].isDisplayed = false;
-                    this.returnData[i].isExpanded = false;
-                    for(let k= 0; k< this.pills.length; k++){
-
-                        if (this.returnData[i].Seller && this.returnData[i].Seller.toLowerCase().includes(this.pills[k].label.toLowerCase())) {
-                            this.returnData[i].isDisplayed = true;
-                            this.returnData[i].isExpanded = true;
-                        }
-                        else{
-                            //this.returnData[i].isDisplayed = false;
-                            //this.returnData[i].isExpanded = false;
-                        }
-
-                        for(let j = 0; j < this.returnData[i].ForecastList.length; j++){
-                            //this.returnData[i].isDisplayed = false;
-                            //this.returnData[i].isExpanded = false;
-
-                            if (this.returnData[i].ForecastList[j].OwnerName && this.returnData[i].ForecastList[j].OwnerName.toLowerCase().includes(this.pills[k].label.toLowerCase())) {
-                                this.returnData[i].isDisplayed = true;
-                                this.returnData[i].isExpanded = true;
-                            }
-                            else{
-                                //this.returnData[i].isDisplayed = false;
-                                //this.returnData[i].isExpanded = false;
-                            } 
-                        }
-                    }
-                }
-            }
-
-            if(this.value9 == 'Agency'){
-                // Loop through the returnData array to find the correct row
-                for (let i = 0; i < this.returnData.length; i++) {
-                    this.returnData[i].isDisplayed = false;
-                    this.returnData[i].isExpanded = false;
-
-                    for(let k= 0; k< this.pills.length; k++){
-
-                        if (this.returnData[i].Agency && this.returnData[i].Agency.toLowerCase().includes(this.pills[k].label.toLowerCase())) {
-                            this.returnData[i].isDisplayed = true;
-                        }
-                        else{
-                            //this.returnData[i].isDisplayed = false;
-                        }
-                    }
-                }
-            }
-
-            if(this.value9 == 'Type'){
-                // Loop through the returnData array to find the correct row
-                for (let i = 0; i < this.returnData.length; i++) {
-                    this.returnData[i].isDisplayed = false;
-                    this.returnData[i].isExpanded = false;
-
-                    //for(let k= 0; k< this.pills.length; k++){
-
-                        if (this.returnData[i].Type && this.returnData[i].Type.toLowerCase() == this.filterText.toLowerCase()) {
-                            this.returnData[i].isDisplayed = true;
-                        }
-                        else{
-                            //this.returnData[i].isDisplayed = false;
-                        }
-                    //}
-                }
-            }
-
-            if(this.value9 == 'Channel'){
-                // Loop through the returnData array to find the correct row
-                for (let i = 0; i < this.returnData.length; i++) {
-                    this.returnData[i].isDisplayed = false;
-                    this.returnData[i].isExpanded = false;
-
-                    //for(let k= 0; k< this.pills.length; k++){
-
-                        if ( this.returnData[i].Channel && this.returnData[i].Channel.toLowerCase() == this.filterText.toLowerCase()) {
-                            this.returnData[i].isDisplayed = true;
-                        }
-                        else{
-                            //this.returnData[i].isDisplayed = false;
-                        }
-                    //}
-                }
-            }
-
-        //}
-        */
-        this.CaluclateCumulativeData();
-    }
-
-    CaluclateCumulativeData(){
-        
-        this.CumulativeData.BookingsCurrentYear = 0;
-        this.CumulativeData.BookingsNextYear = 0;
-        this.CumulativeData.PipelineCurrentQuarter = 0;
-        this.CumulativeData.PipelineNextQuarter = 0;
-        this.CumulativeData.q1 = 0;
-        this.CumulativeData.q2 = 0;
-        this.CumulativeData.q3 = 0;
-        this.CumulativeData.q4 = 0;
-        this.CumulativeData.ForecastNextYear = 0;
-
-
-        for (let i = 0; i < this.returnData.length; i++) {
-            if (this.returnData[i].isDisplayed == true) {
-                this.CumulativeData.BookingsCurrentYear =  this.CumulativeData.BookingsCurrentYear + this.returnData[i].BookingsCurrentYear;
-                this.CumulativeData.BookingsNextYear =  this.CumulativeData.BookingsNextYear + this.returnData[i].BookingsNextYear;
-                this.CumulativeData.PipelineCurrentQuarter =  this.CumulativeData.PipelineCurrentQuarter + this.returnData[i].PipelineCurrentQuarter;
-                this.CumulativeData.PipelineNextQuarter =  this.CumulativeData.PipelineNextQuarter + this.returnData[i].PipelineNextQuarter;
-
-                for(let j = 0; j < this.returnData[i].ForecastList.length; j++){
-                    if(this.returnData[i].ForecastList[j].q11){
-                        this.CumulativeData.q1 = this.CumulativeData.q1 + this.returnData[i].ForecastList[j].q11;
-                    }
-                    if(this.returnData[i].ForecastList[j].q21){
-                        this.CumulativeData.q2 = this.CumulativeData.q2 + this.returnData[i].ForecastList[j].q21;
-                    }
-                    if(this.returnData[i].ForecastList[j].q31){
-                        this.CumulativeData.q3 = this.CumulativeData.q3 + this.returnData[i].ForecastList[j].q31;
-                    }
-                    if(this.returnData[i].ForecastList[j].q41){
-                        this.CumulativeData.q4 = this.CumulativeData.q4 + this.returnData[i].ForecastList[j].q41;
-                    }
-                    this.CumulativeData.ForecastNextYear = this.CumulativeData.q1 + this.CumulativeData.q2 + this.CumulativeData.q3 + this.CumulativeData.q4;
-                }
-            }
-
-
-        }
-
-        
-    }
-
-    clearFilter() {
-        this.filterText = '';
-        // Loop through the returnData array to find the correct row
-        for (let i = 0; i < this.returnData.length; i++) {
-
-            this.returnData[i].isDisplayed = true;
-            this.returnData[i].isExpanded = false;
-
-        }
-        //this.pills = [];
-        this.CaluclateCumulativeData();
-    }
-
-    @track value9 = '';  // Selected value
-    // Options for the combobox
-    @track options9 = [
-        { label: 'Seller', value: 'Seller' },
-        { label: 'Advertiser', value: 'Advertiser' },
-        { label: 'Agency', value: 'Agency' },
-        { label: 'Type', value: 'Type' },
-        { label: 'Channel', value: 'Channel' }
-    ];
-
-    //@track filterOptions = [];
-    @track displayFilterInput = true;
-    // Handles changes in combobox selection
-    handleChangeFilter(event) {
-        this.value9 = event.detail.value;
-        /*if(this.value9 == 'Type' || this.value9 == 'Channel'){
-            this.displayFilterInput = false;
-            if(this.value9 == 'Type'){
-                this.filterOptions = this.options2;
-            }else if(this.value9 == 'Channel'){
-                this.filterOptions = this.options;
-            }
-        }
-        else{
-            this.displayFilterInput = true;
-        }*/
-    }
-
-    
-    @track filterText;
-
-    handleFilterChange(event) {
-        this.filterText = event.target.value;
-        this.applyFilter();
     }
 
     handleNavigate(event) {

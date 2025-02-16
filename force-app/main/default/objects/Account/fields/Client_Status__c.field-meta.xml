@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Client Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Lost</fullName>
+                <default>false</default>
+                <label>Lost</label>
+            </value>
+            <value>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+                <label>Deferred</label>
+            </value>
+            <value>
+                <fullName>In-Process</fullName>
+                <default>false</default>
+                <label>In-Process</label>
+            </value>
+            <value>
+                <fullName>Not Contacted</fullName>
+                <default>false</default>
+                <label>Not Contacted</label>
+            </value>
+            <value>
+                <fullName>High Risk</fullName>
+                <default>false</default>
+                <label>High Risk</label>
+            </value>
+            <value>
+                <fullName>One-Time Deal</fullName>
+                <default>false</default>
+                <label>One-Time Deal</label>
+            </value>
+            <value>
+                <fullName>Closed Won</fullName>
+                <default>false</default>
+                <label>Closed Won</label>
+            </value>
+            <value>
+                <fullName>Covid Loss</fullName>
+                <default>false</default>
+                <label>Covid Loss</label>
+            </value>
+            <value>
+                <fullName>Renewed Late</fullName>
+                <default>false</default>
+                <label>Renewed Late</label>
+            </value>
+            <value>
+                <fullName>Renewed Early</fullName>
+                <default>false</default>
+                <label>Renewed Early</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

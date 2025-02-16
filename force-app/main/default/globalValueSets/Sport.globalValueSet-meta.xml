@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>American Football</fullName>
+        <default>false</default>
+        <label>American Football</label>
+    </customValue>
+    <customValue>
+        <fullName>Athletics</fullName>
+        <default>false</default>
+        <label>Athletics</label>
+    </customValue>
+    <customValue>
+        <fullName>Aussie Rules Football</fullName>
+        <default>false</default>
+        <label>Aussie Rules Football</label>
+    </customValue>
+    <customValue>
+        <fullName>Badminton</fullName>
+        <default>false</default>
+        <label>Badminton</label>
+    </customValue>
+    <customValue>
+        <fullName>Baseball</fullName>
+        <default>false</default>
+        <label>Baseball</label>
+    </customValue>
+    <customValue>
+        <fullName>Basketball</fullName>
+        <default>false</default>
+        <label>Basketball</label>
+    </customValue>
+    <customValue>
+        <fullName>Bowling</fullName>
+        <default>false</default>
+        <label>Bowling</label>
+    </customValue>
+    <customValue>
+        <fullName>Boxing</fullName>
+        <default>false</default>
+        <label>Boxing</label>
+    </customValue>
+    <customValue>
+        <fullName>Collegiate</fullName>
+        <default>false</default>
+        <label>Collegiate</label>
+    </customValue>
+    <customValue>
+        <fullName>Combat Sports (MMA, Kickboxing, etc.)</fullName>
+        <default>false</default>
+        <label>Combat Sports (MMA, Kickboxing, etc.)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cricket</fullName>
+        <default>false</default>
+        <label>Cricket</label>
+    </customValue>
+    <customValue>
+        <fullName>Cycling</fullName>
+        <default>false</default>
+        <label>Cycling</label>
+    </customValue>
+    <customValue>
+        <fullName>Darts</fullName>
+        <default>false</default>
+        <label>Darts</label>
+    </customValue>
+    <customValue>
+        <fullName>Drone Racing</fullName>
+        <default>false</default>
+        <label>Drone Racing</label>
+    </customValue>
+    <customValue>
+        <fullName>Equestrian</fullName>
+        <default>false</default>
+        <label>Equestrian</label>
+    </customValue>
+    <customValue>
+        <fullName>esports</fullName>
+        <default>false</default>
+        <label>Esports</label>
+    </customValue>
+    <customValue>
+        <fullName>Extreme Sports</fullName>
+        <default>false</default>
+        <label>Extreme Sports</label>
+    </customValue>
+    <customValue>
+        <fullName>Golf</fullName>
+        <default>false</default>
+        <label>Golf</label>
+    </customValue>
+    <customValue>
+        <fullName>Halls of Fame</fullName>
+        <default>false</default>
+        <label>Halls of Fame</label>
+    </customValue>
+    <customValue>
+        <fullName>Handball</fullName>
+        <default>false</default>
+        <label>Handball</label>
+    </customValue>
+    <customValue>
+        <fullName>Hockey</fullName>
+        <default>false</default>
+        <label>Hockey</label>
+    </customValue>
+    <customValue>
+        <fullName>Horse Racing</fullName>
+        <default>false</default>
+        <label>Horse Racing</label>
+    </customValue>
+    <customValue>
+        <fullName>Ice Hockey</fullName>
+        <default>false</default>
+        <label>Ice Hockey</label>
+    </customValue>
+    <customValue>
+        <fullName>Kabaddi</fullName>
+        <default>false</default>
+        <label>Kabaddi</label>
+    </customValue>
+    <customValue>
+        <fullName>Lacrosse</fullName>
+        <default>false</default>
+        <label>Lacrosse</label>
+    </customValue>
+    <customValue>
+        <fullName>Mass Participation</fullName>
+        <default>false</default>
+        <label>Mass Participation</label>
+    </customValue>
+    <customValue>
+        <fullName>Motorsport</fullName>
+        <default>false</default>
+        <label>Motorsport</label>
+    </customValue>
+    <customValue>
+        <fullName>Multiple</fullName>
+        <default>false</default>
+        <label>Multiple</label>
+    </customValue>
+    <customValue>
+        <fullName>Netball</fullName>
+        <default>false</default>
+        <label>Netball</label>
+    </customValue>
+    <customValue>
+        <fullName>Rodeo</fullName>
+        <default>false</default>
+        <label>Rodeo</label>
+    </customValue>
+    <customValue>
+        <fullName>Rugby League</fullName>
+        <default>false</default>
+        <label>Rugby League</label>
+    </customValue>
+    <customValue>
+        <fullName>Rugby Union</fullName>
+        <default>false</default>
+        <label>Rugby Union</label>
+    </customValue>
+    <customValue>
+        <fullName>Sailing</fullName>
+        <default>false</default>
+        <label>Sailing</label>
+    </customValue>
+    <customValue>
+        <fullName>Snooker/Pool</fullName>
+        <default>false</default>
+        <label>Snooker/Pool</label>
+    </customValue>
+    <customValue>
+        <fullName>Football (Soccer)</fullName>
+        <default>false</default>
+        <label>Soccer (Football)</label>
+    </customValue>
+    <customValue>
+        <fullName>Squash</fullName>
+        <default>false</default>
+        <label>Squash</label>
+    </customValue>
+    <customValue>
+        <fullName>Swimming</fullName>
+        <default>false</default>
+        <label>Swimming</label>
+    </customValue>
+    <customValue>
+        <fullName>Table Tennis</fullName>
+        <default>false</default>
+        <label>Table Tennis</label>
+    </customValue>
+    <customValue>
+        <fullName>Tennis</fullName>
+        <default>false</default>
+        <label>Tennis</label>
+    </customValue>
+    <customValue>
+        <fullName>Volleyball</fullName>
+        <default>false</default>
+        <label>Volleyball</label>
+    </customValue>
+    <customValue>
+        <fullName>Weightlifting</fullName>
+        <default>false</default>
+        <label>Weightlifting</label>
+    </customValue>
+    <customValue>
+        <fullName>Winter Sports</fullName>
+        <default>false</default>
+        <label>Winter Sports</label>
+    </customValue>
+    <customValue>
+        <fullName>Wrestling</fullName>
+        <default>false</default>
+        <label>Wrestling</label>
+    </customValue>
+    <customValue>
+        <fullName>Esport</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Esport</label>
+    </customValue>
+    <masterLabel>Sport</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

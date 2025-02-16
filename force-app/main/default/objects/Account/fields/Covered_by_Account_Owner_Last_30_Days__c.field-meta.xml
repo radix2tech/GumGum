@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Covered_by_Account_Owner_Last_30_Days__c</fullName>
+    <description>Evaluates if the user tagged in the &apos;bottoms up owner&apos; field has tasks or events on this account within 30 days</description>
+    <externalId>false</externalId>
+    <formula>Last_Bottom_up_Activity_Date__c &gt;= (TODAY()-30)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Evaluates if the user tagged in the &apos;bottoms up owner&apos; field has tasks or events on this account within 30 days</inlineHelpText>
+    <label>Covered by Account Owner Last 30 Days?</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

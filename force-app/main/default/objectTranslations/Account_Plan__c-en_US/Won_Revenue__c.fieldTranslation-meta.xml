@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Won Revenue --></help>
+    <label><!-- Actual Revenue --></label>
+    <name>Won_Revenue__c</name>
+</CustomFieldTranslation>

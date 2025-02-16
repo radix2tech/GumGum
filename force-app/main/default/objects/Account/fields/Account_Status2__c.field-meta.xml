@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Status2__c</fullName>
+    <externalId>false</externalId>
+    <label>Account Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Prospect</fullName>
+                <default>true</default>
+                <label>Prospect</label>
+            </value>
+            <value>
+                <fullName>Client</fullName>
+                <default>false</default>
+                <label>Client</label>
+            </value>
+            <value>
+                <fullName>Former Client</fullName>
+                <default>false</default>
+                <label>Former Client</label>
+            </value>
+            <value>
+                <fullName>Prospect (related to Client)</fullName>
+                <default>false</default>
+                <label>Prospect (related to Client)</label>
+            </value>
+            <value>
+                <fullName>Prospect (related to Former Client)</fullName>
+                <default>false</default>
+                <label>Prospect (related to Former Client)</label>
+            </value>
+            <value>
+                <fullName>Client (thru Parent/Child/Sibling)</fullName>
+                <default>false</default>
+                <label>Client (thru Parent/Child/Sibling)</label>
+            </value>
+            <value>
+                <fullName>Client (thru Agency)</fullName>
+                <default>false</default>
+                <label>Client (thru Agency)</label>
+            </value>
+            <value>
+                <fullName>Former Client (thru Parent/Child/Sibling)</fullName>
+                <default>false</default>
+                <label>Former Client (thru Parent/Child/Sibling)</label>
+            </value>
+            <value>
+                <fullName>Former Client (thru Agency)</fullName>
+                <default>false</default>
+                <label>Former Client (thru Agency)</label>
+            </value>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>Active, Client</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Active, Client</label>
+            </value>
+            <value>
+                <fullName>Client, Active</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client, Active</label>
+            </value>
+            <value>
+                <fullName>Client, Active, Client</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client, Active, Client</label>
+            </value>
+            <value>
+                <fullName>Client, Client, Active</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client, Client, Active</label>
+            </value>
+            <value>
+                <fullName>Client, Client, Active, Client</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client, Client, Active, Client</label>
+            </value>
+            <value>
+                <fullName>Client, Client, Active, Client, Client, Active</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client, Client, Active, Client, Client, Active</label>
+            </value>
+            <value>
+                <fullName>Client, Client, Lead</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client, Client, Lead</label>
+            </value>
+            <value>
+                <fullName>Client, Client, Lead, Lead</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client, Client, Lead, Lead</label>
+            </value>
+            <value>
+                <fullName>Client, Inactive</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client, Inactive</label>
+            </value>
+            <value>
+                <fullName>Client, Lead</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client, Lead</label>
+            </value>
+            <value>
+                <fullName>Client, Lead, Active</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client, Lead, Active</label>
+            </value>
+            <value>
+                <fullName>Client, Lead, Lead</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client, Lead, Lead</label>
+            </value>
+            <value>
+                <fullName>Client, Old</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client, Old</label>
+            </value>
+            <value>
+                <fullName>Client, Prospect</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client, Prospect</label>
+            </value>
+            <value>
+                <fullName>Client, Prospect, Inactive</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client, Prospect, Inactive</label>
+            </value>
+            <value>
+                <fullName>Do not contact</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Do not contact</label>
+            </value>
+            <value>
+                <fullName>Do not contact, Not qualified</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Do not contact, Not qualified</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Inactive</label>
+            </value>
+            <value>
+                <fullName>Lead</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lead</label>
+            </value>
+            <value>
+                <fullName>Lead, Client</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lead, Client</label>
+            </value>
+            <value>
+                <fullName>Lead, Client, Lead, Lead, Lead</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lead, Client, Lead, Lead, Lead</label>
+            </value>
+            <value>
+                <fullName>Lead, Dubbel</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lead, Dubbel</label>
+            </value>
+            <value>
+                <fullName>Lead, Not interested</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lead, Not interested</label>
+            </value>
+            <value>
+                <fullName>Lead, Old</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lead, Old</label>
+            </value>
+            <value>
+                <fullName>Lead, Old, Not interested</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lead, Old, Not interested</label>
+            </value>
+            <value>
+                <fullName>Lead, Prospect</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lead, Prospect</label>
+            </value>
+            <value>
+                <fullName>Lead, Prospect, Lead</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lead, Prospect, Lead</label>
+            </value>
+            <value>
+                <fullName>Lead, Prospect, Lead, Lead</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lead, Prospect, Lead, Lead</label>
+            </value>
+            <value>
+                <fullName>Not interested</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not interested</label>
+            </value>
+            <value>
+                <fullName>Not interested, Do not contact</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not interested, Do not contact</label>
+            </value>
+            <value>
+                <fullName>Not interested, Do not contact, Not qualified</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not interested, Do not contact, Not qualified</label>
+            </value>
+            <value>
+                <fullName>Not interested, Inactive</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not interested, Inactive</label>
+            </value>
+            <value>
+                <fullName>Not qualified</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not qualified</label>
+            </value>
+            <value>
+                <fullName>Not qualified, Inactive</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not qualified, Inactive</label>
+            </value>
+            <value>
+                <fullName>Old</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Old</label>
+            </value>
+            <value>
+                <fullName>Old, Inactive</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Old, Inactive</label>
+            </value>
+            <value>
+                <fullName>Old, Not interested</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Old, Not interested</label>
+            </value>
+            <value>
+                <fullName>Old, Not qualified</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Old, Not qualified</label>
+            </value>
+            <value>
+                <fullName>Old, Not qualified, Inactive</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Old, Not qualified, Inactive</label>
+            </value>
+            <value>
+                <fullName>Prospect, Client</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Prospect, Client</label>
+            </value>
+            <value>
+                <fullName>Prospect, Dubbel</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Prospect, Dubbel</label>
+            </value>
+            <value>
+                <fullName>Prospect, Lead</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Prospect, Lead</label>
+            </value>
+            <value>
+                <fullName>Prospect, Lead, Prospect</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Prospect, Lead, Prospect</label>
+            </value>
+            <value>
+                <fullName>Prospect, Not interested</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Prospect, Not interested</label>
+            </value>
+            <value>
+                <fullName>Prospect, Not interested, Do not contact</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Prospect, Not interested, Do not contact</label>
+            </value>
+            <value>
+                <fullName>Prospect, Not qualified</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Prospect, Not qualified</label>
+            </value>
+            <value>
+                <fullName>Prospect, Old</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Prospect, Old</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

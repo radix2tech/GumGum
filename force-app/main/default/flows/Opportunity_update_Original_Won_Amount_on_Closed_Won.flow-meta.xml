@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <decisions>
+        <description>Checking the Stage if it&apos;s Closed/Won or not</description>
+        <name>Check_the_Stage</name>
+        <label>Check the Stage</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>Update_Original_Won_Amount_to_blank</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Closed_Won</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed/Won</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Original_Won_Amount_to_Total_Ordered_Amount</targetReference>
+            </connector>
+            <label>Closed/Won</label>
+        </rules>
+    </decisions>
+    <description>updates the field Original Won Amount when opportunity moved to Closed/Won</description>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity - update Original Won Amount on Closed/Won {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity - update Original Won Amount on Closed/Won</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Original_Won_Amount_to_blank</name>
+        <label>Update Original Won Amount to blank</label>
+        <locationX>314</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>Original_Won_Amount__c</field>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Original_Won_Amount_to_Total_Ordered_Amount</name>
+        <label>Update Original Won Amount to Total Ordered Amount</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>Original_Won_Amount__c</field>
+            <value>
+                <elementReference>$Record.Amount</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_the_Stage</targetReference>
+        </connector>
+        <filterFormula>AND(
+        {!$User.Bypass_Opportunity_Validation__c} = False,
+        ISCHANGED({!$Record.StageName}),
+          OR(
+                   {!$Record.RecordType.Name} = &apos;Advertising&apos;,
+                   {!$Record.RecordType.Name} = &apos;Activation&apos;,
+                   {!$Record.RecordType.Name} = &apos;Verity - Demand&apos;
+                ),
+          OR(
+                   TEXT({!$Record__Prior.StageName})= &apos;Closed/Won&apos;,
+                   TEXT({!$Record.StageName}) = &apos;Closed/Won&apos;
+                )
+       )</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

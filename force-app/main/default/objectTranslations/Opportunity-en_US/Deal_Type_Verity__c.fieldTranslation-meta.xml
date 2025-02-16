@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Deal Type --></label>
+    <name>Deal_Type_Verity__c</name>
+    <picklistValues>
+        <masterLabel>Full Beta [6 Month Beta]</masterLabel>
+        <translation><!-- Full Beta [6 Month Beta] --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Option 1 [12 Months - No Discount]</masterLabel>
+        <translation><!-- Option 1 [12 Months - No Discount] --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Option 2 [12 Months - 3 Months Free]</masterLabel>
+        <translation><!-- Option 2 [12 Months - 3 Months Free] --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Option 3 [18 Months - 6 Months Free]</masterLabel>
+        <translation><!-- Option 3 [18 Months - 6 Months Free] --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Option 4 [12 Months - 6 Months Free]</masterLabel>
+        <translation><!-- Option 4 [12 Months - 6 Months Free] --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Option 5 [24 Months - 12 Months Free]</masterLabel>
+        <translation><!-- Option 5 [24 Months - 12 Months Free] --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

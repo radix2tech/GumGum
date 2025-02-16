@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>12</activeVersionNumber>
+    <description>A message is sent to a Slack channel - exception-approval-alerts, when the Expedite/Exception Opportunities are approved. This flow works for the following regions
+1. Canada
+2. US - Central
+3. US - East
+4. US - West
+5. LATAM</description>
+    <masterLabel>Opportunity - Approval Slack Notifications</masterLabel>
+</FlowDefinition>

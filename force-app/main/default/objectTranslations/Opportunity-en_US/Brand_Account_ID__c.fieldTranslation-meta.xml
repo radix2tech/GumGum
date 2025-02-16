@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the account ID of the related account in this opportunity and only shown if the Account is a brand (Account Type=Brand) --></help>
+    <label><!-- Brand Account ID --></label>
+    <name>Brand_Account_ID__c</name>
+</CustomFieldTranslation>

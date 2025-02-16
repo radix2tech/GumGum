@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select which strategic solutions were pitched to the client for this opportunity --></help>
+    <label><!-- Strategic Solution Pitched --></label>
+    <name>Strategic_Solution_Pitched__c</name>
+    <picklistValues>
+        <masterLabel>AIP</masterLabel>
+        <translation><!-- AIP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Game</masterLabel>
+        <translation><!-- In-Game --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Video</masterLabel>
+        <translation><!-- In-Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verity Data- Display/Native PMP</masterLabel>
+        <translation><!-- Verity Data- Display/Native PMP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verity Data- Pre-Bid</masterLabel>
+        <translation><!-- Verity Data- Pre-Bid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verity Data- Video PMP</masterLabel>
+        <translation><!-- Verity Data- Video PMP --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

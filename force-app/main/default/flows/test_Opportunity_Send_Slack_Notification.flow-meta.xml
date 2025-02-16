@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Exception_Post_to_Slack</name>
+        <label>Exception Post to Slack</label>
+        <locationX>314</locationX>
+        <locationY>755</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>exceptionMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <elementReference>Get_Test_Message_Destination_Id.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Expedite_Post_to_Slack</name>
+        <label>Expedite Post to Slack</label>
+        <locationX>50</locationX>
+        <locationY>755</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>expediteMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <elementReference>Get_Test_Message_Destination_Id.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>Type_of_Approval_Process</name>
+        <label>Type of Approval Process</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Expedite</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Expediting_Approval_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Expedite_Post_to_Slack</targetReference>
+            </connector>
+            <label>Expedite</label>
+        </rules>
+        <rules>
+            <name>Exception</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Exception_Approval__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Exception Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Exception_Post_to_Slack</targetReference>
+            </connector>
+            <label>Exception</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>test - Opportunity Send Slack Notification {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity - Approval Slack Notifications</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Process_Instance</name>
+        <label>Get Process Instance</label>
+        <locationX>314</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Process_Instance_step</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>TargetObjectId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ProcessInstance</object>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Process_Instance_step</name>
+        <label>Get Process Instance step</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Test_Message_Destination_Id</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ProcessInstanceId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Process_Instance.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StepStatus</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Approved</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Comments</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ProcessInstanceStep</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Test_Message_Destination_Id</name>
+        <label>Get Test Message Destination Id</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Type_of_Approval_Process</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>slackv2__Channel_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>exception-approval-alerts</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>slackv2__Channel_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>channel</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>slackv2__Message_Destination__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Process_Instance</targetReference>
+        </connector>
+        <filterLogic>( ( 1 OR 2 OR 3 OR 4 OR 5) AND ( ( 6 AND 7 AND 8 ) OR (  ( 9 AND 10 AND 11 ) AND (  12 OR 13 OR 14 OR 15 OR 16 ) ) ) )</filterLogic>
+        <filters>
+            <field>Opportunity_Region__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Canada</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Opportunity_Region__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>US - Central</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Opportunity_Region__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>US - East</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Opportunity_Region__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>US - West</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Opportunity_Region__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>LATAM</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Expediting_Approval_Status__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Expediting_Approval_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Approved</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Request_Expedite_c__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Exception_Approval__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Exception Approved</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Exception_Approval__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Request_Exception_2__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Exception_Type__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>Above Max # of Unit Types Included</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Exception_Type__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>Below minimum spend (High Impact)</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Exception_Type__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>Below Minimum Spend (Overall Campaign)</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Exception_Type__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>Extra Creative Fees/Waiver Creative Fees</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Exception_Type__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>Multiple Creative Unit Versions</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>exceptionMessage</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>*A New Exception Was Just Approved!*
+
+Opportuntiy Name: {!$Record.Name}
+
+Client Name: {!$Record.Account.Name} 
+
+Region: {!$Record.Opportunity_Region__c}
+
+Units Being requests: {!$Record.All_Units_Included__c}
+
+Specifics of the exception: {!$Record.Specifics_of_Exception__c}
+
+Justification for the exception: {!$Record.Justification__c}
+
+Any further context/restrictions outlined in the approval message: {!Get_Process_Instance_step.Comments}</text>
+    </textTemplates>
+    <textTemplates>
+        <name>expediteMessage</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>*A New Expedite Was Just Approved!*
+
+Opportuntiy Name: {!$Record.Name}
+
+Client Name: {!$Record.Account.Name}
+
+Region: {!$Record.Opportunity_Region__c}
+
+Due Date: {!$Record.Invoice_Due_Date__c}
+
+Units Being requests: {!$Record.All_Units_Included__c}
+
+Expedite Justification: {!$Record.Reason_for_Expediting__c}
+
+Any further context/restrictions outlined in the approval message: {!Get_Process_Instance_step.Comments}</text>
+    </textTemplates>
+</Flow>

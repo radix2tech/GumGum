@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- DSP --></label>
+    <name>DSP__c</name>
+    <picklistValues>
+        <masterLabel>A9</masterLabel>
+        <translation><!-- A9 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AcuityAds</masterLabel>
+        <translation><!-- AcuityAds --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Adelphic</masterLabel>
+        <translation><!-- Adelphic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Adelphic/Viant</masterLabel>
+        <translation><!-- Adelphic/Viant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Adform</masterLabel>
+        <translation><!-- Adform --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Adobe</masterLabel>
+        <translation><!-- Adobe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Amazon</masterLabel>
+        <translation><!-- Amazon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Amobee</masterLabel>
+        <translation><!-- Amobee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Beeswax</masterLabel>
+        <translation><!-- Beeswax --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Blis</masterLabel>
+        <translation><!-- Blis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Centro</masterLabel>
+        <translation><!-- Centro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DV360</masterLabel>
+        <translation><!-- DV360 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DataXu</masterLabel>
+        <translation><!-- DataXu --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DeepIntent</masterLabel>
+        <translation><!-- DeepIntent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Google DV360</masterLabel>
+        <translation><!-- Google DV360 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hawk</masterLabel>
+        <translation><!-- Hawk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MarketOne</masterLabel>
+        <translation><!-- MarketOne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MediaMath</masterLabel>
+        <translation><!-- MediaMath --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PulsePoint</masterLabel>
+        <translation><!-- PulsePoint --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quantcast</masterLabel>
+        <translation><!-- Quantcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stackadapt</masterLabel>
+        <translation><!-- Stackadapt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Supership</masterLabel>
+        <translation><!-- Supership --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TheTradeDesk</masterLabel>
+        <translation><!-- TheTradeDesk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Undertone</masterLabel>
+        <translation><!-- Undertone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Walmart DSP</masterLabel>
+        <translation><!-- Walmart DSP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Xandr</masterLabel>
+        <translation><!-- Xandr --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yahoo</masterLabel>
+        <translation><!-- Yahoo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zeta DSP</masterLabel>
+        <translation><!-- Zeta DSP --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

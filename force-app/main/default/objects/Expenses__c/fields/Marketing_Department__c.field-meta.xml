@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Department__c</fullName>
+    <externalId>false</externalId>
+    <label>Marketing Department</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Corp Comms</fullName>
+                <default>false</default>
+                <label>Corp Comms</label>
+            </value>
+            <value>
+                <fullName>CreativeContent</fullName>
+                <default>false</default>
+                <label>CreativeContent</label>
+            </value>
+            <value>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+                <label>EMEA</label>
+            </value>
+            <value>
+                <fullName>JapanAPAC</fullName>
+                <default>false</default>
+                <label>JapanAPAC</label>
+            </value>
+            <value>
+                <fullName>Marketing Ops</fullName>
+                <default>false</default>
+                <label>Marketing Ops</label>
+            </value>
+            <value>
+                <fullName>NA Experiential</fullName>
+                <default>false</default>
+                <label>NA Experiential</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

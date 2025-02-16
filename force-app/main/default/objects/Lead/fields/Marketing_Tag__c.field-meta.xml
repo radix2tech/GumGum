@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Tag__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used by Sports Marketing to select specific Leads for filtering</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used by Sports Marketing to select specific Leads for filtering</inlineHelpText>
+    <label>Marketing Tag</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

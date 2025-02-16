@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is a field that is being auto-populated by Hubspot --></help>
+    <label><!-- Persona --></label>
+    <name>Persona__c</name>
+    <picklistValues>
+        <masterLabel>Agency</masterLabel>
+        <translation><!-- Agency --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Agency VIP</masterLabel>
+        <translation><!-- Agency VIP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Banker</masterLabel>
+        <translation><!-- Banker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brand</masterLabel>
+        <translation><!-- Brand --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DSP or Trading Desk</masterLabel>
+        <translation><!-- DSP or Trading Desk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General</masterLabel>
+        <translation><!-- General --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Influencer</masterLabel>
+        <translation><!-- Influencer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Investor</masterLabel>
+        <translation><!-- Investor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner</masterLabel>
+        <translation><!-- Partner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Publisher</masterLabel>
+        <translation><!-- Publisher --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reporter / Analyst</masterLabel>
+        <translation><!-- Reporter / Analyst --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rights Holder</masterLabel>
+        <translation><!-- Rights Holder --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSP</masterLabel>
+        <translation><!-- SSP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Strategic</masterLabel>
+        <translation><!-- Strategic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Student / Job Seeker</masterLabel>
+        <translation><!-- Student / Job Seeker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technology Partner</masterLabel>
+        <translation><!-- Technology Partner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VC and Angel</masterLabel>
+        <translation><!-- VC and Angel --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

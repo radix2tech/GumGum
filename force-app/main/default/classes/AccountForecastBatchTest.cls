@@ -43,7 +43,9 @@ public class AccountForecastBatchTest {
         PricebookEntry pbe1 = new PricebookEntry (Product2ID=prd1.id,Pricebook2ID=pricebookId,UnitPrice=50, isActive=true);
         insert pbe1;
         
-        Opportunity opp = new Opportunity(AccountId= testAcc.id,Agency_Name__c=testAcc.id,Start_Date__c = System.Today(),End_Date__c =System.Today()+ 100 ,name = 'Test Opp',CloseDate= System.Today()+ 3 ,Pricebook2Id = pbe1.Pricebook2Id, StageName ='Opportunity Identified' );
+        Id ActivationRecordTypeId = Schema.SObjectType.Opportunity.getRecordTypeInfosByName().get('Activation').getRecordTypeId();
+
+        Opportunity opp = new Opportunity(AccountId= testAcc.id,RecordTypeId = ActivationRecordTypeId,Agency_Name__c=testAcc.id,Start_Date__c = System.Today(),End_Date__c =System.Today()+ 100 ,name = 'Test Opp',CloseDate= System.Today()+ 3 ,Pricebook2Id = pbe1.Pricebook2Id, StageName ='Closed/Won' );
         insert opp;
         
         opportunity getOpp = [SELECT ID,pricebook2Id from opportunity where Id = :opp.Id];
@@ -60,9 +62,54 @@ public class AccountForecastBatchTest {
             Revenue = 200,Verity_Revenue__c = 10,
             ScheduleDate = Date.today()
         );
-        
         insert oliSched;
 
+        OpportunityLineItemSchedule oliSched3 = new OpportunityLineItemSchedule(
+            OpportunityLineItemId = opl1.Id,
+            Type = 'Both',
+            Quantity = 2,
+            Revenue = 200,Verity_Revenue__c = 10,
+            ScheduleDate = Date.today().addYears(1)
+        );
+        insert oliSched3;
+
+        OpportunityLineItemSchedule oliSched5 = new OpportunityLineItemSchedule(
+            OpportunityLineItemId = opl1.Id,
+            Type = 'Both',
+            Quantity = 2,
+            Revenue = 200,Verity_Revenue__c = 10,
+            ScheduleDate = Date.today().addMonths(-2)
+        );
+        insert oliSched5;
+
+
+        Opportunity opp1 = new Opportunity(AccountId= testAcc.id,RecordTypeId = ActivationRecordTypeId,Agency_Name__c=testAcc.id,Start_Date__c = System.Today(),End_Date__c =System.Today()+ 100 ,name = 'Test Opp1',CloseDate= System.Today()+ 3 ,Pricebook2Id = pbe1.Pricebook2Id, StageName ='Proposal' );
+        insert opp1;
+        
+        opportunity getOpp1 = [SELECT ID,pricebook2Id from opportunity where Id = :opp1.Id];
+        getOpp1.Pricebook2Id = pricebookId;
+        update getOpp1;
+        
+        OpportunityLineItem opl2 = new OpportunityLineItem(OpportunityId= opp1.id,Start_Date__c =  System.Today()-20,End_Date__c =System.Today()+ 10,PriceBookEntryID=pbe1.id,Quantity=1,TotalPrice= 50 ) ;
+		insert opl2;
+        
+        OpportunityLineItemSchedule oliSched2 = new OpportunityLineItemSchedule(
+            OpportunityLineItemId = opl2.Id,
+            Type = 'Both',
+            Quantity = 2,
+            Revenue = 200,Verity_Revenue__c = 10,
+            ScheduleDate = Date.today()
+        );
+        insert oliSched2;
+
+        OpportunityLineItemSchedule oliSched4 = new OpportunityLineItemSchedule(
+            OpportunityLineItemId = opl2.Id,
+            Type = 'Both',
+            Quantity = 2,
+            Revenue = 200,Verity_Revenue__c = 10,
+            ScheduleDate = Date.today().addMonths(3)
+        );
+        insert oliSched4;
 
         
     }
@@ -77,82 +124,6 @@ public class AccountForecastBatchTest {
         
         Test.stopTest();
 
-    }
-    
-    @IsTest
-    static void testMethod2() {
-        
-        OpportunityLineItemSchedule oliSchedule = [Select id,OpportunityLineItem.Opportunity.IsClosed,
-                                                   OpportunityLineItemSchedule.ScheduleDate,
-                                                   OpportunityLineItemSchedule.Revenue
-                                                   from OpportunityLineItemSchedule limit 1];
-        Account_Forecast__c forecast = new Account_Forecast__c();
-        
-        Test.startTest();
-        
-        AccountForecastBatch AFBatch = new AccountForecastBatch();
-        AFBatch.calculateAccountForecastData(oliSchedule,forecast);
-        AFBatch.checkScheduleDateQuarters(Date.Today());
-        
-        Test.stopTest();
-    }
-    
-    @IsTest
-    static void testMethod3() {
-        
-        OpportunityLineItemSchedule oliSchedule = [Select id, OpportunityLineItem.OpportunityId
-                                                   from OpportunityLineItemSchedule limit 1];
-        
-        Opportunity opp = new Opportunity();
-        opp.Id = oliSchedule.OpportunityLineItem.OpportunityId;
-        opp.stageName = 'Closed/Won';
-        update opp;
-        
-        oliSchedule = [Select id,OpportunityLineItem.Opportunity.IsClosed,
-                                                   OpportunityLineItem.OpportunityId,
-                                                   OpportunityLineItemSchedule.ScheduleDate,
-                                                   OpportunityLineItemSchedule.Revenue
-                                                   from OpportunityLineItemSchedule where id = :oliSchedule.Id limit 1];
-        
-        Account_Forecast__c forecast = new Account_Forecast__c();
-        
-        Test.startTest();
-        
-        AccountForecastBatch AFBatch = new AccountForecastBatch();
-        AFBatch.calculateAccountForecastData(oliSchedule,forecast);
-        AFBatch.checkScheduleDateQuarters(Date.Today());
-        
-        Test.stopTest();
-    }
-    
-    @IsTest
-    static void testMethod4() {
-        
-        OpportunityLineItemSchedule oliSchedule = [Select id, OpportunityLineItem.OpportunityId
-                                                   from OpportunityLineItemSchedule limit 1];
-        
-        Opportunity opp = new Opportunity();
-        opp.Id = oliSchedule.OpportunityLineItem.OpportunityId;
-        opp.stageName = 'Closed/Won';
-        update opp;
-        
-        oliSchedule = [Select id,OpportunityLineItem.Opportunity.IsClosed,
-                                                   OpportunityLineItem.OpportunityId,
-                                                   OpportunityLineItemSchedule.ScheduleDate,
-                                                   OpportunityLineItemSchedule.Revenue
-                                                   from OpportunityLineItemSchedule where id = :oliSchedule.Id limit 1];
-        
-        Account_Forecast__c forecast = new Account_Forecast__c();
-        
-        oliSchedule.ScheduleDate = Date.valueOf('2025-04-30');
-        
-        Test.startTest();
-        
-        AccountForecastBatch AFBatch = new AccountForecastBatch();
-        AFBatch.calculateAccountForecastData(oliSchedule,forecast);
-        AFBatch.checkScheduleDateQuarters(Date.Today());
-        
-        Test.stopTest();
     }
 
 }

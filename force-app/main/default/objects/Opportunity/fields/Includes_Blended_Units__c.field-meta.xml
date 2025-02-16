@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Includes_Blended_Units__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check if blended units are included in the proposal.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check if blended units are included in the proposal.</inlineHelpText>
+    <label>Includes Blended Units</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

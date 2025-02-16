@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_User_Acct_Mgmt__c</fullName>
+    <externalId>false</externalId>
+    <formula>or( 
+$User.Id = Owner.ManagerId, 
+$User.Id = Owner.Manager.ManagerId, 
+$User.Id = Owner.Manager.Manager.ManagerId, 
+$User.Id = Owner.Manager.Manager.Manager.ManagerId, 
+$User.Id = Owner.Manager.Manager.Manager.Manager.ManagerId, 
+$User.Id = Owner.Manager.Manager.Manager.Manager.Manager.ManagerId, 
+$User.Id = Owner.Manager.Manager.Manager.Manager.Manager.Manager.ManagerId)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Current User = Acct. Mgmt</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

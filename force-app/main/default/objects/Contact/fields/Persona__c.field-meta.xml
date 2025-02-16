@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Persona__c</fullName>
+    <externalId>false</externalId>
+    <label>Persona</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agency</fullName>
+                <default>false</default>
+                <label>Agency</label>
+            </value>
+            <value>
+                <fullName>Agency VIP</fullName>
+                <default>false</default>
+                <label>Agency VIP</label>
+            </value>
+            <value>
+                <fullName>Banker</fullName>
+                <default>false</default>
+                <label>Banker</label>
+            </value>
+            <value>
+                <fullName>Brand</fullName>
+                <default>false</default>
+                <label>Brand</label>
+            </value>
+            <value>
+                <fullName>DSP or Trading Desk</fullName>
+                <default>false</default>
+                <label>DSP or Trading Desk</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>Influencer</fullName>
+                <default>false</default>
+                <label>Influencer</label>
+            </value>
+            <value>
+                <fullName>Investor</fullName>
+                <default>false</default>
+                <label>Investor</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Publisher</fullName>
+                <default>false</default>
+                <label>Publisher</label>
+            </value>
+            <value>
+                <fullName>Reporter / Analyst</fullName>
+                <default>false</default>
+                <label>Reporter / Analyst</label>
+            </value>
+            <value>
+                <fullName>Rights Holder</fullName>
+                <default>false</default>
+                <label>Rights Holder</label>
+            </value>
+            <value>
+                <fullName>Strategic</fullName>
+                <default>false</default>
+                <label>Strategic</label>
+            </value>
+            <value>
+                <fullName>Student / Job Seeker</fullName>
+                <default>false</default>
+                <label>Student / Job Seeker</label>
+            </value>
+            <value>
+                <fullName>Technology Partner</fullName>
+                <default>false</default>
+                <label>Technology Partner</label>
+            </value>
+            <value>
+                <fullName>VC and Angel</fullName>
+                <default>false</default>
+                <label>VC and Angel</label>
+            </value>
+            <value>
+                <fullName>SSP</fullName>
+                <default>false</default>
+                <label>SSP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

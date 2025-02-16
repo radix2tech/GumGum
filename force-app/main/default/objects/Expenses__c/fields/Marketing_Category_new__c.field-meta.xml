@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Category_new__c</fullName>
+    <externalId>false</externalId>
+    <label>Marketing Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+                <label>Consulting</label>
+            </value>
+            <value>
+                <fullName>Content/Gifting</fullName>
+                <default>false</default>
+                <label>Content/Gifting</label>
+            </value>
+            <value>
+                <fullName>Events</fullName>
+                <default>false</default>
+                <label>Events</label>
+            </value>
+            <value>
+                <fullName>Industry Research</fullName>
+                <default>false</default>
+                <label>Industry Research</label>
+            </value>
+            <value>
+                <fullName>Memberships/Subscriptions</fullName>
+                <default>false</default>
+                <label>Memberships/Subscriptions</label>
+            </value>
+            <value>
+                <fullName>PPC</fullName>
+                <default>false</default>
+                <label>PPC</label>
+            </value>
+            <value>
+                <fullName>Publication Subscriptions</fullName>
+                <default>false</default>
+                <label>Publication Subscriptions</label>
+            </value>
+            <value>
+                <fullName>Tentpole Global Events</fullName>
+                <default>false</default>
+                <label>Tentpole Global Events</label>
+            </value>
+            <value>
+                <fullName>Brand &amp; Awareness</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Brand &amp; Awareness</label>
+            </value>
+            <value>
+                <fullName>Client Retention</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client Retention</label>
+            </value>
+            <value>
+                <fullName>Lead Generation &amp; Nurture</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lead Generation &amp; Nurture</label>
+            </value>
+            <value>
+                <fullName>Non-Revenue Marketing Support</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Non-Revenue Marketing Support</label>
+            </value>
+            <value>
+                <fullName>Other (MarTech, subscriptions, licenses, etc.)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other (MarTech, subscriptions, licenses, etc.)</label>
+            </value>
+            <value>
+                <fullName>Product Marketing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Product Marketing</label>
+            </value>
+            <value>
+                <fullName>Sales Tools &amp; Enablement</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sales Tools &amp; Enablement</label>
+            </value>
+            <value>
+                <fullName>Tradeshows</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tradeshows</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

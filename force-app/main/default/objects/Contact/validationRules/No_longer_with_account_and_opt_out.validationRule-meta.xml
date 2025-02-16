@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_longer_with_account_and_opt_out</fullName>
+    <active>false</active>
+    <description>If the contact is &quot;No longer with account,&quot; then the checkbox &quot;Opt contact out of all marketing email&quot; will be automatically checked.</description>
+    <errorConditionFormula>IF(No_longer_with_account__c=TRUE, TRUE, FALSE)</errorConditionFormula>
+    <errorDisplayField>Opt_contact_out_of_all_marketing_email__c</errorDisplayField>
+    <errorMessage>Please check the &quot;Opt contact out of all marketing email&quot; checkbox.</errorMessage>
+</ValidationRule>

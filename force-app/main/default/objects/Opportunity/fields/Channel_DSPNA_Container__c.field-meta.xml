@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Channel_DSPNA_Container__c</fullName>
+    <description>Populates with DSP value when channel is programmatic, but N/A when it is Direct</description>
+    <externalId>false</externalId>
+    <formula>IF(TEXT(Channel__c)=&quot;Programmatic&quot;,TEXT(DSP__c), &quot;N/A&quot;)</formula>
+    <label>Channel DSP/NA Container</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

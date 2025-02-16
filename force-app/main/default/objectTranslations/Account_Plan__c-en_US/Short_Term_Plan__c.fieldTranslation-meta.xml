@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Steps to be taken over the 2 to 4 weeks --></help>
+    <label><!-- Short Term Plan --></label>
+    <name>Short_Term_Plan__c</name>
+</CustomFieldTranslation>

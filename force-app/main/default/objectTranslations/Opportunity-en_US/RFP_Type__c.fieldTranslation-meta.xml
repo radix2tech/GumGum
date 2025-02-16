@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- RFP Type --></label>
+    <name>RFP_Type__c</name>
+    <picklistValues>
+        <masterLabel>Formal RFP</masterLabel>
+        <translation><!-- Formal RFP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N/A (Mocks or any one off reason for a created SF opportunity)</masterLabel>
+        <translation><!-- N/A (Mocks or any one off reason for a created SF opportunity) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Programmatic Inquiry</masterLabel>
+        <translation><!-- Programmatic Inquiry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RFI</masterLabel>
+        <translation><!-- RFI --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Custom Request Type --></label>
+    <name>Custom_Request_Unit__c</name>
+    <picklistValues>
+        <masterLabel>Custom Ad Unit</masterLabel>
+        <translation><!-- Custom Ad Unit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom Targeting (non-image recognition)</masterLabel>
+        <translation><!-- Custom Targeting (non-image recognition) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Image Recognition Technology</masterLabel>
+        <translation><!-- Image Recognition Technology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Real-time Feed Integration</masterLabel>
+        <translation><!-- Real-time Feed Integration --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

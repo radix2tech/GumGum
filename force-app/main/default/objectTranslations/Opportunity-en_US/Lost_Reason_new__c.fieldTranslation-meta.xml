@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Lost Reason --></label>
+    <name>Lost_Reason_new__c</name>
+    <picklistValues>
+        <masterLabel>Agency Lost the Business</masterLabel>
+        <translation><!-- Agency Lost the Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change in Budget/Campaign Cancelled</masterLabel>
+        <translation><!-- Change in Budget/Campaign Cancelled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change in Client Strategy</masterLabel>
+        <translation><!-- Change in Client Strategy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Competitor</masterLabel>
+        <translation><!-- Competitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Creative Lead Time</masterLabel>
+        <translation><!-- Creative Lead Time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ease of Doing Business</masterLabel>
+        <translation><!-- Ease of Doing Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Identified Too Late</masterLabel>
+        <translation><!-- Identified Too Late --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inventory/Scale Concerns</masterLabel>
+        <translation><!-- Inventory/Scale Concerns --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Macro/Economic Concerns</masterLabel>
+        <translation><!-- Macro/Economic Concerns --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Past Performance</masterLabel>
+        <translation><!-- Past Performance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Price</masterLabel>
+        <translation><!-- Price --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Proposal Lead Time</masterLabel>
+        <translation><!-- Proposal Lead Time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Site List</masterLabel>
+        <translation><!-- Site List --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unsupported Product Feature</masterLabel>
+        <translation><!-- Unsupported Product Feature --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

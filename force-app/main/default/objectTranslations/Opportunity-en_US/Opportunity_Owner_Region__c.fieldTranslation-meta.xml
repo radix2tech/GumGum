@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field is a read-only formula. &quot;Opportunity Region&quot; auto populates based on the Opportunity Owner&apos;s Region. It is derived from the picklist &quot;User Region&quot; which is a value in user settings required for every user and represents the Region that the sales rep/account manager is selling into, or alternatively the operations or other personnel&apos;s primary regional location. --></help>
+    <label><!-- Opportunity Owner Region --></label>
+    <name>Opportunity_Owner_Region__c</name>
+</CustomFieldTranslation>

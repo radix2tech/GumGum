@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Q2_Amount__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+AND( 
+AND( 
+Start_Date2__c &gt;= DATE(YEAR(Today()),4,1), 
+Start_Date2__c &lt;= DATE(YEAR(Today()),6,30) 
+), 
+AND( 
+End_Date2__c &gt;= DATE(YEAR(Today()),4,1), 
+End_Date2__c &lt;= DATE(YEAR(Today()),6,30) 
+) 
+), 
+Amount, 
+IF( 
+AND( 
+Start_Date2__c &lt; DATE(YEAR(Today()),4,1), 
+AND( 
+End_Date2__c &gt;= DATE(YEAR(Today()),4,1), 
+End_Date2__c &lt;= DATE(YEAR(Today()),6,30) 
+) 
+), 
+(Amount / Flight_Length__c ) * ABS(((DATE(YEAR(Today()),4,1))-Start_Date2__c)-Flight_Length__c), 
+IF( 
+AND( 
+AND( 
+Start_Date2__c &gt;= DATE(YEAR(Today()),4,1), 
+Start_Date2__c &lt;= DATE(YEAR(Today()),6,30) 
+), 
+End_Date2__c &gt; DATE(YEAR(Today()),6,30) 
+), 
+(Amount / Flight_Length__c ) * ABS((End_Date2__c - DATE(YEAR(Today()),6,30))-Flight_Length__c), 
+IF( 
+AND( 
+Start_Date2__c &lt; DATE(YEAR(Today()),4,1), 
+End_Date2__c &gt; DATE(YEAR(Today()),6,30) 
+), 
+(Amount / Flight_Length__c) * ABS((((End_Date2__c - DATE(YEAR(Today()),7,1))+(DATE(YEAR(Today()),3,31))-Start_Date2__c))- Flight_Length__c), 0 ))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Q2 Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

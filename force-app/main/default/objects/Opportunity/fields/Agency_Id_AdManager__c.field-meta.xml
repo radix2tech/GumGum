@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agency_Id_AdManager__c</fullName>
+    <description>Agency Id from Ad Manager for Advertising API</description>
+    <externalId>false</externalId>
+    <formula>Agency_Name__r.Ad_Manager_ID__c</formula>
+    <label>Agency_Id_AdManager</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

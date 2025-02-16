@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- New Opportunity --></label>
+        <name>DaScoopComposer__Groove_Default</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- New Advertising Opportunity --></label>
+        <name>Groove_New_Advertising_Opportunity</name>
+    </fieldSets>
+    <layouts>
+        <layout>Activation</layout>
+        <sections>
+            <label><!-- Close Reason --></label>
+            <section>Close Reason</section>
+        </sections>
+        <sections>
+            <label><!-- Finance (For Finance Team Use Only) --></label>
+            <section>Finance (For Finance Team Use Only)</section>
+        </sections>
+        <sections>
+            <label><!-- GumGum Roles --></label>
+            <section>GumGum Roles</section>
+        </sections>
+        <sections>
+            <label><!-- LinkedIn --></label>
+            <section>LinkedIn</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <section>Products</section>
+        </sections>
+        <sections>
+            <label><!-- Proposal Details --></label>
+            <section>Proposal Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Advertising</layout>
+        <sections>
+            <label><!-- Close Reason --></label>
+            <section>Close Reason</section>
+        </sections>
+        <sections>
+            <label><!-- Exception --></label>
+            <section>Exception</section>
+        </sections>
+        <sections>
+            <label><!-- Expedite --></label>
+            <section>Expedite</section>
+        </sections>
+        <sections>
+            <label><!-- Finance (For Admin Use Only) --></label>
+            <section>Finance (For Admin Use Only)</section>
+        </sections>
+        <sections>
+            <label><!-- GumGum Roles --></label>
+            <section>GumGum Roles</section>
+        </sections>
+        <sections>
+            <label><!-- Insertion Order --></label>
+            <section>Insertion Order</section>
+        </sections>
+        <sections>
+            <label><!-- LinkedIn --></label>
+            <section>LinkedIn</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <section>Products</section>
+        </sections>
+        <sections>
+            <label><!-- Programmatic --></label>
+            <section>Programmatic</section>
+        </sections>
+        <sections>
+            <label><!-- Proposal Details --></label>
+            <section>Proposal Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Inside Sales</layout>
+        <sections>
+            <label><!-- Ad Manager Details --></label>
+            <section>Ad Manager Details</section>
+        </sections>
+        <sections>
+            <label><!-- GumGum Roles --></label>
+            <section>GumGum Roles</section>
+        </sections>
+        <sections>
+            <label><!-- Insertion Order --></label>
+            <section>Insertion Order</section>
+        </sections>
+        <sections>
+            <label><!-- Netsuite --></label>
+            <section>Netsuite</section>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <section>Products</section>
+        </sections>
+        <sections>
+            <label><!-- Programmatic --></label>
+            <section>Programmatic</section>
+        </sections>
+        <sections>
+            <label><!-- Proposal Details --></label>
+            <section>Proposal Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Open Market (former Core Prod)</layout>
+        <sections>
+            <label><!-- Close Reason --></label>
+            <section>Close Reason</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Finance (For Admin Use Only) --></label>
+            <section>Finance (For Admin Use Only)</section>
+        </sections>
+        <sections>
+            <label><!-- GumGum Roles --></label>
+            <section>GumGum Roles</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing Reference --></label>
+            <section>Marketing Reference</section>
+        </sections>
+        <sections>
+            <label><!-- Netsuite --></label>
+            <section>Netsuite</section>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <section>Products</section>
+        </sections>
+        <sections>
+            <label><!-- System Information (For System Administrator Use Only) --></label>
+            <section>System Information (For System Administrator Use Only)</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Platform</layout>
+        <sections>
+            <label><!-- Close Reason --></label>
+            <section>Close Reason</section>
+        </sections>
+        <sections>
+            <label><!-- Integration --></label>
+            <section>Integration</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Playground Attention Intellligence Platform</layout>
+        <sections>
+            <label><!-- Close Reason --></label>
+            <section>Close Reason</section>
+        </sections>
+        <sections>
+            <label><!-- Finance (For Finance Team Use Only) --></label>
+            <section>Finance (For Finance Team Use Only)</section>
+        </sections>
+        <sections>
+            <label><!-- GumGum Roles --></label>
+            <section>GumGum Roles</section>
+        </sections>
+        <sections>
+            <label><!-- LinkedIn --></label>
+            <section>LinkedIn</section>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <section>Products</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Publishing</layout>
+        <sections>
+            <label><!-- Deal Terms --></label>
+            <section>Deal Terms</section>
+        </sections>
+        <sections>
+            <label><!-- Deal Type --></label>
+            <section>Deal Type</section>
+        </sections>
+        <sections>
+            <label><!-- Netsuite --></label>
+            <section>Netsuite</section>
+        </sections>
+        <sections>
+            <label><!-- Objective and Intel --></label>
+            <section>Objective and Intel</section>
+        </sections>
+        <sections>
+            <label><!-- Passback --></label>
+            <section>Passback</section>
+        </sections>
+        <sections>
+            <label><!-- Unit Specific Deal Terms --></label>
+            <section>Unit Specific Deal Terms</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Sports</layout>
+        <sections>
+            <label><!-- Client Information --></label>
+            <section>Client Information</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Details --></label>
+            <section>Contract Details</section>
+        </sections>
+        <sections>
+            <label><!-- Netsuite --></label>
+            <section>Netsuite</section>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <section>Products</section>
+        </sections>
+        <sections>
+            <label><!-- Renewal Details --></label>
+            <section>Renewal Details</section>
+        </sections>
+        <sections>
+            <label><!-- Roles --></label>
+            <section>Roles</section>
+        </sections>
+        <sections>
+            <label><!-- Timelines --></label>
+            <section>Timelines</section>
+        </sections>
+        <sections>
+            <label><!-- Win/Loss Information --></label>
+            <section>Win/Loss Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Verity</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Deal Terms --></label>
+            <section>Deal Terms</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Video</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+        <sections>
+            <label><!-- Netsuite --></label>
+            <section>Netsuite</section>
+        </sections>
+        <sections>
+            <label><!-- Salesforce Administrator Section --></label>
+            <section>Salesforce Administrator Section</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- AM Checklist --></label>
+        <name>AM_Checklist</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Account Information --></label>
+        <name>Account_Information</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Opportunity Contact Role --></label>
+        <name>AddOpportunityContactRole</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Bypass Automation --></label>
+        <name>Bypass_Automation</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Clone --></label>
+        <name>Custom_Clone</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Custom Creative Opportunity --></label>
+        <name>Custom_Creative</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Discard Reason --></label>
+        <name>Discard_Reason</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Update Account Key Fields --></label>
+        <name>Industry_Category_and_Type</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Update Products --></label>
+        <name>Update_Products</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Activation --></label>
+        <name>Activation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Advertising --></label>
+        <name>Advertising</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Playground Attention Intelligence Platform --></label>
+        <name>Attention_Intelligence_Platform</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Sports --></label>
+        <name>GumGum_Sports</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Inside Sales --></label>
+        <name>Inside_Sales</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Open Market --></label>
+        <name>Open_Market</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Media SSP --></label>
+        <name>Platform</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Publisher Development --></label>
+        <name>Publisher</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Verity --></label>
+        <name>Verity</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Verity - Demand --></label>
+        <name>Verity_Demand</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Verity - Platform --></label>
+        <name>Verity_Platform</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Verity - Publisher --></label>
+        <name>Verity_Publisher</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Video --></label>
+        <name>Video</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Close Date must occur prior to the Start Date.  Please update the start and end date on the products, then refresh the browser.  You will then be able to update the close date. --></errorMessage>
+        <name>ADVERTISING_Close_Date_Before_Start_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can&apos;t set probability below the default minimum for the stage.  If the opportunity is not to the minimum level of probability, we should not spend additional company resources yet. --></errorMessage>
+        <name>ADVERTISING_Minimum_Probabilities</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter RFP Event Description --></errorMessage>
+        <name>ADVERTISING_RFP_Event_Description</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- TP Order Number is required for closing the Opportunity --></errorMessage>
+        <name>Activation_TP_Order_Closed_Won_Lost</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter the Start Date, Start Time, Start Timezone, End Date, End Time, and End Timezone for Ad Manager. --></errorMessage>
+        <name>Ad_Manager_Required_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the Voiced Budget. --></errorMessage>
+        <name>Ad_Programmatic_Req_Voiced_Budget</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Barter Agency is Required --></errorMessage>
+        <name>BarterAgencyRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Barter Agency Name can only be selected if Type of Barter Agreement is selected. --></errorMessage>
+        <name>Barter_Agency_Name_Validation_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select the Barter Agency --></errorMessage>
+        <name>Barter_Agency_needed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Field required beyond 50% win probability. --></errorMessage>
+        <name>Brand_Safety_Provider_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A CSM #1 must be chosen for all Direct Advertising Opportunities --></errorMessage>
+        <name>CSM_1_Not_Null_for_Direct_Advertising</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Campaign Status is required for Closed Won Opportunities --></errorMessage>
+        <name>CampaignStatusIsMandatoryForClosedWon</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a loss reason --></errorMessage>
+        <name>Campaign_Not_Delivered</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cannot uncheck. --></errorMessage>
+        <name>Cannot_uncheck_Submit_to_Ad_Manager</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select the New Tactic. --></errorMessage>
+        <name>Change_in_Tactic</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the Competitor. --></errorMessage>
+        <name>Competitor</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Fill out PSM if Channel is Programmatic --></errorMessage>
+        <name>Complete_PSM_if_Channel_is_Programmatic</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A reason for Discard must be selected --></errorMessage>
+        <name>Discard_Reason_is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please contact Salesforce Support to change an opportunity stage to &quot;Discard&quot; --></errorMessage>
+        <name>Discard_Validation_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Incremental Opportunities must have a Source Opportunity --></errorMessage>
+        <name>Ensure_Incremental_Opps_have_Source</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cannot enter IO information until Opportunity is Won --></errorMessage>
+        <name>IO_Event</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter IO Event Description --></errorMessage>
+        <name>IO_Event_Description</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cannot enter IO information until Opportunity is Won --></errorMessage>
+        <name>IO_Number_Won</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Details required if IO Type  &quot;Other&quot; is selected. --></errorMessage>
+        <name>IO_Type_If_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- All advertising accounts must have an Industry selected except Agencies and Agency Group. Please go to the related account and populated the field &quot;Industry&quot; --></errorMessage>
+        <name>Industry_Required_for_Accounts</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please input the details of the unsupported product feature to continue --></errorMessage>
+        <name>Input_Unsupported_Prod_Feature_Details</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the Primary, Secondary, or Tertiary KPI. --></errorMessage>
+        <name>KPI_requirements</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- CompanyId should be a numeric value --></errorMessage>
+        <name>LID__Check_CompanyId_Value</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- CompanyId should be a numeric value --></errorMessage>
+        <name>LID__Check_Company_Id_Value</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cannot enter IO information until Opportunity is Won --></errorMessage>
+        <name>Live_Link</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter Lost Details. --></errorMessage>
+        <name>Lost_Details_Other_Archive</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select the Lost Reason and Loss Details --></errorMessage>
+        <name>Lost_Reason</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a competitor. --></errorMessage>
+        <name>Lost_Reason_Competitor</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Must enter Campaign Dates at Proposal Stage; this indicates a Product must be added to this campaign --></errorMessage>
+        <name>Need_Campaign_Dates</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter Start Date --></errorMessage>
+        <name>Need_Start_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the New Agency. --></errorMessage>
+        <name>New_Agency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Notify Accounting and Notify Accounting - Campaign End checkboxes cannot both be checked. --></errorMessage>
+        <name>Notify_Accounting_Campaign_End_checkbox</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not allowed to change opportunity owner; please reach out to Scott Petkanics, Michael Moore and SalesforceSupport@gumgum.com. --></errorMessage>
+        <name>OpportunityOwnerChangeRestriction</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must use an Advertising account record type to create an advertising opportunity --></errorMessage>
+        <name>Oppty_Creation_Record_Type</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter Other reason --></errorMessage>
+        <name>Other_Reason</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Outreach Date is required when the opportunity Type is Renewal. --></errorMessage>
+        <name>Outreach_Date_required_when_Renewal</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- To change the owner on a Won Opportunity, reach out to SalesforceSupport@gumgum.com --></errorMessage>
+        <name>OwnerChangeRestrictionForClosedWon</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter payment terms in the Payment Terms-Other field. --></errorMessage>
+        <name>Payment_terms_equals_other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- An Incremental Opportunity&apos;s name can not be changed. --></errorMessage>
+        <name>Prevent_Incremental_Opp_Name_Change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Ads UK VP and Director are not allowed to edit opportunities if the Opportunity Region is not &quot;EMEA - UK&quot; --></errorMessage>
+        <name>Prevent_Modify_All_UK</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Must assign Primary Contact Role. --></errorMessage>
+        <name>Primary_Contact_Required_On_Creation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please write in the loss reason. --></errorMessage>
+        <name>Programmatic_Loss_Reason_Write_in_Requir</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only the Publisher Team or Ken Weiner can select Publisher as a Channel --></errorMessage>
+        <name>Publisher_Channel</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Reason Not Solicited Open Exchange field can be selected only if the channel is Programmatic --></errorMessage>
+        <name>ReasonNotSolicitedForProgrammatic</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Reason Not Solicited Open Exchange is mandatory if Solicited Open Exchange is No --></errorMessage>
+        <name>ReasonNotSolicitedOpenExchangeMandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a Red Flag reason. --></errorMessage>
+        <name>Red_Flag_Reason</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Agency Name field is required. --></errorMessage>
+        <name>Require_Agency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Notification not sent. All billing details are required to send Accounting notification. --></errorMessage>
+        <name>Require_Billing</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the Blocker --></errorMessage>
+        <name>Require_Blocker</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter Blocker Other Details --></errorMessage>
+        <name>Require_Blocker_Other_Details</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Custom Creative Type, Response Date and Comments must be filled out to request Custom Creative. --></errorMessage>
+        <name>Require_Custom_Creative_Details</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- DSP is a required field when Channel is Programmatic. --></errorMessage>
+        <name>Require_DSP</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Exception Type, Justification and Specifics Must be filled out to request Exception. --></errorMessage>
+        <name>Require_Exception_Details</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Expedite Type, Justification and Departments Needed Must be filled out to request Expedite. --></errorMessage>
+        <name>Require_Expedite_Details</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the Integration Other Details --></errorMessage>
+        <name>Require_Integration_Details</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must add a placeholder product or product at the Proposal or Negotiations Stage --></errorMessage>
+        <name>Require_Placeholder_Product</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Must assign Primary Contact Role. --></errorMessage>
+        <name>Require_Primary_Contact</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please assign at least 1 Primary Contact in the Contact Roles section. --></errorMessage>
+        <name>Require_Primary_Contact_2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must update the products (and remove any placeholder products) when changing an opportunity to Closed Won --></errorMessage>
+        <name>Require_Product_NonProgrammatic_Oppty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Must complete Proposal Details section to move to 50% win probability. --></errorMessage>
+        <name>Require_Proposal</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Proposal folder link required to move to 50% win probability. --></errorMessage>
+        <name>Require_Proposal_Folder_Link</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- RFP Received Date is required to move to Proposal stage. --></errorMessage>
+        <name>Require_RFP_Received_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Targeting and Geo Targeting records need to be completely filled out after 50% probability. --></errorMessage>
+        <name>Require_Targeting</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a main competitor --></errorMessage>
+        <name>Required_MC_Qualifying</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a main competitor --></errorMessage>
+        <name>Required_Qualification_Stage</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- To request a change to the Opportunity Record Type, reach out to SalesforceSupport@gumgum.com --></errorMessage>
+        <name>RestrictRecordTypeChange</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please contact Salesforce Support to change an opportunity stage to &quot;Discard&quot; --></errorMessage>
+        <name>Restrict_to_Admins_Change_to_Discard</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Dashboard ID is required for a Risky Creative Campaign going live --></errorMessage>
+        <name>Risky_Campaign_Dashboard_ID_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Solicited Open Exchange field can be selected only if channel is Programmatic --></errorMessage>
+        <name>SolicitedOpenExchangeForProgrammatic</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Type Of Agreement is Mandatory --></errorMessage>
+        <name>TypeOfAgreementRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Type of Barter Agreement can&apos;t be Net if Channel is Programmatic --></errorMessage>
+        <name>TypeOfBarterAgreementProgrammatic</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the Total Ordered Amount --></errorMessage>
+        <name>VerityAmountRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When Other is chosen for Blocker, please enter details in &quot;Blocker- Other Details&quot;. --></errorMessage>
+        <name>Verity_Req_at_Blocker_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- At 75%, please enter Deal Type, Payment Terms, Payment Schedule, Total URLs, Units (Millions), Deal Value, Deal Discount Percent, and Deal Discount Months. --></errorMessage>
+        <name>Verity_Reqs_Greater_Than_75</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- At Holding or Closed/Lost, please enter Blocker. --></errorMessage>
+        <name>Verity_Reqs_at_0_25</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- At 100%, please enter First Billing Date and Out Clause. Also, check that &quot;Deal Terms Correct?&quot; is true. --></errorMessage>
+        <name>Verity_Reqs_at_100</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter Account Name. --></errorMessage>
+        <name>Verity_Require_Account_Name</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter Type. --></errorMessage>
+        <name>Verity_Require_Type</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Bill To Tier is selected as Distributor, please select a value for Distributor. --></errorMessage>
+        <name>celigo_sfnsio__Validate_Distributor</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Ship To Tier is selected as Distributor, please select a value for Distributor. --></errorMessage>
+        <name>celigo_sfnsio__Validate_Distributor_Ship</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- End date should be greater than Start date. --></errorMessage>
+        <name>celigo_sfnsio__Validate_End_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Bill To Tier is selected as Reseller, please select a value for Reseller. --></errorMessage>
+        <name>celigo_sfnsio__Validate_Reseller</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Ship To Tier is selected as Reseller, please select a value for Reseller. --></errorMessage>
+        <name>celigo_sfnsio__Validate_Reseller_Ship</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Commission_FQ --></label>
+        <name>Commission_FQ</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Incremental_Opportunity --></label>
+        <name>New_Incremental_Opportunity</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Process_Lines --></label>
+        <name>Process_Lines</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Products --></label>
+        <name>Products</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_to_Slack --></label>
+        <name>slackv2__Send_to_Slack</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Slack_Alerts --></label>
+        <name>slackv2__Slack_Alerts</name>
+    </webLinks>
+</CustomObjectTranslation>

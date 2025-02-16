@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If an exception is needed, select the type and filling the exception description, then submit for approval. --></help>
+    <label><!-- Exception Type --></label>
+    <name>Exception_Type__c</name>
+    <picklistValues>
+        <masterLabel>Above Max # of Unit Types Included</masterLabel>
+        <translation><!-- Above Max # of Unit Types Included --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Below Floor Rates</masterLabel>
+        <translation><!-- Below Floor Rates --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Below Minimum Spend (Overall Campaign)</masterLabel>
+        <translation><!-- Below Minimum Spend (Overall Campaign) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Below Minimum Spend (Research Study)</masterLabel>
+        <translation><!-- Below Minimum Spend (Research Study) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Below minimum spend (High Impact)</masterLabel>
+        <translation><!-- Below minimum spend (High Impact) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Below minimum spend (Sponsorship)</masterLabel>
+        <translation><!-- Below minimum spend (Sponsorship) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cover ad serving cost and/or brand study serving fees</masterLabel>
+        <translation><!-- Cover ad serving cost and/or brand study serving fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Extra Creative Fees/Waiver Creative Fees</masterLabel>
+        <translation><!-- Extra Creative Fees/Waiver Creative Fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guarantee Campaign Performance</masterLabel>
+        <translation><!-- Guarantee Campaign Performance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Higher % Added Value Impressions</masterLabel>
+        <translation><!-- Higher % Added Value Impressions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multiple Creative Unit Versions</masterLabel>
+        <translation><!-- Multiple Creative Unit Versions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Out Clause (Less than 7 days)</masterLabel>
+        <translation><!-- Out Clause (Less than 7 days) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waive 3rd Party BT Up charge</masterLabel>
+        <translation><!-- Waive 3rd Party BT Up charge --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Segment__c</fullName>
+    <externalId>false</externalId>
+    <label>Marketing Segment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Holiday Gift</fullName>
+                <default>false</default>
+                <label>2016 Client Holiday Gifts</label>
+            </value>
+            <value>
+                <fullName>Aircover</fullName>
+                <default>false</default>
+                <label>Aircover</label>
+            </value>
+            <value>
+                <fullName>Competitors</fullName>
+                <default>false</default>
+                <label>Competitors</label>
+            </value>
+            <value>
+                <fullName>CVPR Conference 2017</fullName>
+                <default>false</default>
+                <label>CVPR Conference 2017</label>
+            </value>
+            <value>
+                <fullName>Ophir</fullName>
+                <default>false</default>
+                <label>Ophir</label>
+            </value>
+            <value>
+                <fullName>Pluck PR - Reporters</fullName>
+                <default>false</default>
+                <label>Pluck PR - Reporters</label>
+            </value>
+            <value>
+                <fullName>The Visionary Subscriber</fullName>
+                <default>false</default>
+                <label>The Visionary Subscriber</label>
+            </value>
+            <value>
+                <fullName>VIP/Senior Client</fullName>
+                <default>false</default>
+                <label>VIP/Senior Client</label>
+            </value>
+            <value>
+                <fullName>2016 Client Holiday Gifts - Programmatic</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>2016 Client Holiday Gifts - Programmatic</label>
+            </value>
+            <value>
+                <fullName>Analyst</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Analyst</label>
+            </value>
+            <value>
+                <fullName>Bankers</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Bankers</label>
+            </value>
+            <value>
+                <fullName>Brands</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Brands</label>
+            </value>
+            <value>
+                <fullName>DSPs/Trading Desks</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>DSPs/Trading Desks</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>General - Reporter Analyst</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>General - Reporter Analyst</label>
+            </value>
+            <value>
+                <fullName>Influencer</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Influencer</label>
+            </value>
+            <value>
+                <fullName>Ophir - Agency VIPs</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ophir - Agency VIPs</label>
+            </value>
+            <value>
+                <fullName>Ophir - Analysts</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ophir - Analysts</label>
+            </value>
+            <value>
+                <fullName>Ophir - Bankers</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ophir - Bankers</label>
+            </value>
+            <value>
+                <fullName>Ophir - Cannes eMarketer Event</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ophir - Cannes eMarketer Event</label>
+            </value>
+            <value>
+                <fullName>Ophir - GDS Brands</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ophir - GDS Brands</label>
+            </value>
+            <value>
+                <fullName>Ophir - General</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ophir - General</label>
+            </value>
+            <value>
+                <fullName>Ophir - Journalists</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ophir - Journalists</label>
+            </value>
+            <value>
+                <fullName>Ophir - Strategics</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ophir - Strategics</label>
+            </value>
+            <value>
+                <fullName>Ophir - VC&apos;s and Angels</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ophir - VC&apos;s and Angels</label>
+            </value>
+            <value>
+                <fullName>Programmatic</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Programmatic</label>
+            </value>
+            <value>
+                <fullName>Reporter</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Reporter</label>
+            </value>
+            <value>
+                <fullName>Reporters/Analysts</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Reporters/Analysts</label>
+            </value>
+            <value>
+                <fullName>Strategics</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Strategics</label>
+            </value>
+            <value>
+                <fullName>VC&apos;s and Angels</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>VC&apos;s and Angels</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

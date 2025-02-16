@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outcomes_Data__c</fullName>
+    <description>SOP-2414</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Benchmarks Only - In platform benchmark comparison only. 
+BYOD - Standard - Data comparison against Viewability or Video Completion Rate. 
+BYOD - Conversions - Data comparison against client outcomes data such as conversions, site lands etc. 
+BYOD - Brand Lift - Data comparison against client brand lift data. 
+BLS - Playground XYZ run Brand Lift Study.</inlineHelpText>
+    <label>Outcomes Data</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Benchmarks Only</fullName>
+                <default>false</default>
+                <label>Benchmarks Only</label>
+            </value>
+            <value>
+                <fullName>BYOD – Standard</fullName>
+                <default>false</default>
+                <label>BYOD – Standard</label>
+            </value>
+            <value>
+                <fullName>BYOD – Conversions</fullName>
+                <default>false</default>
+                <label>BYOD – Conversions</label>
+            </value>
+            <value>
+                <fullName>BYOD – Brand Lift</fullName>
+                <default>false</default>
+                <label>BYOD – Brand Lift</label>
+            </value>
+            <value>
+                <fullName>BLS</fullName>
+                <default>false</default>
+                <label>BLS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

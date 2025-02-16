@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Primary_Contact_2</fullName>
+    <active>false</active>
+    <description>Must assign primary contact role at proposal stage or higher</description>
+    <errorConditionFormula>RecordType.Name = &apos;Advertising, Sports&apos;
+  &amp;&amp; ISBLANK(&apos;Primary_Contact_Assigned__c&apos;) &amp;&amp; ( or(ispickval(StageName, &apos;proposal, present, pilot, proposal active, negotiations, approved, approved/outcome pending, closed/won&apos;)))</errorConditionFormula>
+    <errorMessage>Please assign at least 1 Primary Contact in the Contact Roles section.</errorMessage>
+</ValidationRule>

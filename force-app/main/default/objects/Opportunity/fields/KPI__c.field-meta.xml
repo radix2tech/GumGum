@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KPI__c</fullName>
+    <description>This field displays the KPI&apos;s to be measured in the campaign</description>
+    <externalId>false</externalId>
+    <label>KPI&apos;s</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CTR</fullName>
+                <default>false</default>
+                <label>CTR</label>
+            </value>
+            <value>
+                <fullName>VCR</fullName>
+                <default>false</default>
+                <label>VCR</label>
+            </value>
+            <value>
+                <fullName>CPA / Conversions</fullName>
+                <default>false</default>
+                <label>CPA / Conversions</label>
+            </value>
+            <value>
+                <fullName>Bounce Rate / Landing Page Yield</fullName>
+                <default>false</default>
+                <label>Bounce Rate / Landing Page Yield</label>
+            </value>
+            <value>
+                <fullName>Reach</fullName>
+                <default>false</default>
+                <label>Reach</label>
+            </value>
+            <value>
+                <fullName>Viewability</fullName>
+                <default>false</default>
+                <label>Viewability</label>
+            </value>
+            <value>
+                <fullName>Engagement</fullName>
+                <default>false</default>
+                <label>Engagement</label>
+            </value>
+            <value>
+                <fullName>Time Spent</fullName>
+                <default>false</default>
+                <label>Time Spent</label>
+            </value>
+            <value>
+                <fullName>Brand Awareness Lift</fullName>
+                <default>false</default>
+                <label>Brand Awareness Lift</label>
+            </value>
+            <value>
+                <fullName>Sales/Consideration Lift</fullName>
+                <default>false</default>
+                <label>Sales/Consideration Lift</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

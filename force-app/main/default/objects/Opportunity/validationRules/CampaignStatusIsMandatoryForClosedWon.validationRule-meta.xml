@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CampaignStatusIsMandatoryForClosedWon</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+ISCHANGED(StageName),
+ISNEW()
+),
+TEXT(StageName)==&apos;Closed/Won&apos;,
+RecordType.Name=&apos;Advertising&apos;,
+ISBLANK(TEXT(Campaign_Status__c )),
+ $User.Bypass_Opportunity_Validation__c = False
+)</errorConditionFormula>
+    <errorDisplayField>Campaign_Status__c</errorDisplayField>
+    <errorMessage>Campaign Status is required for Closed Won Opportunities</errorMessage>
+</ValidationRule>

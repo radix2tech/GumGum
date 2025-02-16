@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <description>Only Advertising (Excluding Current Opp)</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>for_OpportunityType</name>
+        <dataType>String</dataType>
+        <expression>IF(
+((YEAR(TODAY()) - YEAR({!Get_Related_Opps.End_Date2__c})) * 12 +
+(MONTH(TODAY()) - MONTH({!Get_Related_Opps.End_Date2__c})) &gt; 13)||ISBLANK({!Get_Related_Opps.End_Date2__c})||
+ISNULL({!Get_Related_Opps.End_Date2__c}) ,
+&quot;New Business&quot;,
+&quot;Renewal Business&quot;
+)</expression>
+    </formulas>
+    <interviewLabel>Opportunity - Update Type {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity - Update Type</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Exception_records</name>
+        <label>Create Exception records</label>
+        <locationX>704</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>ComponentName__c</field>
+            <value>
+                <stringValue>Flow - Opportunity - Update Type</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Exception_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordId__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Custom_Exception__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Related_Opps</name>
+        <label>Get Related Opps</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Opportunity_Type</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Exception_records</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Closed/Won</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Label.Advertising_RecordTypeId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>End_Date2__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <sortField>End_Date2__c</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Opportunity_Type</name>
+        <label>Update Opportunity Type</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Create_Exception_records</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <elementReference>for_OpportunityType</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Related_Opps</targetReference>
+        </connector>
+        <filterFormula>OR(
+            AND(
+                       ISNEW(),
+                       {!$Record.RecordType.Name} = &apos;Advertising&apos;
+                    ),
+            AND(
+                       ISCHANGED({!$Record.StageName}),
+                       TEXT({!$Record.StageName}) = &apos;Closed/Won&apos;,
+                        {!$Record.RecordType.Name} = &apos;Advertising&apos;
+                     )
+       )</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BarterAgencyRequired</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+     RecordType.Name == &apos;Advertising&apos;,
+     NOT(ISNEW()),
+     TEXT( Channel__c ) == &apos;Direct&apos;,
+     ISCHANGED(StageName),
+     TEXT(StageName)==&apos;Closed/Won&apos;,
+     NOT(ISBLANK( TEXT(Type_of_Agreement__c ))),
+     ISBLANK(TEXT(Barter_Agency__c))
+    )</errorConditionFormula>
+    <errorDisplayField>Barter_Agency__c</errorDisplayField>
+    <errorMessage>Barter Agency is Required</errorMessage>
+</ValidationRule>

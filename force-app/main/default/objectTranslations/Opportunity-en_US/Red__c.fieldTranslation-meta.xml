@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Red Flag Reason --></label>
+    <name>Red__c</name>
+    <picklistValues>
+        <masterLabel>Always On Campaign</masterLabel>
+        <translation><!-- Always On Campaign --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Geo too restrictive</masterLabel>
+        <translation><!-- Geo too restrictive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KPI not a good fit</masterLabel>
+        <translation><!-- KPI not a good fit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Required 1p data</masterLabel>
+        <translation><!-- Required 1p data --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Running on small allowlist</masterLabel>
+        <translation><!-- Running on small allowlist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shared budget across multiple partners</masterLabel>
+        <translation><!-- Shared budget across multiple partners --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable to pull accurate avails</masterLabel>
+        <translation><!-- Unable to pull accurate avails --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unit do not have enough avails</masterLabel>
+        <translation><!-- Unit do not have enough avails --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

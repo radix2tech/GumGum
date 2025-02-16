@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select “Net” when an account is 1) “Opted-In” to a Barter agreement/trading deal, 2) the campaign will be channel “Direct”, and 3) the insertion order will be received by GumGum  “Net” of discount. Select “Gross” when an account is 1) “Opted-In” to a Barter agreement, 2) the channel can be direct or programmatic, and 3) the campaign revenue will require the discount be paid back to the agency in the form of a rebate or trade credit due. --></help>
+    <label><!-- Type of Barter Agreement --></label>
+    <name>Type_of_Agreement__c</name>
+    <picklistValues>
+        <masterLabel>Gross</masterLabel>
+        <translation><!-- Gross --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Net</masterLabel>
+        <translation><!-- Net --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

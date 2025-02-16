@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Accounts_Active_and_Inactive</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Region__c</columns>
+    <columns>ACCOUNT.INDUSTRY</columns>
+    <columns>Category__c</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>Inactive__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>X2022_Data_Clean_Up_Signoff__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Advertising</value>
+    </filters>
+    <label>My Accounts (Advertising)</label>
+</ListView>

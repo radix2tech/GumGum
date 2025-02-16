@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Marketing_Expense_Submission_Approved</fullName>
+        <description>Marketing Expense Submission Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Marketing_Email_Templates/Marketing_Expense_Submission_Approved_2</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Expense_Status_Update_Approved</fullName>
+        <field>Expense_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Expense Status Update - Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Expense_Status_Update_Recalled</fullName>
+        <field>Expense_Status__c</field>
+        <literalValue>Recalled</literalValue>
+        <name>Expense Status Update - Recalled</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Expense_Status_Update_Rejected</fullName>
+        <field>Expense_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Expense Status Update - Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Updated_Status</fullName>
+        <field>Expense_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Expense Status Update - Pending Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>2nd Reminder</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Expenses__c.Expense_Status__c</field>
+            <operation>equals</operation>
+            <value>Pending Approval</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Invoices Submitted</fullName>
+        <active>true</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Expenses__c.CreatedDate</field>
+            <operation>greaterOrEqual</operation>
+            <value>THIS MONTH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Expenses__c.Occurence_Date__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>LAST MONTH</value>
+        </criteriaItems>
+        <description>Invoices Submitted after last date of the previous month - email alert</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reminder Expense Approval Email-Som</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Expenses__c.Expense_Status__c</field>
+            <operation>equals</operation>
+            <value>Pending Approval</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+</Workflow>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verity_Reqs_at_0_25</fullName>
+    <active>false</active>
+    <description>Required at 0 or 25%: Blocker</description>
+    <errorConditionFormula>AND(
+ RecordType.DeveloperName=&quot;Verity&quot;,
+   ISBLANK( TEXT( Blocker__c ) ) ,
+ OR(
+ ISPICKVAL(StageName, &quot;Holding&quot;) ,
+ISPICKVAL(StageName, &quot;Closed/Lost&quot;) 
+) 
+ )</errorConditionFormula>
+    <errorMessage>At Holding or Closed/Lost, please enter Blocker.</errorMessage>
+</ValidationRule>

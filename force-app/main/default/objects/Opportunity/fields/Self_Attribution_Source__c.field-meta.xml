@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Self_Attribution_Source__c</fullName>
+    <description>Based on SOP - 2085</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the category that a lead’s manual input on the form field “How did you hear about us” falls into</inlineHelpText>
+    <label>Self Attribution Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Blog</fullName>
+                <default>false</default>
+                <label>Blog</label>
+            </value>
+            <value>
+                <fullName>Bot Crawler</fullName>
+                <default>false</default>
+                <label>Bot Crawler</label>
+            </value>
+            <value>
+                <fullName>Brand</fullName>
+                <default>false</default>
+                <label>Brand</label>
+            </value>
+            <value>
+                <fullName>Chat GPT</fullName>
+                <default>false</default>
+                <label>Chat GPT</label>
+            </value>
+            <value>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+                <label>Competitor</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Event</fullName>
+                <default>false</default>
+                <label>Event</label>
+            </value>
+            <value>
+                <fullName>GG Ads</fullName>
+                <default>false</default>
+                <label>GG Ads</label>
+            </value>
+            <value>
+                <fullName>Industry</fullName>
+                <default>false</default>
+                <label>Industry</label>
+            </value>
+            <value>
+                <fullName>Industry News</fullName>
+                <default>false</default>
+                <label>Industry News</label>
+            </value>
+            <value>
+                <fullName>Partnership</fullName>
+                <default>false</default>
+                <label>Partnership</label>
+            </value>
+            <value>
+                <fullName>Past work</fullName>
+                <default>false</default>
+                <label>Past work</label>
+            </value>
+            <value>
+                <fullName>Podcast</fullName>
+                <default>false</default>
+                <label>Podcast</label>
+            </value>
+            <value>
+                <fullName>Programmatic</fullName>
+                <default>false</default>
+                <label>Programmatic</label>
+            </value>
+            <value>
+                <fullName>Site referral</fullName>
+                <default>false</default>
+                <label>Site referral</label>
+            </value>
+            <value>
+                <fullName>Social</fullName>
+                <default>false</default>
+                <label>Social</label>
+            </value>
+            <value>
+                <fullName>TV Ad</fullName>
+                <default>false</default>
+                <label>TV Ad</label>
+            </value>
+            <value>
+                <fullName>Web Search</fullName>
+                <default>false</default>
+                <label>Web Search</label>
+            </value>
+            <value>
+                <fullName>WOM / Referral</fullName>
+                <default>false</default>
+                <label>WOM / Referral</label>
+            </value>
+            <value>
+                <fullName>Influencer Marketing Hub</fullName>
+                <default>false</default>
+                <label>Influencer Marketing Hub</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

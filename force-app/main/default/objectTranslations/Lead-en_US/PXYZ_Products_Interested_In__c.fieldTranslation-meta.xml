@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field is auto-populated by Hubspot based on what product is selected from the PXYZ contact form. --></help>
+    <label><!-- PXYZ Products Interested In --></label>
+    <name>PXYZ_Products_Interested_In__c</name>
+    <picklistValues>
+        <masterLabel>Attention Data, High Impact Creative &amp; Premium Inventory (Full-Service Activation)</masterLabel>
+        <translation><!-- Attention Data, High Impact Creative &amp; Premium Inventory (Full-Service Activation) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Attention Measurement &amp; Optimisation (Data Only)</masterLabel>
+        <translation><!-- Attention Measurement &amp; Optimisation (Data Only) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Publisher Partnerships</masterLabel>
+        <translation><!-- Publisher Partnerships --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Youtube Attention Measurement</masterLabel>
+        <translation><!-- Youtube Attention Measurement --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

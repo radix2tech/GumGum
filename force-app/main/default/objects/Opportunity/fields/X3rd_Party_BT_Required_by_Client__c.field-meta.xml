@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X3rd_Party_BT_Required_by_Client__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>To track when the client requests 3rd party BT</description>
+    <externalId>false</externalId>
+    <inlineHelpText>With the rise of privacy laws more information is required on client requests vs Sales up-sell</inlineHelpText>
+    <label>3rd Party BT Required by Client</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

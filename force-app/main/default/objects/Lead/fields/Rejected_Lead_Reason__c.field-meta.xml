@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rejected_Lead_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Rejected Lead Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bad Data/Spam</fullName>
+                <default>false</default>
+                <label>Bad Data/Spam</label>
+            </value>
+            <value>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+                <label>Competitor</label>
+            </value>
+            <value>
+                <fullName>GumGum Employee</fullName>
+                <default>false</default>
+                <label>GumGum Employee</label>
+            </value>
+            <value>
+                <fullName>Irrelevant Contact</fullName>
+                <default>false</default>
+                <label>Irrelevant Contact</label>
+            </value>
+            <value>
+                <fullName>No Digital Advertising</fullName>
+                <default>false</default>
+                <label>No Digital Advertising</label>
+            </value>
+            <value>
+                <fullName>Not in Geo</fullName>
+                <default>false</default>
+                <label>Not in Geo</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Tech Partner</fullName>
+                <default>false</default>
+                <label>Tech Partner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

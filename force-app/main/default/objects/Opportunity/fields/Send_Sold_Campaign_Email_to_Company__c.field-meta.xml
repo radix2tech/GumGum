@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Sold_Campaign_Email_to_Company__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When checked, AM triggers the email to the company at campaign-announcements@gumgum.com about the campaign being sold through.</description>
+    <externalId>false</externalId>
+    <label>Send Sold Campaign Email to Company</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

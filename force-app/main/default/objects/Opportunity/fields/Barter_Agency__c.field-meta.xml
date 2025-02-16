@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Barter_Agency__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose the applicable agency associated with the barter agreement.  Should only be chosen if &apos;Type of Barter Agreement&apos; is populated</inlineHelpText>
+    <label>Barter Agency Name</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>Agyle</fullName>
+                <default>false</default>
+                <label>Agyle</label>
+            </value>
+            <value>
+                <fullName>Astus</fullName>
+                <default>false</default>
+                <label>Astus</label>
+            </value>
+            <value>
+                <fullName>Evergreen</fullName>
+                <default>false</default>
+                <label>Evergreen</label>
+            </value>
+            <value>
+                <fullName>ICON</fullName>
+                <default>false</default>
+                <label>ICON</label>
+            </value>
+            <value>
+                <fullName>Miroma</fullName>
+                <default>false</default>
+                <label>Miroma</label>
+            </value>
+            <value>
+                <fullName>NYIAX</fullName>
+                <default>false</default>
+                <label>NYIAX</label>
+            </value>
+            <value>
+                <fullName>Orion</fullName>
+                <default>false</default>
+                <label>Orion</label>
+            </value>
+            <value>
+                <fullName>Fortitude Trading Ltd</fullName>
+                <default>false</default>
+                <label>Fortitude Trading Ltd</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

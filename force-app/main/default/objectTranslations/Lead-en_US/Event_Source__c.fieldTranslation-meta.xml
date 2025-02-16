@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Event Source --></label>
+    <name>Event_Source__c</name>
+    <picklistValues>
+        <masterLabel>Brand Safety Email 2017</masterLabel>
+        <translation><!-- Brand Safety Email 2017 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bring Cannes to You (Chicago)</masterLabel>
+        <translation><!-- Bring Cannes to You (Chicago) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bring Cannes to You (LA)</masterLabel>
+        <translation><!-- Bring Cannes to You (LA) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bring Cannes to You (London)</masterLabel>
+        <translation><!-- Bring Cannes to You (London) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DMEXCO 2017</masterLabel>
+        <translation><!-- DMEXCO 2017 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

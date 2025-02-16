@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LATAM_Partnership_Inbound_Queue_Lead</fullName>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Hubspot_Lifecycle_Stage__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COUNTRY</columns>
+    <columns>Persona__c</columns>
+    <columns>First_Marketing_Campaign__c</columns>
+    <columns>Most_Recent_Marketing_Campaign__c</columns>
+    <columns>Demographic_Score__c</columns>
+    <columns>Engagement_History_Score__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Unqualified</value>
+    </filters>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.Lead</value>
+    </filters>
+    <label>LATAM Partnership Inbound Queue</label>
+    <queue>LATAM_Partnership_Inbound_Queue</queue>
+    <sharedTo>
+        <group>LATAM_Partnership_Inbound_Group</group>
+    </sharedTo>
+</ListView>

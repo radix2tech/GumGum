@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Spend_Lost_Amount__c</fullName>
+    <description>Spend Lost Amount calculates the value of Voiced Budget minus Total Ordered Amount.</description>
+    <externalId>false</externalId>
+    <formula>MAX(IF(OR(TEXT(Campaign_Status__c) = &quot;Campaign Ended&quot;, TEXT(Campaign_Status__c) = &quot;Campaign Cancelled&quot;), Voiced_Budget__c - Amount, 0),0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Spend Lost Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

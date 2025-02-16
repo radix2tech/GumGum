@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Checked_Incremental</fullName>
+        <field>Incremental__c</field>
+        <literalValue>1</literalValue>
+        <name>Checked - Incremental</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Move_Quantity_to_Millions</fullName>
+        <field>Millions__c</field>
+        <formula>Quantity</formula>
+        <name>Move Quantity to Millions</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Quantity_x_1000</fullName>
+        <field>Quantity</field>
+        <formula>Quantity / 1000</formula>
+        <name>Quantity - x/1000</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_Negotiations_from_opp_prod</fullName>
+        <field>StageName</field>
+        <literalValue>Negotiations</literalValue>
+        <name>Stage - Negotiations (from opp-prod)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>OpportunityId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Uncheck_Incremental_Checkbox</fullName>
+        <field>Incremental__c</field>
+        <literalValue>0</literalValue>
+        <name>Uncheck Incremental Checkbox</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_AM_Approval_Status_to_Resubmit</fullName>
+        <field>AM_Approval__c</field>
+        <literalValue>Requires Re-submission</literalValue>
+        <name>Update AM Approval Status to Resubmit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>OpportunityId</targetObject>
+    </fieldUpdates>
+    <rules>
+        <fullName>Check Incremental Checkbox</fullName>
+        <actions>
+            <name>Checked_Incremental</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>OpportunityLineItem.Incremental_New__c</field>
+            <operation>equals</operation>
+            <value>Incremental</value>
+        </criteriaItems>
+        <description>When the Revenue Type field is set to Incremental, check the Incremental checkbox.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Uncheck Incremental Checkbox</fullName>
+        <actions>
+            <name>Uncheck_Incremental_Checkbox</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>OpportunityLineItem.Incremental_New__c</field>
+            <operation>notEqual</operation>
+            <value>Incremental</value>
+        </criteriaItems>
+        <description>When the Revenue Type field is set to anything other than Incremental, un-check the Incremental checkbox.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

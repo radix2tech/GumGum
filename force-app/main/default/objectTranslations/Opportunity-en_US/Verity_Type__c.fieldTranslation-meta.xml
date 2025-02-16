@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field will display Pre-Bid, PMP, and or Video based on the products selected --></help>
+    <label><!-- Verity Type --></label>
+    <name>Verity_Type__c</name>
+    <picklistValues>
+        <masterLabel>PMP</masterLabel>
+        <translation><!-- PMP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Platform Integration</masterLabel>
+        <translation><!-- Platform Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre-Bid</masterLabel>
+        <translation><!-- Pre-Bid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SaaS</masterLabel>
+        <translation><!-- SaaS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video</masterLabel>
+        <translation><!-- Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video PMP</masterLabel>
+        <translation><!-- Video PMP --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

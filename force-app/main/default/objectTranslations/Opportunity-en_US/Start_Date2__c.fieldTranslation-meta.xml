@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Contract Start Date will automatically reflect the earliest schedule date from the Products tab --></help>
+    <label><!-- Contract Start Date --></label>
+    <name>Start_Date2__c</name>
+</CustomFieldTranslation>

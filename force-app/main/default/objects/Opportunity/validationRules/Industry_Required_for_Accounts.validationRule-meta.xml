@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry_Required_for_Accounts</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+      $User.Bypass_Opportunity_Validation__c = FALSE,
+      NOT( $Permission.Bypass_Opportunity_Validation ),
+      NOT(ISPICKVAL(StageName, &quot;Closed/Lost&quot;)),
+      NOT(ISPICKVAL(StageName, &quot;Discard&quot;)),
+      Is_Converted__c =FALSE,
+      OR(
+          $User.ProfileId = &quot;00eU0000000J7n2&quot;,
+          $User.ProfileId = &quot;00eU0000000po22&quot;,
+          $User.ProfileId = &quot;00eU0000000JCOd&quot;,
+          $User.ProfileId = &quot;00e4U000001604u&quot;,
+          $User.ProfileId = &quot;00e0P000000xYeQ&quot;,
+          $User.ProfileId = &quot;00e0P000000KPVm&quot;,
+          $User.ProfileId = &quot;00e0P000000KPVh&quot;,
+          $User.ProfileId = &quot;00e0P000000GpIM&quot;,
+          $User.ProfileId = &quot;00e0P000000GpIC&quot;
+         ),
+      OR(
+          RecordType.Name == &apos;Activation&apos;,
+          RecordType.Name == &apos;Advertising&apos;,
+          RecordType.Name == &quot;Attention_Intelligence_Platform&quot;
+         ),
+      NOT(ISPICKVAL( Account.Type , &quot;Agency&quot;)),
+      NOT(ISPICKVAL(Account.Type, &quot;Agency Group&quot;)),
+      ISBLANK(Text( Account.Industry ))
+    )</errorConditionFormula>
+    <errorMessage>All advertising accounts must have an Industry selected except Agencies and Agency Group. Please go to the related account and populated the field &quot;Industry&quot;</errorMessage>
+</ValidationRule>

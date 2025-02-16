@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Primary KPI --></label>
+    <name>Primary_KPI__c</name>
+    <picklistValues>
+        <masterLabel>Action Rate</masterLabel>
+        <translation><!-- Action Rate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>App Download</masterLabel>
+        <translation><!-- App Download --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Attention</masterLabel>
+        <translation><!-- Attention --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Attention Time</masterLabel>
+        <translation><!-- Attention Time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brand Awareness Lift</masterLabel>
+        <translation><!-- Brand Awareness Lift --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CPA</masterLabel>
+        <translation><!-- CPA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CPC</masterLabel>
+        <translation><!-- CPC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CPCV</masterLabel>
+        <translation><!-- CPCV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CPM</masterLabel>
+        <translation><!-- CPM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CPQA</masterLabel>
+        <translation><!-- CPQA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CTR</masterLabel>
+        <translation><!-- CTR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conversions</masterLabel>
+        <translation><!-- Conversions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cost Efficiency</masterLabel>
+        <translation><!-- Cost Efficiency --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Engagement</masterLabel>
+        <translation><!-- Engagement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Foot Traffic</masterLabel>
+        <translation><!-- Foot Traffic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Store Sales</masterLabel>
+        <translation><!-- In-Store Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Landing Page Yield</masterLabel>
+        <translation><!-- Landing Page Yield --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lead Generation</masterLabel>
+        <translation><!-- Lead Generation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Online Sales</masterLabel>
+        <translation><!-- Online Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Play Rate</masterLabel>
+        <translation><!-- Play Rate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ROAS</masterLabel>
+        <translation><!-- ROAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reach</masterLabel>
+        <translation><!-- Reach --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales/Consideration Lift</masterLabel>
+        <translation><!-- Sales/Consideration Lift --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shopping Cart Volume</masterLabel>
+        <translation><!-- Shopping Cart Volume --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Site Traffic</masterLabel>
+        <translation><!-- Site Traffic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Traffic Rate</masterLabel>
+        <translation><!-- Traffic Rate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VCR</masterLabel>
+        <translation><!-- VCR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video Views</masterLabel>
+        <translation><!-- Video Views --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Viewability</masterLabel>
+        <translation><!-- Viewability --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

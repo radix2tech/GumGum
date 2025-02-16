@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the new exception request box. Once checked, click the &quot;Submit Approval&quot; button at the top of the page to trigger the approval process. --></help>
+    <label><!-- Request Exception --></label>
+    <name>Request_Exception_2__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Incremental_Opp_Name_Change</fullName>
+    <active>true</active>
+    <description>Prevent users from changing an Incremental Opportunity&apos;s name</description>
+    <errorConditionFormula>RecordTypeId = &quot;012550000000IhF&quot; &amp;&amp;
+ $User.Bypass_Opportunity_Validation__c = FALSE &amp;&amp;
+NOT( $Permission.Bypass_Opportunity_Validation )&amp;&amp;
+ISCHANGED(Name)</errorConditionFormula>
+    <errorMessage>An Incremental Opportunity&apos;s name can not be changed.</errorMessage>
+</ValidationRule>

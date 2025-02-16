@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Oppty_Creation_Record_Type</fullName>
+    <active>true</active>
+    <description>Prevents users from creating advertising oppty using any other record types other than advertising</description>
+    <errorConditionFormula>AND(
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+ISNEW(),
+NOT( $Permission.Bypass_Opportunity_Validation ),
+OR(
+Account.RecordType.Name = &quot;Billing Entity&quot;,
+Account.RecordType.Name = &quot;Supplier&quot;,
+Account.RecordType.Name = &quot;Sports&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>You must use an Advertising account record type to create an advertising opportunity</errorMessage>
+</ValidationRule>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>puravin.sivaganam@playgroundxyz.com</contactEmail>
+    <label>BigQuery</label>
+    <oauthConfig>
+        <callbackUrl>https://gumgum.lightning.force.com</callbackUrl>
+        <consumerKey>3MVG9QDx8IX8nP5TCPXYz41WeOqonT77F83blbdWe2PIbguSAvovxGTyoxeqsj4aAsOg.Gmc70qYx_GfzHqu.</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <scopes>Full</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <refreshTokenPolicy>zero</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

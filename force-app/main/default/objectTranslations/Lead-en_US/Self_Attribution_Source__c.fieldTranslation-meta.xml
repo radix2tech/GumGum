@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the category that a lead’s manual input on the form field “How did you hear about us” falls into --></help>
+    <label><!-- Self Attribution Source --></label>
+    <name>Self_Attribution_Source__c</name>
+    <picklistValues>
+        <masterLabel>Blog</masterLabel>
+        <translation><!-- Blog --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bot Crawler</masterLabel>
+        <translation><!-- Bot Crawler --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brand</masterLabel>
+        <translation><!-- Brand --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chat GPT</masterLabel>
+        <translation><!-- Chat GPT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Competitor</masterLabel>
+        <translation><!-- Competitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email</masterLabel>
+        <translation><!-- Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event</masterLabel>
+        <translation><!-- Event --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GG Ads</masterLabel>
+        <translation><!-- GG Ads --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Industry</masterLabel>
+        <translation><!-- Industry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Industry News</masterLabel>
+        <translation><!-- Industry News --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Influencer Marketing Hub</masterLabel>
+        <translation><!-- Influencer Marketing Hub --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partnership</masterLabel>
+        <translation><!-- Partnership --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Past work</masterLabel>
+        <translation><!-- Past work --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Podcast</masterLabel>
+        <translation><!-- Podcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Programmatic</masterLabel>
+        <translation><!-- Programmatic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Site referral</masterLabel>
+        <translation><!-- Site referral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Social</masterLabel>
+        <translation><!-- Social --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TV Ad</masterLabel>
+        <translation><!-- TV Ad --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WOM / Referral</masterLabel>
+        <translation><!-- WOM / Referral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Search</masterLabel>
+        <translation><!-- Web Search --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

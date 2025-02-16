@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>AUS Gross/Net Changes</masterLabel>
+    <promptVersions>
+        <body>&lt;p&gt;When entering Products on Opportunities with an Agency Discount, be sure to &lt;strong&gt;enter the Net (Post Discount) amount in the Total Price on the Product Lines.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp; &lt;/p&gt;&lt;p&gt;The Gross revenue needed for invoicing will be calculated in a separate field&lt;/p&gt;</body>
+        <customApplication>standard__LightningSales</customApplication>
+        <delayDays>1</delayDays>
+        <dismissButtonLabel>Got It!</dismissButtonLabel>
+        <displayPosition>MiddleCenter</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <isPublished>true</isPublished>
+        <masterLabel>AUS Gross/Net Changes</masterLabel>
+        <publishedDate>2024-09-27</publishedDate>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
+        <startDate>2024-10-07</startDate>
+        <targetPageKey1>Opportunity</targetPageKey1>
+        <targetPageKey2>view</targetPageKey2>
+        <targetPageType>standard__recordPage</targetPageType>
+        <targetRecordType>Opportunity.Advertising</targetRecordType>
+        <timesToDisplay>1</timesToDisplay>
+        <title>Important Update To Adding Revenue</title>
+        <uiFormulaRule>
+            <criteria>
+                <leftValue>{!$Permission.CustomPermission.In_App_Guidance}</leftValue>
+                <operator>EQUAL</operator>
+                <rightValue>TRUE</rightValue>
+            </criteria>
+        </uiFormulaRule>
+        <userAccess>SpecificPermissions</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+</Prompt>

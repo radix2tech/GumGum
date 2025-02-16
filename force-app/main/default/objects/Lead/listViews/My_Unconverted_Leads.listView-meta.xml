@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Unconverted_Leads</fullName>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Hubspot_Lifecycle_Stage__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COUNTRY</columns>
+    <columns>First_Marketing_Campaign__c</columns>
+    <columns>Most_Recent_Marketing_Campaign__c</columns>
+    <columns>Recycled_Lead_Reason__c</columns>
+    <columns>Rejected_Lead_Reason__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.Lead</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Cold Lead,Unqualified</value>
+    </filters>
+    <label>My Leads</label>
+</ListView>

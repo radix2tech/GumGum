@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GGS_Clients</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Alt_Acct_Name__c</columns>
+    <columns>SaaSOptics_Profile__c</columns>
+    <columns>Renewal_Date_Client__c</columns>
+    <columns>Total_ARR_Client__c</columns>
+    <columns>Sync_with_Zendesk__c</columns>
+    <columns>Open_Opps_Renewals__c</columns>
+    <columns>State_Province__c</columns>
+    <columns>Country__c</columns>
+    <columns>SaaSOptics_Instance__c</columns>
+    <columns>Account_Status2__c</columns>
+    <columns>Media_Channel_Broadcast__c</columns>
+    <columns>Media_Channel_Social__c</columns>
+    <columns>Media_Channel_Streaming__c</columns>
+    <columns>Auto_Collections__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Sports</value>
+    </filters>
+    <filters>
+        <field>Account_Status2__c</field>
+        <operation>equals</operation>
+        <value>Client</value>
+    </filters>
+    <filters>
+        <field>SaaSOptics_Instance__c</field>
+        <operation>equals</operation>
+        <value>US,UK</value>
+    </filters>
+    <label>GGS Clients/Former Clients</label>
+</ListView>

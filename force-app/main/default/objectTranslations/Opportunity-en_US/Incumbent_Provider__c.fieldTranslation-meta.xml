@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Incumbent Contextual Provider --></label>
+    <name>Incumbent_Provider__c</name>
+    <picklistValues>
+        <masterLabel>Comscore</masterLabel>
+        <translation><!-- Comscore --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Double Verify</masterLabel>
+        <translation><!-- Double Verify --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IBM/Watson Advertising</masterLabel>
+        <translation><!-- IBM/Watson Advertising --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Integral Ad Science</masterLabel>
+        <translation><!-- Integral Ad Science --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internally Developed</masterLabel>
+        <translation><!-- Internally Developed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oracle/Grapeshot</masterLabel>
+        <translation><!-- Oracle/Grapeshot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Peer39</masterLabel>
+        <translation><!-- Peer39 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TTD Contextual</masterLabel>
+        <translation><!-- TTD Contextual --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

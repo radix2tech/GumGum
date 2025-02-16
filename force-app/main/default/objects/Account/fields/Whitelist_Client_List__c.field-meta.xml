@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Whitelist_Client_List__c</fullName>
+    <externalId>false</externalId>
+    <label>Whitelist Client List (inactive)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AT&amp;T</fullName>
+                <default>false</default>
+                <label>AT&amp;T</label>
+            </value>
+            <value>
+                <fullName>Coca Cola</fullName>
+                <default>false</default>
+                <label>Coca Cola</label>
+            </value>
+            <value>
+                <fullName>Ford</fullName>
+                <default>false</default>
+                <label>Ford</label>
+            </value>
+            <value>
+                <fullName>GTB</fullName>
+                <default>false</default>
+                <label>GTB</label>
+            </value>
+            <value>
+                <fullName>GumGum</fullName>
+                <default>false</default>
+                <label>GumGum</label>
+            </value>
+            <value>
+                <fullName>Kargo</fullName>
+                <default>false</default>
+                <label>Kargo</label>
+            </value>
+            <value>
+                <fullName>Lincoln</fullName>
+                <default>false</default>
+                <label>Lincoln</label>
+            </value>
+            <value>
+                <fullName>Omnicom</fullName>
+                <default>false</default>
+                <label>Omnicom</label>
+            </value>
+            <value>
+                <fullName>Publisher Hitlist</fullName>
+                <default>false</default>
+                <label>Publisher Hitlist</label>
+            </value>
+            <value>
+                <fullName>SC Johnson - Display</fullName>
+                <default>false</default>
+                <label>SC Johnson - Display</label>
+            </value>
+            <value>
+                <fullName>SC Johnson - Video</fullName>
+                <default>false</default>
+                <label>SC Johnson - Video</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

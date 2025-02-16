@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSP__c</fullName>
+    <externalId>false</externalId>
+    <label>SSP</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Amazon</fullName>
+                <default>false</default>
+                <label>Amazon</label>
+            </value>
+            <value>
+                <fullName>Google</fullName>
+                <default>false</default>
+                <label>Google</label>
+            </value>
+            <value>
+                <fullName>Index Exchange</fullName>
+                <default>false</default>
+                <label>Index Exchange</label>
+            </value>
+            <value>
+                <fullName>Iris.TV</fullName>
+                <default>false</default>
+                <label>Iris.TV</label>
+            </value>
+            <value>
+                <fullName>JW Player</fullName>
+                <default>false</default>
+                <label>JW Player</label>
+            </value>
+            <value>
+                <fullName>Magnite</fullName>
+                <default>false</default>
+                <label>Magnite</label>
+            </value>
+            <value>
+                <fullName>OpenX</fullName>
+                <default>false</default>
+                <label>OpenX</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Pubmatic</fullName>
+                <default>false</default>
+                <label>Pubmatic</label>
+            </value>
+            <value>
+                <fullName>SpotX</fullName>
+                <default>false</default>
+                <label>SpotX</label>
+            </value>
+            <value>
+                <fullName>Teads</fullName>
+                <default>false</default>
+                <label>Teads</label>
+            </value>
+            <value>
+                <fullName>Verizon Media</fullName>
+                <default>false</default>
+                <label>Verizon Media</label>
+            </value>
+            <value>
+                <fullName>Xandr Curate</fullName>
+                <default>false</default>
+                <label>Xandr Curate</label>
+            </value>
+            <value>
+                <fullName>The MediaGrid</fullName>
+                <default>false</default>
+                <label>The MediaGrid</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

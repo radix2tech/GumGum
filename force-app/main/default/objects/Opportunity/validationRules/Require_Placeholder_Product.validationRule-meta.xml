@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Placeholder_Product</fullName>
+    <active>true</active>
+    <description>You must add a placeholder product at the Opportunity Identified 25% stage. Active on these record types: Advertising, Activation and AIP</description>
+    <errorConditionFormula>AND(
+     ISCHANGED(StageName),
+     $User.Bypass_Opportunity_Validation__c = FALSE,
+				 NOT($Permission.Bypass_Opportunity_Validation),
+				 HasOpportunityLineItem = False,
+     Placeholder_Product_Count__c&gt;0,
+    
+     OR(
+         RecordType.Name = &quot;Advertising&quot; ,
+         RecordType.Name = &quot;Activation&quot; ,
+         RecordType.Name = &quot;Attention_Intelligence_Platform&quot; 
+       ),
+      OR(
+          Probability = 0.25 ,
+          Probability = 0.50 
+         )
+     )</errorConditionFormula>
+    <errorMessage>You must add a placeholder product or product at the Proposal or Negotiations Stage</errorMessage>
+</ValidationRule>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Marketing Segment --></label>
+    <name>Marketing_Segment__c</name>
+    <picklistValues>
+        <masterLabel>2016 Client Holiday Gifts</masterLabel>
+        <translation><!-- 2016 Client Holiday Gifts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aircover</masterLabel>
+        <translation><!-- Aircover --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CVPR Conference 2017</masterLabel>
+        <translation><!-- CVPR Conference 2017 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Competitors</masterLabel>
+        <translation><!-- Competitors --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ophir</masterLabel>
+        <translation><!-- Ophir --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pluck PR - Reporters</masterLabel>
+        <translation><!-- Pluck PR - Reporters --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>The Visionary Subscriber</masterLabel>
+        <translation><!-- The Visionary Subscriber --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VIP/Senior Client</masterLabel>
+        <translation><!-- VIP/Senior Client --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

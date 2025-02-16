@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VerityAmountRequired</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+     $User.Bypass_Opportunity_Validation__c = False,
+     RecordType.Name = &apos;Verity&apos;,
+     ISBLANK(Amount),
+     OR(
+         ISNEW(),
+         ISCHANGED(StageName)
+        ),
+     OR(
+         TEXT(StageName) = &apos;Contract/Negotiations&apos;,
+         TEXT(StageName) = &apos;Closed/Won&apos;,
+         TEXT(StageName) = &apos;Initial Proposal&apos;
+        )
+    )</errorConditionFormula>
+    <errorDisplayField>Amount</errorDisplayField>
+    <errorMessage>Please enter the Total Ordered Amount</errorMessage>
+</ValidationRule>

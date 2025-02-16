@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2019_Events_ROI_Tracker__c</fullName>
+    <externalId>false</externalId>
+    <label>2019 Events ROI Tracker</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>2018 NA Sales Midwest Spa Event with Jim Beam</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Spa Event with Jim Beam</label>
+            </value>
+            <value>
+                <fullName>2018 Q4 NA Sales East- Cookie Do</fullName>
+                <default>false</default>
+                <label>2018 Q4 NA Sales East- Cookie Do</label>
+            </value>
+            <value>
+                <fullName>2018 Q4 NA Sales East- Holiday Party with Cadreon</fullName>
+                <default>false</default>
+                <label>2018 Q4 NA Sales East- Holiday Party with Cadreon</label>
+            </value>
+            <value>
+                <fullName>2018 Q4 NA Sales East- Spa at Peninsula with Subway</fullName>
+                <default>false</default>
+                <label>2018 Q4 NA Sales East- Spa at Peninsula with Subway</label>
+            </value>
+            <value>
+                <fullName>2018 Q4 NA Sales East- The ONE Party</fullName>
+                <default>false</default>
+                <label>2018 Q4 NA Sales East- The ONE Party</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West Holiday Cuyana</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West Holiday Cuyana</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West Holiday Sunglass Hut</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West Holiday Sunglass Hut</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West SF Baarc Lunch</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West SF Baarc Lunch</label>
+            </value>
+            <value>
+                <fullName>2019 NA Pub Dev Digiday Publishing Summit Vail</fullName>
+                <default>false</default>
+                <label>2019 NA Pub Dev Digiday Publishing Summit Vail</label>
+            </value>
+            <value>
+                <fullName>2019 NA Digiday Media Buying Summit (February)</fullName>
+                <default>false</default>
+                <label>2019 NA Digiday Media Buying Summit (February)</label>
+            </value>
+            <value>
+                <fullName>2019 IAB Annual Leadership Meeting</fullName>
+                <default>false</default>
+                <label>2019 IAB Annual Leadership Meeting</label>
+            </value>
+            <value>
+                <fullName>2019 Japan- GumGum x beBit: Digital Marketing Seminar</fullName>
+                <default>false</default>
+                <label>2019 Japan- GumGum x beBit: Digital Marketing Seminar</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Not_Delivered</fullName>
+    <active>false</active>
+    <description>Part of request delivered 8-21-18 for Adam Schenkel&apos;s request to &quot;Track if a campaign was delivered in full and why not if it didn&apos;t get delivered.&quot; This forces a loss reason to be chosen when a campaign is not delivered fully. Inside Sales Record Type</description>
+    <errorConditionFormula>and( 
+ 
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+isblank(TEXT(Loss_Reason__c)) 
+)</errorConditionFormula>
+    <errorDisplayField>Loss_Reason__c</errorDisplayField>
+    <errorMessage>Please select a loss reason</errorMessage>
+</ValidationRule>

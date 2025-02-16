@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_to_Admins_Change_to_Discard</fullName>
+    <active>false</active>
+    <description>Only admins can change oppty to stage to Discard</description>
+    <errorConditionFormula>AND(
+ISBLANK(TEXT( Discard_Reason__c )),
+ISCHANGED(StageName), 
+TEXT(StageName) = &quot;Discard&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;
+)</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>Please contact Salesforce Support to change an opportunity stage to &quot;Discard&quot;</errorMessage>
+</ValidationRule>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Monthly US Uniques --></label>
+    <name>Monthly_US_Uniques__c</name>
+    <picklistValues>
+        <masterLabel>0-100k</masterLabel>
+        <translation><!-- 0-100k --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1-5mm</masterLabel>
+        <translation><!-- 1-5mm --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>100-249k</masterLabel>
+        <translation><!-- 100-249k --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>250-499k</masterLabel>
+        <translation><!-- 250-499k --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>500-999k</masterLabel>
+        <translation><!-- 500-999k --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5mm+</masterLabel>
+        <translation><!-- 5mm+ --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Opt_In__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Created per Val T.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Person has opted in to receive marketing emails and promotions</inlineHelpText>
+    <label>Marketing Opt-In</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

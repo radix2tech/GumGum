@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Campaign Status --></label>
+    <name>Campaign_Status__c</name>
+    <picklistValues>
+        <masterLabel>Campaign Cancelled</masterLabel>
+        <translation><!-- Campaign Cancelled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Campaign Ended</masterLabel>
+        <translation><!-- Campaign Ended --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Campaign Paused</masterLabel>
+        <translation><!-- Campaign Paused --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Engineering Is Setting Up</masterLabel>
+        <translation><!-- Engineering Is Setting Up --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Between Phases</masterLabel>
+        <translation><!-- In Between Phases --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In QA</masterLabel>
+        <translation><!-- In QA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In with AdBuilder</masterLabel>
+        <translation><!-- In with AdBuilder --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In with Creative</masterLabel>
+        <translation><!-- In with Creative --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Live</masterLabel>
+        <translation><!-- Live --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Live, Creative Refresh</masterLabel>
+        <translation><!-- Live, Creative Refresh --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ready to Go</masterLabel>
+        <translation><!-- Ready to Go --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for Assets</masterLabel>
+        <translation><!-- Waiting for Assets --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for Client Creative Approval</masterLabel>
+        <translation><!-- Waiting for Client Creative Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for Pixels/Tags</masterLabel>
+        <translation><!-- Waiting for Pixels/Tags --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for Video</masterLabel>
+        <translation><!-- Waiting for Video --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

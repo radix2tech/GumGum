@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Proposal</fullName>
+    <active>false</active>
+    <description>Must complete Proposal Details section to move to 50% win probability.</description>
+    <errorConditionFormula>AND( 
+/* These are the main requirements for this validation rule */ 
+TEXT(StageName) &lt;&gt; &quot;Closed/Lost&quot;, 
+TEXT(Channel__c) &lt;&gt; &quot;Programmatic&quot;, 
+RecordType.DeveloperName =&quot;Advertising&quot;, 
+Probability &gt;= 0.5, 
+isblank(X3rd_Party_Supplier__c ),
+
+/* This section is checking if any of these fields are blank */ 
+OR( 
+ISBLANK( RFP_Received_Date__c ), 
+ISBLANK( KPI_Client_Objectives__c ), 
+ISBLANK( RFP_Due_Date__c ), 
+ISBLANK( All_Units_Included__c ), 
+ISBLANK( TEXT( RFP__c ) ), 
+ISBLANK( TEXT( Contains_New_Products__c ) ), 
+ISBLANK( TEXT( Mock_Requested__c ) ), 
+AND( 
+ISBLANK( Low_Budget_Level__c ), 
+ISBLANK( Mid_Budget_Level__c ), 
+ISBLANK( High_Budget_Level__c ) 
+), 
+ISBLANK( TEXT( Event2__c ) ), 
+AND( 
+ISPICKVAL(Event2__c, &apos;Yes&apos;), 
+ISBLANK( RFP_Event_Description__c ) 
+) 
+))</errorConditionFormula>
+    <errorMessage>Must complete Proposal Details section to move to 50% win probability.</errorMessage>
+</ValidationRule>

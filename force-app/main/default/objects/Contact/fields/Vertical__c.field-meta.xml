@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vertical__c</fullName>
+    <externalId>false</externalId>
+    <label>Vertical</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Auto and Recreational Vehicles</fullName>
+                <default>false</default>
+                <label>Auto and Recreational Vehicles</label>
+            </value>
+            <value>
+                <fullName>CPG</fullName>
+                <default>false</default>
+                <label>CPG</label>
+            </value>
+            <value>
+                <fullName>Entertainment/Media</fullName>
+                <default>false</default>
+                <label>Entertainment/Media</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>Issues and Causes</fullName>
+                <default>false</default>
+                <label>Issues and Causes</label>
+            </value>
+            <value>
+                <fullName>Life Stages</fullName>
+                <default>false</default>
+                <label>Life Stages</label>
+            </value>
+            <value>
+                <fullName>Misc. Businesses and Industries</fullName>
+                <default>false</default>
+                <label>Misc. Businesses and Industries</label>
+            </value>
+            <value>
+                <fullName>Music, Sports and Live Events</fullName>
+                <default>false</default>
+                <label>Music, Sports and Live Events</label>
+            </value>
+            <value>
+                <fullName>Pharma</fullName>
+                <default>false</default>
+                <label>Pharma</label>
+            </value>
+            <value>
+                <fullName>Politics</fullName>
+                <default>false</default>
+                <label>Politics</label>
+            </value>
+            <value>
+                <fullName>Retail</fullName>
+                <default>false</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>Technology</fullName>
+                <default>false</default>
+                <label>Technology</label>
+            </value>
+            <value>
+                <fullName>Telecommunications</fullName>
+                <default>false</default>
+                <label>Telecommunications</label>
+            </value>
+            <value>
+                <fullName>Travel and Leisure</fullName>
+                <default>false</default>
+                <label>Travel and Leisure</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

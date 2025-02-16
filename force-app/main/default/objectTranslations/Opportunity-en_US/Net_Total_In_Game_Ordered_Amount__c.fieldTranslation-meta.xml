@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Net Revenue only on In-Game Products, calculated as 30% of Gross (No Barter / Trading Deal Account) or 25% of Gross (Yes Barter / Trading Deal Account) --></help>
+    <label><!-- Net Total In-Game Ordered Amount --></label>
+    <name>Net_Total_In_Game_Ordered_Amount__c</name>
+</CustomFieldTranslation>

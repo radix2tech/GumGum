@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Regional_ROI_Tracker__c</fullName>
+    <externalId>false</externalId>
+    <label>Regional ROI Tracker</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>2018 NA Sales Midwest Nordstrom Shopping Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Nordstrom Shopping Event</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales East - BATSU Event</fullName>
+                <default>false</default>
+                <label>2017 NA Sales East - BATSU Event</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales East Blue Hill at Stone Barn Dinner</fullName>
+                <default>false</default>
+                <label>2017 NA Sales East Blue Hill at Stone Barn Dinner</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales East - Cadreon Happy Hour</fullName>
+                <default>false</default>
+                <label>2017 NA Sales East - Cadreon Happy Hour</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales East - Catch Dinner</fullName>
+                <default>false</default>
+                <label>2017 NA Sales East - Catch Dinner</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales East - Converse Event</fullName>
+                <default>false</default>
+                <label>2017 NA Sales East - Converse Event</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales East - Lululemon Shopping Event</fullName>
+                <default>false</default>
+                <label>2017 NA Sales East - Lululemon Shopping Event</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales East - Manicure Event at BPI</fullName>
+                <default>false</default>
+                <label>2017 NA Sales East - Manicure Event at BPI</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales East - Pizza Making</fullName>
+                <default>false</default>
+                <label>2017 NA Sales East - Pizza Making</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales East - Sur La Table Cooking Class</fullName>
+                <default>false</default>
+                <label>2017 NA Sales East - Sur La Table Cooking Class</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales West STAPLES Kings vs Blues</fullName>
+                <default>false</default>
+                <label>2017 NA Sales West STAPLES Kings vs Blues</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales West STAPLES Kings vs Maple Leafs</fullName>
+                <default>false</default>
+                <label>2017 NA Sales West STAPLES Kings vs Maple Leafs</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales West STAPLES Lakers vs Golden State</fullName>
+                <default>false</default>
+                <label>2017 NA Sales West STAPLES Lakers vs Golden State</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales West STAPLES Lakers vs Pelicans</fullName>
+                <default>false</default>
+                <label>2017 NA Sales West STAPLES Lakers vs Pelicans</label>
+            </value>
+            <value>
+                <fullName>2017 UK Cereal Killer Cafe</fullName>
+                <default>false</default>
+                <label>2017 UK Cereal Killer Cafe</label>
+            </value>
+            <value>
+                <fullName>2017 UK Mindshare Huddle</fullName>
+                <default>false</default>
+                <label>2017 UK Mindshare Huddle</label>
+            </value>
+            <value>
+                <fullName>Agency Thought Leaders NYC Dinner 7/25/17</fullName>
+                <default>false</default>
+                <label>Agency Thought Leaders NYC Dinner 7/25/17</label>
+            </value>
+            <value>
+                <fullName>August NA Sales West Benefit 2017</fullName>
+                <default>false</default>
+                <label>August NA Sales West Benefit 2017</label>
+            </value>
+            <value>
+                <fullName>August NA Sales West Cuyana 2017</fullName>
+                <default>false</default>
+                <label>August NA Sales West Cuyana 2017</label>
+            </value>
+            <value>
+                <fullName>August NA Sales West Hourglass 2017</fullName>
+                <default>false</default>
+                <label>August NA Sales West Hourglass 2017</label>
+            </value>
+            <value>
+                <fullName>August NA Sales West Kiehl&apos;s 2017</fullName>
+                <default>false</default>
+                <label>August NA Sales West Kiehl&apos;s 2017</label>
+            </value>
+            <value>
+                <fullName>August NA Sales West Kiehls SF 2017</fullName>
+                <default>false</default>
+                <label>August NA Sales West Kiehls SF 2017</label>
+            </value>
+            <value>
+                <fullName>August NA Sales West Sushi @ Carat 2017</fullName>
+                <default>false</default>
+                <label>August NA Sales West Sushi @ Carat 2017</label>
+            </value>
+            <value>
+                <fullName>ESPYS 2017</fullName>
+                <default>false</default>
+                <label>ESPYS 2017</label>
+            </value>
+            <value>
+                <fullName>July NA Sales West Benefit 2017</fullName>
+                <default>false</default>
+                <label>July NA Sales West Benefit 2017</label>
+            </value>
+            <value>
+                <fullName>NA Sales Midwest Bruno Mars Concert 2017</fullName>
+                <default>false</default>
+                <label>NA Sales Midwest Bruno Mars Concert 2017</label>
+            </value>
+            <value>
+                <fullName>NA Sales Midwest Detroit City Soccer Game 2017</fullName>
+                <default>false</default>
+                <label>NA Sales Midwest Detroit City Soccer Game 2017</label>
+            </value>
+            <value>
+                <fullName>NA Sales Midwest Detroit Thought Leadership Dinner 2017</fullName>
+                <default>false</default>
+                <label>NA Sales Midwest Detroit Thought Leadership Dinner 2017</label>
+            </value>
+            <value>
+                <fullName>NA Sales Midwest DFWIMA iHack Sponsorship 2017</fullName>
+                <default>false</default>
+                <label>NA Sales Midwest DFWIMA iHack Sponsorship 2017</label>
+            </value>
+            <value>
+                <fullName>NA Sales Midwest Eat. Drink. Critique! 2017</fullName>
+                <default>false</default>
+                <label>NA Sales Midwest Eat. Drink. Critique! 2017</label>
+            </value>
+            <value>
+                <fullName>NA Sales Midwest SapientRazorfish Golf Outing Sponsorship 2017</fullName>
+                <default>false</default>
+                <label>NA Sales Midwest SapientRazorfish Golf Outing Sponsorship 2017</label>
+            </value>
+            <value>
+                <fullName>NYC Comedy Club Event 2017</fullName>
+                <default>false</default>
+                <label>NYC Comedy Club Event 2017</label>
+            </value>
+            <value>
+                <fullName>UK London Fashion Week 2017</fullName>
+                <default>false</default>
+                <label>UK London Fashion Week 2017</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales East - Q4 Winner - Cece - Dear Evan Hansen</fullName>
+                <default>false</default>
+                <label>2017 NA Sales East - Q4 Winner - Cece - Dear Evan Hansen</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales East- Sprint Shopping Event</fullName>
+                <default>false</default>
+                <label>2017 NA Sales East- Sprint Shopping Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West October STAPLES Game</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West October STAPLES Game</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Aroma Workshop Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Aroma Workshop Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Canada Justin Timberlake Concert Suite</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Canada Justin Timberlake Concert Suite</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Canada Leafs vs. Penguins Suite</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Canada Leafs vs. Penguins Suite</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Red Wings Suite - OCT</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Red Wings Suite - OCT</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Minneapolis i612 Halloween Sponsorship</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Minneapolis i612 Halloween Sponsorship</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- D.C Adweek</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- D.C Adweek</label>
+            </value>
+            <value>
+                <fullName>2018 Q4 NA Sales East - Comedy Club Event</fullName>
+                <default>false</default>
+                <label>2018 Q4 NA Sales East - Comedy Club Event</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

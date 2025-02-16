@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Budget_Marketing_programs__c</fullName>
+    <externalId>false</externalId>
+    <formula>Currencyrate( text(CurrencyIsoCode))* 
+case(month(Occurence_Date__c),
+1,31000,
+2,31000,
+3,31000,
+4,79000,
+5,129000,
+6,79000,
+7,75000,
+8,125000,
+9,75000,
+10,25000,
+11,25000,
+12,25000,0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Budget Marketing programs</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_of_Most_Recent_Marketing_Campaign__c</fullName>
+    <description>This date should continuously update with the date the campaign member was added to the campaign in Most recent marketing campaign.</description>
+    <externalId>false</externalId>
+    <label>Date of Most  Recent Marketing Campaign</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

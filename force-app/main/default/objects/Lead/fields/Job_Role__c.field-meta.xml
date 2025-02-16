@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Role__c</fullName>
+    <description>Please select the level of role seniority this person currently holds</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select the level of role seniority this person currently holds</inlineHelpText>
+    <label>Job Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Job_Role</valueSetName>
+    </valueSet>
+</CustomField>

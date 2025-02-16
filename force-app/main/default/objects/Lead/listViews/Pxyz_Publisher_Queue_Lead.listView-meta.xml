@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pxyz_Publisher_Queue_Lead</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Pxyz Publisher Queue</label>
+    <queue>Pxyz_Publisher_Queue</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

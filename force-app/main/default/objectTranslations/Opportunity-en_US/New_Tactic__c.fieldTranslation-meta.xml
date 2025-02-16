@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- New Tactic --></label>
+    <name>New_Tactic__c</name>
+    <picklistValues>
+        <masterLabel>Publisher Direct/Endemic Site</masterLabel>
+        <translation><!-- Publisher Direct/Endemic Site --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shift to Content</masterLabel>
+        <translation><!-- Shift to Content --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shift to Pre-roll Only</masterLabel>
+        <translation><!-- Shift to Pre-roll Only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shift to Social/Search</masterLabel>
+        <translation><!-- Shift to Social/Search --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

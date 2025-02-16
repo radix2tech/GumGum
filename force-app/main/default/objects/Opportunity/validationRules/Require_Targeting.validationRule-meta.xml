@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Targeting</fullName>
+    <active>false</active>
+    <errorConditionFormula>and(
+RecordType.DeveloperName = &quot;Advertising&quot;,
+TEXT(Channel__c) &lt;&gt; &quot;Programmatic&quot;,
+Probability &gt;= 0.75,
+ Targeting_Complete__c = FALSE,
+ISCHANGED( StageName )
+)</errorConditionFormula>
+    <errorMessage>Targeting and Geo Targeting records need to be completely filled out after 50% probability.</errorMessage>
+</ValidationRule>

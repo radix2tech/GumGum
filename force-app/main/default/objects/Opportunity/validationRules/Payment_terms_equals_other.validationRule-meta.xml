@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_terms_equals_other</fullName>
+    <active>true</active>
+    <errorConditionFormula>and(
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+NOT( $Permission.Bypass_Opportunity_Validation ),
+ispickval( Insertion_Order_Payment_Terms__c , &quot;Other&quot;),
+isblank( Payment_Term_Notes__c )
+)</errorConditionFormula>
+    <errorMessage>Please enter payment terms in the Payment Terms-Other field.</errorMessage>
+</ValidationRule>

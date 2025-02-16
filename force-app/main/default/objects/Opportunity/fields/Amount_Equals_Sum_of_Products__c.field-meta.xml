@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount_Equals_Sum_of_Products__c</fullName>
+    <externalId>false</externalId>
+    <formula>ABS(Round(Amount, 0) - Round(Total_Ordered_Amount_Check_Figure__c, 0)) &lt; 5</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Amount Equals Sum of Products</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

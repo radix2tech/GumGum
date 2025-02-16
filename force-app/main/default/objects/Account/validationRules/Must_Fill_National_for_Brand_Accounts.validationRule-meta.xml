@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Must_Fill_National_for_Brand_Accounts</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+NOT( $Permission.Bypass_Account_Validation ),
+OR(
+ Opp_Count__c = 0,
+Converted__c = FALSE,
+ ISBLANK( Opp_Count__c )),
+
+OR(
+$User.ProfileId = &quot;00eU0000000J7n2&quot;,
+$User.ProfileId = &quot;00eU0000000JCOd&quot;,
+$User.ProfileId = &quot;00e4U000001604u&quot;,
+$User.ProfileId = &quot;00e0P000000xYeQ&quot;,
+$User.ProfileId = &quot;00e0P000000KPVm&quot;,
+$User.ProfileId = &quot;00e0P000000KPVh&quot;,
+$User.ProfileId = &quot;00e0P000000GpIM&quot;,
+$User.ProfileId = &quot;00e0P000000GpIC&quot;
+),
+RecordType.Name = &quot;Advertising&quot;,
+OR(
+
+(ISPICKVAL(Type, &quot;Brand Direct&quot;))),
+
+ISBLANK(Text(  National__c  ))
+)</errorConditionFormula>
+    <errorDisplayField>National__c</errorDisplayField>
+    <errorMessage>If this account is a brand then indicate if this is a National account</errorMessage>
+</ValidationRule>

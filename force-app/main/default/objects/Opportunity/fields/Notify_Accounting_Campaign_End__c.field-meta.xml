@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notify_Accounting_Campaign_End__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This checkbox triggers an email to accounting that the campaign has ended</description>
+    <externalId>false</externalId>
+    <label>Notify Accounting - Campaign End</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agency_Name__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>If the Agency Name field is entered, show the name of that Agency. Otherwise, show the error message.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the Agency Account facilitating the campaign, if applicable.  Do not include Brand direct accounts in this field</inlineHelpText>
+    <label>Agency Name</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Advertising</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Agency Opportunities</relationshipLabel>
+    <relationshipName>Opportunities1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- CPM Type --></label>
+    <name>CPM_Type__c</name>
+    <picklistValues>
+        <masterLabel>Estimated CPM</masterLabel>
+        <translation><!-- Estimated CPM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Segment CPM</masterLabel>
+        <translation><!-- Segment CPM --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

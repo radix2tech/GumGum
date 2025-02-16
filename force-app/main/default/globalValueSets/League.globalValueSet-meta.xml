@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Allsvenskan</fullName>
+        <default>false</default>
+        <label>Allsvenskan</label>
+    </customValue>
+    <customValue>
+        <fullName>ATP</fullName>
+        <default>false</default>
+        <label>ATP</label>
+    </customValue>
+    <customValue>
+        <fullName>ATP Tour</fullName>
+        <default>false</default>
+        <label>ATP Tour</label>
+    </customValue>
+    <customValue>
+        <fullName>Australian Football League</fullName>
+        <default>false</default>
+        <label>Australian Football League</label>
+    </customValue>
+    <customValue>
+        <fullName>Big Bash</fullName>
+        <default>false</default>
+        <label>Big Bash</label>
+    </customValue>
+    <customValue>
+        <fullName>Bundesliga</fullName>
+        <default>false</default>
+        <label>Bundesliga</label>
+    </customValue>
+    <customValue>
+        <fullName>Canadian Football League</fullName>
+        <default>false</default>
+        <label>Canadian Football League</label>
+    </customValue>
+    <customValue>
+        <fullName>Championship</fullName>
+        <default>false</default>
+        <label>Championship</label>
+    </customValue>
+    <customValue>
+        <fullName>Divionsforeningen</fullName>
+        <default>false</default>
+        <label>Divionsforeningen</label>
+    </customValue>
+    <customValue>
+        <fullName>Ekstraklasa</fullName>
+        <default>false</default>
+        <label>Ekstraklasa</label>
+    </customValue>
+    <customValue>
+        <fullName>Eliteserien</fullName>
+        <default>false</default>
+        <label>Eliteserien</label>
+    </customValue>
+    <customValue>
+        <fullName>English Championship</fullName>
+        <default>false</default>
+        <label>English Championship</label>
+    </customValue>
+    <customValue>
+        <fullName>English County Cricket</fullName>
+        <default>false</default>
+        <label>English County Cricket</label>
+    </customValue>
+    <customValue>
+        <fullName>Eredivisie</fullName>
+        <default>false</default>
+        <label>Eredivisie</label>
+    </customValue>
+    <customValue>
+        <fullName>Esports</fullName>
+        <default>false</default>
+        <label>Esports</label>
+    </customValue>
+    <customValue>
+        <fullName>Euroleague</fullName>
+        <default>false</default>
+        <label>Euroleague</label>
+    </customValue>
+    <customValue>
+        <fullName>F1</fullName>
+        <default>false</default>
+        <label>F1</label>
+    </customValue>
+    <customValue>
+        <fullName>Formula 1</fullName>
+        <default>false</default>
+        <label>Formula 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Formula E</fullName>
+        <default>false</default>
+        <label>Formula E</label>
+    </customValue>
+    <customValue>
+        <fullName>Indycar</fullName>
+        <default>false</default>
+        <label>Indycar</label>
+    </customValue>
+    <customValue>
+        <fullName>IPL</fullName>
+        <default>false</default>
+        <label>IPL</label>
+    </customValue>
+    <customValue>
+        <fullName>ISL</fullName>
+        <default>false</default>
+        <label>ISL</label>
+    </customValue>
+    <customValue>
+        <fullName>La Liga</fullName>
+        <default>false</default>
+        <label>La Liga</label>
+    </customValue>
+    <customValue>
+        <fullName>Ligue 1</fullName>
+        <default>false</default>
+        <label>Ligue 1</label>
+    </customValue>
+    <customValue>
+        <fullName>LPGA Tour</fullName>
+        <default>false</default>
+        <label>LPGA Tour</label>
+    </customValue>
+    <customValue>
+        <fullName>MiLB</fullName>
+        <default>false</default>
+        <label>MiLB</label>
+    </customValue>
+    <customValue>
+        <fullName>MLB</fullName>
+        <default>false</default>
+        <label>MLB</label>
+    </customValue>
+    <customValue>
+        <fullName>MLR</fullName>
+        <default>false</default>
+        <label>MLR</label>
+    </customValue>
+    <customValue>
+        <fullName>MLS</fullName>
+        <default>false</default>
+        <label>MLS</label>
+    </customValue>
+    <customValue>
+        <fullName>Motorsports</fullName>
+        <default>false</default>
+        <label>Motorsports</label>
+    </customValue>
+    <customValue>
+        <fullName>Multiple</fullName>
+        <default>false</default>
+        <label>Multiple</label>
+    </customValue>
+    <customValue>
+        <fullName>NASCAR</fullName>
+        <default>false</default>
+        <label>NASCAR</label>
+    </customValue>
+    <customValue>
+        <fullName>NBA</fullName>
+        <default>false</default>
+        <label>NBA</label>
+    </customValue>
+    <customValue>
+        <fullName>NCAA</fullName>
+        <default>false</default>
+        <label>NCAA</label>
+    </customValue>
+    <customValue>
+        <fullName>NFL</fullName>
+        <default>false</default>
+        <label>NFL</label>
+    </customValue>
+    <customValue>
+        <fullName>NHL</fullName>
+        <default>false</default>
+        <label>NHL</label>
+    </customValue>
+    <customValue>
+        <fullName>NHRA</fullName>
+        <default>false</default>
+        <label>NHRA</label>
+    </customValue>
+    <customValue>
+        <fullName>NRL</fullName>
+        <default>false</default>
+        <label>NRL</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Overwatch League</fullName>
+        <default>false</default>
+        <label>Overwatch League</label>
+    </customValue>
+    <customValue>
+        <fullName>PBA</fullName>
+        <default>false</default>
+        <label>PBA</label>
+    </customValue>
+    <customValue>
+        <fullName>PBR</fullName>
+        <default>false</default>
+        <label>PBR</label>
+    </customValue>
+    <customValue>
+        <fullName>PGA</fullName>
+        <default>false</default>
+        <label>PGA</label>
+    </customValue>
+    <customValue>
+        <fullName>PGA Tour</fullName>
+        <default>false</default>
+        <label>PGA Tour</label>
+    </customValue>
+    <customValue>
+        <fullName>Premier League</fullName>
+        <default>false</default>
+        <label>Premier League</label>
+    </customValue>
+    <customValue>
+        <fullName>Premiership</fullName>
+        <default>false</default>
+        <label>Premiership</label>
+    </customValue>
+    <customValue>
+        <fullName>Primeira Liga</fullName>
+        <default>false</default>
+        <label>Primeira Liga</label>
+    </customValue>
+    <customValue>
+        <fullName>Pro14</fullName>
+        <default>false</default>
+        <label>Pro14</label>
+    </customValue>
+    <customValue>
+        <fullName>Pro League</fullName>
+        <default>false</default>
+        <label>Pro League</label>
+    </customValue>
+    <customValue>
+        <fullName>Scottish Premiership</fullName>
+        <default>false</default>
+        <label>Scottish Premiership</label>
+    </customValue>
+    <customValue>
+        <fullName>Serie A</fullName>
+        <default>false</default>
+        <label>Serie A</label>
+    </customValue>
+    <customValue>
+        <fullName>The Premier League</fullName>
+        <default>false</default>
+        <label>The Premier League</label>
+    </customValue>
+    <customValue>
+        <fullName>UCI World Tour</fullName>
+        <default>false</default>
+        <label>UCI World Tour</label>
+    </customValue>
+    <customValue>
+        <fullName>Vitality T20</fullName>
+        <default>false</default>
+        <label>Vitality T20</label>
+    </customValue>
+    <customValue>
+        <fullName>WNBA</fullName>
+        <default>false</default>
+        <label>WNBA</label>
+    </customValue>
+    <customValue>
+        <fullName>WTA</fullName>
+        <default>false</default>
+        <label>WTA</label>
+    </customValue>
+    <customValue>
+        <fullName>Super League</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Super League</label>
+    </customValue>
+    <customValue>
+        <fullName>English League One</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>English League One</label>
+    </customValue>
+    <customValue>
+        <fullName>Aviva Premiership Rugby</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Aviva Premiership Rugby</label>
+    </customValue>
+    <customValue>
+        <fullName>EPL</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EPL</label>
+    </customValue>
+    <masterLabel>League</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

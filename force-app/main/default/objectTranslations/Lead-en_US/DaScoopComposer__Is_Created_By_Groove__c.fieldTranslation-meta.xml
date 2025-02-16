@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicates whether this lead was created by Groove. --></help>
+    <label><!-- Is Created By Groove --></label>
+    <name>DaScoopComposer__Is_Created_By_Groove__c</name>
+</CustomFieldTranslation>

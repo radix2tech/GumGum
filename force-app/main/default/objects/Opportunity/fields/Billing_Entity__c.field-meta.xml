@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Entity__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The Account where invoices should be sent to (TDG).  Sync with Netsuite.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Billing Entity account where invoices should be sent to.</inlineHelpText>
+    <label>Billing Entity</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Billing Entity</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Account_Region_Country__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Opportunity_Region_Country__c</valueField>
+        </filterItems>
+        <infoMessage>Select the Billing Entity Account</infoMessage>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Opportunities (Billing Entity)</relationshipLabel>
+    <relationshipName>Account_Billing_Entity</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

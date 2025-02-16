@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Send Sold Campaign Email to Company --></label>
+    <name>Send_Sold_Campaign_Email_to_Company__c</name>
+</CustomFieldTranslation>

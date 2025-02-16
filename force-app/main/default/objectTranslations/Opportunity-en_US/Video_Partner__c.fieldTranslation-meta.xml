@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Video Partner --></label>
+    <name>Video_Partner__c</name>
+    <picklistValues>
+        <masterLabel>IRIS</masterLabel>
+        <translation><!-- IRIS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JW</masterLabel>
+        <translation><!-- JW --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

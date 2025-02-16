@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Calculates the number of days between when the opp first moved into a qualified stage (Pipeline) and the date to which it was moved to Closed (Won or Lost) --></help>
+    <label><!-- Total Pipeline Age --></label>
+    <name>Total_Pipeline_Age__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field will check off when an email bounces from Hubspot --></help>
+    <label><!-- Invalid Email Address --></label>
+    <name>Invalid_Email_Address__c</name>
+</CustomFieldTranslation>

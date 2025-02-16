@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name</fullName>
+    <inlineHelpText>Standard naming convention is “Year_Quarter_Name of Campaign_Tactic” - i.e. 2021_Q4_Lumen Study_Adweek Eblast</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Generic</fullName>
+    <active>true</active>
+    <label>Contact</label>
+    <picklistValues>
+        <picklist>DOZISF__ZoomInfo_Enrich_Status__c</picklist>
+        <values>
+            <fullName>Company Enriched Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enriched</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error Occurred in Instant Enrich</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error Occurred in Scheduled Enrich</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insufficient Credits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Match</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Enriched - Not Under Management</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Email_Validation_Result__c</picklist>
+        <values>
+            <fullName>Invalid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Valid</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Source__c</picklist>
+        <values>
+            <fullName>Brand Safety Email 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bring Cannes to You %28Chicago%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bring Cannes to You %28LA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bring Cannes to You %28London%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DMEXCO 2017</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Functional_Role__c</picklist>
+        <values>
+            <fullName>Administration%2FExecutive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance%2FAccounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR%2FRecruiting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics%2FSupply Chain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing%2FAdvertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operations%2FProduction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PR%2FMedia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Procurement%2FPurchasing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales%2FPartnerships</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology%2FData</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hubspot_Lifecycle_Stage__c</picklist>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evangelist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing Qualified Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Qualified Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subscriber</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>I_m_Here_to_Learn_About__c</picklist>
+        <values>
+            <fullName>Advertising Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publisher Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visual Intelligence%2FSocial Media Solutions</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Job_Role__c</picklist>
+        <values>
+            <fullName>Business Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C-Suite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coordinator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inventory Partnerships</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LID__Level__c</picklist>
+        <values>
+            <fullName>Primary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Secondary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tertiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LID__No_longer_at_Company__c</picklist>
+        <values>
+            <fullName>Ignore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not at Company</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>ABM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content downloads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gifting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GumGum Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hosted Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LinkedIn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LinkedIn Premium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PPC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paid Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partnerships</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Press</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quiz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Prospecting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsored Tradeshow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Winmo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lifecycle_Stage__c</picklist>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing Qualified Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Accepted Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Qualified Lead</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Marketing_Segment__c</picklist>
+        <values>
+            <fullName>Aircover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVPR Conference 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holiday Gift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ophir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pluck PR - Reporters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Visionary Subscriber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIP%2FSenior Client</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>My_Role_Involves__c</picklist>
+        <values>
+            <fullName>Media Buying</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sultan</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PXYZ_Products_Interested_In__c</picklist>
+        <values>
+            <fullName>Attention Data%2C High Impact Creative %26 Premium Inventory %28Full-Service Activation%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Attention Measurement %26 Optimisation %28Data Only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publisher Partnerships</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Youtube Attention Measurement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Persona__c</picklist>
+        <values>
+            <fullName>Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency VIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DSP or Trading Desk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Influencer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publisher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reporter %2F Analyst</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rights Holder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SSP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student %2F Job Seeker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VC and Angel</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Publisher_vertical__c</picklist>
+        <values>
+            <fullName>Auto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business %26 Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fashion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Drink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gaming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health %26 Wellness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home %26 Garden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Humor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lifestyles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miscellaneous</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>News</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Networks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region__c</picklist>
+        <values>
+            <fullName>AMER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Self_Attribution_Source__c</picklist>
+        <values>
+            <fullName>Blog</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bot Crawler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chat GPT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GG Ads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industry News</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partnership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Past work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Podcast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Programmatic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TV Ad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WOM %2F Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Search</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sports_Persona__c</picklist>
+        <values>
+            <fullName>Business Intelligence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Sponsorships</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Head of Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partnership Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partnership Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsorship Consultant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Region__c</picklist>
+        <values>
+            <fullName>APAC - Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - New Zealand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Belgium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - France</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Germany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Netherlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Nordics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Spain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LATAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United States</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Territory_Sports__c</picklist>
+        <values>
+            <fullName>AJ Sheth %28Rights Holders%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chris Mike %28North%2FCentral%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hilary Brown %28Southwest%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joe Pinaire %28South%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OPEN %28Mid-Atlantic%2FGreat Lakes%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OPEN %28Northeast%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TBD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TBD %28Brands%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TBD %28EMEA Rep%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vertical__c</picklist>
+        <values>
+            <fullName>Auto and Recreational Vehicles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment%2FMedia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Issues and Causes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Life Stages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misc%2E Businesses and Industries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Music%2C Sports and Live Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Politics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel and Leisure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>asknicely__CSAT_Type__c</picklist>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>asknicely__FIVESTAR_Type__c</picklist>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>asknicely__NPS_Type__c</picklist>
+        <values>
+            <fullName>Detractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Passive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promoter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

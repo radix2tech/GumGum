@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Need_Campaign_Dates</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+OR( ISBLANK(Start_Date2__c),   
+ISBLANK(End_Date2__c)),
+NOT( $Permission.Bypass_Opportunity_Validation ),
+ISPICKVAL(StageName, &quot;Proposal&quot;),  
+OR(
+RecordTypeId = &quot;012U00000001pHJ&quot;,
+RecordTypeId = &quot;0124U000000bydM&quot;,
+RecordTypeId = &quot;0124U000000g9sj&quot;)
+)</errorConditionFormula>
+    <errorMessage>Must enter Campaign Dates at Proposal Stage; this indicates a Product must be added to this campaign</errorMessage>
+</ValidationRule>

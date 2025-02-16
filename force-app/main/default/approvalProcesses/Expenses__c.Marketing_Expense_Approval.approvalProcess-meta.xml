@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>allInternalUsers</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <type>creator</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Occurence_Date__c</field>
+        <field>Name</field>
+        <field>Vendor_Name__c</field>
+        <field>Marketing_Category__c</field>
+        <field>Department__c</field>
+        <field>Expense_Amount__c</field>
+        <field>Quick_Note__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>bplomion@gumgum.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Marketing expenses &gt;$15,000 is approved by Ben</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Expenses__c.Expense_Amount__c</field>
+                <operation>greaterOrEqual</operation>
+                <value>&quot;USD 15,000&quot;</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Marketing Expense CMO Approval</label>
+        <name>Marketing_Expense_CMO_Approval</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>som@gumgum.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Event expenses &lt;$15,000 is approved by Som</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Expenses__c.Expense_Amount__c</field>
+                <operation>lessThan</operation>
+                <value>&quot;USD 15,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Expenses__c.Marketing_Category__c</field>
+                <operation>equals</operation>
+                <value>Events</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Marketing Expense Event Approval</label>
+        <name>Marketing_Expense_Event_Approval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>som@gumgum.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Non-events expenses &lt;$15,000</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Expenses__c.Expense_Amount__c</field>
+                <operation>lessThan</operation>
+                <value>&quot;USD 15,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Expenses__c.Marketing_Category__c</field>
+                <operation>notEqual</operation>
+                <value>Events</value>
+            </criteriaItems>
+        </entryCriteria>
+        <label>Marketing Expense Non-Event Approval</label>
+        <name>Marketing_Expense_Non_Event_Approval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <emailTemplate>Marketing_Email_Templates/Marketing_Expense_Approval</emailTemplate>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <finalApprovalActions>
+        <action>
+            <name>Expense_Status_Update_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Marketing_Expense_Submission_Approved</name>
+            <type>Alert</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Expense_Status_Update_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Updated_Status</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Marketing Expense Approval</label>
+    <processOrder>1</processOrder>
+    <recallActions>
+        <action>
+            <name>Expense_Status_Update_Recalled</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

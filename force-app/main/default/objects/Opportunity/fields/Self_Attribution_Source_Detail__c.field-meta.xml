@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Self_Attribution_Source_Detail__c</fullName>
+    <description>This field is created based on the SOP - 2085</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is populated based on  Self Attribution Source Detail field on Lead to Opportunity during conversion</inlineHelpText>
+    <label>Self Attribution Source Detail</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Publisher_Channel_Opportunities</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>Account_Manager__c</columns>
+    <columns>End_Date2__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Advertising</value>
+    </filters>
+    <filters>
+        <field>Channel__c</field>
+        <operation>equals</operation>
+        <value>Publisher</value>
+    </filters>
+    <label>Publisher-Channel Opportunities</label>
+    <sharedTo>
+        <group>Publisher_Channel_Team</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Region__c</fullName>
+    <description>This is the Region of the Sales Rep who owns the opportunity (Opportunity Owner) region.  A trigger updates this value when the record is created or the opportunity owner changes.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the Region of the Sales Rep who owns the opportunity (Opportunity Owner) region.</inlineHelpText>
+    <label>Opportunity Region</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Region</valueSetName>
+    </valueSet>
+</CustomField>

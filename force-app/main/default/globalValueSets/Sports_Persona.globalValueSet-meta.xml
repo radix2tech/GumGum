@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Business Intelligence</fullName>
+        <default>false</default>
+        <label>Business Intelligence</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Sponsorships</fullName>
+        <default>false</default>
+        <label>Corporate Sponsorships</label>
+    </customValue>
+    <customValue>
+        <fullName>Digital Marketing</fullName>
+        <default>false</default>
+        <label>Digital Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Head of Marketing</fullName>
+        <default>false</default>
+        <label>Head of Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Partnership Management</fullName>
+        <default>false</default>
+        <label>Partnership Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Partnership Sales</fullName>
+        <default>false</default>
+        <label>Partnership Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Sponsorship Consultant</fullName>
+        <default>false</default>
+        <label>Sponsorship Consultant</label>
+    </customValue>
+    <masterLabel>Sports Persona</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

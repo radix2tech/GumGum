@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Source__c</fullName>
+    <externalId>false</externalId>
+    <label>Event Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bring Cannes to You (LA)</fullName>
+                <default>false</default>
+                <label>Bring Cannes to You (LA)</label>
+            </value>
+            <value>
+                <fullName>Bring Cannes to You (London)</fullName>
+                <default>false</default>
+                <label>Bring Cannes to You (London)</label>
+            </value>
+            <value>
+                <fullName>Bring Cannes to You (Chicago)</fullName>
+                <default>false</default>
+                <label>Bring Cannes to You (Chicago)</label>
+            </value>
+            <value>
+                <fullName>Brand Safety Email 2017</fullName>
+                <default>false</default>
+                <label>Brand Safety Email 2017</label>
+            </value>
+            <value>
+                <fullName>DMEXCO 2017</fullName>
+                <default>false</default>
+                <label>DMEXCO 2017</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SolicitedOpenExchangeForProgrammatic</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+     RecordType.Name = &apos;Advertising&apos;,
+     TEXT(Channel__c)!=&apos;Programmatic&apos;,
+     NOT(ISBLANK(TEXT(Solicited_Open_Exchange__c)))
+   )</errorConditionFormula>
+    <errorDisplayField>Solicited_Open_Exchange__c</errorDisplayField>
+    <errorMessage>Solicited Open Exchange field can be selected only if channel is Programmatic</errorMessage>
+</ValidationRule>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Advertising_Shelby_Parker_West</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>Channel__c</columns>
+    <columns>OPPORTUNITY.LAST_UPDATE</columns>
+    <columns>Start_Date2__c</columns>
+    <columns>End_Date2__c</columns>
+    <columns>Opportunity_Region__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Advertising</value>
+    </filters>
+    <filters>
+        <field>Opportunity_Owner_Full_Name__c</field>
+        <operation>contains</operation>
+        <value>Shelby</value>
+    </filters>
+    <filters>
+        <field>Opportunity_Region__c</field>
+        <operation>equals</operation>
+        <value>US - West</value>
+    </filters>
+    <label>Advertising Shelby Parker West</label>
+</ListView>

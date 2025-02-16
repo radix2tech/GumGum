@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Opportunity Source --></label>
+    <name>Opportunity_Source_Verity__c</name>
+    <picklistValues>
+        <masterLabel>Inbound - Demo request</masterLabel>
+        <translation><!-- Inbound - Demo request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound - Partner referral</masterLabel>
+        <translation><!-- Inbound - Partner referral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound - Pub Dev Referral</masterLabel>
+        <translation><!-- Inbound - Pub Dev Referral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound</masterLabel>
+        <translation><!-- Outbound --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound - Executive Team</masterLabel>
+        <translation><!-- Outbound - Executive Team --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound - Larson</masterLabel>
+        <translation><!-- Outbound - Larson --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound - Masha</masterLabel>
+        <translation><!-- Outbound - Masha --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound - Media SDR team</masterLabel>
+        <translation><!-- Outbound - Media SDR team --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound - Media sales team</masterLabel>
+        <translation><!-- Outbound - Media sales team --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound - SDR (David)</masterLabel>
+        <translation><!-- Outbound - SDR (David) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound - SDR (Matthew)</masterLabel>
+        <translation><!-- Outbound - SDR (Matthew) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound - William</masterLabel>
+        <translation><!-- Outbound - William --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

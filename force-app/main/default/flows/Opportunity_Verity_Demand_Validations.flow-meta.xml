@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <decisions>
+        <name>Check_If_Placeholder_exist</name>
+        <label>Check If Placeholder exist</label>
+        <locationX>974</locationX>
+        <locationY>503</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Placeholder_Doesn_t_Exist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Placeholder_Products</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AddPlaceholderError</targetReference>
+            </connector>
+            <label>Placeholder Doesn&apos;t Exist</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Placeholder_Products</name>
+        <label>Check Placeholder Products</label>
+        <locationX>248</locationX>
+        <locationY>503</locationY>
+        <defaultConnector>
+            <targetReference>Get_Opp_Prod_required_fields</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Exist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Placeholder_Products</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>RemovePlaceholderError</targetReference>
+            </connector>
+            <label>Exist</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Required_Fields</name>
+        <label>Check Required Fields</label>
+        <locationX>446</locationX>
+        <locationY>719</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Required_Fields_Missing</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Opp_Prod_required_fields</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>RequiredFieldsError</targetReference>
+            </connector>
+            <label>Required Fields Missing</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Checking_Stage</name>
+        <label>Checking Stage</label>
+        <locationX>809</locationX>
+        <locationY>395</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Closed_Won</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed/Won</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Placeholder_Products</targetReference>
+            </connector>
+            <label>Closed/Won</label>
+        </rules>
+        <rules>
+            <name>Prob_10_and_Not_Closed_Won</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Proposal</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Negotiations</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Outcome Pending</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Approval</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_If_Placeholder_exist</targetReference>
+            </connector>
+            <label>Prob &gt; 10% and Not Closed/Won</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity(Verity - Demand) - Validations</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Partner and Segment Type are mandatory</description>
+        <name>Get_Opp_Prod_required_fields</name>
+        <label>Get Opp Prod required fields</label>
+        <locationX>446</locationX>
+        <locationY>611</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Required_Fields</targetReference>
+        </connector>
+        <filterLogic>(1 OR 2 OR 3 ) AND 4</filterLogic>
+        <filters>
+            <field>Partner__c</field>
+            <operator>EqualTo</operator>
+        </filters>
+        <filters>
+            <field>Segment_Type__c</field>
+            <operator>EqualTo</operator>
+        </filters>
+        <filters>
+            <field>Pricing__c</field>
+            <operator>EqualTo</operator>
+        </filters>
+        <filters>
+            <field>OpportunityId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>OpportunityLineItem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Placeholder_Products</name>
+        <label>Get Placeholder Products</label>
+        <locationX>809</locationX>
+        <locationY>287</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Checking_Stage</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Product_Name_Text__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>Placeholder</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>OpportunityId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>OpportunityLineItem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>683</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Placeholder_Products</targetReference>
+        </connector>
+        <filterFormula>AND(
+           ISCHANGED({!$Record.StageName}),
+           {!$Record.RecordType.Name} = &apos;Verity - Demand&apos;,
+           {!$User.Bypass_Opportunity_Validation__c} = False
+        )</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

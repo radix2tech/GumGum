@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Write-in the reason for the loss --></help>
+    <label><!-- Other Programmatic Loss Reason --></label>
+    <name>Other_Programmatic_Entry__c</name>
+</CustomFieldTranslation>

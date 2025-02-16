@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_Date2__c</fullName>
+    <description>Roll up from product for the earliest start date.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contract Start Date will automatically reflect the earliest schedule date from the Products tab</inlineHelpText>
+    <label>Contract Start Date</label>
+    <summarizedField>OpportunityLineItem.Start_Date__c</summarizedField>
+    <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+    <summaryOperation>min</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

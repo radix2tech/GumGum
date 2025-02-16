@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Recycled Lead Reason --></label>
+    <name>Recycled_Lead_Reason__c</name>
+    <picklistValues>
+        <masterLabel>No/low budget</masterLabel>
+        <translation><!-- No/low budget --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non-decision maker</masterLabel>
+        <translation><!-- Non-decision maker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not interested</masterLabel>
+        <translation><!-- Not interested --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not ready to buy</masterLabel>
+        <translation><!-- Not ready to buy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unresponsive</masterLabel>
+        <translation><!-- Unresponsive --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

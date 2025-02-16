@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Exception_2__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field triggers an approval process for an exception</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the new exception request box. Once checked, click the &quot;Submit Approval&quot; button at the top of the page to trigger the approval process.</inlineHelpText>
+    <label>Request Exception</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

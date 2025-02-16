@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Vertical --></label>
+    <name>Vertical__c</name>
+    <picklistValues>
+        <masterLabel>Auto</masterLabel>
+        <translation><!-- Auto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business &amp; Finance</masterLabel>
+        <translation><!-- Business &amp; Finance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Entertainment, Fashion</masterLabel>
+        <translation><!-- Entertainment, Fashion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Food &amp; Drink</masterLabel>
+        <translation><!-- Food &amp; Drink --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gaming</masterLabel>
+        <translation><!-- Gaming --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Health &amp; Wellness</masterLabel>
+        <translation><!-- Health &amp; Wellness --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Home &amp; Garden</masterLabel>
+        <translation><!-- Home &amp; Garden --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Humor Lifestyles</masterLabel>
+        <translation><!-- Humor Lifestyles --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Miscellaneous</masterLabel>
+        <translation><!-- Miscellaneous --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>News</masterLabel>
+        <translation><!-- News --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Social Networks</masterLabel>
+        <translation><!-- Social Networks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sports</masterLabel>
+        <translation><!-- Sports --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technology</masterLabel>
+        <translation><!-- Technology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Travel</masterLabel>
+        <translation><!-- Travel --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

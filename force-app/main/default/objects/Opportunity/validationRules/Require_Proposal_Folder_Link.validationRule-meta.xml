@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Proposal_Folder_Link</fullName>
+    <active>true</active>
+    <description>Proposal folder link required to move to 50% win probability.</description>
+    <errorConditionFormula>AND(
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+Probability  &gt;=0.50,
+NOT( $Permission.Bypass_Opportunity_Validation ),
+RecordType.Id =&quot;012U00000001pHJ&quot;,
+ISPICKVAL(Channel__c,&quot;Direct&quot;),
+ISBLANK(Notes__c)
+)</errorConditionFormula>
+    <errorDisplayField>Notes__c</errorDisplayField>
+    <errorMessage>Proposal folder link required to move to 50% win probability.</errorMessage>
+</ValidationRule>

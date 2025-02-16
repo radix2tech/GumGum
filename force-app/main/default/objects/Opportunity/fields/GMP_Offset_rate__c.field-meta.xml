@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GMP_Offset_rate__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the CPM rate that we are charging the buyer to
+offset the campaign, which will be added to the CPM of the media.
+$0.10 : Use on standards IAB deals (always on) example GG Display. 
+$0.25 : Core media sales
+$0.00 : If the client does NOT want to off-set the campaign, and only wants to run against low-carbon sites</inlineHelpText>
+    <label>GMP Offset rate</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Green_Media_Product_GMP_Campaign__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>$0.10</fullName>
+                <default>false</default>
+                <label>0.10</label>
+            </value>
+            <value>
+                <fullName>$0.25</fullName>
+                <default>false</default>
+                <label>0.25</label>
+            </value>
+            <value>
+                <fullName>$0.00</fullName>
+                <default>false</default>
+                <label>0.00</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>$0.10</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>$0.25</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>$0.00</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of Outbound Emails sent to this Lead --></help>
+    <label><!-- Outbound Email Counter --></label>
+    <name>Outbound_Email_Counter__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <description>This field shows the category of the opportunity</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Budget_Category_Content_Flight (Blocked Competitors, if applicable)- 
+(i.e - $1M_Makeup Brand_Skincare content_11/12-11/19)</inlineHelpText>
+    <label>Category Sponsorship Proposed</label>
+    <length>131072</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

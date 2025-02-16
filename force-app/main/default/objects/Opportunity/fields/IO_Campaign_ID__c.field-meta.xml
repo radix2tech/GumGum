@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IO_Campaign_ID__c</fullName>
+    <description>This field displays the insertion order campaign ID</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Field required for all North America regions</inlineHelpText>
+    <label>Billing Code</label>
+    <length>500</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>2</visibleLines>
+</CustomField>

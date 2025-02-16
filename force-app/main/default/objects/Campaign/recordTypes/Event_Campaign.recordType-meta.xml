@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Campaign</fullName>
+    <active>true</active>
+    <label>Event Campaign</label>
+    <picklistValues>
+        <picklist>Agency_Relations_Output__c</picklist>
+        <values>
+            <fullName>1-Pager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ABM Activation Option</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Prototype</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsorship</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Approved_by_Management__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Audience_Persona__c</picklist>
+        <values>
+            <fullName>Hispanic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Millennials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Young Millennials</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Creative_Type__c</picklist>
+        <values>
+            <fullName>Design Team%3A Internal Demo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Design%3A Custom Prototype</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Registration_Method__c</picklist>
+        <values>
+            <fullName>Ceros Interactive Page</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email Invitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Splash Page</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsored</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Method__c</picklist>
+        <values>
+            <fullName>Bank Transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Check</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Card</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region__c</picklist>
+        <values>
+            <fullName>APAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - NSW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - New Zealand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - QLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - SA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - SEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - VIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - WA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Belgium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Germany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Netherlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - Nordics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA - Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA Sales Central %26 Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA Sales East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA Sales West</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Relevant_Business_Line__c</picklist>
+        <values>
+            <fullName>GumGum Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Game</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open Market</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PXYZ AIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PXYZ Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publisher Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verity PMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verity Pre-bid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verity Video PMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verity for Publishers</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Aborted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planned</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Target_Region_s__c</picklist>
+        <values>
+            <fullName>APAC - Independents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - QLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - SA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - WA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA - International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LATAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US - West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Co-marketing partnerships</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content Downloads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gifting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hosted Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paid Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paid Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quiz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsored Tradeshow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eABM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

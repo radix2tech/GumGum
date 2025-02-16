@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnalyticSnapshot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <name>Weekly Snapshot Summary</name>
+    <runningUser>dan.friedman@gumgum.com</runningUser>
+    <sourceReport>SnapshotReports/snapshot_test_wil</sourceReport>
+    <targetObject>Opportunity_Snapshot__c</targetObject>
+</AnalyticSnapshot>

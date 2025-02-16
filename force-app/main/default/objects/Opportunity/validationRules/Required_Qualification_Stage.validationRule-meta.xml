@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Qualification_Stage</fullName>
+    <active>false</active>
+    <description>Main Competitor field is required at GGS qualification stage and higher</description>
+    <errorConditionFormula>AND(
+Probability &gt;0.14,
+RecordType.Name=&quot;Sports&quot;
+)</errorConditionFormula>
+    <errorMessage>Please select a main competitor</errorMessage>
+</ValidationRule>

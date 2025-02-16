@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Filter or Formula --></label>
+    <name>Filter_or_Formula__c</name>
+    <picklistValues>
+        <masterLabel>Filter</masterLabel>
+        <translation><!-- Filter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Formula</masterLabel>
+        <translation><!-- Formula --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

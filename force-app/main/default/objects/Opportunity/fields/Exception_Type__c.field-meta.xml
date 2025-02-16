@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exception_Type__c</fullName>
+    <description>This field displays the exception type if needed</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If an exception is needed, select the type and filling the exception description, then submit for approval.</inlineHelpText>
+    <label>Exception Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Above Max # of Unit Types Included</fullName>
+                <default>false</default>
+                <label>Above Max # of Unit Types Included</label>
+            </value>
+            <value>
+                <fullName>Below Floor Rates</fullName>
+                <default>false</default>
+                <label>Below Floor Rates</label>
+            </value>
+            <value>
+                <fullName>Below minimum spend (High Impact)</fullName>
+                <default>false</default>
+                <label>Below minimum spend (High Impact)</label>
+            </value>
+            <value>
+                <fullName>Below Minimum Spend (Overall Campaign)</fullName>
+                <default>false</default>
+                <label>Below Minimum Spend (Overall Campaign)</label>
+            </value>
+            <value>
+                <fullName>Below Minimum Spend (Research Study)</fullName>
+                <default>false</default>
+                <label>Below Minimum Spend (Research Study)</label>
+            </value>
+            <value>
+                <fullName>Below minimum spend (Sponsorship)</fullName>
+                <default>false</default>
+                <label>Below minimum spend (Sponsorship)</label>
+            </value>
+            <value>
+                <fullName>Cover ad serving cost and/or brand study serving fees</fullName>
+                <default>false</default>
+                <label>Cover ad serving cost and/or brand study serving fees</label>
+            </value>
+            <value>
+                <fullName>Extra Creative Fees/Waiver Creative Fees</fullName>
+                <default>false</default>
+                <label>Extra Creative Fees/Waiver Creative Fees</label>
+            </value>
+            <value>
+                <fullName>Guarantee Campaign Performance</fullName>
+                <default>false</default>
+                <label>Guarantee Campaign Performance</label>
+            </value>
+            <value>
+                <fullName>Higher % Added Value Impressions</fullName>
+                <default>false</default>
+                <label>Higher % Added Value Impressions</label>
+            </value>
+            <value>
+                <fullName>Multiple Creative Unit Versions</fullName>
+                <default>false</default>
+                <label>Multiple Creative Unit Versions</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Out Clause (Less than 7 days)</fullName>
+                <default>false</default>
+                <label>Out Clause (Less than 7 days)</label>
+            </value>
+            <value>
+                <fullName>Waive 3rd Party BT Up charge</fullName>
+                <default>false</default>
+                <label>Waive 3rd Party BT Up charge</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Forecast_Sum__c</fullName>
+    <externalId>false</externalId>
+    <label>Forecast(Sum)</label>
+    <summarizedField>AAR_Split_Owner__c.Forecast_Sum__c</summarizedField>
+    <summaryFilterItems>
+        <field>AAR_Split_Owner__c.Is_Active__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryForeignKey>AAR_Split_Owner__c.Advertiser_Agency_Relationship__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

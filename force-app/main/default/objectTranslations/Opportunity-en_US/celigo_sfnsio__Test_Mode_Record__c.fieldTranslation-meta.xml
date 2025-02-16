@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Prerequisite: Enable &quot;Test mode&quot; from your IO General settings page. Enable the checkbox to sync records and test your IO version. If you leave the &quot;Send as test record to IO&quot; box unchecked, we will sync records via the v2 version Installed by Celigo automatically; need to keep 10/3/2022 per Marco. --></help>
+    <label><!-- Send as test record to IO --></label>
+    <name>celigo_sfnsio__Test_Mode_Record__c</name>
+</CustomFieldTranslation>

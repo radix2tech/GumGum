@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verity_Channel__c</fullName>
+    <externalId>false</externalId>
+    <label>Verity Channel</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Audio</fullName>
+                <default>false</default>
+                <label>Audio</label>
+            </value>
+            <value>
+                <fullName>Connected TV</fullName>
+                <default>false</default>
+                <label>Connected TV</label>
+            </value>
+            <value>
+                <fullName>High-Impact Display</fullName>
+                <default>false</default>
+                <label>High-Impact Display</label>
+            </value>
+            <value>
+                <fullName>Native</fullName>
+                <default>false</default>
+                <label>Native</label>
+            </value>
+            <value>
+                <fullName>Online Video</fullName>
+                <default>false</default>
+                <label>Online Video</label>
+            </value>
+            <value>
+                <fullName>Standard Display</fullName>
+                <default>false</default>
+                <label>Standard Display</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

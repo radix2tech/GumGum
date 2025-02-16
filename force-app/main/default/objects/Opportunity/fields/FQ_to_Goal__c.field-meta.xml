@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FQ_to_Goal__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( AND( IsClosed ,  IsWon , Owner.Current_Quarter_Quota__c &gt; 0), Current_Quarter_Amount__c / Owner.Current_Quarter_Quota__c ,0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>FQ % to Goal</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

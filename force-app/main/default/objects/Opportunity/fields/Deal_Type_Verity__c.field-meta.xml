@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deal_Type_Verity__c</fullName>
+    <externalId>false</externalId>
+    <label>Deal Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Option 1 [12 Months - No Discount]</fullName>
+                <default>false</default>
+                <label>Option 1 [12 Months - No Discount]</label>
+            </value>
+            <value>
+                <fullName>Option 2 [12 Months - 3 Months Free]</fullName>
+                <default>false</default>
+                <label>Option 2 [12 Months - 3 Months Free]</label>
+            </value>
+            <value>
+                <fullName>Option 3 [18 Months - 6 Months Free]</fullName>
+                <default>false</default>
+                <label>Option 3 [18 Months - 6 Months Free]</label>
+            </value>
+            <value>
+                <fullName>Option 4 [12 Months - 6 Months Free]</fullName>
+                <default>false</default>
+                <label>Option 4 [12 Months - 6 Months Free]</label>
+            </value>
+            <value>
+                <fullName>Option 5 [24 Months - 12 Months Free]</fullName>
+                <default>false</default>
+                <label>Option 5 [24 Months - 12 Months Free]</label>
+            </value>
+            <value>
+                <fullName>Full Beta [6 Month Beta]</fullName>
+                <default>false</default>
+                <label>Full Beta [6 Month Beta]</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

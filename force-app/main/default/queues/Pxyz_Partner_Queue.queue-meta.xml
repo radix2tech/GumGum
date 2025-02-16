@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>Pxyz Partner Queue</name>
+    <queueMembers>
+        <users>
+            <user>0054u00000csnr5qaf_ben.dimond@gumgum.com</user>
+            <user>rob.hall@gumgum.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

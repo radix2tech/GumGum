@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- Budget_Category_Content_Flight (Blocked Competitors, if applicable)- 
+(i.e - $1M_Makeup Brand_Skincare content_11/12-11/19) -->
+    </help>
+    <label><!-- Category Sponsorship Proposed --></label>
+    <name>Category__c</name>
+</CustomFieldTranslation>

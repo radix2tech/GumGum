@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>GumGum Inc.</fullName>
+        <default>true</default>
+        <label>GumGum Inc.</label>
+    </customValue>
+    <customValue>
+        <fullName>GumGum UK</fullName>
+        <default>false</default>
+        <label>GumGum UK</label>
+    </customValue>
+    <customValue>
+        <fullName>GumGum Australia</fullName>
+        <default>false</default>
+        <label>GumGum Australia</label>
+    </customValue>
+    <customValue>
+        <fullName>GumGum Japan</fullName>
+        <default>false</default>
+        <label>GumGum Japan</label>
+    </customValue>
+    <masterLabel>Business Unit</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

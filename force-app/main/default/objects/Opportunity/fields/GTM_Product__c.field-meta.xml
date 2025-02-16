@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GTM_Product__c</fullName>
+    <description>The % of this Campaign that is planned to be our current GTM product offering</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Populate the estimated % of this Campaign that will be On-Platform OLV</inlineHelpText>
+    <label>GTM Product %</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

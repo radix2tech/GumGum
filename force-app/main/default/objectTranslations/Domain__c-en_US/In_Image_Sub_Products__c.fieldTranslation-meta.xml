@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- In-Image Sub Products --></label>
+    <name>In_Image_Sub_Products__c</name>
+    <picklistValues>
+        <masterLabel>Broadway</masterLabel>
+        <translation><!-- Broadway --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Canvas</masterLabel>
+        <translation><!-- Canvas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Content</masterLabel>
+        <translation><!-- Content --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Display</masterLabel>
+        <translation><!-- Display --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Embedded Video</masterLabel>
+        <translation><!-- Embedded Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pencil</masterLabel>
+        <translation><!-- Pencil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Runway</masterLabel>
+        <translation><!-- Runway --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Slider</masterLabel>
+        <translation><!-- Slider --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Studio</masterLabel>
+        <translation><!-- Studio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Studio 728x90</masterLabel>
+        <translation><!-- Studio 728x90 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Test</masterLabel>
+        <translation><!-- Test --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Top</masterLabel>
+        <translation><!-- Top --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video</masterLabel>
+        <translation><!-- Video --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

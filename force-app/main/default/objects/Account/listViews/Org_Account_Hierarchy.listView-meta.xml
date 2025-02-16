@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Org_Account_Hierarchy</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Owner_TEXT__c</columns>
+    <columns>Opps_Won_TEMP__c</columns>
+    <columns>Total_Revenue_Generated_del__c</columns>
+    <columns>Avg_Deal_Size__c</columns>
+    <columns>Last_Opp__c</columns>
+    <columns>Opp_Open_Count_Brand_And_Agency__c</columns>
+    <columns>Total_Pipeline__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Org_Account_Hierarchy</label>
+</ListView>

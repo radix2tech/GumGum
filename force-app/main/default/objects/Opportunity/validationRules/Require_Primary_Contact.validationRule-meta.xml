@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Primary_Contact</fullName>
+    <active>false</active>
+    <description>Must assign Primary Contact Role.</description>
+    <errorConditionFormula>AND(
+ ISBLANK(  SalesLoft1__Primary_Contact__c),
+ ISBLANK(ContactId),
+ Is_Converted__c = FALSE,
+or(
+ispickval( StageName , &quot;Proposal&quot;),
+ispickval( StageName , &quot;Negotiations&quot;),
+ispickval( StageName , &quot;Approved&quot;),
+ispickval( StageName , &quot;Approved / Outcome Pending&quot;),
+ispickval( StageName , &quot;Demo &amp; Testing&quot;),
+ispickval( StageName , &quot;Initial Proposal&quot;),
+ispickval( StageName , &quot;Contract/Negotiations&quot;),
+ispickval( StageName , &quot;Pitch Opportunity&quot;),
+ispickval( StageName , &quot;Holding&quot;),
+ispickval( StageName , &quot;Pitched &amp; Considering&quot;),
+ispickval( StageName , &quot;Testing / Proposal&quot;),
+ispickval( StageName , &quot;Negotiation&quot;),
+ispickval( StageName , &quot;Committed&quot;),
+ispickval( StageName , &quot;Approved&quot;),
+ispickval( StageName , &quot;Closed/Won&quot;)
+)
+)</errorConditionFormula>
+    <errorDisplayField>SalesLoft1__Primary_Contact__c</errorDisplayField>
+    <errorMessage>Must assign Primary Contact Role.</errorMessage>
+</ValidationRule>

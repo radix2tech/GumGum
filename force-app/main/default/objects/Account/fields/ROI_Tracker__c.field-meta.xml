@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROI_Tracker__c</fullName>
+    <externalId>false</externalId>
+    <label>National ROI Tracker</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cannes Chicago</fullName>
+                <default>false</default>
+                <label>Cannes Chicago</label>
+            </value>
+            <value>
+                <fullName>Cannes LA</fullName>
+                <default>false</default>
+                <label>Cannes LA</label>
+            </value>
+            <value>
+                <fullName>Cannes London</fullName>
+                <default>false</default>
+                <label>Cannes London</label>
+            </value>
+            <value>
+                <fullName>Hamptons 2017 Weekend 1</fullName>
+                <default>false</default>
+                <label>Hamptons 2017 Weekend 1</label>
+            </value>
+            <value>
+                <fullName>Hamptons 2017 Weekend 2</fullName>
+                <default>false</default>
+                <label>Hamptons 2017 Weekend 2</label>
+            </value>
+            <value>
+                <fullName>Hamptons 2017 Weekend 3</fullName>
+                <default>false</default>
+                <label>Hamptons 2017 Weekend 3</label>
+            </value>
+            <value>
+                <fullName>Hamptons 2017 Weekend 4</fullName>
+                <default>false</default>
+                <label>Hamptons 2017 Weekend 4</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

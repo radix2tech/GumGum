@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Forecasted_2019_Revenue__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Revenue that is forecasted for this account in 2023 based on the Sales bottoms up.</inlineHelpText>
+    <label>2023 Forecasted Revenue</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Currency</type>
+</CustomField>

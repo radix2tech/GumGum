@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- DMP --></label>
+    <name>DMP__c</name>
+    <picklistValues>
+        <masterLabel>Adobe</masterLabel>
+        <translation><!-- Adobe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LiveRamp</masterLabel>
+        <translation><!-- LiveRamp --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lotame</masterLabel>
+        <translation><!-- Lotame --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Neustar</masterLabel>
+        <translation><!-- Neustar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oracle</masterLabel>
+        <translation><!-- Oracle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Premutive</masterLabel>
+        <translation><!-- Premutive --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

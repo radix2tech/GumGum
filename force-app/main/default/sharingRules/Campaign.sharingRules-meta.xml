@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Campaign_open_toMidWest</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Campaign open to MidWest</label>
+        <sharedTo>
+            <roleAndSubordinates>VP_Central</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Campaign_open_to_East</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Campaigns will be open to all users, except Operations (who gain access through ownership only)</description>
+        <label>Campaign open to East</label>
+        <sharedTo>
+            <roleAndSubordinates>VP_East</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Campaign_open_to_Publisher_Sales</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Campaign open to Publisher Sales</label>
+        <sharedTo>
+            <roleAndSubordinates>Publisher_Sales</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Campaign_open_to_West</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Campaign open to West</label>
+        <sharedTo>
+            <roleAndSubordinates>SVP_West</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_Campaigns_with_MD_EMEA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share Campaigns with MD EMEA</label>
+        <sharedTo>
+            <role>EMEA_SVP</role>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_VP_UK</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share with VP UK</label>
+        <sharedTo>
+            <role>UK_Director</role>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

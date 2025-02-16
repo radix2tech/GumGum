@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If a publisher wishes to exclude a certain unit type. --></help>
+    <label><!-- Special Needs --></label>
+    <name>Special_Needs__c</name>
+    <picklistValues>
+        <masterLabel>No Content</masterLabel>
+        <translation><!-- No Content --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Embedded Video</masterLabel>
+        <translation><!-- No Embedded Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No II Canvas</masterLabel>
+        <translation><!-- No II Canvas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No IS Display</masterLabel>
+        <translation><!-- No IS Display --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No IS Half Takeover</masterLabel>
+        <translation><!-- No IS Half Takeover --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No IS Takeover Full</masterLabel>
+        <translation><!-- No IS Takeover Full --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Closed_Lost_Email_Alert</name>
+        <label>Closed/Lost Email Alert</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <faultConnector>
+            <targetReference>Create_Exception_Records</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>{!$Label.East_Closed_Lost_Email}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>The Opportunity {!$Record.Name} moved to Closed/Lost</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>emailBody</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>useLineBreaks</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>61.0</apiVersion>
+    <decisions>
+        <name>Bypass_Opportunity_Validation</name>
+        <label>Bypass Opportunity Validation</label>
+        <locationX>314</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Bypassed</defaultConnectorLabel>
+        <rules>
+            <name>Not_Bypassed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$User.Bypass_Opportunity_Validation__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Closed_Lost_Email_Alert</targetReference>
+            </connector>
+            <label>Not Bypassed</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity (East Team) - Closed Lost Notification {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity (East Team) - Closed Lost Notification</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Exception_Records</name>
+        <label>Create Exception Records</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>ComponentName__c</field>
+            <value>
+                <stringValue>Opportunity (East Team) - Closed Lost Notification</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Exception_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordId__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Custom_Exception__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Bypass_Opportunity_Validation</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Owner_Role__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>east</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Closed/Lost</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>emailBody</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Seller: {!$Record.Owner.FirstName} {!$Record.Owner.LastName}
+AM: {!$Record.Account_Manager__r.FirstName} {!$Record.Account_Manager__r.LastName}
+CSM: {!$Record.CSM_1__r.FirstName} {!$Record.CSM_1__r.LastName}
+Strategic Growth Team Member: {!$Record.AR_Member__r.FirstName} {!$Record.AR_Member__r.LastName}
+PSM: {!$Record.PSM__r.FirstName} {!$Record.PSM__r.LastName}
+ 
+Here&apos;s all the details: 
+Opportunity Name: {!$Record.Name}
+Agency: {!$Record.Agency_Name__r.Name}
+Channel: {!$Record.Channel__c}
+DSP (if applicable): {!$Record.DSP__c}
+Start Date: {!$Record.Start_Date2__c}
+End Date: {!$Record.End_Date2__c}
+Total Order Amount: {!$Record.Amount}
+Lost Reason: {!$Record.Lost_Reason_new__c}
+Lost Details: {!$Record.Lost_Details_Why__c}
+Opportunity Link: {!$Label.OpportunityURL}{!$Record.Id}/view</text>
+    </textTemplates>
+</Flow>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Quota</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Quotas</value>
+    </caseValues>
+    <layouts>
+        <layout>Quota Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Quota Entry --></label>
+            <section>Quota Entry</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Account Plan --></label>
+        <name>Account_Plan</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Update Quota --></label>
+        <name>Update_Quota</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

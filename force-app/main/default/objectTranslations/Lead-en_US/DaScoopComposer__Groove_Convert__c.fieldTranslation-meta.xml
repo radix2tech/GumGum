@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is a Groove action button that creates the &quot;Convert&quot; URL --></help>
+    <label><!-- Convert --></label>
+    <name>DaScoopComposer__Groove_Convert__c</name>
+</CustomFieldTranslation>

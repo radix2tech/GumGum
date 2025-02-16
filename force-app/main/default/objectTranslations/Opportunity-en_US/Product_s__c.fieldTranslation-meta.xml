@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Product(s) --></label>
+    <name>Product_s__c</name>
+    <picklistValues>
+        <masterLabel>CTV</masterLabel>
+        <translation><!-- CTV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Display</masterLabel>
+        <translation><!-- Display --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hangtime</masterLabel>
+        <translation><!-- Hangtime --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Image</masterLabel>
+        <translation><!-- In-Image --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Screen</masterLabel>
+        <translation><!-- In-Screen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Screen Cascade</masterLabel>
+        <translation><!-- In-Screen Cascade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Slot</masterLabel>
+        <translation><!-- In-Slot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In-Stream</masterLabel>
+        <translation><!-- In-Stream --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Skins</masterLabel>
+        <translation><!-- Skins --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video</masterLabel>
+        <translation><!-- Video --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

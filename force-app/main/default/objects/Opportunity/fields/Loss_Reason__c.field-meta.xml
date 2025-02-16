@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loss_Reason__c</fullName>
+    <description>Used to track reason for budget cut on Programmatic opportunities.</description>
+    <externalId>false</externalId>
+    <label>Programmatic Loss Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Scale Issues</fullName>
+                <default>false</default>
+                <label>Scale Issues</label>
+            </value>
+            <value>
+                <fullName>Creative Delay</fullName>
+                <default>false</default>
+                <label>Creative Delay</label>
+            </value>
+            <value>
+                <fullName>DSP Issues</fullName>
+                <default>false</default>
+                <label>DSP Issues</label>
+            </value>
+            <value>
+                <fullName>Tracking Issues</fullName>
+                <default>false</default>
+                <label>Tracking Issues</label>
+            </value>
+            <value>
+                <fullName>Other (write-in)</fullName>
+                <default>false</default>
+                <label>Other (write-in)</label>
+            </value>
+            <value>
+                <fullName>Advertiser Cut/Lost Budget</fullName>
+                <default>false</default>
+                <label>Advertiser Cut/Lost Budget</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

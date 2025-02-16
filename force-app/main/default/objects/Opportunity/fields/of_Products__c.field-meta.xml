@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>of_Products__c</fullName>
+    <description>this field is a roll up summary to tell us how many products have been added to the opportunity.  The main purpose of this field is to have a validation rule that does not allow a seller to move the opportunity past 50% until products have been added.</description>
+    <externalId>false</externalId>
+    <label># of Products</label>
+    <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

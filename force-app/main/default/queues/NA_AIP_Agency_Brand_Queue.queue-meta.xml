@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>NA AIP Agency/Brand Queue</name>
+    <queueMembers>
+        <users>
+            <user>amy.vecsi@playgroundxyz.com</user>
+            <user>andrew.cantwell@playgroundxyz.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

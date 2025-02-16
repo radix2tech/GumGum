@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Count of  ‘Video Solution - OLV’ or ‘Video Solution - CTV’  products --></help>
+    <label><!-- Count of Verity Products --></label>
+    <name>Count_of_Verity_Products__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opps_Won_TEMP__c</fullName>
+    <description>How many Won Opps are in this Account?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How many Won Opps are in this Account?</inlineHelpText>
+    <label>Brand Opp Won Count</label>
+    <summaryFilterItems>
+        <field>Opportunity.StageName</field>
+        <operation>equals</operation>
+        <value>Closed/Won</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Opportunity.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>Verity, Open Market, Video, Activation, Playground Attention Intelligence Platform, Advertising</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Account Type --></label>
+    <name>Account_Type__c</name>
+    <picklistValues>
+        <masterLabel>Agency</masterLabel>
+        <translation><!-- Agency --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brand</masterLabel>
+        <translation><!-- Brand --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Entertainment</masterLabel>
+        <translation><!-- Entertainment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Federation</masterLabel>
+        <translation><!-- Federation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>League</masterLabel>
+        <translation><!-- League --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Media</masterLabel>
+        <translation><!-- Media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rights Holder</masterLabel>
+        <translation><!-- Rights Holder --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Team</masterLabel>
+        <translation><!-- Team --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

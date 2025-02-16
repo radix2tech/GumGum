@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Invite to 2018 July 4 Candy Club --></label>
+    <name>Invite_to_2018_July_4_Candy_Club__c</name>
+</CustomFieldTranslation>

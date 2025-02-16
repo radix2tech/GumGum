@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Item Snapshot Email Alert --></label>
+    <name>Item_Snapshot_Email_Alert__c</name>
+    <relationshipLabel><!-- Email Alert Recipients --></relationshipLabel>
+</CustomFieldTranslation>

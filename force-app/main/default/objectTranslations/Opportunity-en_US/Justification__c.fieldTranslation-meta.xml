@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Describe why the exception being requested is necessary.  Also include targeting information and any other pertinent details. --></help>
+    <label><!-- Exception Justification --></label>
+    <name>Justification__c</name>
+</CustomFieldTranslation>

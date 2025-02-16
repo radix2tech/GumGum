@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Targeting_Tactic</fullName>
+    <active>false</active>
+    <description>At least one targeting type should be selected</description>
+    <errorConditionFormula>AND(
+ Audience__c = FALSE,
+ Keyword__c = FALSE,
+ VerticalNew__c = FALSE,
+ IAB__c = FALSE,
+ BehavorialCheck__c = FALSE,
+ Trend__c = FALSE,
+ Retargeting__c = FALSE,
+ Geo__c = FALSE,
+ ISBLANK( Event2__c),
+ ISBLANK(  Additional_Targeting__c )
+)</errorConditionFormula>
+    <errorMessage>Please select a Targeting Type</errorMessage>
+</ValidationRule>

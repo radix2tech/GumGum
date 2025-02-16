@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Primary Interest --></label>
+    <name>Primary_Interest__c</name>
+    <picklistValues>
+        <masterLabel>Direct Selling Opportunity</masterLabel>
+        <translation><!-- Direct Selling Opportunity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GumGum&apos;s Demand</masterLabel>
+        <translation><!-- GumGum&apos;s Demand --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSAI</masterLabel>
+        <translation><!-- SSAI --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

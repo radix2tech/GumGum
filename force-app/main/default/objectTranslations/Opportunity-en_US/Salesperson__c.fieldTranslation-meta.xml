@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field controls record owner, to ensure the Salesperson of record remains owner of the record, even when account owner is changed. --></help>
+    <label><!-- Salesperson of Record --></label>
+    <name>Salesperson__c</name>
+    <relationshipLabel><!-- Opportunities (Salesperson of Record) --></relationshipLabel>
+</CustomFieldTranslation>

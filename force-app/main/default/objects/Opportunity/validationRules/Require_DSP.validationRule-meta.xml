@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_DSP</fullName>
+    <active>false</active>
+    <errorConditionFormula>NOT( $Permission.Bypass_Opportunity_Validation )&amp;&amp;
+ $User.Bypass_Opportunity_Validation__c = FALSE &amp;&amp;
+OR(
+RecordType.DeveloperName = &quot;Advertising&quot; &amp;&amp; 
+RecordType.DeveloperName = &quot;Activation&quot;)&amp;&amp;
+ TEXT(Channel__c) = &quot;Programmatic&quot; &amp;&amp;
+ ISBLANK(TEXT(DSP__c)) &amp;&amp;
+ NOT(ISCHANGED( Placeholder_Product_Exists__c )) &amp;&amp;
+ NOT(ISCHANGED( Start_Date2__c )) &amp;&amp;
+ NOT(ISCHANGED( End_Date2__c )) &amp;&amp;
+  DATEVALUE(CreatedDate)  &gt;= DATE(2017,1,30)</errorConditionFormula>
+    <errorDisplayField>DSP__c</errorDisplayField>
+    <errorMessage>DSP is a required field when Channel is Programmatic.</errorMessage>
+</ValidationRule>

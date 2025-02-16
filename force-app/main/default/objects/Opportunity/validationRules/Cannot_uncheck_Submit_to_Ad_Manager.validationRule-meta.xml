@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_uncheck_Submit_to_Ad_Manager</fullName>
+    <active>true</active>
+    <description>Inside Sales Only</description>
+    <errorConditionFormula>and(ischanged(Submit_to_Ad_Manager__c ), 
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+NOT( $Permission.Bypass_Opportunity_Validation ),
+not(Submit_to_Ad_Manager__c ))</errorConditionFormula>
+    <errorDisplayField>Submit_to_Ad_Manager__c</errorDisplayField>
+    <errorMessage>Cannot uncheck.</errorMessage>
+</ValidationRule>

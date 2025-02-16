@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Priority__c</fullName>
+    <externalId>false</externalId>
+    <label>Account Priority</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A+ (Top Client)</fullName>
+                <default>false</default>
+                <label>A+ (Top Client)</label>
+            </value>
+            <value>
+                <fullName>A-  (Top Client, lower budget)</fullName>
+                <default>false</default>
+                <label>A-  (Top Client, lower budget)</label>
+            </value>
+            <value>
+                <fullName>B+  (Secondary Client, High))</fullName>
+                <default>false</default>
+                <label>B+  (Secondary Client, High))</label>
+            </value>
+            <value>
+                <fullName>B- (Secondary, Low Budget)</fullName>
+                <default>false</default>
+                <label>B- (Secondary, Low Budget)</label>
+            </value>
+            <value>
+                <fullName>C (Opportunistic)</fullName>
+                <default>false</default>
+                <label>C (Opportunistic)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Key_Takeaway_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+$RecordType.Name = &quot;Event Campaign&quot;, 
+$RecordType.Name = &quot;Campaign&quot;, 
+ISBLANK(Key_Takeaway__c), 
+ISPICKVAL(Status, &quot;Completed&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Key_Takeaway__c</errorDisplayField>
+    <errorMessage>Please enter Key Takeaway information for completed event campaign.</errorMessage>
+</ValidationRule>

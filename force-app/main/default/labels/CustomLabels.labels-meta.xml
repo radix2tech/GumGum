@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AccountForecastBatchJobId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountForecastBatchJobId</shortDescription>
+        <value>707Uw00000rxksAIAQ</value>
+    </labels>
+    <labels>
+        <fullName>AccountForecastBatchQuery</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountForecastBatchQuery</shortDescription>
+        <value>SELECT Id,CurrencyIsoCode, Advertiser__c, Agency__c, AdvertiserAgency__c, (SELECT Id, Advertiser_Agency_Relationship__c FROM Account_Forecasts__r LIMIT 1) FROM Advertiser_Agency_Relationship__c where id = &apos;a36Uw000001UUsvIAG&apos;</value>
+    </labels>
+    <labels>
+        <fullName>Activation_Opportunity_PriceBookId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Activation Opportunity PriceBookId</shortDescription>
+        <value>01s4U00000124zbQAA</value>
+    </labels>
+    <labels>
+        <fullName>Advertising_Pricebook_Id</fullName>
+        <categories>Advertising Pricebook Id</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Advertising Pricebook Id</shortDescription>
+        <value>01s0P000001P6voQAC</value>
+    </labels>
+    <labels>
+        <fullName>Advertising_RecordTypeId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Advertising RecordTypeId</shortDescription>
+        <value>012U00000001pHJIAY</value>
+    </labels>
+    <labels>
+        <fullName>Billing_Entity_Record_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Billing Entity Record Type</shortDescription>
+        <value>Billing Entity</value>
+    </labels>
+    <labels>
+        <fullName>Billing_Integration_UserId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Billing Integration UserId</shortDescription>
+        <value>0054U000006VHr1QAG</value>
+    </labels>
+    <labels>
+        <fullName>CurrencyConversionBatchErrorEmail</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CurrencyConversionBatchErrorEmail</shortDescription>
+        <value>waqar.shaik@ic.gumgum.com</value>
+    </labels>
+    <labels>
+        <fullName>East_Closed_Lost_Email</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>East Closed Lost Email</shortDescription>
+        <value>patrick.abrams@gumgum.com</value>
+    </labels>
+    <labels>
+        <fullName>FE_pageSize</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FE_pageSize</shortDescription>
+        <value>100</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityCampaignStatusBatchErrorEmail</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityCampaignStatusBatchErrorEmail</shortDescription>
+        <value>waqar.shaik@ic.gumgum.com</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityURL</shortDescription>
+        <value>https://gumgum.lightning.force.com/lightning/r/Opportunity/</value>
+    </labels>
+    <labels>
+        <fullName>Playground_AIP</fullName>
+        <categories>Playground AIP PriceBookName</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Playground AIP</shortDescription>
+        <value>01s4U000001EjswQAC</value>
+    </labels>
+    <labels>
+        <fullName>Playground_Profile_ID</fullName>
+        <categories>ProfileId Of Playground Profle</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Playground Profile ID</shortDescription>
+        <value>00e4U0000011ktGQAQ</value>
+    </labels>
+    <labels>
+        <fullName>StandardPricebookId</fullName>
+        <categories>StandardPricebookId</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>StandardPricebookId</shortDescription>
+        <value>01sU0000000J0gYIAS</value>
+    </labels>
+    <labels>
+        <fullName>Verity_Demand_PricebookId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Verity - Demand PricebookId</shortDescription>
+        <value>01sUw000000GKM9IAO</value>
+    </labels>
+    <labels>
+        <fullName>Verity_Demand_RecordTypeId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Verity - Demand RecordTypeId</shortDescription>
+        <value>012Uw000002ZTu1IAG</value>
+    </labels>
+    <labels>
+        <fullName>Verity_Platform_PricebookId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Verity - Platform PricebookId</shortDescription>
+        <value>01sUw000000GKPNIA4</value>
+    </labels>
+    <labels>
+        <fullName>Verity_Platform_RecordTypeId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Verity - Platform RecordTypeId</shortDescription>
+        <value>012Uw000002ZTu2IAG</value>
+    </labels>
+    <labels>
+        <fullName>Verity_Publisher_PricebookId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Verity - Publisher PricebookId</shortDescription>
+        <value>01sUw000000GKNlIAO</value>
+    </labels>
+    <labels>
+        <fullName>Verity_Publisher_RecordTypeId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Verity - Publisher RecordTypeId</shortDescription>
+        <value>012Uw000002ZTu3IAG</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RVP_Ordered_Commission_Amount__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  Sales_Rep__r.Manager.Id  =  Sales_Rep__r.Id , 0,  Opportunity__r.Probability *   Commission__r.Opportunity_Split_Percentage__c  *   Total_Ordered_Amount__c  *  Sales_Rep__r.Manager.RVP_Commission_Percentage__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>RVP Ordered Commission Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

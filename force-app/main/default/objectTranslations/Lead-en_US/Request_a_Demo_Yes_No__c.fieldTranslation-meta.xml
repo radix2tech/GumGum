@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Request a Demo Yes/No (Checkbox) --></label>
+    <name>Request_a_Demo_Yes_No__c</name>
+</CustomFieldTranslation>

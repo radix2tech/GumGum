@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Groove_Removed_From_Flow_Reason__c</fullName>
+    <description>Reason why someone was removed from the Flow they were most recently added to</description>
+    <externalId>false</externalId>
+    <label>Removed From Flow Reason</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

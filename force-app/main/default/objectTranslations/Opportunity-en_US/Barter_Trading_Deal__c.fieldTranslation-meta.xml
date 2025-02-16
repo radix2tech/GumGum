@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose the applicable Trading / Barter deal. Values are populated based on the Opportunity Region selected. --></help>
+    <label><!-- Barter / Trading Deal --></label>
+    <name>Barter_Trading_Deal__c</name>
+    <picklistValues>
+        <masterLabel>APAC - APEX</masterLabel>
+        <translation><!-- APAC - APEX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APAC - Bohemia</masterLabel>
+        <translation><!-- APAC - Bohemia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APAC - DAN - SEA</masterLabel>
+        <translation><!-- APAC - DAN - SEA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APAC - GroupM - SEA</masterLabel>
+        <translation><!-- APAC - GroupM - SEA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APAC - Havas</masterLabel>
+        <translation><!-- APAC - Havas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APAC - IPG - AU</masterLabel>
+        <translation><!-- APAC - IPG - AU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APAC - IPG - SEA</masterLabel>
+        <translation><!-- APAC - IPG - SEA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APAC - OMG</masterLabel>
+        <translation><!-- APAC - OMG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APAC - OMG - SEA</masterLabel>
+        <translation><!-- APAC - OMG - SEA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APAC - Omnet</masterLabel>
+        <translation><!-- APAC - Omnet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APAC - Saatchi</masterLabel>
+        <translation><!-- APAC - Saatchi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APAC - Saatchi - SEA</masterLabel>
+        <translation><!-- APAC - Saatchi - SEA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BE - Blue2Purple</masterLabel>
+        <translation><!-- BE - Blue2Purple --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BE - GroupM</masterLabel>
+        <translation><!-- BE - GroupM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BE - IPG</masterLabel>
+        <translation><!-- BE - IPG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BE - Publicis</masterLabel>
+        <translation><!-- BE - Publicis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BE - Space</masterLabel>
+        <translation><!-- BE - Space --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BE - Zigt</masterLabel>
+        <translation><!-- BE - Zigt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CA - APEX</masterLabel>
+        <translation><!-- CA - APEX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CA - GroupM GMI</masterLabel>
+        <translation><!-- CA - GroupM GMI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CA - Orion</masterLabel>
+        <translation><!-- CA - Orion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DE - Dentsu</masterLabel>
+        <translation><!-- DE - Dentsu --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DE - Fischer</masterLabel>
+        <translation><!-- DE - Fischer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DE - GroupM</masterLabel>
+        <translation><!-- DE - GroupM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DE - OMD</masterLabel>
+        <translation><!-- DE - OMD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intl. - Adidas</masterLabel>
+        <translation><!-- Intl. - Adidas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intl. - Aramco</masterLabel>
+        <translation><!-- Intl. - Aramco --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intl. - CoE</masterLabel>
+        <translation><!-- Intl. - CoE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intl. - Dell</masterLabel>
+        <translation><!-- Intl. - Dell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intl. - Merkle</masterLabel>
+        <translation><!-- Intl. - Merkle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JP - Carta Holdings</masterLabel>
+        <translation><!-- JP - Carta Holdings --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JP - Dentsu</masterLabel>
+        <translation><!-- JP - Dentsu --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JP - GroupM</masterLabel>
+        <translation><!-- JP - GroupM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NL - APEX</masterLabel>
+        <translation><!-- NL - APEX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NL - Artefact</masterLabel>
+        <translation><!-- NL - Artefact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NL - Dentsu</masterLabel>
+        <translation><!-- NL - Dentsu --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NL - IPG</masterLabel>
+        <translation><!-- NL - IPG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NL - OMG</masterLabel>
+        <translation><!-- NL - OMG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NL - Orion</masterLabel>
+        <translation><!-- NL - Orion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NL - Publicis</masterLabel>
+        <translation><!-- NL - Publicis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - Active</masterLabel>
+        <translation><!-- UK - Active --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - Agyle</masterLabel>
+        <translation><!-- UK - Agyle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - Apex</masterLabel>
+        <translation><!-- UK - Apex --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - Astus</masterLabel>
+        <translation><!-- UK - Astus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - Bicycle</masterLabel>
+        <translation><!-- UK - Bicycle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - Dentsu</masterLabel>
+        <translation><!-- UK - Dentsu --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - Expedia</masterLabel>
+        <translation><!-- UK - Expedia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - GMI</masterLabel>
+        <translation><!-- UK - GMI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - GoodStuff/Assembly</masterLabel>
+        <translation><!-- UK - GoodStuff/Assembly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - GroupM</masterLabel>
+        <translation><!-- UK - GroupM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - Havas</masterLabel>
+        <translation><!-- UK - Havas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - IPG/Matterkind (non orion)</masterLabel>
+        <translation><!-- UK - IPG/Matterkind (non orion) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - Innocean</masterLabel>
+        <translation><!-- UK - Innocean --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - McCann Central</masterLabel>
+        <translation><!-- UK - McCann Central --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - Miroma</masterLabel>
+        <translation><!-- UK - Miroma --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - Nestle</masterLabel>
+        <translation><!-- UK - Nestle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - OMG</masterLabel>
+        <translation><!-- UK - OMG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - Omnet</masterLabel>
+        <translation><!-- UK - Omnet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - Orion</masterLabel>
+        <translation><!-- UK - Orion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - Publicis</masterLabel>
+        <translation><!-- UK - Publicis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - Specialist Works</masterLabel>
+        <translation><!-- UK - Specialist Works --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - omniGOV</masterLabel>
+        <translation><!-- UK - omniGOV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UK - the7stars</masterLabel>
+        <translation><!-- UK - the7stars --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>US - APEX</masterLabel>
+        <translation><!-- US - APEX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>US - Active International</masterLabel>
+        <translation><!-- US - Active International --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>US - Dentsu</masterLabel>
+        <translation><!-- US - Dentsu --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>US - Horizon</masterLabel>
+        <translation><!-- US - Horizon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>US - Orion</masterLabel>
+        <translation><!-- US - Orion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>US - SparkFoundry</masterLabel>
+        <translation><!-- US - SparkFoundry --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

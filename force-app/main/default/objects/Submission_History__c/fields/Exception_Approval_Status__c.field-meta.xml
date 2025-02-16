@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exception_Approval_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Exception Approval Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Exception</fullName>
+                <default>false</default>
+                <label>No Exception</label>
+            </value>
+            <value>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+                <label>Submitted</label>
+            </value>
+            <value>
+                <fullName>Exception Rejected</fullName>
+                <default>false</default>
+                <label>Exception Rejected</label>
+            </value>
+            <value>
+                <fullName>Exception Approved</fullName>
+                <default>false</default>
+                <label>Exception Approved</label>
+            </value>
+            <value>
+                <fullName>Requires Re-submission</fullName>
+                <default>false</default>
+                <label>Requires Re-submission</label>
+            </value>
+            <value>
+                <fullName>Recalled</fullName>
+                <default>false</default>
+                <label>Recalled</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

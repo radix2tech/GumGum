@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Publisher_Channel</fullName>
+    <active>false</active>
+    <description>Prevents certain users from using the publisher Channel picklist value</description>
+    <errorConditionFormula>AND(
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+NOT( $Permission.Bypass_Opportunity_Validation ),
+ RecordTypeId &lt;&gt; &quot;0120P00000034uZ&quot;,
+    ISPICKVAL( Channel__c , &quot;Publisher&quot;),
+    NOT($Profile.Id = &quot;00eU0000000FLjgIAG&quot;),
+   NOT($Profile.Id = &quot;00eU0000000FLjhIAG&quot;),
+   NOT($Profile.Id = &quot;00eU0000000FLjiIAG&quot;),
+    NOT( $User.LastName  = &quot;Weiner&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Channel__c</errorDisplayField>
+    <errorMessage>Only the Publisher Team or Ken Weiner can select Publisher as a Channel</errorMessage>
+</ValidationRule>

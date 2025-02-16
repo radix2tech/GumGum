@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GumGum_Tracked_Revenue__c</fullName>
+    <description>GumGum revenue synced from Ad Manager.  This is total revenue attributed to the campaign, it is not actual received revenue.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>GumGum revenue synced from Ad Manager.  This is total revenue attributed to the campaign, it is not actual received revenue.</inlineHelpText>
+    <label>GumGum Tracked Revenue</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

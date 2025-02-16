@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Solution__c</fullName>
+    <description>Who does this account currently use for measurement?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Who does this account currently use for measurement?</inlineHelpText>
+    <label>Current Solution</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Blinkfire</fullName>
+                <default>false</default>
+                <label>Blinkfire</label>
+            </value>
+            <value>
+                <fullName>HookIt</fullName>
+                <default>false</default>
+                <label>HookIt</label>
+            </value>
+            <value>
+                <fullName>Horizm</fullName>
+                <default>false</default>
+                <label>Horizm</label>
+            </value>
+            <value>
+                <fullName>MVP Index</fullName>
+                <default>false</default>
+                <label>MVP Index</label>
+            </value>
+            <value>
+                <fullName>Nielsen</fullName>
+                <default>false</default>
+                <label>Nielsen</label>
+            </value>
+            <value>
+                <fullName>Shikenso</fullName>
+                <default>false</default>
+                <label>Shikenso</label>
+            </value>
+            <value>
+                <fullName>Stream Engine</fullName>
+                <default>false</default>
+                <label>Stream Engine</label>
+            </value>
+            <value>
+                <fullName>YouGov/SMG</fullName>
+                <default>false</default>
+                <label>YouGov/SMG</label>
+            </value>
+            <value>
+                <fullName>Zoomph</fullName>
+                <default>false</default>
+                <label>Zoomph</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

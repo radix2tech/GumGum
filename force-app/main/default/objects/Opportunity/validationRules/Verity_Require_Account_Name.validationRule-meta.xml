@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verity_Require_Account_Name</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( RecordType.DeveloperName=&quot;Verity&quot;, 
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+ISBLANK( Account_Name_as_String__c) )</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>Please enter Account Name.</errorMessage>
+</ValidationRule>

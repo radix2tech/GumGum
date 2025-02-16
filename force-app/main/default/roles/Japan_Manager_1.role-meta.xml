@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Ads Japan Manager 1</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Ads Japan_Manager_1</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Japan_MD</parentRole>
+</Role>

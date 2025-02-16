@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Targeting Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Audience</masterLabel>
+        <translation><!-- Audience --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Behavioral</masterLabel>
+        <translation><!-- Behavioral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keyword</masterLabel>
+        <translation><!-- Keyword --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trend</masterLabel>
+        <translation><!-- Trend --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vertical</masterLabel>
+        <translation><!-- Vertical --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

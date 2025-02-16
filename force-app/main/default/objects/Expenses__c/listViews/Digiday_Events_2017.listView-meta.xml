@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Digiday_Events_2017</fullName>
+    <columns>NAME</columns>
+    <columns>Expense_Amount__c</columns>
+    <columns>Expense_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Vendor_Name__c</field>
+        <operation>equals</operation>
+        <value>Digiday</value>
+    </filters>
+    <label>Digiday Events 2017</label>
+</ListView>

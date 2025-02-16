@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IO_Type__c</fullName>
+    <description>This field displays the insertion order type</description>
+    <externalId>false</externalId>
+    <label>IO Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Original IO</fullName>
+                <default>false</default>
+                <label>Original IO</label>
+            </value>
+            <value>
+                <fullName>Revised IO - Incremental</fullName>
+                <default>false</default>
+                <label>Revised IO - Incremental</label>
+            </value>
+            <value>
+                <fullName>Revised IO - Budget Cut</fullName>
+                <default>false</default>
+                <label>Revised IO - Budget Cut</label>
+            </value>
+            <value>
+                <fullName>Revised IO - Optimizations</fullName>
+                <default>false</default>
+                <label>Revised IO - Optimizations</label>
+            </value>
+            <value>
+                <fullName>Revised IO - Other</fullName>
+                <default>false</default>
+                <label>Revised IO - Other</label>
+            </value>
+            <value>
+                <fullName>Actualized IO</fullName>
+                <default>false</default>
+                <label>Actualized IO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

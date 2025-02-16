@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CY_to_Date_Closed__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( (Today() - DATE(
+IF(Today() &lt; DATE( YEAR( TODAY() ) ,01,01),
+YEAR( TODAY() ) -1,
+YEAR( TODAY() )
+),01,01)) &gt;= (CloseDate - DATE( (IF( CloseDate &lt; DATE( YEAR( CloseDate ) ,01,01),
+YEAR( CloseDate ) -1,
+YEAR( CloseDate ) )
+),01,01)) ,
+1,
+0
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>CY to Date - Closed</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

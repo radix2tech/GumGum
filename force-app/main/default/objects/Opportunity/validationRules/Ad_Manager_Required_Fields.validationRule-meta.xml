@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ad_Manager_Required_Fields</fullName>
+    <active>false</active>
+    <description>If Submit to Ad Manager, then six fields are required: Start Date, Start Time, Start Timezone, End Date, End Time, and End Timezone.</description>
+    <errorConditionFormula>AND(
+ Submit_to_Ad_Manager__c = TRUE,
+ OR(
+ISBLANK(Start_Date_AdManager__c),
+ISBLANK(Start_Time__c),
+ISBLANK(TEXT(Campaign_Start_Timezone__c)),
+ISBLANK( End_Date_AdManager__c),
+ISBLANK( End_Time__c),
+ISBLANK(TEXT( End_Timezone__c))
+)
+)</errorConditionFormula>
+    <errorDisplayField>Submit_to_Ad_Manager__c</errorDisplayField>
+    <errorMessage>Enter the Start Date, Start Time, Start Timezone, End Date, End Time, and End Timezone for Ad Manager.</errorMessage>
+</ValidationRule>

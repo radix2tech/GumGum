@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>In_Image_Sub_Products__c</fullName>
+    <externalId>false</externalId>
+    <label>In-Image Sub Products</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Studio</fullName>
+                <default>false</default>
+                <label>Studio</label>
+            </value>
+            <value>
+                <fullName>Studio 728x90</fullName>
+                <default>false</default>
+                <label>Studio 728x90</label>
+            </value>
+            <value>
+                <fullName>Runway</fullName>
+                <default>false</default>
+                <label>Runway</label>
+            </value>
+            <value>
+                <fullName>Canvas</fullName>
+                <default>false</default>
+                <label>Canvas</label>
+            </value>
+            <value>
+                <fullName>Broadway</fullName>
+                <default>false</default>
+                <label>Broadway</label>
+            </value>
+            <value>
+                <fullName>Slider</fullName>
+                <default>false</default>
+                <label>Slider</label>
+            </value>
+            <value>
+                <fullName>Pencil</fullName>
+                <default>false</default>
+                <label>Pencil</label>
+            </value>
+            <value>
+                <fullName>Content</fullName>
+                <default>false</default>
+                <label>Content</label>
+            </value>
+            <value>
+                <fullName>Display</fullName>
+                <default>false</default>
+                <label>Display</label>
+            </value>
+            <value>
+                <fullName>Video</fullName>
+                <default>false</default>
+                <label>Video</label>
+            </value>
+            <value>
+                <fullName>Embedded Video</fullName>
+                <default>false</default>
+                <label>Embedded Video</label>
+            </value>
+            <value>
+                <fullName>Top</fullName>
+                <default>false</default>
+                <label>Top</label>
+            </value>
+            <value>
+                <fullName>Test</fullName>
+                <default>false</default>
+                <label>Test</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

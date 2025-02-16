@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RestrictRecordTypeChange</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISCHANGED(RecordTypeId),
+    $Profile.Name != &apos;System Administrator&apos;
+   )</errorConditionFormula>
+    <errorMessage>To request a change to the Opportunity Record Type, reach out to SalesforceSupport@gumgum.com</errorMessage>
+</ValidationRule>

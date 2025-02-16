@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- I&apos;m Here to Learn About --></label>
+    <name>I_m_Here_to_Learn_About__c</name>
+    <picklistValues>
+        <masterLabel>Advertising Solutions</masterLabel>
+        <translation><!-- Advertising Solutions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Publisher Solutions</masterLabel>
+        <translation><!-- Publisher Solutions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Visual Intelligence/Social Media Solutions</masterLabel>
+        <translation><!-- Visual Intelligence/Social Media Solutions --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

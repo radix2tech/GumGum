@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Secondary_KPI__c</fullName>
+    <externalId>false</externalId>
+    <label>Secondary KPI</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Action Rate</fullName>
+                <default>false</default>
+                <label>Action Rate</label>
+            </value>
+            <value>
+                <fullName>App Download</fullName>
+                <default>false</default>
+                <label>App Download</label>
+            </value>
+            <value>
+                <fullName>Attention</fullName>
+                <default>false</default>
+                <label>Attention</label>
+            </value>
+            <value>
+                <fullName>Attention Time</fullName>
+                <default>false</default>
+                <label>Attention Time</label>
+            </value>
+            <value>
+                <fullName>Brand Awareness Lift</fullName>
+                <default>false</default>
+                <label>Brand Awareness Lift</label>
+            </value>
+            <value>
+                <fullName>Cost Efficiency</fullName>
+                <default>false</default>
+                <label>Cost Efficiency</label>
+            </value>
+            <value>
+                <fullName>CPA</fullName>
+                <default>false</default>
+                <label>CPA</label>
+            </value>
+            <value>
+                <fullName>CPC</fullName>
+                <default>false</default>
+                <label>CPC</label>
+            </value>
+            <value>
+                <fullName>CPQA</fullName>
+                <default>false</default>
+                <label>CPQA</label>
+            </value>
+            <value>
+                <fullName>CTR</fullName>
+                <default>false</default>
+                <label>CTR</label>
+            </value>
+            <value>
+                <fullName>Engagement</fullName>
+                <default>false</default>
+                <label>Engagement</label>
+            </value>
+            <value>
+                <fullName>Foot Traffic</fullName>
+                <default>false</default>
+                <label>Foot Traffic</label>
+            </value>
+            <value>
+                <fullName>In-Store Sales</fullName>
+                <default>false</default>
+                <label>In-Store Sales</label>
+            </value>
+            <value>
+                <fullName>Landing Page Yield</fullName>
+                <default>false</default>
+                <label>Landing Page Yield</label>
+            </value>
+            <value>
+                <fullName>Lead Generation</fullName>
+                <default>false</default>
+                <label>Lead Generation</label>
+            </value>
+            <value>
+                <fullName>NA</fullName>
+                <default>false</default>
+                <label>NA</label>
+            </value>
+            <value>
+                <fullName>Online Sales</fullName>
+                <default>false</default>
+                <label>Online Sales</label>
+            </value>
+            <value>
+                <fullName>Play Rate</fullName>
+                <default>false</default>
+                <label>Play Rate</label>
+            </value>
+            <value>
+                <fullName>Reach</fullName>
+                <default>false</default>
+                <label>Reach</label>
+            </value>
+            <value>
+                <fullName>ROAS</fullName>
+                <default>false</default>
+                <label>ROAS</label>
+            </value>
+            <value>
+                <fullName>Sales/Consideration Lift</fullName>
+                <default>false</default>
+                <label>Sales/Consideration Lift</label>
+            </value>
+            <value>
+                <fullName>Shopping Cart Volume</fullName>
+                <default>false</default>
+                <label>Shopping Cart Volume</label>
+            </value>
+            <value>
+                <fullName>Site Traffic</fullName>
+                <default>false</default>
+                <label>Site Traffic</label>
+            </value>
+            <value>
+                <fullName>Traffic Rate</fullName>
+                <default>false</default>
+                <label>Traffic Rate</label>
+            </value>
+            <value>
+                <fullName>VCR</fullName>
+                <default>false</default>
+                <label>VCR</label>
+            </value>
+            <value>
+                <fullName>Video Views</fullName>
+                <default>false</default>
+                <label>Video Views</label>
+            </value>
+            <value>
+                <fullName>Viewability</fullName>
+                <default>false</default>
+                <label>Viewability</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

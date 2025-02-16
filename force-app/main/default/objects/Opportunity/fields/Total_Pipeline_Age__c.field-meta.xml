@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Pipeline_Age__c</fullName>
+    <description>Calculates the number of days between when the opp first moved into a qualified stage (Pipeline) and the date to which it was moved to Closed (Won or Lost)</description>
+    <externalId>false</externalId>
+    <formula>IF(IsClosed=TRUE,Date_Moved_to_Closed_Won_Lost__c,TODAY())-(Date_Qualified__c)</formula>
+    <inlineHelpText>Calculates the number of days between when the opp first moved into a qualified stage (Pipeline) and the date to which it was moved to Closed (Won or Lost)</inlineHelpText>
+    <label>Total Pipeline Age</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

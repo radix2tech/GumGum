@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Allows certain users *admin and sales ops&quot; to bypass process builders for uploads --></help>
+    <label><!-- Bypass Automation --></label>
+    <name>Bypass_Automation__c</name>
+</CustomFieldTranslation>

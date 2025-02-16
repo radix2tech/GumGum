@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_for_Supplier</fullName>
+    <active>true</active>
+    <description>Requires_account_to_be_a_Supplier</description>
+    <errorConditionFormula>Vendor_Name__r.RecordType.Name &lt;&gt; &quot;Supplier&quot;</errorConditionFormula>
+    <errorDisplayField>Vendor_Name__c</errorDisplayField>
+    <errorMessage>Please select a &quot;Supplier&quot; account.</errorMessage>
+</ValidationRule>

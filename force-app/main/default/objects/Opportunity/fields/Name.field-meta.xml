@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name</fullName>
+    <inlineHelpText>Correct Naming Convention:  
+Region - Sub Region - Agency - Brand - Opp / Campaign Name - Type(IO/PMP/InGame) - Revenue Time (Q2/June)</inlineHelpText>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+</CustomField>

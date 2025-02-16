@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_State_Province__c</fullName>
+    <externalId>false</externalId>
+    <label>Campaign State/Province</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Campaign_Country__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Targeting_Campaign_State_Province</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>AK - Alaska</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>AL - Alabama</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>AR - Arkansas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>AZ - Arizona</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>CA - California</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>CO - Colorado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>CT - Connecticut</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>DC - District Of Columbia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>DE - Delaware</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>FL - Florida</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>GA - Georgia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>HI - Hawaii</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>IA - Iowa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>ID - Idaho</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>IL - Illinois</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>IN - Indiana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>KS - Kansas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>KY - Kentucky</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>LA - Louisiana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>MA - Massachusetts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>MD - Maryland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>ME - Maine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>MI - Michigan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>MN - Minnesota</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>MO - Missouri</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>MS - Mississippi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>MT - Montana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>NC - North Carolina</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>ND - North Dakota</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>NE - Nebraska</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>NH - New Hampshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>NJ - New Jersey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>NM - New Mexico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>NV - Nevada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>NY - New York</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>OH - Ohio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>OK - Oklahoma</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>OR - Oregon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>PA - Pennsylvania</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>RI - Rhode Island</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>SC - South Carolina</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>SD - South Dakota</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>TN - Tennessee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>TX - Texas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>UT - Utah</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>VA - Virginia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>VT - Vermont</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>WA - Washington</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>WI - Wisconsin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>WV - West Virginia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US - United States of America</controllingFieldValue>
+            <valueName>WY - Wyoming</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CA - Canada</controllingFieldValue>
+            <valueName>Alberta - AB - Alberta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CA - Canada</controllingFieldValue>
+            <valueName>British Columbia - BC - British Columbia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CA - Canada</controllingFieldValue>
+            <valueName>Manitoba - MB - Manitoba</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CA - Canada</controllingFieldValue>
+            <valueName>New Brunswick - NB - New Brunswick</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CA - Canada</controllingFieldValue>
+            <valueName>Newfoundland and Labrador - NL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CA - Canada</controllingFieldValue>
+            <valueName>Northwest Territories - NT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CA - Canada</controllingFieldValue>
+            <valueName>Nova Scotia - NS - Nova Scotia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CA - Canada</controllingFieldValue>
+            <valueName>Nunavut - NU - Nunavut</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CA - Canada</controllingFieldValue>
+            <valueName>Ontario - ON - Ontario</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CA - Canada</controllingFieldValue>
+            <valueName>Prince Edward Island - PE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CA - Canada</controllingFieldValue>
+            <valueName>Quebec - QC - Quebec</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CA - Canada</controllingFieldValue>
+            <valueName>Saskatchewan - SK - Saskatchewan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CA - Canada</controllingFieldValue>
+            <valueName>Yukon - YT - Yukon</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

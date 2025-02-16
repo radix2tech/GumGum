@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Invoice_status_submitted</fullName>
+        <field>Invoice_Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Invoice status submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Notify marketing of paid invoice</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Invoice_Breakout__c.Invoice_Status__c</field>
+            <operation>equals</operation>
+            <value>Paid (Closed)</value>
+        </criteriaItems>
+        <description>Send email when invoice status is changed to paid.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

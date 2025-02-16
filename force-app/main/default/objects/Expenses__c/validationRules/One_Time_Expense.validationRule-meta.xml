@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>One_Time_Expense</fullName>
+    <active>true</active>
+    <description>Forces user to pick only one option from &quot;Department&quot; multi-select picklist</description>
+    <errorConditionFormula>(
+IF(INCLUDES(Department__c, &quot;Australia &amp; NZ&quot;),1,0)+
+IF(INCLUDES(Department__c, &quot;Central Marketing&quot;),1,0)+
+IF(INCLUDES(Department__c, &quot;Europe&quot;),1,0)+
+IF(INCLUDES(Department__c, &quot;Execs&quot;),1,0)+
+IF(INCLUDES(Department__c, &quot;HR&quot;),1,0)+
+IF(INCLUDES(Department__c, &quot;International (Besides Europe, Australia &amp; NZ)&quot;),1,0)+
+IF(INCLUDES(Department__c, &quot;Japan&quot;),1,0)+
+IF(INCLUDES(Department__c, &quot;NA Programmatic&quot;),1,0)+
+IF(INCLUDES(Department__c, &quot;NA Pub Dev&quot;),1,0)+
+IF(INCLUDES(Department__c, &quot;NA Sales - Central &amp; Canada&quot;),1,0)+
+IF(INCLUDES(Department__c, &quot;NA Sales - East&quot;),1,0)+
+IF(INCLUDES(Department__c, &quot;NA Sales - West&quot;),1,0)+
+IF(INCLUDES(Department__c, &quot;SalesOps&quot;),1,0)+
+IF(INCLUDES(Department__c, &quot;Sports&quot;),1,0)+
+IF(INCLUDES(Department__c, &quot;Tech&quot;),1,0)
+) &gt; 1</errorConditionFormula>
+    <errorDisplayField>Department__c</errorDisplayField>
+    <errorMessage>You may only choose one Department when for a One-Time expense.</errorMessage>
+</ValidationRule>

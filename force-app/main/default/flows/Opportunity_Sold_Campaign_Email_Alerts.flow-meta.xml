@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>New_Business_250k_email_alert</name>
+        <label>New Business 250k+ email alert</label>
+        <locationX>578</locationX>
+        <locationY>384</locationY>
+        <actionName>Opportunity.Sold_campaign_new_business_250k</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>New_Business_250k_email_alert_2</name>
+        <label>New Business &lt;250k email alert</label>
+        <locationX>842</locationX>
+        <locationY>384</locationY>
+        <actionName>Opportunity.Sold_campaign_new_business_250k_less</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Renewal_250k_email_alert</name>
+        <label>Renewal 250k+ email alert</label>
+        <locationX>50</locationX>
+        <locationY>384</locationY>
+        <actionName>Opportunity.Sold_campaign_existing_business_250k</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Renewal_250k_email_alert_2</name>
+        <label>Renewal &lt;250k email alert</label>
+        <locationX>314</locationX>
+        <locationY>384</locationY>
+        <actionName>Opportunity.Sold_campaign_existing_business_250k_less</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>62.0</apiVersion>
+    <decisions>
+        <name>Check_Type_and_Amount</name>
+        <label>Check Type and Amount</label>
+        <locationX>578</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Renewal_Business</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Renewal Business</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Amount</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>250000.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Renewal_250k_email_alert</targetReference>
+            </connector>
+            <label>Renewal 250k+</label>
+        </rules>
+        <rules>
+            <name>Renewal_Business_250K</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Renewal Business</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Amount</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <numberValue>250000.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Renewal_250k_email_alert_2</targetReference>
+            </connector>
+            <label>Renewal &lt;250K</label>
+        </rules>
+        <rules>
+            <name>New_Business_250K</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New Business</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Amount</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>250000.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Business_250k_email_alert</targetReference>
+            </connector>
+            <label>New Business 250K+</label>
+        </rules>
+        <rules>
+            <name>New_Businsess_250k</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New Business</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Amount</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <numberValue>250000.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Business_250k_email_alert_2</targetReference>
+            </connector>
+            <label>New Businsess &lt;250k</label>
+        </rules>
+    </decisions>
+    <description>This flow sends email when stage is changed is changed to Closed/Won and is converted from a workflow rules</description>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity - Sold Campaign Email Alerts {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity - Sold Campaign Email Alerts</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>AND( 
+         {!$Record.RecordType.Name} = &apos;Advertising&apos;,
+          TEXT({!$Record.StageName}) = &apos;Closed/Won&apos;,
+          {!$User.Bypass_Opportunity_Validation__c} = false
+      )</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Check_Type_and_Amount</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

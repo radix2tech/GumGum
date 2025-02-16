@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_Date_AdManager_FormulaWrapped__c</fullName>
+    <description>Wraps start date and time into 1 object for Advertising API</description>
+    <externalId>false</externalId>
+    <formula>TEXT(Start_Date_AdManager__c) + &quot; &quot; + TEXT(Start_Time__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Start_Date_AdManager_FormulaWrapped</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

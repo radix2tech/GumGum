@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exception_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Exception Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Below Floor Rates</fullName>
+                <default>false</default>
+                <label>Below Floor Rates</label>
+            </value>
+            <value>
+                <fullName>Below Minimum Spend (Canvas)</fullName>
+                <default>false</default>
+                <label>Below Minimum Spend (Canvas)</label>
+            </value>
+            <value>
+                <fullName>Below Minimum Spend (Embedded Video)</fullName>
+                <default>false</default>
+                <label>Below Minimum Spend (Embedded Video)</label>
+            </value>
+            <value>
+                <fullName>Below Minimum Spend (Overall Campaign)</fullName>
+                <default>false</default>
+                <label>Below Minimum Spend (Overall Campaign)</label>
+            </value>
+            <value>
+                <fullName>Extra Creative Fees/Waiver Creative Fees</fullName>
+                <default>false</default>
+                <label>Extra Creative Fees/Waiver Creative Fees</label>
+            </value>
+            <value>
+                <fullName>Higher % Added Value Impressions</fullName>
+                <default>false</default>
+                <label>Higher % Added Value Impressions</label>
+            </value>
+            <value>
+                <fullName>Higher % In-image Canvas</fullName>
+                <default>false</default>
+                <label>Higher % In-image Canvas</label>
+            </value>
+            <value>
+                <fullName>Mock Request</fullName>
+                <default>false</default>
+                <label>Mock Request</label>
+            </value>
+            <value>
+                <fullName>Multiple Creative Unit Versions</fullName>
+                <default>false</default>
+                <label>Multiple Creative Unit Versions</label>
+            </value>
+            <value>
+                <fullName>Out Clause (Less than 7 days)</fullName>
+                <default>false</default>
+                <label>Out Clause (Less than 7 days)</label>
+            </value>
+            <value>
+                <fullName>Research Study</fullName>
+                <default>false</default>
+                <label>Research Study</label>
+            </value>
+            <value>
+                <fullName>Rolling Launch</fullName>
+                <default>false</default>
+                <label>Rolling Launch</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

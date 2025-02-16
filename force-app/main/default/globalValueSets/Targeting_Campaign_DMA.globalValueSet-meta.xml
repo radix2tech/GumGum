@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>662 - Abilene-Sweetwater TX</fullName>
+        <default>false</default>
+        <label>662 - Abilene-Sweetwater TX</label>
+    </customValue>
+    <customValue>
+        <fullName>525 - Albany GA</fullName>
+        <default>false</default>
+        <label>525 - Albany GA</label>
+    </customValue>
+    <customValue>
+        <fullName>532 - Albany-Schenectady-Troy NY</fullName>
+        <default>false</default>
+        <label>532 - Albany-Schenectady-Troy NY</label>
+    </customValue>
+    <customValue>
+        <fullName>790 - Albuquerque-Santa Fe NM</fullName>
+        <default>false</default>
+        <label>790 - Albuquerque-Santa Fe NM</label>
+    </customValue>
+    <customValue>
+        <fullName>644 - Alexandria LA</fullName>
+        <default>false</default>
+        <label>644 - Alexandria LA</label>
+    </customValue>
+    <customValue>
+        <fullName>583 - Alpena MI</fullName>
+        <default>false</default>
+        <label>583 - Alpena MI</label>
+    </customValue>
+    <customValue>
+        <fullName>634 - Amarillo TX</fullName>
+        <default>false</default>
+        <label>634 - Amarillo TX</label>
+    </customValue>
+    <customValue>
+        <fullName>743 - Anchorage AK</fullName>
+        <default>false</default>
+        <label>743 - Anchorage AK</label>
+    </customValue>
+    <customValue>
+        <fullName>524 - Atlanta GA</fullName>
+        <default>false</default>
+        <label>524 - Atlanta GA</label>
+    </customValue>
+    <customValue>
+        <fullName>520 - Augusta GA</fullName>
+        <default>false</default>
+        <label>520 - Augusta GA</label>
+    </customValue>
+    <customValue>
+        <fullName>635 - Austin TX</fullName>
+        <default>false</default>
+        <label>635 - Austin TX</label>
+    </customValue>
+    <customValue>
+        <fullName>800 - Bakersfield CA</fullName>
+        <default>false</default>
+        <label>800 - Bakersfield CA</label>
+    </customValue>
+    <customValue>
+        <fullName>512 - Baltimore MD</fullName>
+        <default>false</default>
+        <label>512 - Baltimore MD</label>
+    </customValue>
+    <customValue>
+        <fullName>537 - Bangor ME</fullName>
+        <default>false</default>
+        <label>537 - Bangor ME</label>
+    </customValue>
+    <customValue>
+        <fullName>716 - Baton Rouge LA</fullName>
+        <default>false</default>
+        <label>716 - Baton Rouge LA</label>
+    </customValue>
+    <customValue>
+        <fullName>692 - Beaumont-Port Arthur TX</fullName>
+        <default>false</default>
+        <label>692 - Beaumont-Port Arthur TX</label>
+    </customValue>
+    <customValue>
+        <fullName>821 - Bend OR</fullName>
+        <default>false</default>
+        <label>821 - Bend OR</label>
+    </customValue>
+    <customValue>
+        <fullName>756 - Billings MT</fullName>
+        <default>false</default>
+        <label>756 - Billings MT</label>
+    </customValue>
+    <customValue>
+        <fullName>746 - Biloxi-Gulfport MS</fullName>
+        <default>false</default>
+        <label>746 - Biloxi-Gulfport MS</label>
+    </customValue>
+    <customValue>
+        <fullName>502 - Binghamton NY</fullName>
+        <default>false</default>
+        <label>502 - Binghamton NY</label>
+    </customValue>
+    <customValue>
+        <fullName>630 - Birmingham AL</fullName>
+        <default>false</default>
+        <label>630 - Birmingham AL</label>
+    </customValue>
+    <customValue>
+        <fullName>559 - Bluefield-Beckley-Oak Hill WV</fullName>
+        <default>false</default>
+        <label>559 - Bluefield-Beckley-Oak Hill WV</label>
+    </customValue>
+    <customValue>
+        <fullName>757 - Boise ID</fullName>
+        <default>false</default>
+        <label>757 - Boise ID</label>
+    </customValue>
+    <customValue>
+        <fullName>506 - Boston MA-Manchester NH</fullName>
+        <default>false</default>
+        <label>506 - Boston MA-Manchester NH</label>
+    </customValue>
+    <customValue>
+        <fullName>736 - Bowling Green KY</fullName>
+        <default>false</default>
+        <label>736 - Bowling Green KY</label>
+    </customValue>
+    <customValue>
+        <fullName>514 - Buffalo NY</fullName>
+        <default>false</default>
+        <label>514 - Buffalo NY</label>
+    </customValue>
+    <customValue>
+        <fullName>523 - Burlington VT-Plattsburgh NY</fullName>
+        <default>false</default>
+        <label>523 - Burlington VT-Plattsburgh NY</label>
+    </customValue>
+    <customValue>
+        <fullName>754 - Butte-Bozeman MT</fullName>
+        <default>false</default>
+        <label>754 - Butte-Bozeman MT</label>
+    </customValue>
+    <customValue>
+        <fullName>767 - Casper-Riverton WY</fullName>
+        <default>false</default>
+        <label>767 - Casper-Riverton WY</label>
+    </customValue>
+    <customValue>
+        <fullName>637 - Cedar Rapids-Waterloo-Iowa City &amp; Dubuque IA</fullName>
+        <default>false</default>
+        <label>637 - Cedar Rapids-Waterloo-Iowa City &amp; Dubuque IA</label>
+    </customValue>
+    <customValue>
+        <fullName>648 - Champaign &amp; Springfield-Decatur IL</fullName>
+        <default>false</default>
+        <label>648 - Champaign &amp; Springfield-Decatur IL</label>
+    </customValue>
+    <customValue>
+        <fullName>564 - Charleston-Huntington WV</fullName>
+        <default>false</default>
+        <label>564 - Charleston-Huntington WV</label>
+    </customValue>
+    <customValue>
+        <fullName>519 - Charleston SC</fullName>
+        <default>false</default>
+        <label>519 - Charleston SC</label>
+    </customValue>
+    <customValue>
+        <fullName>517 - Charlotte NC</fullName>
+        <default>false</default>
+        <label>517 - Charlotte NC</label>
+    </customValue>
+    <customValue>
+        <fullName>584 - Charlottesville VA</fullName>
+        <default>false</default>
+        <label>584 - Charlottesville VA</label>
+    </customValue>
+    <customValue>
+        <fullName>575 - Chattanooga TN</fullName>
+        <default>false</default>
+        <label>575 - Chattanooga TN</label>
+    </customValue>
+    <customValue>
+        <fullName>759 - Cheyenne WY-Scottsbluff NE</fullName>
+        <default>false</default>
+        <label>759 - Cheyenne WY-Scottsbluff NE</label>
+    </customValue>
+    <customValue>
+        <fullName>602 - Chicago IL</fullName>
+        <default>false</default>
+        <label>602 - Chicago IL</label>
+    </customValue>
+    <customValue>
+        <fullName>868 - Chico-Redding CA</fullName>
+        <default>false</default>
+        <label>868 - Chico-Redding CA</label>
+    </customValue>
+    <customValue>
+        <fullName>515 - Cincinnati OH</fullName>
+        <default>false</default>
+        <label>515 - Cincinnati OH</label>
+    </customValue>
+    <customValue>
+        <fullName>598 - Clarksburg-Weston WV</fullName>
+        <default>false</default>
+        <label>598 - Clarksburg-Weston WV</label>
+    </customValue>
+    <customValue>
+        <fullName>510 - Cleveland-Akron (Canton) OH</fullName>
+        <default>false</default>
+        <label>510 - Cleveland-Akron (Canton) OH</label>
+    </customValue>
+    <customValue>
+        <fullName>752 - Colorado Springs-Pueblo CO</fullName>
+        <default>false</default>
+        <label>752 - Colorado Springs-Pueblo CO</label>
+    </customValue>
+    <customValue>
+        <fullName>604 - Columbia-Jefferson City MO</fullName>
+        <default>false</default>
+        <label>604 - Columbia-Jefferson City MO</label>
+    </customValue>
+    <customValue>
+        <fullName>546 - Columbia SC</fullName>
+        <default>false</default>
+        <label>546 - Columbia SC</label>
+    </customValue>
+    <customValue>
+        <fullName>522 - Columbus GA</fullName>
+        <default>false</default>
+        <label>522 - Columbus GA</label>
+    </customValue>
+    <customValue>
+        <fullName>535 - Columbus OH</fullName>
+        <default>false</default>
+        <label>535 - Columbus OH</label>
+    </customValue>
+    <customValue>
+        <fullName>673 - Columbus-Tupelo-West Point MS</fullName>
+        <default>false</default>
+        <label>673 - Columbus-Tupelo-West Point MS</label>
+    </customValue>
+    <customValue>
+        <fullName>600 - Corpus Christi TX</fullName>
+        <default>false</default>
+        <label>600 - Corpus Christi TX</label>
+    </customValue>
+    <customValue>
+        <fullName>623 - Dallas-Ft. Worth TX</fullName>
+        <default>false</default>
+        <label>623 - Dallas-Ft. Worth TX</label>
+    </customValue>
+    <customValue>
+        <fullName>682 - Davenport IA-Rock Island-Moline IL</fullName>
+        <default>false</default>
+        <label>682 - Davenport IA-Rock Island-Moline IL</label>
+    </customValue>
+    <customValue>
+        <fullName>542 - Dayton OH</fullName>
+        <default>false</default>
+        <label>542 - Dayton OH</label>
+    </customValue>
+    <customValue>
+        <fullName>751 - Denver CO</fullName>
+        <default>false</default>
+        <label>751 - Denver CO</label>
+    </customValue>
+    <customValue>
+        <fullName>679 - Des Moines-Ames IA</fullName>
+        <default>false</default>
+        <label>679 - Des Moines-Ames IA</label>
+    </customValue>
+    <customValue>
+        <fullName>505 - Detroit MI</fullName>
+        <default>false</default>
+        <label>505 - Detroit MI</label>
+    </customValue>
+    <customValue>
+        <fullName>606 - Dothan AL</fullName>
+        <default>false</default>
+        <label>606 - Dothan AL</label>
+    </customValue>
+    <customValue>
+        <fullName>676 - Duluth MN-Superior WI</fullName>
+        <default>false</default>
+        <label>676 - Duluth MN-Superior WI</label>
+    </customValue>
+    <customValue>
+        <fullName>765 - El Paso TX</fullName>
+        <default>false</default>
+        <label>765 - El Paso TX</label>
+    </customValue>
+    <customValue>
+        <fullName>565 - Elmira NY</fullName>
+        <default>false</default>
+        <label>565 - Elmira NY</label>
+    </customValue>
+    <customValue>
+        <fullName>516 - Erie PA</fullName>
+        <default>false</default>
+        <label>516 - Erie PA</label>
+    </customValue>
+    <customValue>
+        <fullName>801 - Eugene OR</fullName>
+        <default>false</default>
+        <label>801 - Eugene OR</label>
+    </customValue>
+    <customValue>
+        <fullName>802 - Eureka CA</fullName>
+        <default>false</default>
+        <label>802 - Eureka CA</label>
+    </customValue>
+    <customValue>
+        <fullName>649 - Evansville IN</fullName>
+        <default>false</default>
+        <label>649 - Evansville IN</label>
+    </customValue>
+    <customValue>
+        <fullName>745 - Fairbanks AK</fullName>
+        <default>false</default>
+        <label>745 - Fairbanks AK</label>
+    </customValue>
+    <customValue>
+        <fullName>724 - Fargo-Valley City ND</fullName>
+        <default>false</default>
+        <label>724 - Fargo-Valley City ND</label>
+    </customValue>
+    <customValue>
+        <fullName>513 - Flint-Saginaw-Bay City MI</fullName>
+        <default>false</default>
+        <label>513 - Flint-Saginaw-Bay City MI</label>
+    </customValue>
+    <customValue>
+        <fullName>570 - Florence-Myrtle Beach SC</fullName>
+        <default>false</default>
+        <label>570 - Florence-Myrtle Beach SC</label>
+    </customValue>
+    <customValue>
+        <fullName>571 - Ft. Myers-Naples FL</fullName>
+        <default>false</default>
+        <label>571 - Ft. Myers-Naples FL</label>
+    </customValue>
+    <customValue>
+        <fullName>670 - Ft. Smith-Fayetteville-Springdale-Rogers AR</fullName>
+        <default>false</default>
+        <label>670 - Ft. Smith-Fayetteville-Springdale-Rogers AR</label>
+    </customValue>
+    <customValue>
+        <fullName>509 - Ft. Wayne IN</fullName>
+        <default>false</default>
+        <label>509 - Ft. Wayne IN</label>
+    </customValue>
+    <customValue>
+        <fullName>866 - Fresno-Visalia CA</fullName>
+        <default>false</default>
+        <label>866 - Fresno-Visalia CA</label>
+    </customValue>
+    <customValue>
+        <fullName>592 - Gainesville FL</fullName>
+        <default>false</default>
+        <label>592 - Gainesville FL</label>
+    </customValue>
+    <customValue>
+        <fullName>798 - Glendive MT</fullName>
+        <default>false</default>
+        <label>798 - Glendive MT</label>
+    </customValue>
+    <customValue>
+        <fullName>563 - Grand Rapids-Kalamazoo-Battle Creek MI</fullName>
+        <default>false</default>
+        <label>563 - Grand Rapids-Kalamazoo-Battle Creek MI</label>
+    </customValue>
+    <customValue>
+        <fullName>773 - Grand Junction-Montrose CO</fullName>
+        <default>false</default>
+        <label>773 - Grand Junction-Montrose CO</label>
+    </customValue>
+    <customValue>
+        <fullName>755 - Great Falls MT</fullName>
+        <default>false</default>
+        <label>755 - Great Falls MT</label>
+    </customValue>
+    <customValue>
+        <fullName>658 - Green Bay-Appleton WI</fullName>
+        <default>false</default>
+        <label>658 - Green Bay-Appleton WI</label>
+    </customValue>
+    <customValue>
+        <fullName>518 - Greensboro-High Point-Winston Salem NC</fullName>
+        <default>false</default>
+        <label>518 - Greensboro-High Point-Winston Salem NC</label>
+    </customValue>
+    <customValue>
+        <fullName>545 - Greenville-New Bern-Washington NC</fullName>
+        <default>false</default>
+        <label>545 - Greenville-New Bern-Washington NC</label>
+    </customValue>
+    <customValue>
+        <fullName>567 - Greenville-Spartanburg SC-Asheville NC-Anderson SC</fullName>
+        <default>false</default>
+        <label>567 - Greenville-Spartanburg SC-Asheville NC-Anderson SC</label>
+    </customValue>
+    <customValue>
+        <fullName>647 - Greenwood-Greenville MS</fullName>
+        <default>false</default>
+        <label>647 - Greenwood-Greenville MS</label>
+    </customValue>
+    <customValue>
+        <fullName>636 - Harlingen-Weslaco-Brownsville-McAllen TX</fullName>
+        <default>false</default>
+        <label>636 - Harlingen-Weslaco-Brownsville-McAllen TX</label>
+    </customValue>
+    <customValue>
+        <fullName>566 - Harrisburg-Lancaster-Lebanon-York PA</fullName>
+        <default>false</default>
+        <label>566 - Harrisburg-Lancaster-Lebanon-York PA</label>
+    </customValue>
+    <customValue>
+        <fullName>569 - Harrisonburg VA</fullName>
+        <default>false</default>
+        <label>569 - Harrisonburg VA</label>
+    </customValue>
+    <customValue>
+        <fullName>533 - Hartford &amp; New Haven CT</fullName>
+        <default>false</default>
+        <label>533 - Hartford &amp; New Haven CT</label>
+    </customValue>
+    <customValue>
+        <fullName>710 - Hattiesburg-Laurel MS</fullName>
+        <default>false</default>
+        <label>710 - Hattiesburg-Laurel MS</label>
+    </customValue>
+    <customValue>
+        <fullName>766 - Helena MT</fullName>
+        <default>false</default>
+        <label>766 - Helena MT</label>
+    </customValue>
+    <customValue>
+        <fullName>744 - Honolulu HI</fullName>
+        <default>false</default>
+        <label>744 - Honolulu HI</label>
+    </customValue>
+    <customValue>
+        <fullName>618 - Houston TX</fullName>
+        <default>false</default>
+        <label>618 - Houston TX</label>
+    </customValue>
+    <customValue>
+        <fullName>691 - Huntsville-Decatur (Florence) AL</fullName>
+        <default>false</default>
+        <label>691 - Huntsville-Decatur (Florence) AL</label>
+    </customValue>
+    <customValue>
+        <fullName>758 - Idaho Falls-Pocatello ID</fullName>
+        <default>false</default>
+        <label>758 - Idaho Falls-Pocatello ID</label>
+    </customValue>
+    <customValue>
+        <fullName>527 - Indianapolis IN</fullName>
+        <default>false</default>
+        <label>527 - Indianapolis IN</label>
+    </customValue>
+    <customValue>
+        <fullName>718 - Jackson MS</fullName>
+        <default>false</default>
+        <label>718 - Jackson MS</label>
+    </customValue>
+    <customValue>
+        <fullName>639 - Jackson TN</fullName>
+        <default>false</default>
+        <label>639 - Jackson TN</label>
+    </customValue>
+    <customValue>
+        <fullName>561 - Jacksonville FL</fullName>
+        <default>false</default>
+        <label>561 - Jacksonville FL</label>
+    </customValue>
+    <customValue>
+        <fullName>574 - Johnstown-Altoona PA</fullName>
+        <default>false</default>
+        <label>574 - Johnstown-Altoona PA</label>
+    </customValue>
+    <customValue>
+        <fullName>734 - Jonesboro AR</fullName>
+        <default>false</default>
+        <label>734 - Jonesboro AR</label>
+    </customValue>
+    <customValue>
+        <fullName>603 - Joplin MO-Pittsburg KS</fullName>
+        <default>false</default>
+        <label>603 - Joplin MO-Pittsburg KS</label>
+    </customValue>
+    <customValue>
+        <fullName>747 - Juneau AK</fullName>
+        <default>false</default>
+        <label>747 - Juneau AK</label>
+    </customValue>
+    <customValue>
+        <fullName>616 - Kansas City MO</fullName>
+        <default>false</default>
+        <label>616 - Kansas City MO</label>
+    </customValue>
+    <customValue>
+        <fullName>557 - Knoxville TN</fullName>
+        <default>false</default>
+        <label>557 - Knoxville TN</label>
+    </customValue>
+    <customValue>
+        <fullName>702 - La Crosse-Eau Claire WI</fullName>
+        <default>false</default>
+        <label>702 - La Crosse-Eau Claire WI</label>
+    </customValue>
+    <customValue>
+        <fullName>582 - Lafayette IN</fullName>
+        <default>false</default>
+        <label>582 - Lafayette IN</label>
+    </customValue>
+    <customValue>
+        <fullName>642 - Lafayette LA</fullName>
+        <default>false</default>
+        <label>642 - Lafayette LA</label>
+    </customValue>
+    <customValue>
+        <fullName>643 - Lake Charles LA</fullName>
+        <default>false</default>
+        <label>643 - Lake Charles LA</label>
+    </customValue>
+    <customValue>
+        <fullName>551 - Lansing MI</fullName>
+        <default>false</default>
+        <label>551 - Lansing MI</label>
+    </customValue>
+    <customValue>
+        <fullName>749 - Laredo TX</fullName>
+        <default>false</default>
+        <label>749 - Laredo TX</label>
+    </customValue>
+    <customValue>
+        <fullName>839 - Las Vegas NV</fullName>
+        <default>false</default>
+        <label>839 - Las Vegas NV</label>
+    </customValue>
+    <customValue>
+        <fullName>541 - Lexington KY</fullName>
+        <default>false</default>
+        <label>541 - Lexington KY</label>
+    </customValue>
+    <customValue>
+        <fullName>558 - Lima OH</fullName>
+        <default>false</default>
+        <label>558 - Lima OH</label>
+    </customValue>
+    <customValue>
+        <fullName>722 - Lincoln &amp; Hastings-Kearney NE</fullName>
+        <default>false</default>
+        <label>722 - Lincoln &amp; Hastings-Kearney NE</label>
+    </customValue>
+    <customValue>
+        <fullName>693 - Little Rock-Pine Bluff AR</fullName>
+        <default>false</default>
+        <label>693 - Little Rock-Pine Bluff AR</label>
+    </customValue>
+    <customValue>
+        <fullName>803 - Los Angeles CA</fullName>
+        <default>false</default>
+        <label>803 - Los Angeles CA</label>
+    </customValue>
+    <customValue>
+        <fullName>529 - Louisville KY</fullName>
+        <default>false</default>
+        <label>529 - Louisville KY</label>
+    </customValue>
+    <customValue>
+        <fullName>651 - Lubbock TX</fullName>
+        <default>false</default>
+        <label>651 - Lubbock TX</label>
+    </customValue>
+    <customValue>
+        <fullName>503 - Macon GA</fullName>
+        <default>false</default>
+        <label>503 - Macon GA</label>
+    </customValue>
+    <customValue>
+        <fullName>669 - Madison WI</fullName>
+        <default>false</default>
+        <label>669 - Madison WI</label>
+    </customValue>
+    <customValue>
+        <fullName>737 - Mankato MN</fullName>
+        <default>false</default>
+        <label>737 - Mankato MN</label>
+    </customValue>
+    <customValue>
+        <fullName>553 - Marquette MI</fullName>
+        <default>false</default>
+        <label>553 - Marquette MI</label>
+    </customValue>
+    <customValue>
+        <fullName>813 - Medford-Klamath Falls OR</fullName>
+        <default>false</default>
+        <label>813 - Medford-Klamath Falls OR</label>
+    </customValue>
+    <customValue>
+        <fullName>640 - Memphis TN</fullName>
+        <default>false</default>
+        <label>640 - Memphis TN</label>
+    </customValue>
+    <customValue>
+        <fullName>711 - Meridian MS</fullName>
+        <default>false</default>
+        <label>711 - Meridian MS</label>
+    </customValue>
+    <customValue>
+        <fullName>528 - Miami-Ft. Lauderdale FL</fullName>
+        <default>false</default>
+        <label>528 - Miami-Ft. Lauderdale FL</label>
+    </customValue>
+    <customValue>
+        <fullName>617 - Milwaukee WI</fullName>
+        <default>false</default>
+        <label>617 - Milwaukee WI</label>
+    </customValue>
+    <customValue>
+        <fullName>613 - Minneapolis-St. Paul MN</fullName>
+        <default>false</default>
+        <label>613 - Minneapolis-St. Paul MN</label>
+    </customValue>
+    <customValue>
+        <fullName>687 - Minot-Bismarck-Dickinson(Williston) ND</fullName>
+        <default>false</default>
+        <label>687 - Minot-Bismarck-Dickinson(Williston) ND</label>
+    </customValue>
+    <customValue>
+        <fullName>762 - Missoula MT</fullName>
+        <default>false</default>
+        <label>762 - Missoula MT</label>
+    </customValue>
+    <customValue>
+        <fullName>686 - Mobile AL-Pensacola (Ft. Walton Beach) FL</fullName>
+        <default>false</default>
+        <label>686 - Mobile AL-Pensacola (Ft. Walton Beach) FL</label>
+    </customValue>
+    <customValue>
+        <fullName>628 - Monroe LA-El Dorado AR</fullName>
+        <default>false</default>
+        <label>628 - Monroe LA-El Dorado AR</label>
+    </customValue>
+    <customValue>
+        <fullName>828 - Monterey-Salinas CA</fullName>
+        <default>false</default>
+        <label>828 - Monterey-Salinas CA</label>
+    </customValue>
+    <customValue>
+        <fullName>698 - Montgomery (Selma) AL</fullName>
+        <default>false</default>
+        <label>698 - Montgomery (Selma) AL</label>
+    </customValue>
+    <customValue>
+        <fullName>659 - Nashville TN</fullName>
+        <default>false</default>
+        <label>659 - Nashville TN</label>
+    </customValue>
+    <customValue>
+        <fullName>622 - New Orleans LA</fullName>
+        <default>false</default>
+        <label>622 - New Orleans LA</label>
+    </customValue>
+    <customValue>
+        <fullName>501 - New York NY</fullName>
+        <default>false</default>
+        <label>501 - New York NY</label>
+    </customValue>
+    <customValue>
+        <fullName>544 - Norfolk-Portsmouth-Newport News VA</fullName>
+        <default>false</default>
+        <label>544 - Norfolk-Portsmouth-Newport News VA</label>
+    </customValue>
+    <customValue>
+        <fullName>740 - North Platte NE</fullName>
+        <default>false</default>
+        <label>740 - North Platte NE</label>
+    </customValue>
+    <customValue>
+        <fullName>633 - Odessa-Midland TX</fullName>
+        <default>false</default>
+        <label>633 - Odessa-Midland TX</label>
+    </customValue>
+    <customValue>
+        <fullName>650 - Oklahoma City OK</fullName>
+        <default>false</default>
+        <label>650 - Oklahoma City OK</label>
+    </customValue>
+    <customValue>
+        <fullName>652 - Omaha NE</fullName>
+        <default>false</default>
+        <label>652 - Omaha NE</label>
+    </customValue>
+    <customValue>
+        <fullName>534 - Orlando-Daytona Beach-Melbourne FL</fullName>
+        <default>false</default>
+        <label>534 - Orlando-Daytona Beach-Melbourne FL</label>
+    </customValue>
+    <customValue>
+        <fullName>631 - Ottumwa IA-Kirksville MO</fullName>
+        <default>false</default>
+        <label>631 - Ottumwa IA-Kirksville MO</label>
+    </customValue>
+    <customValue>
+        <fullName>632 - Paducah KY-Cape Girardeau MO-Harrisburg-Mount Vernon IL</fullName>
+        <default>false</default>
+        <label>632 - Paducah KY-Cape Girardeau MO-Harrisburg-Mount Vernon IL</label>
+    </customValue>
+    <customValue>
+        <fullName>804 - Palm Springs CA</fullName>
+        <default>false</default>
+        <label>804 - Palm Springs CA</label>
+    </customValue>
+    <customValue>
+        <fullName>656 - Panama City FL</fullName>
+        <default>false</default>
+        <label>656 - Panama City FL</label>
+    </customValue>
+    <customValue>
+        <fullName>597 - Parkersburg WV</fullName>
+        <default>false</default>
+        <label>597 - Parkersburg WV</label>
+    </customValue>
+    <customValue>
+        <fullName>675 - Peoria-Bloomington IL</fullName>
+        <default>false</default>
+        <label>675 - Peoria-Bloomington IL</label>
+    </customValue>
+    <customValue>
+        <fullName>504 - Philadelphia PA</fullName>
+        <default>false</default>
+        <label>504 - Philadelphia PA</label>
+    </customValue>
+    <customValue>
+        <fullName>753 - Phoenix AZ</fullName>
+        <default>false</default>
+        <label>753 - Phoenix AZ</label>
+    </customValue>
+    <customValue>
+        <fullName>508 - Pittsburgh PA</fullName>
+        <default>false</default>
+        <label>508 - Pittsburgh PA</label>
+    </customValue>
+    <customValue>
+        <fullName>500 - Portland-Auburn ME</fullName>
+        <default>false</default>
+        <label>500 - Portland-Auburn ME</label>
+    </customValue>
+    <customValue>
+        <fullName>820 - Portland OR</fullName>
+        <default>false</default>
+        <label>820 - Portland OR</label>
+    </customValue>
+    <customValue>
+        <fullName>552 - Presque Isle ME</fullName>
+        <default>false</default>
+        <label>552 - Presque Isle ME</label>
+    </customValue>
+    <customValue>
+        <fullName>521 - Providence RI-New Bedford MA</fullName>
+        <default>false</default>
+        <label>521 - Providence RI-New Bedford MA</label>
+    </customValue>
+    <customValue>
+        <fullName>717 - Quincy IL-Hannibal MO-Keokuk IA</fullName>
+        <default>false</default>
+        <label>717 - Quincy IL-Hannibal MO-Keokuk IA</label>
+    </customValue>
+    <customValue>
+        <fullName>560 - Raleigh-Durham (Fayetteville) NC</fullName>
+        <default>false</default>
+        <label>560 - Raleigh-Durham (Fayetteville) NC</label>
+    </customValue>
+    <customValue>
+        <fullName>764 - Rapid City SD</fullName>
+        <default>false</default>
+        <label>764 - Rapid City SD</label>
+    </customValue>
+    <customValue>
+        <fullName>811 - Reno NV</fullName>
+        <default>false</default>
+        <label>811 - Reno NV</label>
+    </customValue>
+    <customValue>
+        <fullName>556 - Richmond-Petersburg VA</fullName>
+        <default>false</default>
+        <label>556 - Richmond-Petersburg VA</label>
+    </customValue>
+    <customValue>
+        <fullName>573 - Roanoke-Lynchburg VA</fullName>
+        <default>false</default>
+        <label>573 - Roanoke-Lynchburg VA</label>
+    </customValue>
+    <customValue>
+        <fullName>611 - Rochester MN-Mason City IA-Austin MN</fullName>
+        <default>false</default>
+        <label>611 - Rochester MN-Mason City IA-Austin MN</label>
+    </customValue>
+    <customValue>
+        <fullName>538 - Rochester NY</fullName>
+        <default>false</default>
+        <label>538 - Rochester NY</label>
+    </customValue>
+    <customValue>
+        <fullName>610 - Rockford IL</fullName>
+        <default>false</default>
+        <label>610 - Rockford IL</label>
+    </customValue>
+    <customValue>
+        <fullName>862 - Sacramento-Stockton-Modesto CA</fullName>
+        <default>false</default>
+        <label>862 - Sacramento-Stockton-Modesto CA</label>
+    </customValue>
+    <customValue>
+        <fullName>638 - St. Joseph MO</fullName>
+        <default>false</default>
+        <label>638 - St. Joseph MO</label>
+    </customValue>
+    <customValue>
+        <fullName>609 - St. Louis MO</fullName>
+        <default>false</default>
+        <label>609 - St. Louis MO</label>
+    </customValue>
+    <customValue>
+        <fullName>576 - Salisbury MD</fullName>
+        <default>false</default>
+        <label>576 - Salisbury MD</label>
+    </customValue>
+    <customValue>
+        <fullName>770 - Salt Lake City UT</fullName>
+        <default>false</default>
+        <label>770 - Salt Lake City UT</label>
+    </customValue>
+    <customValue>
+        <fullName>661 - San Angelo TX</fullName>
+        <default>false</default>
+        <label>661 - San Angelo TX</label>
+    </customValue>
+    <customValue>
+        <fullName>641 - San Antonio TX</fullName>
+        <default>false</default>
+        <label>641 - San Antonio TX</label>
+    </customValue>
+    <customValue>
+        <fullName>825 - San Diego CA</fullName>
+        <default>false</default>
+        <label>825 - San Diego CA</label>
+    </customValue>
+    <customValue>
+        <fullName>807 - San Francisco-Oakland-San Jose CA</fullName>
+        <default>false</default>
+        <label>807 - San Francisco-Oakland-San Jose CA</label>
+    </customValue>
+    <customValue>
+        <fullName>855 - Santa Barbara-Santa Maria-San Luis Obispo CA</fullName>
+        <default>false</default>
+        <label>855 - Santa Barbara-Santa Maria-San Luis Obispo CA</label>
+    </customValue>
+    <customValue>
+        <fullName>507 - Savannah GA</fullName>
+        <default>false</default>
+        <label>507 - Savannah GA</label>
+    </customValue>
+    <customValue>
+        <fullName>819 - Seattle-Tacoma WA</fullName>
+        <default>false</default>
+        <label>819 - Seattle-Tacoma WA</label>
+    </customValue>
+    <customValue>
+        <fullName>657 - Sherman TX-Ada OK</fullName>
+        <default>false</default>
+        <label>657 - Sherman TX-Ada OK</label>
+    </customValue>
+    <customValue>
+        <fullName>612 - Shreveport LA</fullName>
+        <default>false</default>
+        <label>612 - Shreveport LA</label>
+    </customValue>
+    <customValue>
+        <fullName>624 - Sioux City IA</fullName>
+        <default>false</default>
+        <label>624 - Sioux City IA</label>
+    </customValue>
+    <customValue>
+        <fullName>725 - Sioux Falls(Mitchell) SD</fullName>
+        <default>false</default>
+        <label>725 - Sioux Falls(Mitchell) SD</label>
+    </customValue>
+    <customValue>
+        <fullName>588 - South Bend-Elkhart IN</fullName>
+        <default>false</default>
+        <label>588 - South Bend-Elkhart IN</label>
+    </customValue>
+    <customValue>
+        <fullName>881 - Spokane WA</fullName>
+        <default>false</default>
+        <label>881 - Spokane WA</label>
+    </customValue>
+    <customValue>
+        <fullName>543 - Springfield-Holyoke MA</fullName>
+        <default>false</default>
+        <label>543 - Springfield-Holyoke MA</label>
+    </customValue>
+    <customValue>
+        <fullName>619 - Springfield MO</fullName>
+        <default>false</default>
+        <label>619 - Springfield MO</label>
+    </customValue>
+    <customValue>
+        <fullName>555 - Syracuse NY</fullName>
+        <default>false</default>
+        <label>555 - Syracuse NY</label>
+    </customValue>
+    <customValue>
+        <fullName>530 - Tallahassee FL-Thomasville GA</fullName>
+        <default>false</default>
+        <label>530 - Tallahassee FL-Thomasville GA</label>
+    </customValue>
+    <customValue>
+        <fullName>539 - Tampa-St. Petersburg (Sarasota) FL</fullName>
+        <default>false</default>
+        <label>539 - Tampa-St. Petersburg (Sarasota) FL</label>
+    </customValue>
+    <customValue>
+        <fullName>581 - Terre Haute IN</fullName>
+        <default>false</default>
+        <label>581 - Terre Haute IN</label>
+    </customValue>
+    <customValue>
+        <fullName>547 - Toledo OH</fullName>
+        <default>false</default>
+        <label>547 - Toledo OH</label>
+    </customValue>
+    <customValue>
+        <fullName>605 - Topeka KS</fullName>
+        <default>false</default>
+        <label>605 - Topeka KS</label>
+    </customValue>
+    <customValue>
+        <fullName>540 - Traverse City-Cadillac MI</fullName>
+        <default>false</default>
+        <label>540 - Traverse City-Cadillac MI</label>
+    </customValue>
+    <customValue>
+        <fullName>531 - Tri-Cities TN-VA</fullName>
+        <default>false</default>
+        <label>531 - Tri-Cities TN-VA</label>
+    </customValue>
+    <customValue>
+        <fullName>789 - Tucson (Sierra Vista) AZ</fullName>
+        <default>false</default>
+        <label>789 - Tucson (Sierra Vista) AZ</label>
+    </customValue>
+    <customValue>
+        <fullName>671 - Tulsa OK</fullName>
+        <default>false</default>
+        <label>671 - Tulsa OK</label>
+    </customValue>
+    <customValue>
+        <fullName>760 - Twin Falls ID</fullName>
+        <default>false</default>
+        <label>760 - Twin Falls ID</label>
+    </customValue>
+    <customValue>
+        <fullName>709 - Tyler-Longview(Lufkin &amp; Nacogdoches) TX</fullName>
+        <default>false</default>
+        <label>709 - Tyler-Longview(Lufkin &amp; Nacogdoches) TX</label>
+    </customValue>
+    <customValue>
+        <fullName>526 - Utica NY</fullName>
+        <default>false</default>
+        <label>526 - Utica NY</label>
+    </customValue>
+    <customValue>
+        <fullName>626 - Victoria TX</fullName>
+        <default>false</default>
+        <label>626 - Victoria TX</label>
+    </customValue>
+    <customValue>
+        <fullName>625 - Waco-Temple-Bryan TX</fullName>
+        <default>false</default>
+        <label>625 - Waco-Temple-Bryan TX</label>
+    </customValue>
+    <customValue>
+        <fullName>511 - Washington DC (Hagerstown MD)</fullName>
+        <default>false</default>
+        <label>511 - Washington DC (Hagerstown MD)</label>
+    </customValue>
+    <customValue>
+        <fullName>549 - Watertown NY</fullName>
+        <default>false</default>
+        <label>549 - Watertown NY</label>
+    </customValue>
+    <customValue>
+        <fullName>705 - Wausau-Rhinelander WI</fullName>
+        <default>false</default>
+        <label>705 - Wausau-Rhinelander WI</label>
+    </customValue>
+    <customValue>
+        <fullName>548 - West Palm Beach-Ft. Pierce FL</fullName>
+        <default>false</default>
+        <label>548 - West Palm Beach-Ft. Pierce FL</label>
+    </customValue>
+    <customValue>
+        <fullName>554 - Wheeling WV-Steubenville OH</fullName>
+        <default>false</default>
+        <label>554 - Wheeling WV-Steubenville OH</label>
+    </customValue>
+    <customValue>
+        <fullName>678 - Wichita-Hutchinson KS</fullName>
+        <default>false</default>
+        <label>678 - Wichita-Hutchinson KS</label>
+    </customValue>
+    <customValue>
+        <fullName>627 - Wichita Falls TX &amp; Lawton OK</fullName>
+        <default>false</default>
+        <label>627 - Wichita Falls TX &amp; Lawton OK</label>
+    </customValue>
+    <customValue>
+        <fullName>577 - Wilkes Barre-Scranton PA</fullName>
+        <default>false</default>
+        <label>577 - Wilkes Barre-Scranton PA</label>
+    </customValue>
+    <customValue>
+        <fullName>550 - Wilmington NC</fullName>
+        <default>false</default>
+        <label>550 - Wilmington NC</label>
+    </customValue>
+    <customValue>
+        <fullName>810 - Yakima-Pasco-Richland-Kennewick WA</fullName>
+        <default>false</default>
+        <label>810 - Yakima-Pasco-Richland-Kennewick WA</label>
+    </customValue>
+    <customValue>
+        <fullName>536 - Youngstown OH</fullName>
+        <default>false</default>
+        <label>536 - Youngstown OH</label>
+    </customValue>
+    <customValue>
+        <fullName>771 - Yuma AZ-El Centro CA</fullName>
+        <default>false</default>
+        <label>771 - Yuma AZ-El Centro CA</label>
+    </customValue>
+    <customValue>
+        <fullName>596 - Zanesville OH</fullName>
+        <default>false</default>
+        <label>596 - Zanesville OH</label>
+    </customValue>
+    <masterLabel>Targeting Campaign DMA</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

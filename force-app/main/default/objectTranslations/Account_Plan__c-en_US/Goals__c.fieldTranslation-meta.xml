@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What are the vital goals to achieve with this customer or prospect during the year. --></help>
+    <label><!-- Goals --></label>
+    <name>Goals__c</name>
+</CustomFieldTranslation>

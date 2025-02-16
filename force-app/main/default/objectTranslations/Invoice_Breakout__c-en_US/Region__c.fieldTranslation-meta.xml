@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Which region is the expense serving? --></help>
+    <label><!-- Region --></label>
+    <name>Region__c</name>
+    <picklistValues>
+        <masterLabel>APAC: Australia</masterLabel>
+        <translation><!-- APAC: Australia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APAC: Japan</masterLabel>
+        <translation><!-- APAC: Japan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>All Domestic</masterLabel>
+        <translation><!-- All Domestic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>All Regions</masterLabel>
+        <translation><!-- All Regions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Domestic: East</masterLabel>
+        <translation><!-- Domestic: East --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Domestic: Midwest</masterLabel>
+        <translation><!-- Domestic: Midwest --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Domestic: West</masterLabel>
+        <translation><!-- Domestic: West --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMEA: United Kingdom</masterLabel>
+        <translation><!-- EMEA: United Kingdom --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

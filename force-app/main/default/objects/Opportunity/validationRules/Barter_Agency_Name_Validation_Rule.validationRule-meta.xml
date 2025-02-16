@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Barter_Agency_Name_Validation_Rule</fullName>
+    <active>false</active>
+    <description>Allow Barter Agency Name to be selected after choosing &quot;Gross or Net&quot;</description>
+    <errorConditionFormula>AND(ISBLANK(TEXT(Type_of_Agreement__c)),NOT(ISBLANK(TEXT( Barter_Agency__c ))),  RecordTypeId = &apos;012U00000001pHJ&apos;)</errorConditionFormula>
+    <errorDisplayField>Barter_Agency__c</errorDisplayField>
+    <errorMessage>Barter Agency Name can only be selected if Type of Barter Agreement is selected.</errorMessage>
+</ValidationRule>

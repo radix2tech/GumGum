@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sync_with_Zendesk__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check this box when you need this account to sync with Zendesk</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box when you need this account to sync with Zendesk</inlineHelpText>
+    <label>Sync with Zendesk</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

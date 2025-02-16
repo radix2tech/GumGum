@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Accommodations and lodging</fullName>
+        <default>false</default>
+        <label>Accommodations and lodging</label>
+    </customValue>
+    <customValue>
+        <fullName>Accounting, Auditing, and Taxes</fullName>
+        <default>false</default>
+        <label>Accounting, Auditing, and Taxes</label>
+    </customValue>
+    <customValue>
+        <fullName>Air Travel</fullName>
+        <default>false</default>
+        <label>Air Travel</label>
+    </customValue>
+    <customValue>
+        <fullName>Anti-Aging</fullName>
+        <default>false</default>
+        <label>Anti-Aging</label>
+    </customValue>
+    <customValue>
+        <fullName>Antiques &amp; Collectibles</fullName>
+        <default>false</default>
+        <label>Antiques &amp; Collectibles</label>
+    </customValue>
+    <customValue>
+        <fullName>Apparel</fullName>
+        <default>false</default>
+        <label>Apparel</label>
+    </customValue>
+    <customValue>
+        <fullName>Apparel, Beauty, &amp; Fashion</fullName>
+        <default>false</default>
+        <label>Apparel, Beauty, &amp; Fashion</label>
+    </customValue>
+    <customValue>
+        <fullName>Arts &amp; Entertainment Awards</fullName>
+        <default>false</default>
+        <label>Arts &amp; Entertainment Awards</label>
+    </customValue>
+    <customValue>
+        <fullName>Astrology &amp; Horoscopes</fullName>
+        <default>false</default>
+        <label>Astrology &amp; Horoscopes</label>
+    </customValue>
+    <customValue>
+        <fullName>ATV&apos;s and Motorcycles</fullName>
+        <default>false</default>
+        <label>ATV&apos;s and Motorcycles</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto</fullName>
+        <default>false</default>
+        <label>Auto</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto and Recreational Vehicles</fullName>
+        <default>false</default>
+        <label>Auto and Recreational Vehicles</label>
+    </customValue>
+    <customValue>
+        <fullName>Automotive</fullName>
+        <default>false</default>
+        <label>Automotive</label>
+    </customValue>
+    <customValue>
+        <fullName>Baby, Parenting &amp; Family</fullName>
+        <default>false</default>
+        <label>Baby, Parenting &amp; Family</label>
+    </customValue>
+    <customValue>
+        <fullName>Banking</fullName>
+        <default>false</default>
+        <label>Banking</label>
+    </customValue>
+    <customValue>
+        <fullName>Beauty &amp; Personal Care</fullName>
+        <default>false</default>
+        <label>Beauty &amp; Personal Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Beverages</fullName>
+        <default>false</default>
+        <label>Beverages</label>
+    </customValue>
+    <customValue>
+        <fullName>Bio-tech &amp; Pharmaceutical</fullName>
+        <default>false</default>
+        <label>Bio-tech &amp; Pharmaceutical</label>
+    </customValue>
+    <customValue>
+        <fullName>Black Magic, Astrology &amp; Esoteric</fullName>
+        <default>false</default>
+        <label>Black Magic, Astrology &amp; Esoteric</label>
+    </customValue>
+    <customValue>
+        <fullName>Boating &amp; Water Recreation</fullName>
+        <default>false</default>
+        <label>Boating &amp; Water Recreation</label>
+    </customValue>
+    <customValue>
+        <fullName>Boats &amp; Watercraft</fullName>
+        <default>false</default>
+        <label>Boats &amp; Watercraft</label>
+    </customValue>
+    <customValue>
+        <fullName>Body Art</fullName>
+        <default>false</default>
+        <label>Body Art</label>
+    </customValue>
+    <customValue>
+        <fullName>Books, literature, magazine, print, and reference materials</fullName>
+        <default>false</default>
+        <label>Books, literature, magazine, print, and reference materials</label>
+    </customValue>
+    <customValue>
+        <fullName>Building Construction &amp; Maintenance</fullName>
+        <default>false</default>
+        <label>Building Construction &amp; Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>Business &amp; Finance</fullName>
+        <default>false</default>
+        <label>Business &amp; Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Finance</fullName>
+        <default>false</default>
+        <label>Business Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>Business News &amp; Media</fullName>
+        <default>false</default>
+        <label>Business News &amp; Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Business to Business</fullName>
+        <default>false</default>
+        <label>Business to Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Camping &amp; Outdoor Recreation</fullName>
+        <default>false</default>
+        <label>Camping &amp; Outdoor Recreation</label>
+    </customValue>
+    <customValue>
+        <fullName>Car Audio &amp; Video</fullName>
+        <default>false</default>
+        <label>Car Audio &amp; Video</label>
+    </customValue>
+    <customValue>
+        <fullName>Cards &amp; Greetings</fullName>
+        <default>false</default>
+        <label>Cards &amp; Greetings</label>
+    </customValue>
+    <customValue>
+        <fullName>Cartoons</fullName>
+        <default>false</default>
+        <label>Cartoons</label>
+    </customValue>
+    <customValue>
+        <fullName>Casinos and resorts</fullName>
+        <default>false</default>
+        <label>Casinos and resorts</label>
+    </customValue>
+    <customValue>
+        <fullName>Cell phone carriers</fullName>
+        <default>false</default>
+        <label>Cell phone carriers</label>
+    </customValue>
+    <customValue>
+        <fullName>Chemical Industry</fullName>
+        <default>false</default>
+        <label>Chemical Industry</label>
+    </customValue>
+    <customValue>
+        <fullName>Cleaning products</fullName>
+        <default>false</default>
+        <label>Cleaning products</label>
+    </customValue>
+    <customValue>
+        <fullName>Clothing</fullName>
+        <default>false</default>
+        <label>Clothing</label>
+    </customValue>
+    <customValue>
+        <fullName>Commercial &amp; Industry Printing</fullName>
+        <default>false</default>
+        <label>Commercial &amp; Industry Printing</label>
+    </customValue>
+    <customValue>
+        <fullName>Computer Accessories</fullName>
+        <default>false</default>
+        <label>Computer Accessories</label>
+    </customValue>
+    <customValue>
+        <fullName>Computer Hardware</fullName>
+        <default>false</default>
+        <label>Computer Hardware</label>
+    </customValue>
+    <customValue>
+        <fullName>Computers</fullName>
+        <default>false</default>
+        <label>Computers</label>
+    </customValue>
+    <customValue>
+        <fullName>Computer Software</fullName>
+        <default>false</default>
+        <label>Computer Software</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer Credit Info</fullName>
+        <default>false</default>
+        <label>Consumer Credit Info</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer Electronic Accessories</fullName>
+        <default>false</default>
+        <label>Consumer Electronic Accessories</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer Electronics</fullName>
+        <default>false</default>
+        <label>Consumer Electronics</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer Electronics &amp; Tech</fullName>
+        <default>false</default>
+        <label>Consumer Electronics &amp; Tech</label>
+    </customValue>
+    <customValue>
+        <fullName>Cooking</fullName>
+        <default>false</default>
+        <label>Cooking</label>
+    </customValue>
+    <customValue>
+        <fullName>Cosmetic Procedures &amp; Body Modification</fullName>
+        <default>false</default>
+        <label>Cosmetic Procedures &amp; Body Modification</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer Products (CPG)</fullName>
+        <default>false</default>
+        <label>CPG</label>
+    </customValue>
+    <customValue>
+        <fullName>CPG &amp; Beverage</fullName>
+        <default>false</default>
+        <label>CPG &amp; Beverage</label>
+    </customValue>
+    <customValue>
+        <fullName>Credit &amp; Lending</fullName>
+        <default>false</default>
+        <label>Credit &amp; Lending</label>
+    </customValue>
+    <customValue>
+        <fullName>Credit Cards</fullName>
+        <default>false</default>
+        <label>Credit Cards</label>
+    </customValue>
+    <customValue>
+        <fullName>Cruises &amp; Cruise Services</fullName>
+        <default>false</default>
+        <label>Cruises &amp; Cruise Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Dating</fullName>
+        <default>false</default>
+        <label>Dating</label>
+    </customValue>
+    <customValue>
+        <fullName>Debt Consolidation</fullName>
+        <default>false</default>
+        <label>Debt Consolidation</label>
+    </customValue>
+    <customValue>
+        <fullName>Design &amp; Engineering</fullName>
+        <default>false</default>
+        <label>Design &amp; Engineering</label>
+    </customValue>
+    <customValue>
+        <fullName>Digital Streaming Services</fullName>
+        <default>false</default>
+        <label>Digital Streaming Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Dinning &amp; Nightlife Reviews, Guides &amp; Listings</fullName>
+        <default>false</default>
+        <label>Dinning &amp; Nightlife Reviews, Guides &amp; Listings</label>
+    </customValue>
+    <customValue>
+        <fullName>Direct Response</fullName>
+        <default>false</default>
+        <label>Direct Response</label>
+    </customValue>
+    <customValue>
+        <fullName>Domain Names &amp; Domain Name Registration</fullName>
+        <default>false</default>
+        <label>Domain Names &amp; Domain Name Registration</label>
+    </customValue>
+    <customValue>
+        <fullName>Drugs &amp; Supplements</fullName>
+        <default>false</default>
+        <label>Drugs &amp; Supplements</label>
+    </customValue>
+    <customValue>
+        <fullName>Drug Stores, Pharmacies, and Variety Chains</fullName>
+        <default>false</default>
+        <label>Drug Stores, Pharmacies, and Variety Chains</label>
+    </customValue>
+    <customValue>
+        <fullName>Economy</fullName>
+        <default>false</default>
+        <label>Economy</label>
+    </customValue>
+    <customValue>
+        <fullName>Education</fullName>
+        <default>false</default>
+        <label>Education</label>
+    </customValue>
+    <customValue>
+        <fullName>Education &amp; Training</fullName>
+        <default>false</default>
+        <label>Education &amp; Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Email &amp; Messaging</fullName>
+        <default>false</default>
+        <label>Email &amp; Messaging</label>
+    </customValue>
+    <customValue>
+        <fullName>Energy</fullName>
+        <default>false</default>
+        <label>Energy</label>
+    </customValue>
+    <customValue>
+        <fullName>Energy Industry</fullName>
+        <default>false</default>
+        <label>Energy Industry</label>
+    </customValue>
+    <customValue>
+        <fullName>Entertainment</fullName>
+        <default>false</default>
+        <label>Entertainment</label>
+    </customValue>
+    <customValue>
+        <fullName>Entertainment/Media</fullName>
+        <default>false</default>
+        <label>Entertainment/Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Entertainment/Media Retailers</fullName>
+        <default>false</default>
+        <label>Entertainment/Media Retailers</label>
+    </customValue>
+    <customValue>
+        <fullName>Entertainment Misc</fullName>
+        <default>false</default>
+        <label>Entertainment Misc</label>
+    </customValue>
+    <customValue>
+        <fullName>Environment</fullName>
+        <default>false</default>
+        <label>Environment</label>
+    </customValue>
+    <customValue>
+        <fullName>Event promos</fullName>
+        <default>false</default>
+        <label>Event promos</label>
+    </customValue>
+    <customValue>
+        <fullName>Events, Shows &amp; Cultural Attractions</fullName>
+        <default>false</default>
+        <label>Events, Shows &amp; Cultural Attractions</label>
+    </customValue>
+    <customValue>
+        <fullName>Fashion</fullName>
+        <default>false</default>
+        <label>Fashion</label>
+    </customValue>
+    <customValue>
+        <fullName>Finance</fullName>
+        <default>false</default>
+        <label>Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Planning &amp; Management, Investing, and Retirement</fullName>
+        <default>false</default>
+        <label>Financial Planning &amp; Management, Investing, and Retirement</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Services</fullName>
+        <default>false</default>
+        <label>Financial Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Fitness</fullName>
+        <default>false</default>
+        <label>Fitness</label>
+    </customValue>
+    <customValue>
+        <fullName>Food</fullName>
+        <default>false</default>
+        <label>Food</label>
+    </customValue>
+    <customValue>
+        <fullName>Food &amp; Drink</fullName>
+        <default>false</default>
+        <label>Food &amp; Drink</label>
+    </customValue>
+    <customValue>
+        <fullName>Food and Nutrition</fullName>
+        <default>false</default>
+        <label>Food and Nutrition</label>
+    </customValue>
+    <customValue>
+        <fullName>Food Service Industry</fullName>
+        <default>false</default>
+        <label>Food Service Industry</label>
+    </customValue>
+    <customValue>
+        <fullName>Footwear</fullName>
+        <default>false</default>
+        <label>Footwear</label>
+    </customValue>
+    <customValue>
+        <fullName>Fun &amp; Trivia</fullName>
+        <default>false</default>
+        <label>Fun &amp; Trivia</label>
+    </customValue>
+    <customValue>
+        <fullName>Gambling</fullName>
+        <default>false</default>
+        <label>Gambling</label>
+    </customValue>
+    <customValue>
+        <fullName>Games</fullName>
+        <default>false</default>
+        <label>Games</label>
+    </customValue>
+    <customValue>
+        <fullName>Gaming</fullName>
+        <default>false</default>
+        <label>Gaming</label>
+    </customValue>
+    <customValue>
+        <fullName>Gardening</fullName>
+        <default>false</default>
+        <label>Gardening</label>
+    </customValue>
+    <customValue>
+        <fullName>Get Rich Quick</fullName>
+        <default>false</default>
+        <label>Get Rich Quick</label>
+    </customValue>
+    <customValue>
+        <fullName>Gifts</fullName>
+        <default>false</default>
+        <label>Gifts</label>
+    </customValue>
+    <customValue>
+        <fullName>GPS &amp; Navigation</fullName>
+        <default>false</default>
+        <label>GPS &amp; Navigation</label>
+    </customValue>
+    <customValue>
+        <fullName>Grants, Scholarships &amp; Financial Aid</fullName>
+        <default>false</default>
+        <label>Grants, Scholarships &amp; Financial Aid</label>
+    </customValue>
+    <customValue>
+        <fullName>Hair Care</fullName>
+        <default>false</default>
+        <label>Hair Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Health</fullName>
+        <default>false</default>
+        <label>Health</label>
+    </customValue>
+    <customValue>
+        <fullName>Health &amp; Wellness</fullName>
+        <default>false</default>
+        <label>Health &amp; Wellness</label>
+    </customValue>
+    <customValue>
+        <fullName>Health Care Services</fullName>
+        <default>false</default>
+        <label>Health Care Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Health Conditions &amp; Concerns</fullName>
+        <default>false</default>
+        <label>Health Conditions &amp; Concerns</label>
+    </customValue>
+    <customValue>
+        <fullName>Home</fullName>
+        <default>false</default>
+        <label>Home</label>
+    </customValue>
+    <customValue>
+        <fullName>Home &amp; Garden</fullName>
+        <default>false</default>
+        <label>Home &amp; Garden</label>
+    </customValue>
+    <customValue>
+        <fullName>Home Appliances</fullName>
+        <default>false</default>
+        <label>Home Appliances</label>
+    </customValue>
+    <customValue>
+        <fullName>Home Audio &amp; Video</fullName>
+        <default>false</default>
+        <label>Home Audio &amp; Video</label>
+    </customValue>
+    <customValue>
+        <fullName>Home Decor &amp; Interior Decorating</fullName>
+        <default>false</default>
+        <label>Home Decor &amp; Interior Decorating</label>
+    </customValue>
+    <customValue>
+        <fullName>Home Furniture</fullName>
+        <default>false</default>
+        <label>Home Furniture</label>
+    </customValue>
+    <customValue>
+        <fullName>Home video: DVD, BluRay, etc.</fullName>
+        <default>false</default>
+        <label>Home video: DVD, BluRay, etc.</label>
+    </customValue>
+    <customValue>
+        <fullName>Humor</fullName>
+        <default>false</default>
+        <label>Humor</label>
+    </customValue>
+    <customValue>
+        <fullName>Humor &amp; Jokes</fullName>
+        <default>false</default>
+        <label>Humor &amp; Jokes</label>
+    </customValue>
+    <customValue>
+        <fullName>Hygiene &amp; Toiletries</fullName>
+        <default>false</default>
+        <label>Hygiene &amp; Toiletries</label>
+    </customValue>
+    <customValue>
+        <fullName>Industrial Goods &amp; Manufacturing</fullName>
+        <default>false</default>
+        <label>Industrial Goods &amp; Manufacturing</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance</fullName>
+        <default>false</default>
+        <label>Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Internet/TV/home phone providers</fullName>
+        <default>false</default>
+        <label>Internet/TV/home phone providers</label>
+    </customValue>
+    <customValue>
+        <fullName>Internet Service Plans</fullName>
+        <default>false</default>
+        <label>Internet Service Plans</label>
+    </customValue>
+    <customValue>
+        <fullName>Internet Services</fullName>
+        <default>false</default>
+        <label>Internet Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Investing</fullName>
+        <default>false</default>
+        <label>Investing</label>
+    </customValue>
+    <customValue>
+        <fullName>Issues and Causes</fullName>
+        <default>false</default>
+        <label>Issues and Causes</label>
+    </customValue>
+    <customValue>
+        <fullName>Jewelry</fullName>
+        <default>false</default>
+        <label>Jewelry</label>
+    </customValue>
+    <customValue>
+        <fullName>Job Listings</fullName>
+        <default>false</default>
+        <label>Job Listings</label>
+    </customValue>
+    <customValue>
+        <fullName>Kitchen &amp; Dining</fullName>
+        <default>false</default>
+        <label>Kitchen &amp; Dining</label>
+    </customValue>
+    <customValue>
+        <fullName>Last Minute Travel</fullName>
+        <default>false</default>
+        <label>Last Minute Travel</label>
+    </customValue>
+    <customValue>
+        <fullName>Life Stages</fullName>
+        <default>false</default>
+        <label>Life Stages</label>
+    </customValue>
+    <customValue>
+        <fullName>Lifestyles</fullName>
+        <default>false</default>
+        <label>Lifestyles</label>
+    </customValue>
+    <customValue>
+        <fullName>Live events</fullName>
+        <default>false</default>
+        <label>Live events</label>
+    </customValue>
+    <customValue>
+        <fullName>Loans</fullName>
+        <default>false</default>
+        <label>Loans</label>
+    </customValue>
+    <customValue>
+        <fullName>Luggage</fullName>
+        <default>false</default>
+        <label>Luggage</label>
+    </customValue>
+    <customValue>
+        <fullName>Make-Up &amp; Cosmetics</fullName>
+        <default>false</default>
+        <label>Make-Up &amp; Cosmetics</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical Devices, Equipment &amp; Supplies</fullName>
+        <default>false</default>
+        <label>Medical Devices, Equipment &amp; Supplies</label>
+    </customValue>
+    <customValue>
+        <fullName>Misc. Businesses and Industries</fullName>
+        <default>false</default>
+        <label>Misc. Businesses and Industries</label>
+    </customValue>
+    <customValue>
+        <fullName>Misc. Issues and Causes</fullName>
+        <default>false</default>
+        <label>Misc. Issues and Causes</label>
+    </customValue>
+    <customValue>
+        <fullName>Miscellaneous</fullName>
+        <default>false</default>
+        <label>Miscellaneous</label>
+    </customValue>
+    <customValue>
+        <fullName>Mobile Phones &amp; Accessories</fullName>
+        <default>false</default>
+        <label>Mobile Phones &amp; Accessories</label>
+    </customValue>
+    <customValue>
+        <fullName>Money Transfer &amp; Wire Services</fullName>
+        <default>false</default>
+        <label>Money Transfer &amp; Wire Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Motor Vehicles</fullName>
+        <default>false</default>
+        <label>Motor Vehicles</label>
+    </customValue>
+    <customValue>
+        <fullName>Moving</fullName>
+        <default>false</default>
+        <label>Moving</label>
+    </customValue>
+    <customValue>
+        <fullName>Music</fullName>
+        <default>false</default>
+        <label>Music</label>
+    </customValue>
+    <customValue>
+        <fullName>Music, Sports, and Live Events</fullName>
+        <default>false</default>
+        <label>Music, Sports, and Live Events</label>
+    </customValue>
+    <customValue>
+        <fullName>Music and Audio</fullName>
+        <default>false</default>
+        <label>Music and Audio</label>
+    </customValue>
+    <customValue>
+        <fullName>News</fullName>
+        <default>false</default>
+        <label>News</label>
+    </customValue>
+    <customValue>
+        <fullName>Nutrition &amp; Dieting</fullName>
+        <default>false</default>
+        <label>Nutrition &amp; Dieting</label>
+    </customValue>
+    <customValue>
+        <fullName>Occult &amp; Paranormal</fullName>
+        <default>false</default>
+        <label>Occult &amp; Paranormal</label>
+    </customValue>
+    <customValue>
+        <fullName>Offbeat</fullName>
+        <default>false</default>
+        <label>Offbeat</label>
+    </customValue>
+    <customValue>
+        <fullName>Office</fullName>
+        <default>false</default>
+        <label>Office</label>
+    </customValue>
+    <customValue>
+        <fullName>Office Supplies &amp; Facilities Management</fullName>
+        <default>false</default>
+        <label>Office Supplies &amp; Facilities Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Parenting and Children</fullName>
+        <default>false</default>
+        <label>Parenting and Children</label>
+    </customValue>
+    <customValue>
+        <fullName>Perfumes &amp; Fragrances</fullName>
+        <default>false</default>
+        <label>Perfumes &amp; Fragrances</label>
+    </customValue>
+    <customValue>
+        <fullName>Pets &amp; Animals</fullName>
+        <default>false</default>
+        <label>Pets &amp; Animals</label>
+    </customValue>
+    <customValue>
+        <fullName>Pets and Animals</fullName>
+        <default>false</default>
+        <label>Pets and Animals</label>
+    </customValue>
+    <customValue>
+        <fullName>Pharma</fullName>
+        <default>false</default>
+        <label>Pharma</label>
+    </customValue>
+    <customValue>
+        <fullName>Pharmacy</fullName>
+        <default>false</default>
+        <label>Pharmacy</label>
+    </customValue>
+    <customValue>
+        <fullName>Phone Plans</fullName>
+        <default>false</default>
+        <label>Phone Plans</label>
+    </customValue>
+    <customValue>
+        <fullName>Photo &amp; Video</fullName>
+        <default>false</default>
+        <label>Photo &amp; Video</label>
+    </customValue>
+    <customValue>
+        <fullName>Plays and theater</fullName>
+        <default>false</default>
+        <label>Plays and theater</label>
+    </customValue>
+    <customValue>
+        <fullName>Portable Media Devices</fullName>
+        <default>false</default>
+        <label>Portable Media Devices</label>
+    </customValue>
+    <customValue>
+        <fullName>Property Development</fullName>
+        <default>false</default>
+        <label>Property Development</label>
+    </customValue>
+    <customValue>
+        <fullName>PSA&apos;s</fullName>
+        <default>false</default>
+        <label>PSA&apos;s</label>
+    </customValue>
+    <customValue>
+        <fullName>Real Estate</fullName>
+        <default>false</default>
+        <label>Real Estate</label>
+    </customValue>
+    <customValue>
+        <fullName>Real Estate Listings</fullName>
+        <default>false</default>
+        <label>Real Estate Listings</label>
+    </customValue>
+    <customValue>
+        <fullName>Recipes</fullName>
+        <default>false</default>
+        <label>Recipes</label>
+    </customValue>
+    <customValue>
+        <fullName>Reference Materials &amp; Resources</fullName>
+        <default>false</default>
+        <label>Reference Materials &amp; Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>References to Sex &amp; Sexuality</fullName>
+        <default>false</default>
+        <label>References to Sex &amp; Sexuality</label>
+    </customValue>
+    <customValue>
+        <fullName>Religion</fullName>
+        <default>false</default>
+        <label>Religion</label>
+    </customValue>
+    <customValue>
+        <fullName>Restaurants and Food Sales</fullName>
+        <default>false</default>
+        <label>Restaurants and Food Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Ring-tones &amp; Downloadables</fullName>
+        <default>false</default>
+        <label>Ring-tones &amp; Downloadables</label>
+    </customValue>
+    <customValue>
+        <fullName>Romance &amp; Relationships</fullName>
+        <default>false</default>
+        <label>Romance &amp; Relationships</label>
+    </customValue>
+    <customValue>
+        <fullName>RV&apos;s and Misc.</fullName>
+        <default>false</default>
+        <label>RV&apos;s and Misc.</label>
+    </customValue>
+    <customValue>
+        <fullName>Scientific Equipment &amp; Services</fullName>
+        <default>false</default>
+        <label>Scientific Equipment &amp; Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Security Equipment &amp; Services</fullName>
+        <default>false</default>
+        <label>Security Equipment &amp; Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Seniors</fullName>
+        <default>false</default>
+        <label>Seniors</label>
+    </customValue>
+    <customValue>
+        <fullName>Sexual &amp; Reproductive Health</fullName>
+        <default>false</default>
+        <label>Sexual &amp; Reproductive Health</label>
+    </customValue>
+    <customValue>
+        <fullName>Shaving &amp; Grooming</fullName>
+        <default>false</default>
+        <label>Shaving &amp; Grooming</label>
+    </customValue>
+    <customValue>
+        <fullName>Skin Care</fullName>
+        <default>false</default>
+        <label>Skin Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Social Networks</fullName>
+        <default>false</default>
+        <label>Social Networks</label>
+    </customValue>
+    <customValue>
+        <fullName>Social Networks &amp; Online Communities</fullName>
+        <default>false</default>
+        <label>Social Networks &amp; Online Communities</label>
+    </customValue>
+    <customValue>
+        <fullName>Software</fullName>
+        <default>false</default>
+        <label>Software</label>
+    </customValue>
+    <customValue>
+        <fullName>Spa &amp; Medical Spa</fullName>
+        <default>false</default>
+        <label>Spa &amp; Medical Spa</label>
+    </customValue>
+    <customValue>
+        <fullName>Special Occasions</fullName>
+        <default>false</default>
+        <label>Special Occasions</label>
+    </customValue>
+    <customValue>
+        <fullName>Specialty Travel</fullName>
+        <default>false</default>
+        <label>Specialty Travel</label>
+    </customValue>
+    <customValue>
+        <fullName>Sporting and recreation</fullName>
+        <default>false</default>
+        <label>Sporting and recreation</label>
+    </customValue>
+    <customValue>
+        <fullName>Sporting Goods</fullName>
+        <default>false</default>
+        <label>Sporting Goods</label>
+    </customValue>
+    <customValue>
+        <fullName>Sports</fullName>
+        <default>false</default>
+        <label>Sports</label>
+    </customValue>
+    <customValue>
+        <fullName>Sports Fan Gear &amp; Apparel</fullName>
+        <default>false</default>
+        <label>Sports Fan Gear &amp; Apparel</label>
+    </customValue>
+    <customValue>
+        <fullName>State Lottery</fullName>
+        <default>false</default>
+        <label>State Lottery</label>
+    </customValue>
+    <customValue>
+        <fullName>Tanning &amp; Sun Care</fullName>
+        <default>false</default>
+        <label>Tanning &amp; Sun Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Technology Retailers</fullName>
+        <default>false</default>
+        <label>Technology Retailers</label>
+    </customValue>
+    <customValue>
+        <fullName>Telecom</fullName>
+        <default>false</default>
+        <label>Telecommunications</label>
+    </customValue>
+    <customValue>
+        <fullName>Theatrical movies and films</fullName>
+        <default>false</default>
+        <label>Theatrical movies and films</label>
+    </customValue>
+    <customValue>
+        <fullName>Third party dealers and selling sites</fullName>
+        <default>false</default>
+        <label>Third party dealers and selling sites</label>
+    </customValue>
+    <customValue>
+        <fullName>Ticket sellers</fullName>
+        <default>false</default>
+        <label>Ticket sellers</label>
+    </customValue>
+    <customValue>
+        <fullName>Tobacco and smoking products</fullName>
+        <default>false</default>
+        <label>Tobacco and smoking products</label>
+    </customValue>
+    <customValue>
+        <fullName>Tourist Attractions, Destinations, and Tourism Boards</fullName>
+        <default>false</default>
+        <label>Tourist Attractions, Destinations, and Tourism Boards</label>
+    </customValue>
+    <customValue>
+        <fullName>Toys</fullName>
+        <default>false</default>
+        <label>Toys</label>
+    </customValue>
+    <customValue>
+        <fullName>Transportation</fullName>
+        <default>false</default>
+        <label>Transportation</label>
+    </customValue>
+    <customValue>
+        <fullName>Transportation &amp; Excursions</fullName>
+        <default>false</default>
+        <label>Transportation &amp; Excursions</label>
+    </customValue>
+    <customValue>
+        <fullName>Travel</fullName>
+        <default>false</default>
+        <label>Travel</label>
+    </customValue>
+    <customValue>
+        <fullName>Travel &amp; Leisure</fullName>
+        <default>false</default>
+        <label>Travel &amp; Leisure</label>
+    </customValue>
+    <customValue>
+        <fullName>Travel and Leisure</fullName>
+        <default>false</default>
+        <label>Travel and Leisure</label>
+    </customValue>
+    <customValue>
+        <fullName>Travel Booking Sites/Services</fullName>
+        <default>false</default>
+        <label>Travel Booking Sites/Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Travel Media &amp; Publications</fullName>
+        <default>false</default>
+        <label>Travel Media &amp; Publications</label>
+    </customValue>
+    <customValue>
+        <fullName>TV</fullName>
+        <default>false</default>
+        <label>TV</label>
+    </customValue>
+    <customValue>
+        <fullName>Vehicle Dealers</fullName>
+        <default>false</default>
+        <label>Vehicle Dealers</label>
+    </customValue>
+    <customValue>
+        <fullName>Vehicle Parts &amp; Accessories</fullName>
+        <default>false</default>
+        <label>Vehicle Parts &amp; Accessories</label>
+    </customValue>
+    <customValue>
+        <fullName>Video Games (Casual &amp; Online)</fullName>
+        <default>false</default>
+        <label>Video Games (Casual &amp; Online)</label>
+    </customValue>
+    <customValue>
+        <fullName>Virtual Art &amp; Design</fullName>
+        <default>false</default>
+        <label>Virtual Art &amp; Design</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Design &amp; Development</fullName>
+        <default>false</default>
+        <label>Web Design &amp; Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Hosting</fullName>
+        <default>false</default>
+        <label>Web Hosting</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Portal</fullName>
+        <default>false</default>
+        <label>Web Portal</label>
+    </customValue>
+    <customValue>
+        <fullName>Wedding</fullName>
+        <default>false</default>
+        <label>Wedding</label>
+    </customValue>
+    <customValue>
+        <fullName>Weight Loss</fullName>
+        <default>false</default>
+        <label>Weight Loss</label>
+    </customValue>
+    <customValue>
+        <fullName>Wireless Devices</fullName>
+        <default>false</default>
+        <label>Wireless Devices</label>
+    </customValue>
+    <customValue>
+        <fullName>Yard, Garden &amp; Patio</fullName>
+        <default>false</default>
+        <label>Yard, Garden &amp; Patio</label>
+    </customValue>
+    <customValue>
+        <fullName>Technology</fullName>
+        <default>false</default>
+        <label>Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>Politics</fullName>
+        <default>false</default>
+        <label>Politics</label>
+    </customValue>
+    <masterLabel>Industry</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

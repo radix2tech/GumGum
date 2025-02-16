@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Billing Provider --></label>
+    <name>Billing_Provider__c</name>
+    <picklistValues>
+        <masterLabel>Atlas</masterLabel>
+        <translation><!-- Atlas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DCM</masterLabel>
+        <translation><!-- DCM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DoubleVerify</masterLabel>
+        <translation><!-- DoubleVerify --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Flashtalking</masterLabel>
+        <translation><!-- Flashtalking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GumGum</masterLabel>
+        <translation><!-- GumGum --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IAS</masterLabel>
+        <translation><!-- IAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Innovid</masterLabel>
+        <translation><!-- Innovid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOAT</masterLabel>
+        <translation><!-- MOAT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MediaPlex</masterLabel>
+        <translation><!-- MediaPlex --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nielsen</masterLabel>
+        <translation><!-- Nielsen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pointroll</masterLabel>
+        <translation><!-- Pointroll --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sizmek</masterLabel>
+        <translation><!-- Sizmek --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Smart AdServer</masterLabel>
+        <translation><!-- Smart AdServer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TravelSpike</masterLabel>
+        <translation><!-- TravelSpike --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

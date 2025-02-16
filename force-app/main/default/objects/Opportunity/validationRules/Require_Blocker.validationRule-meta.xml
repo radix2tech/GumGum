@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Blocker</fullName>
+    <active>true</active>
+    <description>If Core Product is Holding/Lost Blocker is required</description>
+    <errorConditionFormula>AND( 
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+ OR($RecordType.Name= &quot;Core Products&quot;,
+ $RecordType.Name= &quot;Video&quot;),
+ OR(
+ ISPICKVAL( StageName, &quot;Holding&quot;),
+ ISPICKVAL( StageName, &quot;Closed/Lost&quot;)), 
+ISBLANK(TEXT(Blocker__c))
+)</errorConditionFormula>
+    <errorMessage>Please enter the Blocker</errorMessage>
+</ValidationRule>

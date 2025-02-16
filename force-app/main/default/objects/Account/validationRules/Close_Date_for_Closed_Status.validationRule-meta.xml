@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_Date_for_Closed_Status</fullName>
+    <active>true</active>
+    <description>Ensures a Close Date is entered on Accounts with their status set to Close</description>
+    <errorConditionFormula>AND(
+ $User.Bypass_Opportunity_Validation__c = FALSE,
+NOT( $Permission.Bypass_Account_Validation ),
+RecordType.Name = &quot;Publisher&quot;,
+ISNULL( Close_Date__c),
+OR(
+ISPICKVAL(Status__c, &quot;100% - Closed/Won!&quot;),
+ISPICKVAL(Status__c, &quot;Lost&quot;)
+)
+
+)</errorConditionFormula>
+    <errorDisplayField>Close_Date__c</errorDisplayField>
+    <errorMessage>You must select a Close Date when the Account status = closed</errorMessage>
+</ValidationRule>

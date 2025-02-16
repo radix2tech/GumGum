@@ -161,8 +161,9 @@
         <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
     </template>
 
+
     <lightning-card title={title} icon-name="custom:custom63">
-        
+
         <lightning-button 
             slot="actions" 
             label="New Relationship" 
@@ -188,16 +189,15 @@
             onclick={runBatch}>
         </lightning-button>
         <div class="card-body">
+
         <lightning-card class="child-card">
             <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" >
                 <thead>
                     <tr>
                         <!-- Bookings -->
-                        <th colspan="2" class="booking-header center-text">Cumulative Bookings</th>
+                        <th colspan="2" class="booking-header center-text">Cumulative Bookings(Advertiser Agency)</th>
                         <!-- Pipeline -->
-                        <th colspan="2" class="pipeline-header center-text">Cumulative Unweighted Pipeline</th>
-                        <!-- Forecast -->
-                        <th colspan="5" class="forecast-header center-text">Cumulative Forecast</th>
+                        <th colspan="2" class="pipeline-header center-text">Cumulative Unweighted Pipeline(Advertiser Agency)</th>
                     </tr>
                     <tr>
                         <!-- Booking Quarters -->
@@ -206,52 +206,102 @@
 
                         <!-- Pipeline Quarters -->
                         <th class="pipeline-header center-text">Current Quarter</th>
-                        <th class="pipeline-header">Next Quarter</th>
+                        <th class="pipeline-header center-text">Next Quarter</th>
 
-                        <!-- Forecast Quarters -->
-                        <th class="forecast-header center-text">Q1 {nextYear}</th>
-                        <th class="forecast-header center-text">Q2 {nextYear}</th>
-                        <th class="forecast-header center-text">Q3 {nextYear}</th>
-                        <th class="forecast-header center-text">Q4 {nextYear}</th>
-                        <th class="forecast-header center-text">FY {nextYear}</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <tr>
-                        <td class="top-aligned">
+                        <td class="top-aligned center-text">
                             {currencySymbol}<lightning-formatted-number value={CumulativeData.BookingsCurrentYear} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
                             </lightning-formatted-number>    
                         </td>
-                        <td class="top-aligned">
+                        <td class="top-aligned center-text">
                             {currencySymbol}<lightning-formatted-number value={CumulativeData.BookingsNextYear} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
                             </lightning-formatted-number>  
                         </td>
-                        <td class="top-aligned">
+                        <td class="top-aligned center-text">
                             {currencySymbol}<lightning-formatted-number value={CumulativeData.PipelineCurrentQuarter} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
                             </lightning-formatted-number> 
                         </td>
-                        <td class="top-aligned">
+                        <td class="top-aligned center-text">
                             {currencySymbol}<lightning-formatted-number value={CumulativeData.PipelineNextQuarter} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
                             </lightning-formatted-number> 
                         </td>
-                        <td class="top-aligned">
+                    </tr>
+                </tbody>
+
+            </table>    
+        <!--</lightning-card>
+        
+        <lightning-card class="child-card">-->
+        </br>
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" >
+                <thead>
+                    <tr>
+                        <!-- Bookings -->
+                        <th colspan="5" class="booking-header center-text">Cumulative Bookings(Seller)</th>
+                        <!-- Forecast -->
+                        <th colspan="5" class="forecast-header center-text">Cumulative Forecast</th>
+                    </tr>
+                    <tr>
+                        <!-- Booking Quarters -->
+                        <th class="booking-header center-text">Q1 {currentYear}</th>
+                        <th class="booking-header center-text">Q2 {currentYear}</th>
+                        <th class="booking-header center-text">Q3 {currentYear}</th>
+                        <th class="booking-header center-text">Q4 {currentYear}</th>
+                        <th class="booking-header center-text">FY {currentYear}</th>
+
+                        <!-- Forecast Quarters -->
+                        <th class="forecast-header center-text">Q1 {forecastYear}</th>
+                        <th class="forecast-header center-text">Q2 {forecastYear}</th>
+                        <th class="forecast-header center-text">Q3 {forecastYear}</th>
+                        <th class="forecast-header center-text">Q4 {forecastYear}</th>
+                        <th class="forecast-header center-text">FY {forecastYear}</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="top-aligned center-text">
+                            {currencySymbol}<lightning-formatted-number value={CumulativeData.CYq1} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                            </lightning-formatted-number> 
+                        </td>
+                        <td class="top-aligned center-text">
+                            {currencySymbol}<lightning-formatted-number value={CumulativeData.CYq2} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                            </lightning-formatted-number> 
+                        </td>
+                        <td class="top-aligned center-text">
+                            {currencySymbol}<lightning-formatted-number value={CumulativeData.CYq3} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                            </lightning-formatted-number> 
+                        </td>
+                        <td class="top-aligned center-text">
+                            {currencySymbol}<lightning-formatted-number value={CumulativeData.CYq4} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                            </lightning-formatted-number> 
+                        </td>
+                        <td class="top-aligned center-text">
+                            {currencySymbol}<lightning-formatted-number value={CumulativeData.ForecastCY} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
+                            </lightning-formatted-number> 
+                        </td>
+
+                        <td class="top-aligned center-text">
                             {currencySymbol}<lightning-formatted-number value={CumulativeData.q1} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
                             </lightning-formatted-number> 
                         </td>
-                        <td class="top-aligned">
+                        <td class="top-aligned center-text">
                             {currencySymbol}<lightning-formatted-number value={CumulativeData.q2} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
                             </lightning-formatted-number> 
                         </td>
-                        <td class="top-aligned">
+                        <td class="top-aligned center-text">
                             {currencySymbol}<lightning-formatted-number value={CumulativeData.q3} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
                             </lightning-formatted-number> 
                         </td>
-                        <td class="top-aligned">
+                        <td class="top-aligned center-text">
                             {currencySymbol}<lightning-formatted-number value={CumulativeData.q4} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
                             </lightning-formatted-number> 
                         </td>
-                        <td class="top-aligned">
+                        <td class="top-aligned center-text">
                             {currencySymbol}<lightning-formatted-number value={CumulativeData.ForecastNextYear} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
                             </lightning-formatted-number> 
                         </td>
@@ -260,14 +310,13 @@
 
             </table>    
         </lightning-card>
-       
 
         <lightning-card>
             <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" >
-                <thead class="child-card2">
+                <thead>
                     <tr>
                         <template if:true={isManager}>
-                            <th class="center-text">
+                            <th class="center-text" style="border-top: 1px solid #dddbda;">
                                 <lightning-input
                                     type="text"
                                     onkeydown={handleSellerKeyDown}>
@@ -378,42 +427,69 @@
                             </template>
 
                         </th>
-                        <th></th>
-                        <!-- Bookings -->
-                        <th></th>
-                        <!-- Pipeline -->
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
                     </tr>
                     <tr>
                         <template if:true={isManager}>
-                            <th class="center-text">Seller</th>
+                            <th style="border-bottom: none; " class="center-text" onclick={handleSort} data-field="Seller">
+                                Seller
+                                <lightning-icon
+                                    if:true={isSellerSortedAsc}
+                                    icon-name="utility:arrowup"
+                                    size="x-small"
+                                ></lightning-icon>
+                                <lightning-icon
+                                    if:true={isSellerSortedDesc}
+                                    icon-name="utility:arrowdown"
+                                    size="x-small"
+                                ></lightning-icon>
+                            </th>
                         </template>    
-                        <th class="center-text">Advertiser</th>
-                        <th class="center-text">Agency</th>
-                        <th class="center-text">Type</th>
-                        <th class="center-text">Channel</th>
-                        <th class="center-text">Trading Deal</th>
+                        <th style="border-bottom: none;" class="center-text" onclick={handleSort} data-field="Advertiser">
+                            Advertiser
+                            <lightning-icon
+                                if:true={isAdvertiserSortedAsc}
+                                icon-name="utility:arrowup"
+                                size="x-small"
+                            ></lightning-icon>
+                            <lightning-icon
+                                if:true={isAdvertiserSortedDesc}
+                                icon-name="utility:arrowdown"
+                                size="x-small"
+                            ></lightning-icon>
+                        </th>
+                        <th style="border-bottom: none;" class="center-text" onclick={handleSort} data-field="Agency">
+                            Agency
+                            <lightning-icon
+                                if:true={isAgencySortedAsc}
+                                icon-name="utility:arrowup"
+                                size="x-small"
+                            ></lightning-icon>
+                            <lightning-icon
+                                if:true={isAgencySortedDesc}
+                                icon-name="utility:arrowdown"
+                                size="x-small"
+                            ></lightning-icon>
+                        </th>
+                        <th style="border-bottom: none;" class="center-text">Type</th>
+                        <th style="border-bottom: none;" class="center-text">Channel</th>
+                        <th style="border-bottom: none;" class="center-text">Trading Deal</th>
                         <!-- Bookings -->
                         <th colspan="2" class="booking-header center-text">Bookings</th>
                         <!-- Pipeline -->
                         <th colspan="2" class="pipeline-header center-text">Pipeline</th>
                         <th class="forecast-header center-text" >Product Forecasts</th>
-                        <th>Change Ownership/</th>
+                        <th>Change Ownership/Remove Relationship</th>
                     </tr>
                     <tr>
                         <!-- Empty Columns -->
                         <template if:true={isManager}>
-                            <th></th>
+                            <th style="border-top: none;"></th>
                         </template>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th style="border-top: none;" ></th>
+                        <th style="border-top: none;" ></th>
+                        <th style="border-top: none;" ></th>
+                        <th style="border-top: none;" ></th>
+                        <th style="border-top: none;" ></th>
                         <!-- Booking Quarters -->
                         <th  class="booking-header center-text">Current Year</th>
                         <th  class="booking-header center-text">Next Year</th>
@@ -422,9 +498,10 @@
                         <th class="pipeline-header center-text">Current Quarter</th>
                         <th class="pipeline-header center-text">Next Quarter</th>
                         <th class="forecast-header center-text" ></th>
-                        <th>Remove Relationship</th>
+                        <th></th>
                     </tr>
                 </thead>
+            
                 <tbody>
                     <template for:each={returnData} for:item="row">
                         <template if:true={row.isDisplayed}>
@@ -436,10 +513,24 @@
                                     </td>
                                 </template>
                                 <td class="top-aligned" >
-                                    <lightning-button variant="base" data-id = {row.AdvertiserId} label={row.Advertiser} title={row.Advertiser} onclick={handleNavigate} class="slds-m-left_x-small"></lightning-button>
+                                    <!--<lightning-button variant="base" data-id = {row.AdvertiserId} label={row.Advertiser} title={row.Advertiser} onclick={handleNavigate} class="left-aligned"></lightning-button>-->
+                                    <div 
+                                        class="slds-button slds-button_base left-aligned-button" 
+                                        data-id={row.AdvertiserId} 
+                                        title={row.Advertiser}
+                                        onclick={handleNavigate}>
+                                        {row.Advertiser}
+                                    </div>
                                 </td>
                                 <td class="top-aligned">
-                                    <lightning-button variant="base" data-id = {row.AgencyId} label={row.Agency} title={row.Advertiser} onclick={handleNavigate} class="slds-m-left_x-small"></lightning-button>
+                                    <!--<lightning-button variant="base" data-id = {row.AgencyId} label={row.Agency} title={row.Agency} onclick={handleNavigate} class="left-aligned"></lightning-button>-->
+                                    <div 
+                                        class="slds-button slds-button_base left-aligned-button" 
+                                        data-id={row.AgencyId} 
+                                        title={row.Agency} 
+                                        onclick={handleNavigate}>
+                                        {row.Agency}
+                                    </div>
                                 </td>
                                 <td class="top-aligned">{row.Type}</td>
                                 <!--<td class="top-aligned">{row.Channel}</td>-->
@@ -462,25 +553,25 @@
                                     <lightning-input type="checkbox" checked={row.TradingDeal} data-id = {row.Id} onchange={handleTypeChange}></lightning-input>
                                 </td>    
                                 <!-- Bookings -->
-                                <td class="top-aligned">
+                                <td class="top-aligned center-text">
                                     {currencySymbol}<lightning-formatted-number value={row.BookingsCurrentYear} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
                                     </lightning-formatted-number> 
                                 </td>
-                                <td class="top-aligned">
+                                <td class="top-aligned center-text">
                                     {currencySymbol}<lightning-formatted-number value={row.BookingsNextYear} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
                                     </lightning-formatted-number> 
                                 </td>
 
                                 <!-- Pipeline -->
-                                <td class="top-aligned">
+                                <td class="top-aligned center-text">
                                     {currencySymbol}<lightning-formatted-number value={row.PipelineCurrentQuarter} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
                                     </lightning-formatted-number> 
                                 </td>
-                                <td class="top-aligned">
+                                <td class="top-aligned center-text">
                                     {currencySymbol}<lightning-formatted-number value={row.PipelineNextQuarter} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
                                     </lightning-formatted-number> 
                                 </td>
-                                <td class="center-text">
+                                <td class="center-text center-text">
                                     {currencySymbol}<lightning-formatted-number value={row.ForecastSum} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}></lightning-formatted-number> 
                                     <template if:true={row.isExpanded}>
                                         <lightning-button-icon 
@@ -529,16 +620,16 @@
                                                             </template>
                                                             <th class="forecast-header center-text">Product</th>
                                                             <!-- Forecast Quarters -->
-                                                            <th class="forecast-header center-text">Q1 {currentYear}</th>
-                                                            <th class="forecast-header center-text">Q1 {nextYear}</th>
-                                                            <th class="forecast-header center-text">Q2 {currentYear}</th>
-                                                            <th class="forecast-header center-text">Q2 {nextYear}</th>
-                                                            <th class="forecast-header center-text">Q3 {currentYear}</th>
-                                                            <th class="forecast-header center-text">Q3 {nextYear}</th>
-                                                            <th class="forecast-header center-text">Q4 {currentYear}</th>
-                                                            <th class="forecast-header center-text">Q4 {nextYear}</th>
+                                                            <th class="forecast-header center-text">Q1 {previousYear}</th>
+                                                            <th class="forecast-header center-text">Q1 {forecastYear}</th>
+                                                            <th class="forecast-header center-text">Q2 {previousYear}</th>
+                                                            <th class="forecast-header center-text">Q2 {forecastYear}</th>
+                                                            <th class="forecast-header center-text">Q3 {previousYear}</th>
+                                                            <th class="forecast-header center-text">Q3 {forecastYear}</th>
+                                                            <th class="forecast-header center-text">Q4 {previousYear}</th>
+                                                            <th class="forecast-header center-text">Q4 {forecastYear}</th>
                                                             <!-- <th class="forecast-header center-text">Currency</th> -->
-                                                            <th class="forecast-header center-text">Sum ({nextYear})</th>
+                                                            <th class="forecast-header center-text">Sum ({forecastYear})</th>
                                                             <th class="forecast-header">Add/Remove</th>
                                                         </tr>
 
@@ -599,20 +690,6 @@
                                                                 <td>
                                                                     <lightning-input data-id = {product.Id} data-row = {row.Id} value={product.q41} onchange={handleQ41Change}></lightning-input>
                                                                 </td>
-                                                                <!-- <td>
-                                                                    <p>{currencyCode}</p>
-                                                                    
-                                                                     <lightning-combobox
-                                                                        placeholder="Choose"
-                                                                        data-id = {product.Id}
-                                                                        data-row = {row.Id}
-                                                                        value={currencyCode}
-                                                                        options={currencyOptions}
-                                                                        
-                                                                        onchange={handleCurrencyChange}>
-                                                                    </lightning-combobox> 
-
-                                                                </td> -->
                                                                 
                                                                 <td class="top-aligned">
                                                                     {currencySymbol}<lightning-formatted-number value={product.productCumulative} maximum-fraction-digits="2" style="currency" currency-code={currencyCode}>
@@ -689,21 +766,6 @@
             <span class="page-info slds-m-right_small">Page {currentPage} of {totalPages}</span>
             <lightning-button label="Next" class="slds-m-right_small" variant="brand" onclick={handleNext}
                 disabled={isNextDisabled}></lightning-button>
-            
-
-                <!--<lightning-button
-                    label="Previous"
-                    onclick={handlePrevious}
-                    disabled={isPreviousDisabled}>
-                </lightning-button>
-                <span class="page-info">Page {currentPage} of {totalPages}</span>
-                <lightning-button
-                    label="Next"
-                    onclick={handleNext}
-                    disabled={isNextDisabled}>
-                </lightning-button>-->
-
-
             <lightning-button label="Submit" variant="brand" onclick={submit}></lightning-button>
         </div>
 

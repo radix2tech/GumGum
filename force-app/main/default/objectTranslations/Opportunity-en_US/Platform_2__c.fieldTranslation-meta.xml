@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Platform --></label>
+    <name>Platform_2__c</name>
+    <picklistValues>
+        <masterLabel>Adobe</masterLabel>
+        <translation><!-- Adobe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CM360</masterLabel>
+        <translation><!-- CM360 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DV360</masterLabel>
+        <translation><!-- DV360 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Flashtalking</masterLabel>
+        <translation><!-- Flashtalking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Google Ads</masterLabel>
+        <translation><!-- Google Ads --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nexxen</masterLabel>
+        <translation><!-- Nexxen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quantcast</masterLabel>
+        <translation><!-- Quantcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TTD</masterLabel>
+        <translation><!-- TTD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Xandr</masterLabel>
+        <translation><!-- Xandr --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

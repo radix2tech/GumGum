@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSM_1_Not_Null_for_Direct_Advertising</fullName>
+    <active>true</active>
+    <description>If Record Type = Advertising and Channel = Direct then CSM #1 cannot be blank</description>
+    <errorConditionFormula>AND(ISBLANK( CSM_1__c ),ISPICKVAL( Channel__c,&quot;Direct&quot;))&amp;&amp; 
+
+ $User.Bypass_Opportunity_Validation__c = FALSE &amp;&amp;
+NOT( $Permission.Bypass_Opportunity_Validation )&amp;&amp;
+RecordTypeId = &quot;012U00000001pHJ&quot;&amp;&amp;
+NOT( $Permission.Bypass_Opportunity_Validation )</errorConditionFormula>
+    <errorDisplayField>CSM_1__c</errorDisplayField>
+    <errorMessage>A CSM #1 must be chosen for all Direct Advertising Opportunities</errorMessage>
+</ValidationRule>

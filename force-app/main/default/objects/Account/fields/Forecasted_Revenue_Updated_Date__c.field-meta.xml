@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Forecasted_Revenue_Updated_Date__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Date the current year forecasted revenue amount was last updated according to updates on the annual bottoms up.</inlineHelpText>
+    <label>Forecasted Revenue Updated Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Date</type>
+</CustomField>

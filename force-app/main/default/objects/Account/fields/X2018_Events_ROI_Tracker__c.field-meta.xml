@@ -1,0 +1,1373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2018_Events_ROI_Tracker__c</fullName>
+    <externalId>false</externalId>
+    <label>2018 Events ROI Tracker</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>018 NA Sales Midwest Detroit Tigers Opening Day Event</fullName>
+                <default>false</default>
+                <label>018 NA Sales Midwest Detroit Tigers Opening Day Event</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales East - Q4 Winner - Cece - Dear Evan Hansen</fullName>
+                <default>false</default>
+                <label>2017 NA Sales East - Q4 Winner - Cece - Dear Evan Hansen</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales East - Q4 Winner- Cece - Dear Evan Hansen</fullName>
+                <default>false</default>
+                <label>2017 NA Sales East - Q4 Winner- Cece - Dear Evan Hansen</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales East- Sprint Shopping Event</fullName>
+                <default>false</default>
+                <label>2017 NA Sales East- Sprint Shopping Event</label>
+            </value>
+            <value>
+                <fullName>2017 NA Sales West sfBig Holiday Party</fullName>
+                <default>false</default>
+                <label>2017 NA Sales West sfBig Holiday Party</label>
+            </value>
+            <value>
+                <fullName>2018_Mini ABM_Facebook</fullName>
+                <default>false</default>
+                <label>2018_Mini ABM_Facebook</label>
+            </value>
+            <value>
+                <fullName>2018_Mini ABM_Ubisoft</fullName>
+                <default>false</default>
+                <label>2018_Mini ABM_Ubisoft</label>
+            </value>
+            <value>
+                <fullName>2018_Mini ABM_Xbox</fullName>
+                <default>false</default>
+                <label>2018_Mini ABM_Xbox</label>
+            </value>
+            <value>
+                <fullName>2018 Advertising Week Asia Form</fullName>
+                <default>false</default>
+                <label>2018 Advertising Week Asia Form</label>
+            </value>
+            <value>
+                <fullName>2018 August NA Sales Dodgers Game</fullName>
+                <default>false</default>
+                <label>2018 August NA Sales Dodgers Game</label>
+            </value>
+            <value>
+                <fullName>2018 AUS Ashton Media&apos;s Programmatic Summit, Sydney</fullName>
+                <default>false</default>
+                <label>2018 AUS Ashton Media&apos;s Programmatic Summit, Sydney</label>
+            </value>
+            <value>
+                <fullName>2018 AUS Breakfast with Wavemaker and Mediacom</fullName>
+                <default>false</default>
+                <label>2018 AUS Breakfast with Wavemaker and Mediacom</label>
+            </value>
+            <value>
+                <fullName>2018 AUS Comexposium / ad:tech Sydney 2018</fullName>
+                <default>false</default>
+                <label>2018 AUS Comexposium / ad:tech Sydney 2018</label>
+            </value>
+            <value>
+                <fullName>2018 AUS Grape Grazing Event</fullName>
+                <default>false</default>
+                <label>2018 AUS Grape Grazing Event</label>
+            </value>
+            <value>
+                <fullName>2018 AUS Mumbrella 360</fullName>
+                <default>false</default>
+                <label>2018 AUS Mumbrella 360</label>
+            </value>
+            <value>
+                <fullName>2018 AUS Zenith &amp; Starcom Breakfast</fullName>
+                <default>false</default>
+                <label>2018 AUS Zenith &amp; Starcom Breakfast</label>
+            </value>
+            <value>
+                <fullName>2018 Campaign Breakfast - Chicago</fullName>
+                <default>false</default>
+                <label>2018 Campaign Breakfast - Chicago</label>
+            </value>
+            <value>
+                <fullName>2018 Campaign Breakfast - New York</fullName>
+                <default>false</default>
+                <label>2018 Campaign Breakfast - New York</label>
+            </value>
+            <value>
+                <fullName>2018 Central &amp; Canada IAB Brand Safety Roadshow</fullName>
+                <default>false</default>
+                <label>2018 Central &amp; Canada IAB Brand Safety Roadshow</label>
+            </value>
+            <value>
+                <fullName>2018 Central Marketing Candy Club Valentines Day</fullName>
+                <default>false</default>
+                <label>2018 Central Marketing Candy Club Valentines Day</label>
+            </value>
+            <value>
+                <fullName>2018 CES</fullName>
+                <default>false</default>
+                <label>2018 CES</label>
+            </value>
+            <value>
+                <fullName>2018 Clorox iConnect</fullName>
+                <default>false</default>
+                <label>2018 Clorox iConnect</label>
+            </value>
+            <value>
+                <fullName>2018 Dallas - Bring Cannes To You</fullName>
+                <default>false</default>
+                <label>2018 Dallas - Bring Cannes To You</label>
+            </value>
+            <value>
+                <fullName>2018 Detroit - Bring Cannes To You</fullName>
+                <default>false</default>
+                <label>2018 Detroit - Bring Cannes To You</label>
+            </value>
+            <value>
+                <fullName>2018 Digiday Publishing Summit Europe</fullName>
+                <default>false</default>
+                <label>2018 Digiday Publishing Summit Europe</label>
+            </value>
+            <value>
+                <fullName>2018 Digiday Sponsorship Event with Eyeota</fullName>
+                <default>false</default>
+                <label>2018 Digiday Sponsorship Event with Eyeota</label>
+            </value>
+            <value>
+                <fullName>2018 Digital Marketing SF Masterclassing</fullName>
+                <default>false</default>
+                <label>2018 Digital Marketing SF Masterclassing</label>
+            </value>
+            <value>
+                <fullName>2018 Europe We Bring Cannes To You</fullName>
+                <default>false</default>
+                <label>2018 Europe We Bring Cannes To You</label>
+            </value>
+            <value>
+                <fullName>2018 February NA Sales STAPLES Lakers vs Phoenix</fullName>
+                <default>false</default>
+                <label>2018 February NA Sales STAPLES Lakers vs Phoenix</label>
+            </value>
+            <value>
+                <fullName>2018 January NA Sales STAPLES Kings vs Pittsburgh</fullName>
+                <default>false</default>
+                <label>2018 January NA Sales STAPLES Kings vs Pittsburgh</label>
+            </value>
+            <value>
+                <fullName>2018 Japan Digiday Publishing Summit</fullName>
+                <default>false</default>
+                <label>2018 Japan Digiday Publishing Summit</label>
+            </value>
+            <value>
+                <fullName>2018 Japan Internet Forum</fullName>
+                <default>false</default>
+                <label>2018 Japan Internet Forum</label>
+            </value>
+            <value>
+                <fullName>2018 June NA Sales SF Cannes Lazy Bear Dinner</fullName>
+                <default>false</default>
+                <label>2018 June NA Sales SF Cannes Lazy Bear Dinner</label>
+            </value>
+            <value>
+                <fullName>2018 March NA Sales STAPLES Kings vs Columbus</fullName>
+                <default>false</default>
+                <label>2018 March NA Sales STAPLES Kings vs Columbus</label>
+            </value>
+            <value>
+                <fullName>2018 NA Digiday Media Buying/Agency Summit</fullName>
+                <default>false</default>
+                <label>2018 NA Digiday Media Buying/Agency Summit</label>
+            </value>
+            <value>
+                <fullName>2018 NA Programmatic Digiday Programmatic Summit - May</fullName>
+                <default>false</default>
+                <label>2018 NA Programmatic Digiday Programmatic Summit - May</label>
+            </value>
+            <value>
+                <fullName>2018 NA Pub Dev Digiday Publishing Summit Vail</fullName>
+                <default>false</default>
+                <label>2018 NA Pub Dev Digiday Publishing Summit Vail</label>
+            </value>
+            <value>
+                <fullName>2018 NA Pub Dev Mastros Dinner</fullName>
+                <default>false</default>
+                <label>2018 NA Pub Dev Mastros Dinner</label>
+            </value>
+            <value>
+                <fullName>2018 NA Pub Dev Mediavine Publisher Conference</fullName>
+                <default>false</default>
+                <label>2018 NA Pub Dev Mediavine Publisher Conference</label>
+            </value>
+            <value>
+                <fullName>2018 NA Pub Dev Vail Chalet Event</fullName>
+                <default>false</default>
+                <label>2018 NA Pub Dev Vail Chalet Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Boston Cannes</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Boston Cannes</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Central &amp; Canada We Bring Cannes To You</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Central &amp; Canada We Bring Cannes To You</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Amnet Cocktail Class</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Amnet Cocktail Class</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Boots Cooking Class</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Boots Cooking Class</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East Cannes</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East Cannes</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Cheese Making Class</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Cheese Making Class</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Cooking Class with Bully Pulpit</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Cooking Class with Bully Pulpit</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Grilled Cheese Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Grilled Cheese Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- J3 Beauty Bite Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- J3 Beauty Bite Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Lululemon Seaport Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Lululemon Seaport Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Mixology Class</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Mixology Class</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Momofoko Cake Making Class</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Momofoko Cake Making Class</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Nestle Happy Hour Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Nestle Happy Hour Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Nissan/Infiniti March Madness Happy Hour</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Nissan/Infiniti March Madness Happy Hour</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Pernod March Madness</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Pernod March Madness</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East Q3 - Hamptons VIP Week</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East Q3 - Hamptons VIP Week</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East Q3 - Hamptons Weekday VIP</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East Q3 - Hamptons Weekday VIP</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East Q3 - Hamptons Weekend 1</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East Q3 - Hamptons Weekend 1</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East Q3 - Hamptons Weekend 2</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East Q3 - Hamptons Weekend 2</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East Q3 - Hamptons Weekend 3</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East Q3 - Hamptons Weekend 3</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East Q3 - Hamptons Weekend 4</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East Q3 - Hamptons Weekend 4</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East Q3 Masterclassing NYC Beauty</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East Q3 Masterclassing NYC Beauty</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Solstice TJX Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Solstice TJX Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Starbucks Happy Hour</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Starbucks Happy Hour</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Target Team Eataly Dinner</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Target Team Eataly Dinner</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East Think N Drink</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East Think N Drink</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Thought Leader Dinner March</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Thought Leader Dinner March</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Valentines Day Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Valentines Day Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East We Bring Cannes To You</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East We Bring Cannes To You</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Wine &amp; Cheese Night with Reese&apos;s</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Wine &amp; Cheese Night with Reese&apos;s</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Zenith Soccer Bumper Balls</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Zenith Soccer Bumper Balls</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Acai Happy Hour at Mindshare</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Acai Happy Hour at Mindshare</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Ada Street Dinner</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Ada Street Dinner</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Ad Club Toronto Ski Day</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Ad Club Toronto Ski Day</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Canada Ad Club Golf Day Foursomes</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Canada Ad Club Golf Day Foursomes</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Canada Digital Day Sponsorship</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Canada Digital Day Sponsorship</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Cincinnati Reds Suite</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Cincinnati Reds Suite</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Cinco de Mayo Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Cinco de Mayo Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Cruz Blanca Brewery Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Cruz Blanca Brewery Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Dallas P!nk Suite</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Dallas P!nk Suite</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Detroit City Soccer Game</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Detroit City Soccer Game</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Detroit Red Wings Partial Season Tickets</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Detroit Red Wings Partial Season Tickets</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Detroit Red Wings Suite</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Detroit Red Wings Suite</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Detroit Tigers Opening Day Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Detroit Tigers Opening Day Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Detroit Tigers Q2/Q3 Ticket Package</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Detroit Tigers Q2/Q3 Ticket Package</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest i612 Event Sponsorship</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest i612 Event Sponsorship</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Justin Timberlake Suite</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Justin Timberlake Suite</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Kaiser Tiger Curling Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Kaiser Tiger Curling Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Kansas City Big 12 Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Kansas City Big 12 Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Lagunita&apos;s Brewery Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Lagunita&apos;s Brewery Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Minneapolis i612 Karaoke Night Sponsorship</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Minneapolis i612 Karaoke Night Sponsorship</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Minneapolis Six Degrees Workout Class</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Minneapolis Six Degrees Workout Class</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Red Wings Q1 Games</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Red Wings Q1 Games</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Royal Palms Shuffleboard Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Royal Palms Shuffleboard Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West April STAPLES Clippers vs Lakers</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West April STAPLES Clippers vs Lakers</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West China Live Reunion Dinner</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West China Live Reunion Dinner</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West Dodgers Game May</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West Dodgers Game May</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West EMT Reunion Dinner</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West EMT Reunion Dinner</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West Entertainment Breakfast Table</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West Entertainment Breakfast Table</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West LA Marketing Event TBD</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West LA Marketing Event TBD</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West May Dodgers Game</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West May Dodgers Game</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West Mediasmith Sponsorship</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West Mediasmith Sponsorship</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West March STAPLES Game</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West March STAPLES Game</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West April STAPLES Game</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West April STAPLES Game</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West Seattle Hulu Reunion Dinner</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West Seattle Hulu Reunion Dinner</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West SF Benefit Beauty Bash</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West SF Benefit Beauty Bash</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West UM Reunion Dinner</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West UM Reunion Dinner</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West SF Kiehls Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West SF Kiehls Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West SF Warriors Game</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West SF Warriors Game</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West Halloween Costume Shopping</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West Halloween Costume Shopping</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West SF Patio Party</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West SF Patio Party</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West October STAPLES Game</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West October STAPLES Game</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West We Bring Cannes To You</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West We Bring Cannes To You</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sports E3 Expo</fullName>
+                <default>false</default>
+                <label>2018 NA Sports E3 Expo</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sports Esports Activate</fullName>
+                <default>false</default>
+                <label>2018 NA Sports Esports Activate</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sports Intersport Brand Engagement &amp; Content Summit</fullName>
+                <default>false</default>
+                <label>2018 NA Sports Intersport Brand Engagement &amp; Content Summit</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sports NBA Revenue Workshop</fullName>
+                <default>false</default>
+                <label>2018 NA Sports NBA Revenue Workshop</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sports NSF Spring Summit</fullName>
+                <default>false</default>
+                <label>2018 NA Sports NSF Spring Summit</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sports The Vertical Series: Sports Tech</fullName>
+                <default>false</default>
+                <label>2018 NA Sports The Vertical Series: Sports Tech</label>
+            </value>
+            <value>
+                <fullName>2018 Non-Marketing Super Bowl</fullName>
+                <default>false</default>
+                <label>2018 Non-Marketing Super Bowl</label>
+            </value>
+            <value>
+                <fullName>2018 Non-Marketing Super Bowl - Friday Night Party</fullName>
+                <default>false</default>
+                <label>2018 Non-Marketing Super Bowl - Friday Night Party</label>
+            </value>
+            <value>
+                <fullName>2018 Non-Marketing Super Bowl - Players Tailgate</fullName>
+                <default>false</default>
+                <label>2018 Non-Marketing Super Bowl - Players Tailgate</label>
+            </value>
+            <value>
+                <fullName>2018 Non-Marketing Super Bowl - Saturday Dinner with Sports</fullName>
+                <default>false</default>
+                <label>2018 Non-Marketing Super Bowl - Saturday Dinner with Sports</label>
+            </value>
+            <value>
+                <fullName>2018 Pepcom @ CES</fullName>
+                <default>false</default>
+                <label>2018 Pepcom @ CES</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Allbirds and 360i</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Allbirds and 360i</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Aunt Jake&apos;s with EL &amp; BS</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Aunt Jake&apos;s with EL &amp; BS</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- BATSU with Chase</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- BATSU with Chase</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Ben &amp; Jerry&apos;s Truck</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Ben &amp; Jerry&apos;s Truck</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Ben &amp; Jerrys with OMD</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Ben &amp; Jerrys with OMD</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Boston Cannes Pool Party</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Boston Cannes Pool Party</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Bowling with NDP</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Bowling with NDP</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Bowlmor with JC Penny</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Bowlmor with JC Penny</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- City Surf and Massages</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- City Surf and Massages</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Dinner with Audi</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Dinner with Audi</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Enchanted Evening</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Enchanted Evening</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Golf Night with Microsoft</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Golf Night with Microsoft</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Grand Banks with Sprint</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Grand Banks with Sprint</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Happy Hour with 87AM</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Happy Hour with 87AM</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Kick Axe Throwing with Carnival</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Kick Axe Throwing with Carnival</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- LuLu with R2I</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- LuLu with R2I</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Mean Girls</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Mean Girls</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Nike Event</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Nike Event</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Nordstrom Pizza Night with Bethesda</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Nordstrom Pizza Night with Bethesda</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Omelettes with Bully Pulpit</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Omelettes with Bully Pulpit</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Omlettes with ICF</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Omlettes with ICF</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Omlettes with Planit Agency</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Omlettes with Planit Agency</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Reebok Shopping</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Reebok Shopping</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- THD HH and Dinner</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- THD HH and Dinner</label>
+            </value>
+            <value>
+                <fullName>2018 Q2 NA Sales East- Yankees with Nestle</fullName>
+                <default>false</default>
+                <label>2018 Q2 NA Sales East- Yankees with Nestle</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Infiniti Converse</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Infiniti Converse</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Mister Krisp Cake</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Mister Krisp Cake</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East - Programmatic Hamptons House</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East - Programmatic Hamptons House</label>
+            </value>
+            <value>
+                <fullName>2018 Sports Leaders in Sport: Sports Business Summit London</fullName>
+                <default>false</default>
+                <label>2018 Sports Leaders in Sport: Sports Business Summit London</label>
+            </value>
+            <value>
+                <fullName>2018 Strategic Advertising Week London</fullName>
+                <default>false</default>
+                <label>2018 Strategic Advertising Week London</label>
+            </value>
+            <value>
+                <fullName>2018 Strategic Advertising Week New York - GumGum Happy Hour</fullName>
+                <default>false</default>
+                <label>2018 Strategic Advertising Week New York - GumGum Happy Hour</label>
+            </value>
+            <value>
+                <fullName>2018 Strategic Breakfast Debate with Campaign</fullName>
+                <default>false</default>
+                <label>2018 Strategic Breakfast Debate with Campaign</label>
+            </value>
+            <value>
+                <fullName>2018 Strategic IAB Annual Leadership Meeting</fullName>
+                <default>false</default>
+                <label>2018 Strategic IAB Annual Leadership Meeting</label>
+            </value>
+            <value>
+                <fullName>2018 Strategic Mobile World Congress</fullName>
+                <default>false</default>
+                <label>2018 Strategic Mobile World Congress</label>
+            </value>
+            <value>
+                <fullName>2018 Strategic We Bring Cannes To You</fullName>
+                <default>false</default>
+                <label>2018 Strategic We Bring Cannes To You</label>
+            </value>
+            <value>
+                <fullName>2018 Tech CVPR</fullName>
+                <default>false</default>
+                <label>2018 Tech CVPR</label>
+            </value>
+            <value>
+                <fullName>2018 The Drum Breakfast - London</fullName>
+                <default>false</default>
+                <label>2018 The Drum Breakfast - London</label>
+            </value>
+            <value>
+                <fullName>2018 The Drum Breakfast - New York</fullName>
+                <default>false</default>
+                <label>2018 The Drum Breakfast - New York</label>
+            </value>
+            <value>
+                <fullName>2018 Tokyo Lunch &amp; Learn</fullName>
+                <default>false</default>
+                <label>2018 Tokyo Lunch &amp; Learn</label>
+            </value>
+            <value>
+                <fullName>2018 UK Drum Awards</fullName>
+                <default>false</default>
+                <label>2018 UK Drum Awards</label>
+            </value>
+            <value>
+                <fullName>2018 UK GumGum World Cup Happy Hour</fullName>
+                <default>false</default>
+                <label>2018 UK GumGum World Cup Happy Hour</label>
+            </value>
+            <value>
+                <fullName>2018 UK IAB Engage</fullName>
+                <default>false</default>
+                <label>2018 UK IAB Engage</label>
+            </value>
+            <value>
+                <fullName>2018 UK IPG/Initiative Social</fullName>
+                <default>false</default>
+                <label>2018 UK IPG/Initiative Social</label>
+            </value>
+            <value>
+                <fullName>2018 UK Pancake Day Crepe Carts</fullName>
+                <default>false</default>
+                <label>2018 UK Pancake Day Crepe Carts</label>
+            </value>
+            <value>
+                <fullName>2018 UK Performance Marketing Awards</fullName>
+                <default>false</default>
+                <label>2018 UK Performance Marketing Awards</label>
+            </value>
+            <value>
+                <fullName>2018 UK Polo</fullName>
+                <default>false</default>
+                <label>2018 UK Polo</label>
+            </value>
+            <value>
+                <fullName>2018 UK Publicis IQ Academy Lunch and Learn</fullName>
+                <default>false</default>
+                <label>2018 UK Publicis IQ Academy Lunch and Learn</label>
+            </value>
+            <value>
+                <fullName>2018 UK Publicis L&amp;D Event</fullName>
+                <default>false</default>
+                <label>2018 UK Publicis L&amp;D Event</label>
+            </value>
+            <value>
+                <fullName>2018 UK Rugby Hospitality</fullName>
+                <default>false</default>
+                <label>2018 UK Rugby Hospitality</label>
+            </value>
+            <value>
+                <fullName>2018 UK Starcom Event</fullName>
+                <default>false</default>
+                <label>2018 UK Starcom Event</label>
+            </value>
+            <value>
+                <fullName>2018 Unltd. Big Clash - Melbourne</fullName>
+                <default>false</default>
+                <label>2018 Unltd. Big Clash - Melbourne</label>
+            </value>
+            <value>
+                <fullName>2018 Unltd. Big Clash - Sydney</fullName>
+                <default>false</default>
+                <label>2018 Unltd. Big Clash - Sydney</label>
+            </value>
+            <value>
+                <fullName>2018 Wine Tasting Happy Hour at CES</fullName>
+                <default>false</default>
+                <label>2018 Wine Tasting Happy Hour at CES</label>
+            </value>
+            <value>
+                <fullName>Hamptons House 2018</fullName>
+                <default>false</default>
+                <label>Hamptons House 2018</label>
+            </value>
+            <value>
+                <fullName>Masterclassing NYC Beauty</fullName>
+                <default>false</default>
+                <label>Masterclassing NYC Beauty</label>
+            </value>
+            <value>
+                <fullName>NA Sales East Think And Drink</fullName>
+                <default>false</default>
+                <label>NA Sales East Think And Drink</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- LuLu Lemon with New Balance</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- LuLu Lemon with New Balance</label>
+            </value>
+            <value>
+                <fullName>2018 Octopus Media Colombia Event</fullName>
+                <default>false</default>
+                <label>2018 Octopus Media Colombia Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Mister Krisp Cake ABM</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Mister Krisp Cake ABM</label>
+            </value>
+            <value>
+                <fullName>2018 Japan Media Briefing</fullName>
+                <default>false</default>
+                <label>2018 Japan Media Briefing</label>
+            </value>
+            <value>
+                <fullName>2018 AUS Cork &amp; Chroma Night</fullName>
+                <default>false</default>
+                <label>2018 AUS Cork &amp; Chroma Night</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Dallas Ice Cream Social</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Dallas Ice Cream Social</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Chuan Spa Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Chuan Spa Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Lollapalooza Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Lollapalooza Event</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Maggie Reillys with Chase</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Maggie Reillys with Chase</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- School of Rock</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- School of Rock</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- ModCo HH</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- ModCo HH</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Converse Creation</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Converse Creation</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Egghead with Metavision</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Egghead with Metavision</label>
+            </value>
+            <value>
+                <fullName>2018 UK Mediacom Picnic</fullName>
+                <default>false</default>
+                <label>2018 UK Mediacom Picnic</label>
+            </value>
+            <value>
+                <fullName>2018 UK Starcom Crazy Golf Event</fullName>
+                <default>false</default>
+                <label>2018 UK Starcom Crazy Golf Event</label>
+            </value>
+            <value>
+                <fullName>2018 UK Winerama Event</fullName>
+                <default>false</default>
+                <label>2018 UK Winerama Event</label>
+            </value>
+            <value>
+                <fullName>2018 Japan Creative Cafe</fullName>
+                <default>false</default>
+                <label>2018 Japan Creative Cafe</label>
+            </value>
+            <value>
+                <fullName>2018 AUS Cider &amp; Sweater Party</fullName>
+                <default>false</default>
+                <label>2018 AUS Cider &amp; Sweater Party</label>
+            </value>
+            <value>
+                <fullName>2018 AUS Wavemaker Sweater &amp; Cider Party</fullName>
+                <default>false</default>
+                <label>2018 AUS Wavemaker Sweater &amp; Cider Party</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Wrecking Club with Citi</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Wrecking Club with Citi</label>
+            </value>
+            <value>
+                <fullName>2018 NA Pub Dev Digiday Publishing Summit Barcelona</fullName>
+                <default>false</default>
+                <label>2018 NA Pub Dev Digiday Publishing Summit Barcelona</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East - Pizza Making with Canon</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East - Pizza Making with Canon</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Lashes with lego</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Lashes with lego</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Citi Programmatic Lunch</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Citi Programmatic Lunch</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Spa with IHG</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Spa with IHG</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Spa with ACS</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Spa with ACS</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- MSFT Spa Night</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- MSFT Spa Night</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Boston Golf Event</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Boston Golf Event</label>
+            </value>
+            <value>
+                <fullName>2018 UK Boxing Match Hospitatlity</fullName>
+                <default>false</default>
+                <label>2018 UK Boxing Match Hospitatlity</label>
+            </value>
+            <value>
+                <fullName>WOMEN OF GUMGUM WELCOME DINNER JAPAN</fullName>
+                <default>false</default>
+                <label>WOMEN OF GUMGUM WELCOME DINNER JAPAN</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Kendra Scott Shopping Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Kendra Scott Shopping Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest i612 Event Sponsorship - September</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest i612 Event Sponsorship - September</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Detroit Lions Suite</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Detroit Lions Suite</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Canada Drake Concert Suite</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Canada Drake Concert Suite</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest AIRE Spa Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest AIRE Spa Event</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 National DMEXCO</fullName>
+                <default>false</default>
+                <label>2018 Q3 National DMEXCO</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Joe&apos;s Seafood with Bully Pulpit</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Joe&apos;s Seafood with Bully Pulpit</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Spa with The Martin Agency</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Spa with The Martin Agency</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Marriott Cooking Class</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Marriott Cooking Class</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Pizza Making with Volvo</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Pizza Making with Volvo</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Spa with Sanofi</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Spa with Sanofi</label>
+            </value>
+            <value>
+                <fullName>2018 Japan WeWork Event: UMAMI x GumGum</fullName>
+                <default>false</default>
+                <label>2018 Japan WeWork Event: UMAMI x GumGum</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Lulu with Mullen</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Lulu with Mullen</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Spa with Weight Watchers</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Spa with Weight Watchers</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Cadreon HH</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Cadreon HH</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Balthazar with Malibu</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Balthazar with Malibu</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Blue Mercury with WMI</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Blue Mercury with WMI</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Spa with Post</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Spa with Post</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Spa with Unilever</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Spa with Unilever</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales East- Wine Tasting SE</fullName>
+                <default>false</default>
+                <label>2018 NA Sales East- Wine Tasting SE</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West SF Kiehls Event - Sept</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West SF Kiehls Event - Sept</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- Kick Axe with Amnet</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- Kick Axe with Amnet</label>
+            </value>
+            <value>
+                <fullName>2018 AUS Marketing Masterclass MELB</fullName>
+                <default>false</default>
+                <label>2018 AUS Marketing Masterclass MELB</label>
+            </value>
+            <value>
+                <fullName>2018 AUS Masterclass SYDNEY</fullName>
+                <default>false</default>
+                <label>2018 AUS Masterclass SYDNEY</label>
+            </value>
+            <value>
+                <fullName>Q4 2018 NA Sales East- Spa Night with LG</fullName>
+                <default>false</default>
+                <label>Q4 2018 NA Sales East- Spa Night with LG</label>
+            </value>
+            <value>
+                <fullName>2018 NA Pub Dev Rangers Game</fullName>
+                <default>false</default>
+                <label>2018 NA Pub Dev Rangers Game</label>
+            </value>
+            <value>
+                <fullName>2018 NA Digiday Media Buying/Agency Summit October</fullName>
+                <default>false</default>
+                <label>2018 NA Digiday Media Buying/Agency Summit October</label>
+            </value>
+            <value>
+                <fullName>2018 Japan Adtech Tokyo with Wes</fullName>
+                <default>false</default>
+                <label>2018 Japan Adtech Tokyo with Wes</label>
+            </value>
+            <value>
+                <fullName>2018 UK Halloween Party</fullName>
+                <default>false</default>
+                <label>2018 UK Halloween Party</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Minneapolis i612 Halloween Sponsorship</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Minneapolis i612 Halloween Sponsorship</label>
+            </value>
+            <value>
+                <fullName>2018 Q4 NA Sales East - PHD Halloween Candy Bar</fullName>
+                <default>false</default>
+                <label>2018 Q4 NA Sales East - PHD Halloween Candy Bar</label>
+            </value>
+            <value>
+                <fullName>Q4 2018 NA Sales East- JD Power Lunch with Audi</fullName>
+                <default>false</default>
+                <label>Q4 2018 NA Sales East- JD Power Lunch with Audi</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Nordstrom Shopping Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Nordstrom Shopping Event</label>
+            </value>
+            <value>
+                <fullName>2018 Q4 NA Sales East- EMP VIP Dinner</fullName>
+                <default>false</default>
+                <label>2018 Q4 NA Sales East- EMP VIP Dinner</label>
+            </value>
+            <value>
+                <fullName>2018 Q4 NA Sales East - Comedy Club Event</fullName>
+                <default>false</default>
+                <label>2018 Q4 NA Sales East - Comedy Club Event</label>
+            </value>
+            <value>
+                <fullName>2018 Q3 NA Sales East- D.C Adweek</fullName>
+                <default>false</default>
+                <label>2018 Q3 NA Sales East- D.C Adweek</label>
+            </value>
+            <value>
+                <fullName>2018 UK MediaWow Washbags</fullName>
+                <default>false</default>
+                <label>2018 UK MediaWow Washbags</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West LA Chateau Marmont</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West LA Chateau Marmont</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Aroma Workshop Event</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Aroma Workshop Event</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Chicago Bears Game</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Chicago Bears Game</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Dallas Cooking Class</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Dallas Cooking Class</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Chicago Soul Cycle Class</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Chicago Soul Cycle Class</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Canada Agency Panel Night</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Canada Agency Panel Night</label>
+            </value>
+            <value>
+                <fullName>2018 Japan CCI Seminar</fullName>
+                <default>false</default>
+                <label>2018 Japan CCI Seminar</label>
+            </value>
+            <value>
+                <fullName>2018 Q4 NA Sales East- Spa with Havas</fullName>
+                <default>false</default>
+                <label>2018 Q4 NA Sales East- Spa with Havas</label>
+            </value>
+            <value>
+                <fullName>2018 Q4 NA Sales East- One World Trade</fullName>
+                <default>false</default>
+                <label>2018 Q4 NA Sales East- One World Trade</label>
+            </value>
+            <value>
+                <fullName>2018 Q4 NA Sales East- Spa with 7 Eleven</fullName>
+                <default>false</default>
+                <label>2018 Q4 NA Sales East- Spa with 7 Eleven</label>
+            </value>
+            <value>
+                <fullName>2018 AUS Christmas Coffee Cart PHD</fullName>
+                <default>false</default>
+                <label>2018 AUS Christmas Coffee Cart PHD</label>
+            </value>
+            <value>
+                <fullName>2018 AUS Pitch2Punch</fullName>
+                <default>false</default>
+                <label>2018 AUS Pitch2Punch</label>
+            </value>
+            <value>
+                <fullName>AUS 2018 Melbourne Cup</fullName>
+                <default>false</default>
+                <label>AUS 2018 Melbourne Cup</label>
+            </value>
+            <value>
+                <fullName>2018 Japan Marketing Seminar: Seminarinfo</fullName>
+                <default>false</default>
+                <label>2018 Japan Marketing Seminar: Seminarinfo</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West November STAPLES Game</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West November STAPLES Game</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales West SF Cavallo Point Cooking Class</fullName>
+                <default>false</default>
+                <label>2018 NA Sales West SF Cavallo Point Cooking Class</label>
+            </value>
+            <value>
+                <fullName>2018 NA Sales Midwest Spa Event with Jim Beam</fullName>
+                <default>false</default>
+                <label>2018 NA Sales Midwest Spa Event with Jim Beam</label>
+            </value>
+            <value>
+                <fullName>2018 Q4 NA Sales East- Spa at Peninsula with Subway</fullName>
+                <default>false</default>
+                <label>2018 Q4 NA Sales East- Spa at Peninsula with Subway</label>
+            </value>
+            <value>
+                <fullName>2018 Japan Digital Marketing Seminar with P&amp;F</fullName>
+                <default>false</default>
+                <label>2018 Japan Digital Marketing Seminar with P&amp;F</label>
+            </value>
+            <value>
+                <fullName>2018 Q4 NA Sales East- Cookie Do</fullName>
+                <default>false</default>
+                <label>2018 Q4 NA Sales East- Cookie Do</label>
+            </value>
+            <value>
+                <fullName>2018 Q4 NA Sales East- BATSU!</fullName>
+                <default>false</default>
+                <label>2018 Q4 NA Sales East- BATSU!</label>
+            </value>
+            <value>
+                <fullName>2018 Q4 NA Sales East- Holiday Party with Cadreon</fullName>
+                <default>false</default>
+                <label>2018 Q4 NA Sales East- Holiday Party with Cadreon</label>
+            </value>
+            <value>
+                <fullName>2018 Q4 NA Sales East- The ONE Party</fullName>
+                <default>false</default>
+                <label>2018 Q4 NA Sales East- The ONE Party</label>
+            </value>
+            <value>
+                <fullName>2018 AUS Unltd. Big Clash - Sydney and Melbourne Events</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>2018 AUS Unltd. Big Clash - Sydney and Melbourne Events</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

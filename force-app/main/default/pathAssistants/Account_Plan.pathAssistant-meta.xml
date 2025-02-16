@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Account_Plan__c</entityName>
+    <fieldName>Scoring__c</fieldName>
+    <masterLabel>Account Plan</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Scoring Criteria HERE&lt;/p&gt;</info>
+        <picklistValueName>10%</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Scoring Criteria HERE&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>25%</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Scoring Criteria HERE&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>50%</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Scoring Criteria HERE&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>75%</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Scoring Criteria HERE&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>90%</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

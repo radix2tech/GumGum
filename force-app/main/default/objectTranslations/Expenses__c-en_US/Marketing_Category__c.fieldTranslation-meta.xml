@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Marketing Category (Accounting) --></label>
+    <name>Marketing_Category__c</name>
+    <picklistValues>
+        <masterLabel>Client Gifts</masterLabel>
+        <translation><!-- Client Gifts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dues &amp; Subscriptions</masterLabel>
+        <translation><!-- Dues &amp; Subscriptions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Graphics/Creative</masterLabel>
+        <translation><!-- Graphics/Creative --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hosted Software</masterLabel>
+        <translation><!-- Hosted Software --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing Programs</masterLabel>
+        <translation><!-- Marketing Programs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing Research</masterLabel>
+        <translation><!-- Marketing Research --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Memberships &amp; Licenses</masterLabel>
+        <translation><!-- Memberships &amp; Licenses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>National Events</masterLabel>
+        <translation><!-- National Events --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Consulting</masterLabel>
+        <translation><!-- Other Consulting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Outside Services</masterLabel>
+        <translation><!-- Other Outside Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paid Media</masterLabel>
+        <translation><!-- Paid Media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Postage &amp; Shipping</masterLabel>
+        <translation><!-- Postage &amp; Shipping --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Public Relations</masterLabel>
+        <translation><!-- Public Relations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regional Marketing Events</masterLabel>
+        <translation><!-- Regional Marketing Events --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TP_Order_Number__c</fullName>
+    <description>Insert The Playground Order number which is auto generated when an opportunity is added into The Playground</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Insert The Playground Order number which is auto generated when an opportunity is added into The Playground</inlineHelpText>
+    <label>TP Order Number</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

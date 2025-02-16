@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Region__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Marketing region; this is not the region naming for the account and opportunity</inlineHelpText>
+    <label>Sub-Region</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>United States</fullName>
+                <default>false</default>
+                <label>United States</label>
+            </value>
+            <value>
+                <fullName>Canada</fullName>
+                <default>false</default>
+                <label>Canada</label>
+            </value>
+            <value>
+                <fullName>LATAM</fullName>
+                <default>false</default>
+                <label>LATAM</label>
+            </value>
+            <value>
+                <fullName>EMEA - UK</fullName>
+                <default>false</default>
+                <label>EMEA - UK</label>
+            </value>
+            <value>
+                <fullName>EMEA - Germany</fullName>
+                <default>false</default>
+                <label>EMEA - Germany</label>
+            </value>
+            <value>
+                <fullName>EMEA - Belgium</fullName>
+                <default>false</default>
+                <label>EMEA - Belgium</label>
+            </value>
+            <value>
+                <fullName>EMEA - Netherlands</fullName>
+                <default>false</default>
+                <label>EMEA - Netherlands</label>
+            </value>
+            <value>
+                <fullName>EMEA - Nordics</fullName>
+                <default>false</default>
+                <label>EMEA - Nordics</label>
+            </value>
+            <value>
+                <fullName>EMEA - France</fullName>
+                <default>false</default>
+                <label>EMEA - France</label>
+            </value>
+            <value>
+                <fullName>EMEA - Italy</fullName>
+                <default>false</default>
+                <label>EMEA - Italy</label>
+            </value>
+            <value>
+                <fullName>EMEA - Spain</fullName>
+                <default>false</default>
+                <label>EMEA - Spain</label>
+            </value>
+            <value>
+                <fullName>APAC - Japan</fullName>
+                <default>false</default>
+                <label>APAC - Japan</label>
+            </value>
+            <value>
+                <fullName>APAC - New Zealand</fullName>
+                <default>false</default>
+                <label>APAC - New Zealand</label>
+            </value>
+            <value>
+                <fullName>APAC - Australia</fullName>
+                <default>false</default>
+                <label>APAC - Australia</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

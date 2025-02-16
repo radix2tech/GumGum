@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2022_Data_Clean_Up_Signoff__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Created per Grace&apos;s request to encourage users to clean up their data after claiming ownership of certain accounts</description>
+    <externalId>false</externalId>
+    <label>2022 Data Clean Up Sign Off</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Accounts1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

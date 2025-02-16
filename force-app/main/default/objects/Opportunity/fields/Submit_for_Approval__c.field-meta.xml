@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit_for_Approval__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field determines a request for a custom creative or not</description>
+    <externalId>false</externalId>
+    <label>Request Custom Creative</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_in_Tactic</fullName>
+    <active>false</active>
+    <description>If Change in Tactic Lost Reason is chosen, select the new tactic in the New Tactic picklist:
+
+Shift to Social/Search
+Shift to Content
+Publisher Direct/Endemic Site
+Shift to Pre-roll Only</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Lost_Reason_new__c, &quot;Change in Tactic&quot;), 
+ISPICKVAL(New_Tactic__c, &quot;&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>New_Tactic__c</errorDisplayField>
+    <errorMessage>Please select the New Tactic.</errorMessage>
+</ValidationRule>

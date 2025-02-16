@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verity_Reqs_at_100</fullName>
+    <active>false</active>
+    <description>Require at 100%: First Billing Date, and Deal Terms Correct?</description>
+    <errorConditionFormula>AND(
+ RecordType.DeveloperName=&quot;Verity&quot;,
+ ISPICKVAL( StageName , &quot;Closed/Won&quot;) ,
+ OR(
+ISBLANK(  First_Billing_Date__c ),
+ ISBLANK( TEXT( Out_clause__c ) ) ,
+ Deal_Terms_Correct__c = FALSE
+) 
+ )</errorConditionFormula>
+    <errorMessage>At 100%, please enter First Billing Date and Out Clause. Also, check that &quot;Deal Terms Correct?&quot; is true.</errorMessage>
+</ValidationRule>

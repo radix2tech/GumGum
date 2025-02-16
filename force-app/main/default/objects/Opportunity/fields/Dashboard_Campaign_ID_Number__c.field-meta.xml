@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dashboard_Campaign_ID_Number__c</fullName>
+    <description>This field displays the campaign id number of the opportunity</description>
+    <externalId>false</externalId>
+    <label>Dashboard Campaign ID Number</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

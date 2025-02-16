@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Programmatic Loss Reason --></label>
+    <name>Loss_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Advertiser Cut/Lost Budget</masterLabel>
+        <translation><!-- Advertiser Cut/Lost Budget --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Creative Delay</masterLabel>
+        <translation><!-- Creative Delay --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DSP Issues</masterLabel>
+        <translation><!-- DSP Issues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other (write-in)</masterLabel>
+        <translation><!-- Other (write-in) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scale Issues</masterLabel>
+        <translation><!-- Scale Issues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tracking Issues</masterLabel>
+        <translation><!-- Tracking Issues --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

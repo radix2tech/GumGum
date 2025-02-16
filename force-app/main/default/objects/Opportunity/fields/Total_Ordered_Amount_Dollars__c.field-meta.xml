@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Ordered_Amount_Dollars__c</fullName>
+    <description>Used in combination with a workflow rule that updates the Total Order Amount into this field so that it can be used for roll-up summaries. It is suspect that the standard Amount (Total Order Amount) field is not visible in roll-ups due to Multi-Currency being active</description>
+    <externalId>false</externalId>
+    <label>Total Ordered Amount Dollars</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

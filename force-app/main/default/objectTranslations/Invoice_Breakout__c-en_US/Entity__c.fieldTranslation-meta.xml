@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select the correct entity from where the budget is coming from --></help>
+    <label><!-- Entity --></label>
+    <name>Entity__c</name>
+    <picklistValues>
+        <masterLabel>GumGum Australia Pty Ltd</masterLabel>
+        <translation><!-- GumGum Australia Pty Ltd --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GumGum Japan K.K.</masterLabel>
+        <translation><!-- GumGum Japan K.K. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GumGum UK Ltd</masterLabel>
+        <translation><!-- GumGum UK Ltd --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GumGum, Inc</masterLabel>
+        <translation><!-- GumGum, Inc --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

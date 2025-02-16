@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Request_Unit__c</fullName>
+    <description>This field displays the custom request type</description>
+    <externalId>false</externalId>
+    <label>Custom Request Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Custom Ad Unit</fullName>
+                <default>false</default>
+                <label>Custom Ad Unit</label>
+            </value>
+            <value>
+                <fullName>Real-time Feed Integration</fullName>
+                <default>false</default>
+                <label>Real-time Feed Integration</label>
+            </value>
+            <value>
+                <fullName>Image Recognition Technology</fullName>
+                <default>false</default>
+                <label>Image Recognition Technology</label>
+            </value>
+            <value>
+                <fullName>Custom Targeting (non-image recognition)</fullName>
+                <default>false</default>
+                <label>Custom Targeting (non-image recognition)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ForecastedIn__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Repurposed this field as part of ticket https://gumgum.jira.com/browse/SOP-2091</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checking this box commits an open opportunity into a seller&apos;s &quot;Forecasted In&quot; Pledge for the current pledge cycle. The box can be checked either in Salesforce or in Clari with a bidirectional sync across both systems.</inlineHelpText>
+    <label>Forecasted In</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unpaid_Marketing_Expenses</fullName>
+    <columns>NAME</columns>
+    <columns>Vendor_Name__c</columns>
+    <columns>Department__c</columns>
+    <columns>Marketing_Category__c</columns>
+    <columns>Expense_Status__c</columns>
+    <columns>Expense_Amount__c</columns>
+    <columns>Invoice_Status__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Expense_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Approved,Rejected,Paid</value>
+    </filters>
+    <label>PENDING APPROVAL Marketing Expenses</label>
+</ListView>

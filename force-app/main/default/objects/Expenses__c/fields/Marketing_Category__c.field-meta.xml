@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Marketing Category (Accounting)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Client Gifts</fullName>
+                <default>false</default>
+                <label>Client Gifts</label>
+            </value>
+            <value>
+                <fullName>Dues &amp; Subscriptions</fullName>
+                <default>false</default>
+                <label>Dues &amp; Subscriptions</label>
+            </value>
+            <value>
+                <fullName>Graphics/Creative</fullName>
+                <default>false</default>
+                <label>Graphics/Creative</label>
+            </value>
+            <value>
+                <fullName>Hosted software</fullName>
+                <default>false</default>
+                <label>Hosted Software</label>
+            </value>
+            <value>
+                <fullName>Marketing programs</fullName>
+                <default>false</default>
+                <label>Marketing Programs</label>
+            </value>
+            <value>
+                <fullName>Marketing research</fullName>
+                <default>false</default>
+                <label>Marketing Research</label>
+            </value>
+            <value>
+                <fullName>Memberships &amp; licenses</fullName>
+                <default>false</default>
+                <label>Memberships &amp; Licenses</label>
+            </value>
+            <value>
+                <fullName>National Events</fullName>
+                <default>false</default>
+                <label>National Events</label>
+            </value>
+            <value>
+                <fullName>Other Consulting</fullName>
+                <default>false</default>
+                <label>Other Consulting</label>
+            </value>
+            <value>
+                <fullName>Other outside services</fullName>
+                <default>false</default>
+                <label>Other Outside Services</label>
+            </value>
+            <value>
+                <fullName>Paid Media</fullName>
+                <default>false</default>
+                <label>Paid Media</label>
+            </value>
+            <value>
+                <fullName>Postage &amp; Shipping</fullName>
+                <default>false</default>
+                <label>Postage &amp; Shipping</label>
+            </value>
+            <value>
+                <fullName>Public relations</fullName>
+                <default>false</default>
+                <label>Public Relations</label>
+            </value>
+            <value>
+                <fullName>Regional Marketing Events</fullName>
+                <default>false</default>
+                <label>Regional Marketing Events</label>
+            </value>
+            <value>
+                <fullName>Creative services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Creative services</label>
+            </value>
+            <value>
+                <fullName>Events</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Events</label>
+            </value>
+            <value>
+                <fullName>Marketing T&amp;E</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Marketing T&amp;E</label>
+            </value>
+            <value>
+                <fullName>Marketing partnerships</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Marketing partnerships</label>
+            </value>
+            <value>
+                <fullName>Operations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Operations</label>
+            </value>
+            <value>
+                <fullName>Printing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Printing</label>
+            </value>
+            <value>
+                <fullName>Promo Items</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Promo Items</label>
+            </value>
+            <value>
+                <fullName>Sales promotions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sales promotions</label>
+            </value>
+            <value>
+                <fullName>Subscriptions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Subscriptions</label>
+            </value>
+            <value>
+                <fullName>T&amp;E airfare &amp; transportation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>T&amp;E airfare &amp; transportation</label>
+            </value>
+            <value>
+                <fullName>T&amp;E lodging</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>T&amp;E lodging</label>
+            </value>
+            <value>
+                <fullName>T&amp;E travel meals</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>T&amp;E travel meals</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

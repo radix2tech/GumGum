@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Event_Campaign_3_Days_Past_End_Date_Not_Completed</fullName>
+        <description>Event Campaign 3 Days Past End Date Not Completed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>marketing@gumgum.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Marketing_Email_Templates/Event_Campaign_3_Days_Past_End_Date_Not_Completed</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Annabel_re_custom_creative</fullName>
+        <description>Notify Annabel re custom creative</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>annabel@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sarah@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>whitney@gumgum.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Notification_re_custom_creative</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Auto_Activate_Campaign</fullName>
+        <field>IsActive</field>
+        <literalValue>1</literalValue>
+        <name>Auto Activate Campaign</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Deactivate_Campaign</fullName>
+        <field>IsActive</field>
+        <literalValue>0</literalValue>
+        <name>Deactivate Campaign</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Campaign_Status_to_Completed</fullName>
+        <field>Status</field>
+        <literalValue>Completed</literalValue>
+        <name>Update Campaign Status to Completed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Campaign_Status_to_In_Progress</fullName>
+        <field>Status</field>
+        <literalValue>In Progress</literalValue>
+        <name>Update Campaign Status to In Progress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Auto Activate Campaign</fullName>
+        <actions>
+            <name>Auto_Activate_Campaign</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Campaign.Type</field>
+            <operation>equals</operation>
+            <value>Gifting,Email,Internal Event,National Event,Other,Paid Advertising,Paid Media,Paid Search,Public Relations,Regional Event,Sales T&amp;E Event,Social Media,Strategic Event,Strategic Partnerships,Web Form,Webinar</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto-Update Campaign Status to Completed</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Campaign.EndDate</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <description>auto-update campaign status to completed when the campaign end date is today</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Update_Campaign_Status_to_Completed</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Campaign.EndDate</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Auto-Update Campaign Status to In Progress</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Campaign.StartDate</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <description>auto-update campaign status to in-progress when the campaign start date is today</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Update_Campaign_Status_to_In_Progress</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Campaign.StartDate</offsetFromField>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Event Campaign 3 Days Past End Date Not Completed</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Campaign.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Event Campaign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Status</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Event_Campaign_3_Days_Past_End_Date_Not_Completed</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Campaign.EndDate</offsetFromField>
+            <timeLength>3</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Event Campaign 5 Days Past End Date Not Completed</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Campaign.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Event Campaign,Event Campaign,Campaign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Status</field>
+            <operation>equals</operation>
+            <value>In Progress,Planned</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Event_Campaign_3_Days_Past_End_Date_Not_Completed</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Campaign.EndDate</offsetFromField>
+            <timeLength>5</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Event Campaign 5 Days Past End Date Not Completed - Alicia</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Campaign.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Event Campaign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Region__c</field>
+            <operation>equals</operation>
+            <value>Australia &amp; NZ,Central Marketing,Europe,Execs,&quot;International (Besides Europe, Australia &amp; NZ)&quot;,NA Programmatic,NA Sales West,NA Sports</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <offsetFromField>Campaign.EndDate</offsetFromField>
+            <timeLength>5</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Event Campaign Approved - Alicia</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Campaign.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Event Campaign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Approved_by_Management__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Region__c</field>
+            <operation>equals</operation>
+            <value>Australia &amp; NZ,Central Marketing,Europe,Execs,&quot;International (Besides Europe, Australia &amp; NZ)&quot;,NA Programmatic,NA Sales West,NA Sports</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Status</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Event Campaign Approved - Maya</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Campaign.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Event Campaign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Approved_by_Management__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Region__c</field>
+            <operation>equals</operation>
+            <value>HR,NA Pub Dev,NA Sales East,Tech,Japan,NA Sales Central &amp; Canada</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Status</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify Annabel re custom creative</fullName>
+        <actions>
+            <name>Notify_Annabel_re_custom_creative</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Campaign.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Strategic Marketing Campaign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Action_Required_Prototype__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Notify Annabel when custom creative needs minimum spend and lead time is entered.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

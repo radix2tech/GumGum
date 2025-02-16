@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Custom Creative-Only are not managed in Salesforce but please fill the field &quot;Custom Creative&quot; to flag this oppty as a custom creative campaign for visibility. --></help>
+    <label><!-- Approval Type --></label>
+    <name>Approval_Type__c</name>
+    <picklistValues>
+        <masterLabel>Exception &amp; Custom Creative</masterLabel>
+        <translation><!-- Exception &amp; Custom Creative --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Exception-Only</masterLabel>
+        <translation><!-- Exception-Only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expedite &amp; Custom Creative</masterLabel>
+        <translation><!-- Expedite &amp; Custom Creative --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expedite &amp; Exception</masterLabel>
+        <translation><!-- Expedite &amp; Exception --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expedite, Exception &amp; Custom Creative</masterLabel>
+        <translation><!-- Expedite, Exception &amp; Custom Creative --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expedite-Only</masterLabel>
+        <translation><!-- Expedite-Only --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

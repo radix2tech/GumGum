@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>New_Opportunity_Slack_Alert</name>
+        <label>New Opportunity Slack Alert</label>
+        <locationX>176</locationX>
+        <locationY>455</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <stringValue>New EMEA Opportunity </stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a1l4U00000C4qb3QAB</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>55.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>New EMEA Opportunities to Slack {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>New EMEA Opportunities to Slack</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>New_EMEA_Opportunity</name>
+        <label>New EMEA Opportunity</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>New_Opportunity_Slack_Alert</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>User_Region__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>EMEA</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>User_Region__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>EMEA - Belgium</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>User_Region__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>EMEA - France</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>User_Region__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>EMEA - Germany</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>User_Region__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>EMEA - Netherlands</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>User_Region__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>EMEA - Nordics</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>User_Region__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>EMEA - Poland</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>User_Region__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>EMEA - Spain</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>User_Region__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>EMEA - UK</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>New_EMEA_Opportunity</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Opportunity Identified</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

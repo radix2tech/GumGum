@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Targeting</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Targeting</value>
+    </caseValues>
+    <layouts>
+        <layout>Geo Targeting</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Targeting Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Geo Targeting --></label>
+        <name>Geo_Targeting</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Targeting --></label>
+        <name>Targeting</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Enter Custom Description --></errorMessage>
+        <name>Custom</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter Event --></errorMessage>
+        <name>Event</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter Keywords --></errorMessage>
+        <name>Keywords</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the Behavioral --></errorMessage>
+        <name>Require_Behavioral</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the Category Description --></errorMessage>
+        <name>Require_Category_Description</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the Catgeory Exclusivity --></errorMessage>
+        <name>Require_Category_Exclusivity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a Geo target --></errorMessage>
+        <name>Require_Geo</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a Targeting Type --></errorMessage>
+        <name>Require_Targeting_Tactic</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please include any additional Multicultural Details, (i.e. 60% Hispanic, 40% Black, etc.) --></help>
+    <label><!-- Multicultural Details --></label>
+    <name>Multicultural_Details__c</name>
+</CustomFieldTranslation>

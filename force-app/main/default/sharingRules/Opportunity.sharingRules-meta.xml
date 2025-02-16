@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Activation</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Activation</label>
+        <sharedTo>
+            <roleAndSubordinates>Advertising_Sales</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Activation</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Activation_to_Sales_Ads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Activation to Sales Ads</label>
+        <sharedTo>
+            <roleAndSubordinates>CFO</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Activation</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Advertising</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Advertising Oppty</label>
+        <sharedTo>
+            <roleAndSubordinates>Advertising_Sales</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Advertising</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Advertising_To_APAC_Strategies</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Advertising To APAC Strategies</label>
+        <sharedTo>
+            <group>APAC_Strategies</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Advertising</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PSM_Update_Impressions_Delivery</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>PSM Update Impressions Delivery</label>
+        <sharedTo>
+            <role>Advertising_Sales</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>PSM__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Pub_AM_Risky_Creative_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Give Pub AM&apos;s the ability to view Opps with Risky Creative</description>
+        <label>Pub AM Risky Creative View</label>
+        <sharedTo>
+            <role>Account_Management</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Risky_Creative__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Verity_Edit_Access</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allows Verity team to cross edit opps (CSM, SDR)</description>
+        <label>Verity Edit Access</label>
+        <sharedTo>
+            <role>Verity_Sales_1</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Verity - Publisher,Verity - Demand,Verity,Verity - Platform</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Verity_Opportunities</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Verity Opportunities</label>
+        <sharedTo>
+            <roleAndSubordinates>Publisher_Sales</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Verity - Publisher,Verity - Demand,Verity,Verity - Platform</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Verity_to_CSMs</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>SOP-2565 - Sharing Verity opportunities with Domestic and International CSM&apos;s</description>
+        <label>Verity to CSMs</label>
+        <sharedTo>
+            <group>Account_Managers_and_CSMs</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Verity - Publisher,Verity - Demand,Verity,Verity - Platform</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Zak_Leete_To_Erica</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Zak Leete To Erica</label>
+        <sharedTo>
+            <role>Ads_East_Sales_Manager_6</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0054U00000DH51MQAT</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Ads_East_Director_2_Canada</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Ads East Director 2 - Canada</label>
+        <sharedTo>
+            <group>Canada</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Ads_East_Director_2</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Ads_PXYZ_Activation_NSW_Coordinator</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Ads PXYZ Activation NSW Coordinator</label>
+        <sharedTo>
+            <role>Ads_PXYZ_Activation_NSW_Coordinator</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Ads_PXYZ_Activation_NSW_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Ads_PXYZ_Activation_QLD_WA_Sales_Coordinator</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Ads PXYZ Activation QLD &amp; WA Sales Coordinator</label>
+        <sharedTo>
+            <role>Ads_PXYZ_Activation_QLD_WA_Sales_Coordinator</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Ads_PXYZ_Activation_QLD_WA_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Ads_UK_Rep4_edit_Access_To_Oliver</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Temporary Edit access to Oliver : SOP - 2142</description>
+        <label>Ads UK Rep4 edit Access To Oliver</label>
+        <sharedTo>
+            <group>Oliver_Nash</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>UK_Rep_4</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Ads_UK_Rep_2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allows UK Covering Seller (Claudia) to write/read records owned by the UK LOA (Holly)</description>
+        <label>Ads UK Rep 2</label>
+        <sharedTo>
+            <group>UK_Covering_Seller</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>UK_LOA</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Ads_UK_rep_4</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Allows Oliver Nash to view Michael&apos;s opportunities temporarily</description>
+        <label>Ads UK rep 4</label>
+        <sharedTo>
+            <role>UK_Rep_4</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>UK_Rep_4</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Engineering</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Engineering</label>
+        <sharedTo>
+            <roleAndSubordinates>Engineering</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Independent_Agencies_Opps_to_APAC_Sales_Coords</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>SOP-3196</description>
+        <label>Independent Agencies Opps to APAC Sales Coords</label>
+        <sharedTo>
+            <group>APAC_Strategies</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Ads_PXYZ_Activation_National_Sales_Lead_of_Independent_Agencies</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Jeremy_Covering_Sumaia</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Jeremy_Covering_Sumaia</label>
+        <sharedTo>
+            <role>Ads_UK_Manager_7</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>UK_Manager_5</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Sales_Coordinator_Melbourne</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Sales Coordinator - Melbourne</label>
+        <sharedTo>
+            <role>Ads_PXYZ_Activation_VIC_Sales_Coordinator</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Ads_PXYZ_Activation_VIC_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Sales_Coordinator_Skylar</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>SOP-2265</description>
+        <label>Sales Coordinator-Skylar</label>
+        <sharedTo>
+            <group>Sales_Leaders</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>East_and_Canada</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Tilly_and_Rob_Trott_Covering_Oliver</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Tilly and Rob Trott Covering Oliver</label>
+        <sharedTo>
+            <group>Tilly_Horner_and_Rob_Trotter</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Oliver_Nash</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>UK_Opps_view_by_Rob_Pete</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>allow Pete &amp; Rob in the same role to see each other&apos;s opps</description>
+        <label>UK Opps view by Rob &amp; Pete</label>
+        <sharedTo>
+            <group>UK_Opps</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>UK_Opps</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>UK_sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>UK sharing</label>
+        <sharedTo>
+            <group>UK_Opps</group>
+        </sharedTo>
+        <sharedFrom>
+            <role>UK_Director</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>VP_Central_to_VP_West</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>VP Central to VP West</label>
+        <sharedTo>
+            <role>SVP_West</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>VP_Central</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>West_and_Midwest_Sales_Coordinator</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>SOP-3282</description>
+        <label>West and Midwest Sales Coordinator</label>
+        <sharedTo>
+            <group>West_and_Midwest_Sales_Coordinator</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>West_and_Midwest_Sales</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

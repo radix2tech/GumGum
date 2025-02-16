@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Payment Terms --></label>
+    <name>Insertion_Order_Payment_Terms__c</name>
+    <picklistValues>
+        <masterLabel>Net 120</masterLabel>
+        <translation><!-- Net 120 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Net 30</masterLabel>
+        <translation><!-- Net 30 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Net 45</masterLabel>
+        <translation><!-- Net 45 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Net 60</masterLabel>
+        <translation><!-- Net 60 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Net 75</masterLabel>
+        <translation><!-- Net 75 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Net 90</masterLabel>
+        <translation><!-- Net 90 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

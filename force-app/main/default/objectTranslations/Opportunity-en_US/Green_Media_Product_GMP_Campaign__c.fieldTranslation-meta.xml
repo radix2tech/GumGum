@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- This is for a sustainability buy that
+we are &quot;offsetting&quot; emissions of the campaign and charging the buyer a fee
+to do so. Scope3 is the current vendor for this partnership. -->
+    </help>
+    <label><!-- Green Media Product (GMP) Campaign --></label>
+    <name>Green_Media_Product_GMP_Campaign__c</name>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation><!-- No --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes</masterLabel>
+        <translation><!-- Yes --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

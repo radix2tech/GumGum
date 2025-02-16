@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sports_Campaigns</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.END_DATE</columns>
+    <columns>Campaign_Length__c</columns>
+    <columns>CAMPAIGN.NUM_SENT</columns>
+    <columns>CAMPAIGN.NUM_RESPONSES</columns>
+    <columns>of_MQLs__c</columns>
+    <columns>Cost_Per_MQL__c</columns>
+    <columns>CAMPAIGN.NUM_LEADS</columns>
+    <columns>Cost_Per_Lead__c</columns>
+    <columns>CAMPAIGN.NUM_CONTACTS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>NA Sports,Intl Sports</value>
+    </filters>
+    <label>Sports Campaigns</label>
+</ListView>

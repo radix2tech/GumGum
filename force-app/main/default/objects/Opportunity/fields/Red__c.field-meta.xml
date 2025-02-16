@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Red__c</fullName>
+    <description>PSM selects the reason for Red flag</description>
+    <externalId>false</externalId>
+    <label>Red Flag Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Always On Campaign</fullName>
+                <default>false</default>
+                <label>Always On Campaign</label>
+            </value>
+            <value>
+                <fullName>Campaign geo too small</fullName>
+                <default>false</default>
+                <label>Geo too restrictive</label>
+            </value>
+            <value>
+                <fullName>KPI not a good fit</fullName>
+                <default>false</default>
+                <label>KPI not a good fit</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Required 1p data</fullName>
+                <default>false</default>
+                <label>Required 1p data</label>
+            </value>
+            <value>
+                <fullName>Running on small allowlist</fullName>
+                <default>false</default>
+                <label>Running on small allowlist</label>
+            </value>
+            <value>
+                <fullName>Shared budget across multiple partners</fullName>
+                <default>false</default>
+                <label>Shared budget across multiple partners</label>
+            </value>
+            <value>
+                <fullName>Unable to pull accurate avails</fullName>
+                <default>false</default>
+                <label>Unable to pull accurate avails</label>
+            </value>
+            <value>
+                <fullName>Unit do not have enough avails</fullName>
+                <default>false</default>
+                <label>Unit do not have enough avails</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

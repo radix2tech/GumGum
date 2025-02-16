@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose the applicable agency associated with the barter agreement.  Should only be chosen if &apos;Type of Barter Agreement&apos; is populated --></help>
+    <label><!-- Barter Agency Name --></label>
+    <name>Barter_Agency__c</name>
+    <picklistValues>
+        <masterLabel>Active</masterLabel>
+        <translation><!-- Active --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Agyle</masterLabel>
+        <translation><!-- Agyle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Astus</masterLabel>
+        <translation><!-- Astus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Evergreen</masterLabel>
+        <translation><!-- Evergreen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fortitude Trading Ltd</masterLabel>
+        <translation><!-- Fortitude Trading Ltd --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ICON</masterLabel>
+        <translation><!-- ICON --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Miroma</masterLabel>
+        <translation><!-- Miroma --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NYIAX</masterLabel>
+        <translation><!-- NYIAX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Orion</masterLabel>
+        <translation><!-- Orion --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

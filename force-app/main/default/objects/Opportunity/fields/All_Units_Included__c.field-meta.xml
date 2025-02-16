@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Units_Included__c</fullName>
+    <description>This field displays the units included in the opportunity</description>
+    <externalId>false</externalId>
+    <label>All Units Included</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>6-sec Canvas Video</fullName>
+                <default>false</default>
+                <label>6-sec Canvas Video</label>
+            </value>
+            <value>
+                <fullName>Added Value</fullName>
+                <default>false</default>
+                <label>Added Value</label>
+            </value>
+            <value>
+                <fullName>Desktop Outstream Skin</fullName>
+                <default>false</default>
+                <label>Desktop Outstream Skin</label>
+            </value>
+            <value>
+                <fullName>Desktop Scroller</fullName>
+                <default>false</default>
+                <label>Desktop Scroller</label>
+            </value>
+            <value>
+                <fullName>Desktop Skin</fullName>
+                <default>false</default>
+                <label>Desktop Skin</label>
+            </value>
+            <value>
+                <fullName>Display</fullName>
+                <default>false</default>
+                <label>Display</label>
+            </value>
+            <value>
+                <fullName>GumGum Native</fullName>
+                <default>false</default>
+                <label>GumGum Native</label>
+            </value>
+            <value>
+                <fullName>GumGum Standard</fullName>
+                <default>false</default>
+                <label>GumGum Standard</label>
+            </value>
+            <value>
+                <fullName>GumGum Stories</fullName>
+                <default>false</default>
+                <label>GumGum Stories</label>
+            </value>
+            <value>
+                <fullName>Hangtime</fullName>
+                <default>false</default>
+                <label>Hangtime</label>
+            </value>
+            <value>
+                <fullName>Hoverboard</fullName>
+                <default>false</default>
+                <label>Hoverboard</label>
+            </value>
+            <value>
+                <fullName>In-Article Shoppable</fullName>
+                <default>false</default>
+                <label>In-Article Shoppable</label>
+            </value>
+            <value>
+                <fullName>In-Article Video</fullName>
+                <default>false</default>
+                <label>In-Article Video</label>
+            </value>
+            <value>
+                <fullName>In-Content Video - No Banner</fullName>
+                <default>false</default>
+                <label>In-Content Video - No Banner</label>
+            </value>
+            <value>
+                <fullName>In-Game</fullName>
+                <default>false</default>
+                <label>In-Game</label>
+            </value>
+            <value>
+                <fullName>In-Image</fullName>
+                <default>false</default>
+                <label>In-Image</label>
+            </value>
+            <value>
+                <fullName>In-Image/In-Screen Blend</fullName>
+                <default>false</default>
+                <label>In-Image/In-Screen Blend</label>
+            </value>
+            <value>
+                <fullName>In-Image 6-Second Canvas Video - No Banner</fullName>
+                <default>false</default>
+                <label>In-Image 6-Second Canvas Video - No Banner</label>
+            </value>
+            <value>
+                <fullName>In-Image 728x90</fullName>
+                <default>false</default>
+                <label>In-Image 728x90</label>
+            </value>
+            <value>
+                <fullName>In-Image Animated</fullName>
+                <default>false</default>
+                <label>In-Image Animated</label>
+            </value>
+            <value>
+                <fullName>In-Image Canvas</fullName>
+                <default>false</default>
+                <label>In-Image Canvas</label>
+            </value>
+            <value>
+                <fullName>In-Image Canvas - Interactive</fullName>
+                <default>false</default>
+                <label>In-Image Canvas - Interactive</label>
+            </value>
+            <value>
+                <fullName>In-image Embedded Video</fullName>
+                <default>false</default>
+                <label>In-Image Embedded Video</label>
+            </value>
+            <value>
+                <fullName>In-Image Expandable</fullName>
+                <default>false</default>
+                <label>In-Image Expandable</label>
+            </value>
+            <value>
+                <fullName>In-Image Frame</fullName>
+                <default>false</default>
+                <label>In-Image Frame</label>
+            </value>
+            <value>
+                <fullName>In-Image Frame - Interactive</fullName>
+                <default>false</default>
+                <label>In-Image Frame - Interactive</label>
+            </value>
+            <value>
+                <fullName>In-Image - Interactive</fullName>
+                <default>false</default>
+                <label>In-Image - Interactive</label>
+            </value>
+            <value>
+                <fullName>Inline Billboard</fullName>
+                <default>false</default>
+                <label>Inline Billboard</label>
+            </value>
+            <value>
+                <fullName>In-Screen</fullName>
+                <default>false</default>
+                <label>In-Screen</label>
+            </value>
+            <value>
+                <fullName>In-Screen Animated</fullName>
+                <default>false</default>
+                <label>In-Screen Animated</label>
+            </value>
+            <value>
+                <fullName>In-Screen Embedded Video</fullName>
+                <default>false</default>
+                <label>In-Screen Embedded Video</label>
+            </value>
+            <value>
+                <fullName>In-Screen Embedded Video - No Banner</fullName>
+                <default>false</default>
+                <label>In-Screen Embedded Video - No Banner</label>
+            </value>
+            <value>
+                <fullName>In-Screen Expandable</fullName>
+                <default>false</default>
+                <label>In-Screen Expandable</label>
+            </value>
+            <value>
+                <fullName>In-Screen Expandable Corner</fullName>
+                <default>false</default>
+                <label>In-Screen Expandable Corner</label>
+            </value>
+            <value>
+                <fullName>In-Screen Expandable Display</fullName>
+                <default>false</default>
+                <label>In-Screen Expandable Display</label>
+            </value>
+            <value>
+                <fullName>In-Screen Embedded Video w/ Expansion</fullName>
+                <default>false</default>
+                <label>In-Screen Expandable Video</label>
+            </value>
+            <value>
+                <fullName>In-Screen Frame</fullName>
+                <default>false</default>
+                <label>In-Screen Frame</label>
+            </value>
+            <value>
+                <fullName>In-Screen Frame - Interactive</fullName>
+                <default>false</default>
+                <label>In-Screen Frame - Interactive</label>
+            </value>
+            <value>
+                <fullName>In-Screen - Interactive</fullName>
+                <default>false</default>
+                <label>In-Screen - Interactive</label>
+            </value>
+            <value>
+                <fullName>In-Screen Side</fullName>
+                <default>false</default>
+                <label>In-Screen Side</label>
+            </value>
+            <value>
+                <fullName>In-Slot</fullName>
+                <default>false</default>
+                <label>In-Slot</label>
+            </value>
+            <value>
+                <fullName>In-Video Corner</fullName>
+                <default>false</default>
+                <label>In-Video Corner</label>
+            </value>
+            <value>
+                <fullName>In-Video PIP</fullName>
+                <default>false</default>
+                <label>In-Video PIP</label>
+            </value>
+            <value>
+                <fullName>In-Video Squeezeback</fullName>
+                <default>false</default>
+                <label>In-Video Squeezeback</label>
+            </value>
+            <value>
+                <fullName>Mobile Scroller</fullName>
+                <default>false</default>
+                <label>Mobile Scroller</label>
+            </value>
+            <value>
+                <fullName>Mobile Skin</fullName>
+                <default>false</default>
+                <label>Mobile Skin</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Page Peel</fullName>
+                <default>false</default>
+                <label>Page Peel</label>
+            </value>
+            <value>
+                <fullName>Placeholder</fullName>
+                <default>false</default>
+                <label>Placeholder</label>
+            </value>
+            <value>
+                <fullName>Pre-Roll</fullName>
+                <default>false</default>
+                <label>Pre-Roll</label>
+            </value>
+            <value>
+                <fullName>Production Fee</fullName>
+                <default>false</default>
+                <label>Production Fee</label>
+            </value>
+            <value>
+                <fullName>PushUp Leaderboard</fullName>
+                <default>false</default>
+                <label>PushUp Leaderboard</label>
+            </value>
+            <value>
+                <fullName>Skins</fullName>
+                <default>false</default>
+                <label>Skins</label>
+            </value>
+            <value>
+                <fullName>Social Display</fullName>
+                <default>false</default>
+                <label>Social Display</label>
+            </value>
+            <value>
+                <fullName>Superskin</fullName>
+                <default>false</default>
+                <label>Superskin</label>
+            </value>
+            <value>
+                <fullName>V.I. Analytics and Reporting</fullName>
+                <default>false</default>
+                <label>V.I. Analytics and Reporting</label>
+            </value>
+            <value>
+                <fullName>Velocity</fullName>
+                <default>false</default>
+                <label>Velocity</label>
+            </value>
+            <value>
+                <fullName>Video Skins</fullName>
+                <default>false</default>
+                <label>Video Skins</label>
+            </value>
+            <value>
+                <fullName>Video Solution</fullName>
+                <default>false</default>
+                <label>Video Solution</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

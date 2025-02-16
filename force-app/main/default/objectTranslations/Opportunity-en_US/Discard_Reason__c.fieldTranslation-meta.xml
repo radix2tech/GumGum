@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is to be used only by Salesforce Administrator --></help>
+    <label><!-- Discard Reason --></label>
+    <name>Discard_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Duplicate</masterLabel>
+        <translation><!-- Duplicate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a fit for GumGum</masterLabel>
+        <translation><!-- Not a fit for GumGum --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Error</masterLabel>
+        <translation><!-- User Error --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

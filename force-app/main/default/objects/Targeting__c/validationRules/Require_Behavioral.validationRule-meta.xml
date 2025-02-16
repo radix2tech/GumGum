@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Behavioral</fullName>
+    <active>true</active>
+    <description>If Behavioral is checked then the drop down is required</description>
+    <errorConditionFormula>AND(
+  BehavorialCheck__c = TRUE,
+  ISPICKVAL( Behavioral__c , &quot;&quot;)
+)</errorConditionFormula>
+    <errorMessage>Please enter the Behavioral</errorMessage>
+</ValidationRule>

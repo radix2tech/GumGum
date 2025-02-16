@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Bypass_Opportunity_Validation</name>
+    </customPermissions>
+    <description>Allows Sales Ops Leadership to bypass oppty validation</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Bypass Opportunity Validation</label>
+    <license>Salesforce</license>
+</PermissionSet>

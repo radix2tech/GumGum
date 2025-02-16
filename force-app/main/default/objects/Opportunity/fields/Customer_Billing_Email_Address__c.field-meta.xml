@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Billing_Email_Address__c</fullName>
+    <description>This field represents the billing email address of the customer</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Only enter an email; no first or last names</inlineHelpText>
+    <label>Customer Billing Email Address</label>
+    <length>131072</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

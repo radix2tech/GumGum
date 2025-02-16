@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Ads West Manager 2</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Ads West Manager 2</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>West_Senior_Manager_1</parentRole>
+</Role>

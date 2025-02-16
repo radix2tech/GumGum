@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Barter_Agency_needed</fullName>
+    <active>false</active>
+    <description>The Barter agency must be selected if barter agreement is checked off</description>
+    <errorConditionFormula>AND(( Barter_Agreement__c)= TRUE,
+ISBLANK(TEXT(Barter_Agency__c)))</errorConditionFormula>
+    <errorMessage>Please select the Barter Agency</errorMessage>
+</ValidationRule>

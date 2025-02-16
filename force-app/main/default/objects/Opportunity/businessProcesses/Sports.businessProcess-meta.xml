@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sports</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Approved</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed%2FLost</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed%2FWon</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Deep Dive Meetings Completed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Discard</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Negotiations</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Opportunity Identified</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pledge</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Proposal</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Suspect</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Transfer_Closed_Won_Opportunities</name>
+    </customPermissions>
+    <description>A custom permission has been assigned to this permission set which allows users to transfer closed/won opportunities if the user have full access to the opportunity</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Transfer Closed/Won Opportunities</label>
+</PermissionSet>

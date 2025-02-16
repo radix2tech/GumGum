@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Region_Country__c</fullName>
+    <description>Helps to filter billing entity so we can relate the billing entity account to an oppty with the same region (country)</description>
+    <externalId>false</externalId>
+    <formula>IF(
+OR(
+TEXT ( Account_Region__c ) = &quot;US - Central&quot;,
+TEXT (Account_Region__c  )= &quot;US - West&quot;,
+TEXT(Account_Region__c  )= &quot;US - East&quot;),
+&quot;US&quot;,
+IF(
+OR(
+TEXT(Account_Region__c )= &quot;EMEA - Germany&quot;,
+TEXT(Account_Region__c )= &quot;EMEA - International&quot;,
+TEXT(Account_Region__c )= &quot;EMEA - UK&quot;,
+TEXT(Account_Region__c )= &quot;EMEA - Belgium&quot;,
+TEXT(Account_Region__c )= &quot;EMEA - Netherlands&quot;,
+TEXT(Account_Region__c  )= &quot;EMEA - Nordics&quot;,
+TEXT(Account_Region__c )= &quot;EMEA - France&quot;,
+TEXT(Account_Region__c )= &quot;EMEA - Italy&quot;,
+TEXT(Account_Region__c )= &quot;EMEA - Spain&quot;,
+TEXT (Account_Region__c )= &quot;EMEA - Poland&quot;),
+&quot;EMEA&quot;,
+IF(
+TEXT(Account_Region__c )= &quot;LATAM&quot;,
+&quot;LATAM&quot;,
+IF(
+TEXT(Account_Region__c )= &quot;Canada&quot;,
+&quot;Canada&quot;,
+IF(
+OR(
+TEXT(Account_Region__c  )= &quot;Japan&quot;,
+TEXT(Account_Region__c )= &quot;New Zealand&quot;,
+TEXT(Account_Region__c )= &quot;APAC - QLD&quot;,
+TEXT(Account_Region__c )= &quot;APAC - SA&quot;,
+TEXT(Account_Region__c )= &quot;VIC&quot;,
+TEXT(Account_Region__c )= &quot;APAC_South East Asia&quot;,
+TEXT(Account_Region__c )= &quot;APAC - WA&quot;,
+TEXT(Account_Region__c ) = &quot;APAC - Independents&quot;,
+TEXT (Account_Region__c )= &quot;NSW&quot;),
+&quot;APAC&quot;,
+NULL)))))</formula>
+    <label>Account Region Country</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

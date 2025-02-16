@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Domain</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Domains</value>
+    </caseValues>
+    <layouts>
+        <layout>Domain Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- In-Image Details --></label>
+            <section>In-Image Details</section>
+        </sections>
+        <sections>
+            <label><!-- In-Screen Details --></label>
+            <section>In-Screen Details</section>
+        </sections>
+        <sections>
+            <label><!-- In-Slot Details --></label>
+            <section>In-Slot Details</section>
+        </sections>
+        <sections>
+            <label><!-- Native Details --></label>
+            <section>Native Details</section>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <section>Products</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
