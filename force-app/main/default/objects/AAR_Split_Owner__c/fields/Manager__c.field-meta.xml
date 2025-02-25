@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Manager__c</fullName>
     <externalId>false</externalId>
-    <formula>Owner__r.Manager.FirstName &amp; &quot; &quot; &amp; Owner__r.Manager.LastName</formula>
+    <formula>Owner:User.Manager.FirstName &amp; &quot; &quot; &amp; Owner:User.Manager.LastName</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Manager</label>
     <required>false</required>

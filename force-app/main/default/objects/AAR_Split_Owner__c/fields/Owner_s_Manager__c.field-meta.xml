@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Owner_s_Manager__c</fullName>
     <externalId>false</externalId>
-    <formula>CASESAFEID(Owner__c)</formula>
+    <formula>CASESAFEID(OwnerId)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Owner&apos;s Manager</label>
     <required>false</required>

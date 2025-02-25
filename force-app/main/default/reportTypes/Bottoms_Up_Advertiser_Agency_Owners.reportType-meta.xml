@@ -16,76 +16,91 @@
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Advertiser</displayNameOverride>
             <field>Advertiser__c</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>AdvertiserAgency</displayNameOverride>
             <field>AdvertiserAgency__c</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Advertiser Agency Link Name</displayNameOverride>
             <field>Name</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Advertiser Agency Name</displayNameOverride>
             <field>Advertiser_Agency_Name__c</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Advertiser-Agency Relationship ID</displayNameOverride>
             <field>Id</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Agency</displayNameOverride>
             <field>AgencyFormula__c</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Agency</displayNameOverride>
             <field>Agency__c</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Brand Direct</displayNameOverride>
             <field>Brand_Direct__c</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
             <field>CreatedBy</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
             <field>CreatedDate</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Currency</displayNameOverride>
             <field>CurrencyIsoCode</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Activity Date</displayNameOverride>
             <field>LastActivityDate</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
             <field>LastModifiedBy</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
             <field>LastModifiedDate</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Link Type</displayNameOverride>
             <field>Link_Type__c</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
@@ -97,26 +112,31 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Relationship Owner</displayNameOverride>
             <field>Relationship_Owner__c</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Override Owner</displayNameOverride>
             <field>Override_Owner__c</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Advertiser-Agency Relationship : Advertiser : 18 Digit Account ID</displayNameOverride>
             <field>Advertiser__c.X18_Digit_Account_ID__c</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Advertiser-Agency Relationship : Agency : 18 Digit Account ID</displayNameOverride>
             <field>Agency__c.X18_Digit_Account_ID__c</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Advertiser-Agency Relationship : Advertiser : Industry</displayNameOverride>
             <field>Advertiser__c.Industry</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
@@ -125,67 +145,86 @@
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>AAR Split Owner ID</displayNameOverride>
             <field>Id</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>AAR Split Owner Name</displayNameOverride>
             <field>Name</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
             <field>CreatedBy</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
             <field>CreatedDate</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Currency</displayNameOverride>
             <field>CurrencyIsoCode</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Is Active</displayNameOverride>
             <field>Is_Active__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
             <field>LastModifiedBy</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
             <field>LastModifiedDate</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Split Owner</displayNameOverride>
+            <field>Owner</field>
+            <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Owner&apos;s Manager</displayNameOverride>
             <field>Owner_s_Manager__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Primary owner</displayNameOverride>
             <field>Primary_owner__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Manager</displayNameOverride>
             <field>Manager__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Account_Forecast__c</field>
+            <displayNameOverride>AAR Split Owner : Owner : Full Name</displayNameOverride>
+            <field>Owner.Name</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Owner__c</field>
+            <displayNameOverride>Account Forecast</displayNameOverride>
+            <field>Account_Forecast__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r</table>
         </columns>
         <masterLabel>AAR Split Owners</masterLabel>
@@ -193,196 +232,235 @@
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
             <field>CreatedBy</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
             <field>CreatedDate</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Currency</displayNameOverride>
             <field>CurrencyIsoCode</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecast Q1</displayNameOverride>
             <field>Forecast_Q11__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecast Q2</displayNameOverride>
             <field>Forecast_Q21__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecast Q3</displayNameOverride>
             <field>Forecast_Q31__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecast Q4</displayNameOverride>
             <field>Forecast_Q41__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecast(Sum)</displayNameOverride>
             <field>Forecast_Sum__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecast Entry ID</displayNameOverride>
             <field>Id</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Forecast Entry Name</displayNameOverride>
             <field>Name</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Q1 NY Pipeline</displayNameOverride>
             <field>Q1_NY_Pipeline__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Q1 CY Booking</displayNameOverride>
             <field>Forecast_Q1__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Q2 CY Booking</displayNameOverride>
             <field>Forecast_Q2__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Q3 CY Booking</displayNameOverride>
             <field>Forecast_Q3__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Q4 CY Booking</displayNameOverride>
             <field>Forecast_Q4__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Active Forecast Entry</displayNameOverride>
             <field>IsActive__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Activity Date</displayNameOverride>
             <field>LastActivityDate</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
             <field>LastModifiedBy</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
             <field>LastModifiedDate</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product</displayNameOverride>
             <field>Product__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>AAR Split Owner</displayNameOverride>
             <field>AAR_Split_Owner__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Q1 CY Pipeline</displayNameOverride>
             <field>Pipeline_Q1__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Q3 NY Pipeline</displayNameOverride>
             <field>Q3_NY_Pipeline__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Q2 PY Bookings</displayNameOverride>
             <field>Q2_PY_Bookings__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Q1 PY Bookings</displayNameOverride>
             <field>Q1_PY_Bookings__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quick update</displayNameOverride>
             <field>Quick_update__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Q3 PY Bookings</displayNameOverride>
             <field>Q3_PY_Bookings__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Q3 CY Pipeline</displayNameOverride>
             <field>Pipeline_Q3__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Q2 NY Pipeline</displayNameOverride>
             <field>Q2_NY_Pipeline__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Q4 NY Pipeline</displayNameOverride>
             <field>Q4_NY_Pipeline__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Q4 CY Pipeline</displayNameOverride>
             <field>Pipeline_Q4__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Q4 PY Bookings</displayNameOverride>
             <field>Q4_PY_Bookings__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Q2 CY Pipeline</displayNameOverride>
             <field>Pipeline_Q2__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Activity Last 60 Days</displayNameOverride>
             <field>Activity_Last_60_Days__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Activity Last 30 Days</displayNameOverride>
             <field>Activity_Last_30_Days__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CY Booking Total</displayNameOverride>
             <field>CY_Booking_Total__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CY Pipeline Total</displayNameOverride>
             <field>CY_Pipeline_Total__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>NY Pipeline Total</displayNameOverride>
             <field>NY_Pipeline_Total__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>PY Booking Total</displayNameOverride>
             <field>PY_Booking_Total__c</field>
             <table>Advertiser_Agency_Relationship__c.AAR_Split_Owners__r.Forecast_Entries__r</table>
         </columns>

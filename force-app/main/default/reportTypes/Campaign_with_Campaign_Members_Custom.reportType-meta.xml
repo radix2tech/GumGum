@@ -12,466 +12,559 @@
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Action Required (Prototype)</displayNameOverride>
             <field>Action_Required_Prototype__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Activation</displayNameOverride>
             <field>Activation__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Active</displayNameOverride>
             <field>IsActive</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Actual Cost in Campaign</displayNameOverride>
             <field>ActualCost</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Actual Cost in Hierarchy</displayNameOverride>
             <field>HierarchyActualCost</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Approved by Management</displayNameOverride>
             <field>Approved_by_Management__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Audience Persona</displayNameOverride>
             <field>Audience_Persona__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Budgeted Cost in Campaign</displayNameOverride>
             <field>BudgetedCost</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Budgeted Cost in Hierarchy</displayNameOverride>
             <field>HierarchyBudgetedCost</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Campaign Currency</displayNameOverride>
             <field>CurrencyIsoCode</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Campaign ID</displayNameOverride>
             <field>Id</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Campaign Member Type</displayNameOverride>
             <field>CampaignMemberRecordType</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Campaign Name</displayNameOverride>
             <field>Name</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Campaign Owner</displayNameOverride>
             <field>Owner</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Campaign Record Type</displayNameOverride>
             <field>RecordType</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Closed Revenue</displayNameOverride>
             <field>Closed_Revenue__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Collateral</displayNameOverride>
             <field>Collateral__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Collateral Expenses</displayNameOverride>
             <field>Collateral_Expenses__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Comments</displayNameOverride>
             <field>Creative_comments__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contacts in Campaign</displayNameOverride>
             <field>NumberOfContacts</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contacts in Hierarchy</displayNameOverride>
             <field>HierarchyNumberOfContacts</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Converted Leads in Campaign</displayNameOverride>
             <field>NumberOfConvertedLeads</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Converted Leads in Hierarchy</displayNameOverride>
             <field>HierarchyNumberOfConvertedLeads</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cost Breakdown</displayNameOverride>
             <field>Cost_Breakdown__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cost Per Lead</displayNameOverride>
             <field>Cost_Per_Lead__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
             <field>CreatedBy</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
             <field>CreatedDate</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Creative Type</displayNameOverride>
             <field>Creative_Type__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Current Quarter</displayNameOverride>
             <field>Current_Quarter__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Custom Creative</displayNameOverride>
             <field>Custom_Creative__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demo Link 1</displayNameOverride>
             <field>Creative_JIRA_Ticket__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demo Link 2</displayNameOverride>
             <field>Demo_Link_2__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demo Link 3</displayNameOverride>
             <field>Demo_Link_3__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Description</displayNameOverride>
             <field>Description</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>End Date</displayNameOverride>
             <field>EndDate</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Event Registration Method</displayNameOverride>
             <field>Event_Registration_Method__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Event Requested By:</displayNameOverride>
             <field>Event_Requested_By__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Existing Unit</displayNameOverride>
             <field>Existing_Unit__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Expected Response (%)</displayNameOverride>
             <field>ExpectedResponse</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Expected Revenue in Campaign</displayNameOverride>
             <field>ExpectedRevenue</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Expected Revenue in Hierarchy</displayNameOverride>
             <field>HierarchyExpectedRevenue</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Expense Sum</displayNameOverride>
             <field>Expense_Sum__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Guest Count</displayNameOverride>
             <field>Guest_Count__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>GumGum Attendees</displayNameOverride>
             <field>GumGum_Attendees__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Key Takeaway</displayNameOverride>
             <field>Key_Takeaway__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Activity</displayNameOverride>
             <field>LastActivityDate</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
             <field>LastModifiedBy</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
             <field>LastModifiedDate</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Leads in Campaign</displayNameOverride>
             <field>NumberOfLeads</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Leads in Hierarchy</displayNameOverride>
             <field>HierarchyNumberOfLeads</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lead Time 1</displayNameOverride>
             <field>Required_Time__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lead Time 2</displayNameOverride>
             <field>Lead_Time_2__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lead Time 3</displayNameOverride>
             <field>Lead_Time_3__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Location</displayNameOverride>
             <field>Location__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Minimum Spend 1</displayNameOverride>
             <field>Minimum_Spend__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Minimum Spend 2</displayNameOverride>
             <field>Minimum_Spend_2__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Minimum Spend 3</displayNameOverride>
             <field>Minimum_Spend_3__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Next Quarter</displayNameOverride>
             <field>Next_Quarter__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Num Sent in Campaign</displayNameOverride>
             <field>NumberSent</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Num Sent in Hierarchy</displayNameOverride>
             <field>HierarchyNumberSent</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Open Revenue</displayNameOverride>
             <field>Open_Revenue__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunities in Campaign</displayNameOverride>
             <field>NumberOfOpportunities</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunities in Hierarchy</displayNameOverride>
             <field>HierarchyNumberOfOpportunities</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Parent Campaign</displayNameOverride>
             <field>Parent</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payment Method</displayNameOverride>
             <field>Payment_Method__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payment Terms</displayNameOverride>
             <field>Payment_Terms__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Region</displayNameOverride>
             <field>Region__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Responses in Campaign</displayNameOverride>
             <field>NumberOfResponses</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Responses in Hierarchy</displayNameOverride>
             <field>HierarchyNumberOfResponses</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>RFP count</displayNameOverride>
             <field>RFP_count__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ROI</displayNameOverride>
             <field>ROI__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Speaker(s)</displayNameOverride>
             <field>Speaker_s__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Start Date</displayNameOverride>
             <field>StartDate</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Status</displayNameOverride>
             <field>Status</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Strategic Marketing JIRA Ticket</displayNameOverride>
             <field>Agency_Relations_JIRA_Ticket__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Strategic Marketing Notes</displayNameOverride>
             <field>Agency_Relations_Notes__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Strategic Marketing Output</displayNameOverride>
             <field>Agency_Relations_Output__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Target Region(s)</displayNameOverride>
             <field>Target_Region_s__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Price for Approval</displayNameOverride>
             <field>Total_Price_for_Approval__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Type</displayNameOverride>
             <field>Type</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Unit: In-Image</displayNameOverride>
             <field>Unit_In_Image__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Unit: In-Screen</displayNameOverride>
             <field>Unit_In_Screen__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Unit: Video</displayNameOverride>
             <field>Unit_Video__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Value Opportunities in Campaign</displayNameOverride>
             <field>AmountAllOpportunities</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Value Opportunities in Hierarchy</displayNameOverride>
             <field>HierarchyAmountAllOpportunities</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Value Won Opportunities in Campaign</displayNameOverride>
             <field>AmountWonOpportunities</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Value Won Opportunities in Hierarchy</displayNameOverride>
             <field>HierarchyAmountWonOpportunities</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Won Opportunities in Campaign</displayNameOverride>
             <field>NumberOfWonOpportunities</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Won Opportunities in Hierarchy</displayNameOverride>
             <field>HierarchyNumberOfWonOpportunities</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride># of MQLs</displayNameOverride>
             <field>of_MQLs__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Campaign Length (# of Days)</displayNameOverride>
             <field>Campaign_Length__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Start Date (2)</displayNameOverride>
             <field>Start_Date_2__c</field>
             <table>Campaign</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Relevant Business Line</displayNameOverride>
             <field>Relevant_Business_Line__c</field>
             <table>Campaign</table>
         </columns>
@@ -480,141 +573,174 @@
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Campaign Member Currency</displayNameOverride>
             <field>CurrencyIsoCode</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
             <field>CreatedBy</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Company (TEXT)</displayNameOverride>
             <field>Company_TEXT__c</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
             <field>CreatedDate</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Do Not Call</displayNameOverride>
             <field>DoNotCall</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Email</displayNameOverride>
             <field>Email</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Email Opt Out</displayNameOverride>
             <field>HasOptedOutOfEmail</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lifecycle Stage</displayNameOverride>
             <field>Lifecycle_Stage__c</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Fax</displayNameOverride>
             <field>Fax</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>First Name</displayNameOverride>
             <field>FirstName</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>First Responded Date</displayNameOverride>
             <field>FirstRespondedDate</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>First Responded Month</displayNameOverride>
             <field>First_Responded_Month__c</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Full Name</displayNameOverride>
             <field>Name</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>GG 100 Prospect</displayNameOverride>
             <field>GG_100_Prospect__c</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Is Primary</displayNameOverride>
             <field>IsPrimary</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
             <field>LastModifiedBy</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
             <field>LastModifiedDate</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Name</displayNameOverride>
             <field>LastName</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Related Record ID</displayNameOverride>
             <field>Id</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lead Status</displayNameOverride>
             <field>Lead_Status__c</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Member First Associated Date</displayNameOverride>
             <field>MemberCreatedDate</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Member ID</displayNameOverride>
             <field>MemberId</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Member Status Update Date</displayNameOverride>
             <field>MemberLastModifiedDate</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mobile</displayNameOverride>
             <field>MobilePhone</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Phone</displayNameOverride>
             <field>Phone</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Responded</displayNameOverride>
             <field>HasResponded</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Account_Category__c</field>
+            <table>Campaign.CampaignMembers</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Status</displayNameOverride>
             <field>Status</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Title</displayNameOverride>
             <field>Title</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
@@ -632,12 +758,19 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CampaignMember-ContactOrLead : Lead : Lead Owner</displayNameOverride>
             <field>Lead.Owner</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CampaignMember-ContactOrLead : Contact : Mailing Country</displayNameOverride>
             <field>Contact.MailingCountryCode</field>
+            <table>Campaign.CampaignMembers</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account_Industry__c</field>
             <table>Campaign.CampaignMembers</table>
         </columns>
         <masterLabel>Campaign Members</masterLabel>

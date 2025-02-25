@@ -3,7 +3,7 @@
     <fullName>Owner__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
-    <label>Owner</label>
+    <label>Owner Do not use</label>
     <referenceTo>User</referenceTo>
     <relationshipName>AAR_Split_Owners</relationshipName>
     <required>false</required>

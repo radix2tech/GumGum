@@ -29,7 +29,7 @@
         <locationX>176</locationX>
         <locationY>287</locationY>
         <inputAssignments>
-            <field>Owner__c</field>
+            <field>OwnerId</field>
             <value>
                 <elementReference>$User.Id</elementReference>
             </value>
@@ -44,7 +44,7 @@
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
-            <field>Owner__c</field>
+            <field>OwnerId</field>
             <operator>EqualTo</operator>
             <value>
                 <stringValue></stringValue>

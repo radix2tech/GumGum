@@ -14,6 +14,11 @@
     </customPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>AAR_Split_Owner__c.Advertiser_Agency_Relationship__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>AAR_Split_Owner__c.Is_Active__c</field>
         <readable>true</readable>
     </fieldPermissions>

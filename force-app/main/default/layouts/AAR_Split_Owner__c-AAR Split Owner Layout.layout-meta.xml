@@ -34,7 +34,11 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Owner__c</field>
+                <field>OwnerId</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Manager__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

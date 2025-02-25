@@ -14,7 +14,7 @@
         <inputParameters>
             <name>emailAddresses</name>
             <value>
-                <stringValue>{!$Label.East_Closed_Lost_Email}</stringValue>
+                <elementReference>$Label.East_Closed_Lost_Email</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -122,10 +122,10 @@
         <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>and</filterLogic>
         <filters>
-            <field>Owner_Role__c</field>
-            <operator>Contains</operator>
+            <field>Opportunity_Region__c</field>
+            <operator>EqualTo</operator>
             <value>
-                <stringValue>east</stringValue>
+                <stringValue>US - East</stringValue>
             </value>
         </filters>
         <filters>

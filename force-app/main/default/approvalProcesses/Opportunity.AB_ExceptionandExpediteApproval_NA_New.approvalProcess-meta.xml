@@ -234,6 +234,10 @@
                 <type>user</type>
             </approver>
             <approver>
+                <name>monica@gumgum.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
                 <name>rebecca.moyer@gumgum.com</name>
                 <type>user</type>
             </approver>
@@ -291,6 +295,10 @@
             </approver>
             <approver>
                 <name>miguel.borgaro@gumgum.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>monica@gumgum.com</name>
                 <type>user</type>
             </approver>
             <approver>
@@ -354,6 +362,10 @@
             </approver>
             <approver>
                 <name>miguel.borgaro@gumgum.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>monica@gumgum.com</name>
                 <type>user</type>
             </approver>
             <approver>

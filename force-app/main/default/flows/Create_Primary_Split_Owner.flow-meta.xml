@@ -145,7 +145,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Owner__c</field>
+            <field>OwnerId</field>
             <value>
                 <elementReference>$Record.OwnerId</elementReference>
             </value>
@@ -171,7 +171,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Owner__c</field>
+            <field>OwnerId</field>
             <value>
                 <elementReference>$User.Id</elementReference>
             </value>
@@ -190,7 +190,7 @@
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
-            <field>Owner__c</field>
+            <field>OwnerId</field>
             <operator>EqualTo</operator>
             <value>
                 <elementReference>$Record.OwnerId</elementReference>

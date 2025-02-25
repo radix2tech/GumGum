@@ -541,6 +541,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>AAR_Split_Owner__c.Advertiser_Agency_Relationship__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>AAR_Split_Owner__c.Forecast_Q1__c</field>
         <readable>true</readable>
@@ -2193,31 +2198,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Advertiser_Agency_Relationship__c.Brand_Direct__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Advertiser_Agency_Relationship__c.Forecast_Q1__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Advertiser_Agency_Relationship__c.Forecast_Q2__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Advertiser_Agency_Relationship__c.Forecast_Q3__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Advertiser_Agency_Relationship__c.Forecast_Q4__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Advertiser_Agency_Relationship__c.Forecast_Sum__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

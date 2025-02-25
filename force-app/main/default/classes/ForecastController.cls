@@ -118,7 +118,7 @@ public class ForecastController {
         data.PipelineNextQuarter = (Decimal)AFAggregateResult1[0].get('totalPipelineNextQuarter') ;
         data.PipelineNextQuarter = (data.PipelineNextQuarter != null ? data.PipelineNextQuarter : 0) * CurrentUserConversionRate;
 
-        String AFAggregateResultQuery2 = 'SELECT SUM(Forecast_Q11__c) Total_Forecast_Q11,  SUM(Forecast_Q21__c) Total_Forecast_Q21, SUM(Forecast_Q31__c) Total_Forecast_Q31,  SUM(Forecast_Q41__c) Total_Forecast_Q41, SUM(Forecast_Q1__c) Total_Forecast_Q1,SUM(Forecast_Q2__c) Total_Forecast_Q2, SUM(Forecast_Q3__c) Total_Forecast_Q3, SUM(Forecast_Q4__c) Total_Forecast_Q4 FROM Forecast_Entry__c  WHERE AAR_Split_Owner__r.Account_Forecast__c IN :AllAFRecords AND '+ SellerForecastEntryConditionQuery +' IsActive__c = true'+ AccessConditionCumulative;
+        String AFAggregateResultQuery2 = 'SELECT SUM(Forecast_Q11__c) Total_Forecast_Q11,  SUM(Forecast_Q21__c) Total_Forecast_Q21, SUM(Forecast_Q31__c) Total_Forecast_Q31,  SUM(Forecast_Q41__c) Total_Forecast_Q41, SUM(Forecast_Q1__c) Total_Forecast_Q1,SUM(Forecast_Q2__c) Total_Forecast_Q2, SUM(Forecast_Q3__c) Total_Forecast_Q3, SUM(Forecast_Q4__c) Total_Forecast_Q4 FROM Forecast_Entry__c  WHERE '+ SellerForecastEntryConditionQuery +' IsActive__c = true'+ AccessConditionCumulative;
         AggregateResult[] AFAggregateResult2 = Database.query(AFAggregateResultQuery2);
 
         data.q1 = (Decimal)AFAggregateResult2[0].get('Total_Forecast_Q11') ;

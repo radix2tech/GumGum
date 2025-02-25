@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Queue xmlns="http://soap.sforce.com/2006/04/metadata">
-    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>japan-sales@gumgum.com</email>
     <name>Japan Agency/Brand Inbound Queue</name>
     <queueMembers>
         <users>
