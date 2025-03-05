@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Avg_Order_Intake_Target__c</fullName>
+    <description>Weekly avg order intake target for a sales user. Request from leadership SOP-3547</description>
+    <externalId>false</externalId>
+    <label>Avg. Order Intake Target</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

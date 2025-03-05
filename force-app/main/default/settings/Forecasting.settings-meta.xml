@@ -242,6 +242,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4U000005lIPi</field>
             <label># Close Date Extensions</label>
         </opportunityListFieldsLabelMappings>
@@ -2134,6 +2138,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -2753,6 +2758,10 @@
         <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <label>Last Modified Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4U000005lIPi</field>
@@ -4646,6 +4655,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -5271,6 +5281,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4U000005lIPi</field>
             <label># Close Date Extensions</label>
         </opportunityListFieldsLabelMappings>
@@ -7163,6 +7177,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -7782,6 +7797,10 @@
         <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <label>Last Modified Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4U000005lIPi</field>
@@ -9675,6 +9694,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -10308,6 +10328,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4U000005lIPi</field>
             <label># Close Date Extensions</label>
         </opportunityListFieldsLabelMappings>
@@ -12194,6 +12218,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -12811,6 +12836,10 @@
         <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <label>Last Modified Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4U000005lIPi</field>
@@ -14704,6 +14733,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -15329,6 +15359,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4U000005lIPi</field>
             <label># Close Date Extensions</label>
         </opportunityListFieldsLabelMappings>
@@ -17221,6 +17255,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -17842,6 +17877,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4U000005lIPi</field>
             <label># Close Date Extensions</label>
         </opportunityListFieldsLabelMappings>
@@ -19733,6 +19772,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -20354,6 +20394,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4U000005lIPi</field>
             <label># Close Date Extensions</label>
         </opportunityListFieldsLabelMappings>
@@ -22245,6 +22289,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -22866,6 +22911,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4U000005lIPi</field>
             <label># Close Date Extensions</label>
         </opportunityListFieldsLabelMappings>
@@ -24757,6 +24806,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -25382,6 +25432,10 @@
             <label>Forecasted Amount</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4U000005lIPi</field>
             <label># Close Date Extensions</label>
         </opportunityListFieldsLabelMappings>
@@ -27274,6 +27328,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>SPLITAMOUNT</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -27893,6 +27948,10 @@
         <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <label>Last Modified Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4U000005lIPi</field>
@@ -29786,6 +29845,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -30431,6 +30491,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4U000005lIPi</field>
             <label># Close Date Extensions</label>
         </opportunityListFieldsLabelMappings>
@@ -32312,6 +32376,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -32936,6 +33001,10 @@
         <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <label>Last Modified Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4U000005lIPi</field>
@@ -34831,6 +34900,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>

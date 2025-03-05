@@ -11,5 +11,10 @@
     <columns>Forecast_Q2__c</columns>
     <columns>Q2_NY_Pipeline__c</columns>
     <filterScope>Everything</filterScope>
+    <filters>
+        <field>AAR_Split_Owner__c</field>
+        <operation>contains</operation>
+        <value>Honey</value>
+    </filters>
     <label>All</label>
 </ListView>

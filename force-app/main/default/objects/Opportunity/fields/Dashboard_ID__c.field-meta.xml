@@ -5,7 +5,7 @@
     <externalId>true</externalId>
     <inlineHelpText>Enter the 5 digit number associated with the Ad Manager campaign</inlineHelpText>
     <label>Ad Manager ID</label>
-    <length>18</length>
+    <length>250</length>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

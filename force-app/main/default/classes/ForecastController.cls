@@ -69,10 +69,10 @@ public class ForecastController {
                                 AND StartDate <= :System.today() 
                                 ORDER BY StartDate DESC LIMIT 1];
         if (dcr != null) {
-        	if(convForecast.q11 > 0)convForecast.q11 = convForecast.q11 * dcr.ConversionRate;
-        	if(convForecast.q21 > 0)convForecast.q21 = convForecast.q21 * dcr.ConversionRate;
-        	if(convForecast.q31 > 0)convForecast.q31 = convForecast.q31 * dcr.ConversionRate;
-        	if(convForecast.q41 > 0)convForecast.q41 = convForecast.q41 * dcr.ConversionRate;
+            if(convForecast.q11 > 0)convForecast.q11 = convForecast.q11 * dcr.ConversionRate;
+            if(convForecast.q21 > 0)convForecast.q21 = convForecast.q21 * dcr.ConversionRate;
+            if(convForecast.q31 > 0)convForecast.q31 = convForecast.q31 * dcr.ConversionRate;
+            if(convForecast.q41 > 0)convForecast.q41 = convForecast.q41 * dcr.ConversionRate;
         }
         return convForecast;
     }
@@ -328,14 +328,14 @@ public class ForecastController {
             //List<User> allSubordinateUsers = getAllSubordinateUsers(UserInfo.getUserId());
             allSubordinateUsers = getAllSubordinates(UserInfo.getUserRoleId());
             if(allSubordinateUsers != null && !allSubordinateUsers.isEmpty()){
-                AccessCondition = ' AND ( Owner__c = \''+UserInfo.getUserId()+'\' OR Owner__c IN :allSubordinateUsers ) ';
-                AccessConditionCumulative = ' AND ( AAR_Split_Owner__r.Owner__c = \''+UserInfo.getUserId()+'\' OR AAR_Split_Owner__r.Owner__c IN :allSubordinateUsers ) ';
+                AccessCondition = ' AND ( OwnerId = \''+UserInfo.getUserId()+'\' OR OwnerId IN :allSubordinateUsers ) ';
+                AccessConditionCumulative = ' AND ( AAR_Split_Owner__r.OwnerId = \''+UserInfo.getUserId()+'\' OR AAR_Split_Owner__r.OwnerId IN :allSubordinateUsers ) ';
             }else{
-                AccessCondition = ' AND Owner__c = \''+UserInfo.getUserId()+'\'';
-                AccessConditionCumulative = ' AND AAR_Split_Owner__r.Owner__c = \''+UserInfo.getUserId()+'\'';
+                AccessCondition = ' AND OwnerId = \''+UserInfo.getUserId()+'\'';
+                AccessConditionCumulative = ' AND AAR_Split_Owner__r.OwnerId = \''+UserInfo.getUserId()+'\'';
             }
         }else if(AccessLevel == 3){
-            AccessCondition = ' AND Owner__c = \''+UserInfo.getUserId()+'\'';
+            AccessCondition = ' AND OwnerId = \''+UserInfo.getUserId()+'\'';
         }
 
         if(recordId != null){
@@ -438,9 +438,9 @@ public class ForecastController {
                         forecastList.add(FE1); 
                         system.debug('### FE1 '+FE1);
                     }else{
-                        List<AAR_Split_Owner__c> splitOwner = [SELECT Id,Owner__c,Is_Active__c FROM AAR_Split_Owner__c  
+                        List<AAR_Split_Owner__c> splitOwner = [SELECT Id,OwnerId,Is_Active__c FROM AAR_Split_Owner__c  
                                                                                             WHERE Account_Forecast__c = :dataRecord.Id 
-                                                                                            AND Owner__c = :UserInfo.getUserId() LIMIT 1];
+                                                                                            AND OwnerId = :UserInfo.getUserId() LIMIT 1];
                         if(splitOwner != null && !splitOwner.isEmpty()){
                             FE.AAR_Split_Owner__c = splitOwner[0].Id;
                             if(!splitOwner[0].Is_Active__c)
@@ -512,7 +512,7 @@ public class ForecastController {
     //Get Relationships
     @AuraEnabled(cacheable=true)
     public static List<Advertiser_Agency_Relationship__c> getAARs(String searchTerm) {
-        return [SELECT Id, Name ,Advertiser_Agency_Name__c FROM Advertiser_Agency_Relationship__c WHERE (Name LIKE :('%' + searchTerm + '%') OR  Advertiser_Agency_Name__c LIKE :('%' + searchTerm + '%')) AND ID NOT IN (SELECT Advertiser_Agency_Relationship__c FROM AAR_Split_Owner__c WHERE  Is_Active__c = true AND Owner__c = :UserInfo.getUserId()) LIMIT 5];
+        return [SELECT Id, Name ,Advertiser_Agency_Name__c FROM Advertiser_Agency_Relationship__c WHERE (Name LIKE :('%' + searchTerm + '%') OR  Advertiser_Agency_Name__c LIKE :('%' + searchTerm + '%')) AND ID NOT IN (SELECT Advertiser_Agency_Relationship__c FROM AAR_Split_Owner__c WHERE  Is_Active__c = true AND OwnerId = :UserInfo.getUserId()) LIMIT 5];
     }
 
     //Create split
@@ -520,7 +520,7 @@ public class ForecastController {
     public static void createSplitOwner(String recordId) {
         AAR_Split_Owner__c AARSplitOwnerRecord;
         try{
-            AARSplitOwnerRecord = [SELECT Id FROM AAR_Split_Owner__c Where Advertiser_Agency_Relationship__c = :recordId AND Owner__c = :UserInfo.getUserId() AND Is_Active__c = false limit 1];
+            AARSplitOwnerRecord = [SELECT Id FROM AAR_Split_Owner__c Where Advertiser_Agency_Relationship__c = :recordId AND OwnerId = :UserInfo.getUserId() AND Is_Active__c = false limit 1];
             AARSplitOwnerRecord.Is_Active__c = true;
             update AARSplitOwnerRecord;
             
@@ -577,7 +577,7 @@ public class ForecastController {
     }
 
     public static Integer getCurrentUserAccess(ReturnDataClass rd){
-		
+        
         Id profileId = UserInfo.getProfileId();
         Profile profile = [SELECT Name FROM Profile WHERE Id = :profileId];
 

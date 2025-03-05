@@ -1058,6 +1058,10 @@
             <label>Includes Sponsorship</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00N0P000007SW9Y</field>
             <label>Start Date</label>
         </forecastingObjectListLabelMappings>
@@ -2030,6 +2034,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -3551,6 +3556,10 @@
             <label>Includes Sponsorship</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00N0P000007SW9Y</field>
             <label>Start Date</label>
         </forecastingObjectListLabelMappings>
@@ -4522,6 +4531,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -6047,6 +6057,10 @@
             <label>Includes Sponsorship</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00N0P000007SW9Y</field>
             <label>Start Date</label>
         </forecastingObjectListLabelMappings>
@@ -7019,6 +7033,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -8540,6 +8555,10 @@
             <label>Includes Sponsorship</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00N0P000007SW9Y</field>
             <label>Start Date</label>
         </forecastingObjectListLabelMappings>
@@ -9511,6 +9530,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -11036,6 +11056,10 @@
             <label>Includes Sponsorship</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00N0P000007SW9Y</field>
             <label>Start Date</label>
         </forecastingObjectListLabelMappings>
@@ -12010,6 +12034,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -13529,6 +13554,10 @@
             <label>Includes Sponsorship</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00N0P000007SW9Y</field>
             <label>Start Date</label>
         </forecastingObjectListLabelMappings>
@@ -14500,6 +14529,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -16025,6 +16055,10 @@
             <label>Includes Sponsorship</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00N0P000007SW9Y</field>
             <label>Start Date</label>
         </forecastingObjectListLabelMappings>
@@ -16997,6 +17031,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -18518,6 +18553,10 @@
             <label>Includes Sponsorship</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00N0P000007SW9Y</field>
             <label>Start Date</label>
         </forecastingObjectListLabelMappings>
@@ -19489,6 +19528,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -21010,6 +21050,10 @@
             <label>Includes Sponsorship</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00N0P000007SW9Y</field>
             <label>Start Date</label>
         </forecastingObjectListLabelMappings>
@@ -21983,6 +22027,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -23502,6 +23547,10 @@
             <label>Includes Sponsorship</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00N0P000007SW9Y</field>
             <label>Start Date</label>
         </forecastingObjectListLabelMappings>
@@ -24473,6 +24522,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -25994,6 +26044,10 @@
             <label>Includes Sponsorship</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00N0P000007SW9Y</field>
             <label>Start Date</label>
         </forecastingObjectListLabelMappings>
@@ -26965,6 +27019,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -28490,6 +28545,10 @@
             <label>Includes Sponsorship</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00N0P000007SW9Y</field>
             <label>Start Date</label>
         </forecastingObjectListLabelMappings>
@@ -29462,6 +29521,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>SPLITAMOUNT</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -30983,6 +31043,10 @@
             <label>Includes Sponsorship</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00N0P000007SW9Y</field>
             <label>Start Date</label>
         </forecastingObjectListLabelMappings>
@@ -31954,6 +32018,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -33483,6 +33548,10 @@
             <label>Includes Sponsorship</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00N0P000007SW9Y</field>
             <label>Start Date</label>
         </forecastingObjectListLabelMappings>
@@ -34460,6 +34529,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>
@@ -35985,6 +36055,10 @@
             <label>Includes Sponsorship</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>FORECASTEDMFJVALUE</field>
+            <label>Manager Judgment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00N0P000007SW9Y</field>
             <label>Start Date</label>
         </forecastingObjectListLabelMappings>
@@ -36958,6 +37032,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>FORECASTEDMFJVALUE</field>
             <field>00N4U000005lIPi</field>
             <field>00N4U000005lIPj</field>
             <field>00NU0000003qE5o</field>

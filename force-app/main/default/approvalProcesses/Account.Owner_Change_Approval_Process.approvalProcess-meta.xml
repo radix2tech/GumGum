@@ -3,6 +3,9 @@
     <active>true</active>
     <allowRecall>false</allowRecall>
     <allowedSubmitters>
+        <type>allInternalUsers</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
         <type>owner</type>
     </allowedSubmitters>
     <approvalPageFields>

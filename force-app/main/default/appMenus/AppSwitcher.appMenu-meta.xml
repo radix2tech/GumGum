@@ -356,4 +356,8 @@
         <name>standard__DataGovernanceConsole</name>
         <type>CustomApplication</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>dupcheck__plauti_deduplicate</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
 </AppMenu>

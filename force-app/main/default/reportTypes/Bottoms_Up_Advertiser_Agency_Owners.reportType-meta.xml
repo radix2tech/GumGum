@@ -140,6 +140,16 @@
             <field>Advertiser__c.Industry</field>
             <table>Advertiser_Agency_Relationship__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Advertiser__c.Account_Region__c</field>
+            <table>Advertiser_Agency_Relationship__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Advertiser__c.Account_Region_Country__c</field>
+            <table>Advertiser_Agency_Relationship__c</table>
+        </columns>
         <masterLabel>Advertiser-Agency Relationships</masterLabel>
     </sections>
     <sections>

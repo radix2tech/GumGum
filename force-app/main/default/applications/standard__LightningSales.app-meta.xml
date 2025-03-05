@@ -11271,28 +11271,22 @@
     </profileActionOverrides>
     <tabs>standard-home</tabs>
     <tabs>standard-Lead</tabs>
+    <tabs>standard-Contact</tabs>
     <tabs>standard-Task</tabs>
     <tabs>standard-Account</tabs>
-    <tabs>standard-Contact</tabs>
     <tabs>standard-Opportunity</tabs>
     <tabs>standard-Campaign</tabs>
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-report</tabs>
     <tabs>Forecast_Entry</tabs>
-    <tabs>EveryoneSocial</tabs>
-    <tabs>Expenses__c</tabs>
-    <tabs>Account_Plan__c</tabs>
-    <tabs>Quota__c</tabs>
-    <tabs>Opportunity_Snapshot__c</tabs>
     <tabs>standard-Event</tabs>
+    <tabs>Expenses__c</tabs>
     <tabs>standard-Forecasting3</tabs>
     <tabs>standard-ContentNote</tabs>
-    <tabs>standard-VoiceCall</tabs>
     <tabs>standard-Today</tabs>
     <tabs>standard-ProcessInstanceWorkitem</tabs>
-    <tabs>standard-AppLauncher</tabs>
     <tabs>standard-Feed</tabs>
-    <tabs>Forecast_Entry__c</tabs>
+    <tabs>Sales_Scorecard__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Lightning_Sales_UtilityBar</utilityBar>
 </CustomApplication>

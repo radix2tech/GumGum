@@ -6,5 +6,5 @@
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>Ads West Manager 2</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
-    <parentRole>West_Senior_Manager_1</parentRole>
+    <parentRole>SVP_West</parentRole>
 </Role>
